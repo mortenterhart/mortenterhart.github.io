@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rechnertechnik 13.02.18</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="multiprozessoren-und-die-von-neumann-architektur">Multiprozessoren und die von-Neumann Architektur</h1>
+<p><em>aus der Vorlesung Rechnertechnik vom 13.02.2018</em></p>
+<hr>
+<p>In diesem Sinne sind nachrichtengekoppelte Multiprozessorsysteme vom Typ <strong>N</strong>o-<strong>R</strong>emote-<strong>M</strong>emory-<strong>A</strong>ccess (NORMA). Bezüglich der Übertragungszeit von Nachrichten unterscheidet man folgende Typen:</p>
+<ul>
+<li><strong>U</strong>niform <strong>C</strong>ommunication <strong>A</strong>rchitecture (UCA): Zwischen allen Prozessoren können gleichlange Nachrichten in gleicher Zeit übertragen werden.</li>
+<li><strong>N</strong>on <strong>U</strong>niform <strong>C</strong>ommunication <strong>A</strong>rchitecture (NUCA): Die Übertragungszeit für eine gleichlange Nachricht zwischen den Prozessoren ist je nach Sende- und Empfänger-Prozessor verschieden lang.</li>
+</ul>
+<p>Das NUCA-Modell kommt bei nachrichtengekoppelten Multiprozessoren am häufigsten vor. Es wird hier eine Nachricht i.a. vom Sende- bis zum Ziel-Prozessor über mehrere Zwischen-Prozessoren geleitet (<em>multiple hops</em>).</p>
+<p>Sind die Prozessoren gleichartig, so spricht man von <strong>homogenen</strong> Multiprozessorsystemen, ansonsten von <strong>inhomogenen</strong> Multiprozessoren.</p>
+<h2 id="die-von-neumann-architektur">Die von-Neumann Architektur</h2>
+<p>Die von Neumann Architektur ist eine Rechnerarchitektur mit minimalem Hardware-Aufwand; sie besteht aus folgenden Komponenten:</p>
+<ul>
+<li>Hauptspeicher (<em>Main Memory</em>) oder Arbeitsspeicher (<em>Working Memory</em>) zum Speichern von Daten und Befehlen.</li>
+<li>Befehlsprozessor (<em>Instruction Processor</em>) mit Steuerwerk (<em>Control Unit</em> (CU)) zur Dekodierung (Interpretation, Entschlüsselung) der Maschinenbefehle und zur Erzeugung von Steuersignalen zur Steuerung anderer Komponenten</li>
+<li>Datenprozessor mit Rechenwerk (<em>Arithmetic Logical Unit</em> (ALU)) für arithmetisch logische Operationen auf den Daten</li>
+<li>Ein-/Ausgabewerk (<em>I/O Processor</em>) zur Kommunikation und zum Datenaustausch mit der Peripherie (z.B. Arbeitsspeicher)</li>
+<li>einen Datenbus und einen Adressbus zum Datentransfer zwischen den Komponenten und den Arbeitsspeicher</li>
+<li>Steuerbus (<em>Control Bus</em>) zur Übertragung der Steuersignale zur Ausführung der Maschinenbefehle durch die Hardware</li>
+</ul>
+<img src="https://i.imgur.com/DjIqy7X.jpg">
+<p><em>Funktion einer von-Neumann Architektur</em>:<br>
+<img src="https://i.imgur.com/6uqnvzl.jpg"></p>
+<p>Der Datenprozessor hat die Aufgabe, Verarbeitungsdaten zu verarbeiten. Dazu besitzt er ein Rechenwerk und mindestens drei Register zur Aufnahme von Operanden. Register sind Speicher mit geringer Speicherkapazität, jedoch mit hoher Zugriffsgeschwindigkeit (kurze Zugriffszeiten).</p>
+<p>Das <strong>Memory Buffer Register</strong> ist ein Puffer-Speicher, über den der Datenaustausch mit dem Speicher abgewickelt wird. <strong>Akkumulator</strong> und <strong>Multiplikationsregister</strong> dienen zur Aufnahme von Additions- und Multiplikationsoperanden (Verarbeitungsdaten) und der Ergebnisse nach der Verarbeitung. Im Steuerwerk des Befehlsprozessors werden die Maschinenbefehle dekodiert (entschlüsselt) und Steuersignale zur Ausführung der Befehle erzeugt. Dabei befindet sich der aktuell bearbeitete Maschinenbefehl im <strong>Befehlsregister</strong> (<em>Instruction Register</em>). Die Adresse, an welcher sich der nächste auszuführende Befehl im Speicher befindet, steht im <strong>Program Counter Register</strong>.</p>
+<p>Ein typischer Befehlsablauf in einer von-Neumann Architektur sieht wie folgt aus:</p>
+<ol>
+<li>In der <strong>Fetch-Phase</strong> wird der Inhalt des Program Counters auf den Adressbus übertragen. Anschließend wird der Speicher mit dieser Adresse angesprochen und der Befehl über den Datenbus in das Memory Buffer Register geladen und von dort in das Befehlsregister. Handelt es sich um einen Befehl mit Operanden, dann folgen dem Befehl noch Arbeitsspeicheradressen und die Operanden werden, auf die gleiche Weise wie vorher der Befehl, aus dem Speicher geholt und dann in den Datenprozessor geladen. Handelt es sich bei dem auszuführenden Befehl nicht um einen Sprungbefehl, so wird der Program Counter einfach inkrementiert. Bei Sprungbefehlen kann der Program Counter mit beliebigen Speicheradressen belegt werden, wodurch dann auch Programmschleifen möglich werden.</li>
+<li>Nach der Fetch-Phase folgt die <strong>Execution-Phase</strong> mit der eigentlichen Befehlsausführung und ggf. Speicherung der Ergebnisse im Arbeitsspeicher.</li>
+</ol>
+<p>Die Maschinenbefehle eines Programms werden also im Wechsel von Fetch- und Execution-Phasen ausgeführt, wobei diese Phasen bei realen CPUs deutlich komplizierter sind. So müssen häufig Adressberechnungen durchgeführt werden, oder es handelt sich um indirekte Adressen, die bei einem Befehl angegeben sind; d.h., dass der Inhalt einer Speicherzelle erst die Adresse der eigentlichen Operanden enthält.</p>
+<p>Die Zeit für die Befehlsausführung ist bei den heutigen Prozessoren sehr gering im Vergleich zu Zugriffszeiten auf den Arbeitsspeicher. Daher spricht man bei der Kommunikation zwischen Prozessor und Arbeitsspeicher vom sogenannten “<strong>von-Neumann Flaschenhals</strong>”. Zur Verbesserung dieser Situation werden heutzutage eine Reihe von architektonischen Maßnahmen ergriffen, wie z.B. schneller Cache-Speicher für wiederholte Speicherzugriffe.</p>
+<p><em>Wesentliche Eigenschaften des <strong>Operationsprinzips</strong> eines von-Neumann Rechners</em>:</p>
+<ul>
+<li>Alle Speicherworte können als Verarbeitungsdaten, Adressen oder Maschinenbefehle interpretiert werden. Die Verwendung und der Typ von Speicherworten (insbesondere der Typ von Daten) richtet sich nach dem jeweiligen Kontext des laufenden Programms oder dem Zustand, in dem sich der Rechner befindet.</li>
+<li>Programmdaten und Verarbeitungsdaten werden <strong>gemeinsam</strong> in einem Speicher abgelegt. Hierdurch können z.B. Übersetzerprogramme (Compiler, Assembler) andere Programme als Daten erzeugen und in den Arbeitsspeicher ablegen. Jedoch können Daten durch dieses Prinzip nur schwer vor unberechtigtem Zugriff durch Programme geschützt werden.</li>
+<li>Die Struktur eines zu bearbeitenden Problems wird bei der von-Neumann Architektur in einem Programm und nicht in der Hardware abgebildet, d.h. die Rechnerarchitektur ist im Wesentlichen unabhängig von der Art der zu bearbeitenden Aufgabe. Dies ist sicherlich eine herausragende Eigenschaft, die dafür gesorgt hat, dass dieser Rechnertyp von der Grundidee auch heute noch dominiert. Gleichartige Rechner, wie Personal Computer, können in hohen Stückzahlen günstig produziert werden und durch entsprechende Programme für die unterschiedlichsten Problembehandlungen universell eingesetzt werden.</li>
+</ul>
+<h2 id="übung">Übung</h2>
+<p>Als Beispiel für die Verarbeitung von Maschinenbefehlen betrachte man die Addition von einzugebenden Zahlen in einer Schleife, bis eine Null eingegeben wird und dann das Ergebnis der bis dahin addierten Zahlen ausgegeben wird.</p>
+<p>Ein fiktiver Modellrechner soll u.a. über folgende mnemonischen Befehle verfügen:</p>
+
+<table>
+<thead>
+<tr>
+<th align="center"><strong>Befehl</strong></th>
+<th align="left"><strong>Beschreibung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>CLA</code></td>
+<td align="left">(Clear Accu) Setzt den Akkumulatorinhalt auf 0 zurück.</td>
+</tr>
+<tr>
+<td align="center"><code>INA</code></td>
+<td align="left">(Input Accu) Liest einen Wert in den Akkumulator ein.</td>
+</tr>
+<tr>
+<td align="center"><code>OUT</code></td>
+<td align="left">(Output Accu) Gibt den Wert des Akkumulators aus.</td>
+</tr>
+<tr>
+<td align="center"><code>ADD (addr)</code></td>
+<td align="left">addiert den Inhalt der Speicherzelle, die durch die Adresse <code>addr</code> angesprochen wird, zum Inhalt des Akkumulators und legt das Ergebnis im Akkumulator ab.</td>
+</tr>
+<tr>
+<td align="center"><code>STR (addr)</code></td>
+<td align="left">(Store) speichert den Akkumulatorinhalt im Arbeitsspeicher an die Stelle <code>addr</code></td>
+</tr>
+<tr>
+<td align="center"><code>SKP (addr)</code></td>
+<td align="left">springt unbedingt zur Adresse <code>addr</code></td>
+</tr>
+<tr>
+<td align="center"><code>SKZ (addr)</code></td>
+<td align="left">springt zur Adresse <code>addr</code>, wenn Akkumulatorinhalt 0 ist, sonst wird der nächste Befehl ausgeführt.</td>
+</tr>
+<tr>
+<td align="center"><code>HLT</code></td>
+<td align="left">(halt) Programmende</td>
+</tr>
+</tbody>
+</table></div>
+</body>
+
+</html>
