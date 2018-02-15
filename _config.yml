@@ -25,7 +25,8 @@ show_downloads: "true"
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-leap-day
+#theme: jekyll-theme-leap-day
+remote_theme: jekyll-materialize-starter-template
 plugins:
   - jekyll-feed
 
