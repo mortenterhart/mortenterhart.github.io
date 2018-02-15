@@ -9,14 +9,14 @@
 </head>
 
 <body class="stackedit">
-  <div class="stackedit__html"><h1 id="rechnertechnik">Rechnertechnik</h1>
+  <div class="stackedit__html"><h1 id="darstellungen-von-daten-und-rechenoperationen">Darstellungen von Daten und Rechenoperationen</h1>
 <p><em>aus der Vorlesung Rechnertechnik vom 15.02.2018</em></p>
 <hr>
 <h2 id="bearbeitung-der-übung">Bearbeitung der Übung</h2>
-<p>Lösung aus der Vorlesung:</p>
+<p><em>Lösung aus der Vorlesung</em>:</p>
 <pre class=" language-assembly"><code class="prism  language-assembly"> 1:  CLA;       # Setze Akku zu 0.
  2:  STR 4711;  # Speichere Akku-Inhalt an Adresse 4711.
- 3:  INA        # Lese Zahl in Akku.
+ 3:  INA;       # Lese Zahl in Akku.
  4:  SKZ 8:;    # Falls Akku = 0, springe zu 8:
  5:  ADD(4711); # Addiere Inhalt von Adresse 4711 zu Akku
  6:  STR 4711;  # Speichere Akku-Inhalt an Adresse 4711.
@@ -25,7 +25,7 @@
  9:  OUT;       # Gebe die Summe aus.
 10:  HLT;       # (halt) Stoppe die Ausführung.
 </code></pre>
-<p>Optimierte Version (powered by Fabian):</p>
+<p><em>Optimierte Version (powered by Fabian)</em>:</p>
 <pre class=" language-assembly"><code class="prism  language-assembly">def     sum = 4711
 
         INA;
