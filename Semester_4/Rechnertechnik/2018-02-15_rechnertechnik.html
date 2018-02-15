@@ -186,10 +186,10 @@ z_d = \sum_{i = 0}^{n - 1} \; z_i b^i.
     return "<span class=\"inline-equation\">" +
            katex.renderToString(tex) +
            "</span>";
+	});
   } catch(error) {
       console.log(error);
   }
-});
 
 $("script[type='math/tex; mode=display']").replaceWith(
   function(){
