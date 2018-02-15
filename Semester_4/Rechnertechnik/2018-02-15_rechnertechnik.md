@@ -148,3 +148,6 @@ In allen Zahlensystemen lassen sich die Operationen Addition, Subtraktion, Multi
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbMTM0NDI0ODA1XX0=
 -->
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTk2NzA4OTc4NV19
+-->
