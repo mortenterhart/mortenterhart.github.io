@@ -13,7 +13,7 @@ Das NUCA-Modell kommt bei nachrichtengekoppelten Multiprozessoren am häufigsten
 Sind die Prozessoren gleichartig, so spricht man von **homogenen** Multiprozessorsystemen, ansonsten von **inhomogenen** Multiprozessoren.
 
 ## Die von-Neumann Architektur
-Die von Neumann Architektur ist eine Rechnerarchitektur mit minimalem Hardware-Aufwand; sie besteht aus folgenden Komponenten:
+Die von-Neumann Architektur ist eine Rechnerarchitektur mit minimalem Hardware-Aufwand; sie besteht aus folgenden Komponenten:
 
 * Hauptspeicher (_Main Memory_) oder Arbeitsspeicher (_Working Memory_) zum Speichern von Daten und Befehlen.
 * Befehlsprozessor (_Instruction Processor_) mit Steuerwerk (_Control Unit_ (CU)) zur Dekodierung (Interpretation, Entschlüsselung) der Maschinenbefehle und zur Erzeugung von Steuersignalen zur Steuerung anderer Komponenten
