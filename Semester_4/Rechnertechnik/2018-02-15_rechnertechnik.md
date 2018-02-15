@@ -1,14 +1,10 @@
----
-title: Rechnertechnik 15.02.2018
-permalink: Semester_4/Rechnertechnik/2018-02-15_rechnertechnik
----
-# Rechnertechnik
+# Darstellungen von Daten und Rechenoperationen
 _aus der Vorlesung Rechnertechnik vom 15.02.2018_
 
 ---
 
 ## Bearbeitung der Übung
-Lösung aus der Vorlesung:
+_Lösung aus der Vorlesung_:
 ```assembly
  1:  CLA;       # Setze Akku zu 0.
  2:  STR 4711;  # Speichere Akku-Inhalt an Adresse 4711.
@@ -22,7 +18,7 @@ Lösung aus der Vorlesung:
 10:  HLT;       # (halt) Stoppe die Ausführung.
 ```
 
-Optimierte Version (powered by Fabian):
+_Optimierte Version (powered by Fabian)_:
 ```assembly
 def     sum = 4711
 
@@ -70,6 +66,7 @@ $\Rightarrow$ 2 Zustände $\rightarrow$ binäre Zustände
 Ein **Maschinenwort** ist eine geordnete endliche Folge von Binärzeichen, die ein Element aus einer Menge von Daten kodiert.
 
 _Gängige Wortlängen sind_:
+
 | **Wortlänge** |  **Abkürzung**  |
 |:-------------:|:---------------:|
 |      1        |       Bit       |
@@ -80,6 +77,7 @@ _Gängige Wortlängen sind_:
 Als Zählereinheit für die Größe eines Speichers werden in der Regel Byte, Wort (2 Byte) oder Doppelwort (4 Byte) verwendet.
 
 _Die Zählereinheiten werden mit Vorfaktoren versehen_:
+
 | **Vorfaktor-Abkürzung** |        **Faktor**              | **dezimale Größenordnung** |
 |:----:|:---------:|:-----------:|
 | k (kilo)| $2^{10} = 1\,024$ | Tausend $10^3$ |
@@ -144,5 +142,5 @@ $\quad \ = 2629$
 
 In allen Zahlensystemen lassen sich die Operationen Addition, Subtraktion, Multiplikation und Division mit dem vom Dezimalsystem bekannten Verfahren ausführen, d.h. stellenweises Rechnen mit Überträgen und Borger.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4NzU1ODkyMV19
+eyJoaXN0b3J5IjpbMTM0NDI0ODA1XX0=
 -->
