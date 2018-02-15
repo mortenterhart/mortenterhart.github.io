@@ -177,3 +177,20 @@ z_d = \sum_{i = 0}^{n - 1} \; z_i b^i.
 <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"></mspace><mtext>&nbsp;</mtext><mo>=</mo><mn>2</mn><mn>6</mn><mn>2</mn><mn>9</mn></mrow><annotation encoding="application/x-tex">\quad \ = 2629</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.64444em;"></span><span class="strut bottom" style="height: 0.64444em; vertical-align: 0em;"></span><span class="base"><span class="mrel"><span class="mspace quad"></span><span class="mspace">&nbsp;</span><span class="mrel">=</span></span><span class="mord mathrm">2</span><span class="mord mathrm">6</span><span class="mord mathrm">2</span><span class="mord mathrm">9</span></span></span></span></span></p>
 <p>In allen Zahlensystemen lassen sich die Operationen Addition, Subtraktion, Multiplikation und Division mit dem vom Dezimalsystem bekannten Verfahren ausführen, d.h. stellenweises Rechnen mit Überträgen und Borger.</p>
 
+<script type="text/javascript">
+	$("script[type='math/tex']").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<span class=\"inline-equation\">" +
+           katex.renderToString(tex) +
+           "</span>";
+});
+
+$("script[type='math/tex; mode=display']").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<div class=\"equation\">" +
+           katex.renderToString("\\displaystyle "+tex) +
+           "</div>";
+});
+</script>
