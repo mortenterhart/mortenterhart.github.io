@@ -1,3 +1,7 @@
+---
+title: Rechnertechnik 13.02.2018
+permalink: Semester_4/Rechnertechnik/2018-02-13_rechnertechnik_md
+---
 # Multiprozessoren und die von-Neumann Architektur
 _aus der Vorlesung Rechnertechnik vom 13.02.2018_
 
