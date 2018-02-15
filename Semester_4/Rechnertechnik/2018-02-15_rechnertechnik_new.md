@@ -8,7 +8,7 @@ Lösung aus der Vorlesung:
 ```assembly
  1:  CLA;       # Setze Akku zu 0.
  2:  STR 4711;  # Speichere Akku-Inhalt an Adresse 4711.
- 3:  INA        # Lese Zahl in Akku.
+ 3:  INA;       # Lese Zahl in Akku.
  4:  SKZ 8:;    # Falls Akku = 0, springe zu 8:
  5:  ADD(4711); # Addiere Inhalt von Adresse 4711 zu Akku
  6:  STR 4711;  # Speichere Akku-Inhalt an Adresse 4711.
@@ -140,5 +140,5 @@ $\quad \ = 2629$
 
 In allen Zahlensystemen lassen sich die Operationen Addition, Subtraktion, Multiplikation und Division mit dem vom Dezimalsystem bekannten Verfahren ausführen, d.h. stellenweises Rechnen mit Überträgen und Borger.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2Mjc4MDE0Nl19
+eyJoaXN0b3J5IjpbLTQ4NzU1ODkyMV19
 -->
