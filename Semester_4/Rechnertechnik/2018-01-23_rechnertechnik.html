@@ -1,0 +1,389 @@
+---
+title: Rechnertechnik 23.01.2018
+permalink: Semester_4/Rechnertechnik/2018-01-23_rechnertechnik
+---
+      <h1 id="einführung">Einführung Rechnerarchitekturen</h1>
+<h2 id="rechnerarchitektur-begriffsbildung">Rechnerarchitektur, Begriffsbildung</h2>
+<p>Die Rechnerarchitektur wird durch die Aufbaustruktur der Hardware und das Operationsprinzip bestimmt. Hierbei legt das funktionelle Verhalten bei der Darstellung, der Speicherung und bei der Transformation von Informationen fest. Dies umfasst die Festlegung der Bedeutung von Kontrollstrukturen zur Programmausführung in der Hardware. Ein und dasselbe Operationsprinzip kann in verschiedenen Hardware-Strukturen realisiert werden. Beim Entwurf einer Rechnerarchitektur sollen u. a. folgende Anforderungen möglichst gut erfüllt werden:</p>
+<ul>
+<li>Leistung</li>
+<li>Ausfalltoleranz</li>
+<li>Erweiterbarkeit</li>
+<li>Benutzerfreundlichkeit</li>
+</ul>
+<p>Man unterscheidet grundsätzlich zwischen Universalrechnern und Spezialrechnern. Während bei der Konstruktion von Spezialrechnern bestimmte Ziele, z.B. die Leistung, besonders wichtig sind, werden Universalrechner so konstruiert, dass die oben genannten Anforderungen möglichst alle erfüllt sind und die Kosten minimiert werden.</p>
+<p>Die Leistung ist sicher ein wichtiges Ziel bei einer Rechnerarchitektur. Hierbei kann eine Forderung nach einer absoluten Leistung für Echtzeit-Aufgaben oder nach einer mittleren Leistung im Mehrbenutzerbetrieb eines Servers gestellt werden.</p>
+<p>Bei Super-Computern, die zur Lösung rechenintensiven Simulationsaufgaben eingesetzt werden, kannd ie Beachtung der Kosteneffektivität, d.h. die Leistung in Bezug auf die Kosten, oft in den Hintergrund gestellt werden. Eine Rechnerarchitektur sollte so konzipiert sein, dass sowohl die Rechenleistung erhöht, als auch neue Funktionen in einem Rechner integriert werden können (z.B. Steckkarten in PCs). Diese Forderung nach Erweiterbarkeit nennt man auch Skalierbarkeit (scalability).</p>
+<p>Bei Anfallstoleranz ist das Ziel, die Betriebsfähigkeit eines Rechners bei Aufall einzelner Komponent möglichst zu erhalten. Dabei kann die Leistung reduziert werden. Jedoch sollten die Rechenergebnisse bei Ausfall erhalten bleiben und besser noch auf einem nicht flüchtigen Speicher gerettet werden.</p>
+<p>Unter Ergonomie und Benutzerfreundlichkeit wird vor allem die Gestaltung der Benutzerschnittstellen durch Peripheriegeräte, z.B. Monitore, Tastaturen, Mäuse und auch Sprach-Ein- und Ausgabe-Systeme. Natürlich lassen sich mehrere Ziele gleichzeitig verfolgen, da sie voneinander stark entkoppelt sind. In welchem Maß einzelne Ziele verfolgt werden, wird durch eine entsprechende Kosten-Nutzen-Analyse bestimmt.</p>
+<p>Die Komponenten einer Rechnerarchitektur sind Hardware-Betriebsmittel, wie Prozessoren, Speicher und Kommunikationshardware (Busse). Wie in der Bauarchitektur gibt es auch in der Rechnerarchitektur Kommunikationsprinzipien, nach denen die Hardware-Betriebsmittel zu einer Rechnerarchitektur zusammengefügt werden.</p>
+<h2 id="teilgebiete-der-informatik-einordnung-der-rechnerarchitektur">Teilgebiete der Informatik: Einordnung der Rechnerarchitektur</h2>
+<p>Informatik (computer science) ist die Wissenschaft von der automatisierten Informationsverarbeitung. Die praktischen und theoretischen Aufgabengebiete lassen sich wie folgt beschreiben:</p>
+<ul>
+<li>Organisatorische, algorithmische und programmtechnische Realisierung von informationsverarbeitenden Prozessen</li>
+<li>Entwurf, (Realisierung), Inbetriebnahme und effektiverer Betrieb von Systemen zur Informationsverarbeitung</li>
+</ul>
+<p>Der Entwurf von Rechenrn kann hierbei eindeutig der Rechnerarchitektur zugeordnet werden. Die Informatik hat zwei Hauptgebiete, die Allgemeine Informatik (auch Kerninformatik) und die Angewandte Informatik. Die zwei Hauptgebiete unterteilen sich jeweils in weitere Teilgebiete und diese wiederum in Themenbereiche</p>
+<p>In diesem Umfeld gehört die Rechnerarchitektur zu den Grundlagenfächern der Technischen Informatik. Dabei nutzt die Rechnerarchitektur die Erkenntnisse und die entwickelten Komponenten (Hardware-Betriebsmittel) aus der Schaltungstechnik. Desweiteren ist für den Betrieb eines Rechners ein sogenanntes Betriebssystem erforderlich, welches an die Rechnerarchitektur angepasst ist. Architekturdetails für die den Benutzer unwichtig sind, bleiben dabei für den Benutzer transparent.</p>
+
+<table>
+<thead>
+<tr>
+<th>Hauptgebiet</th>
+<th>Teilgebiet</th>
+<th>Themenbereiche</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allgemeine Informatik</td>
+<td>Theoretische Informatik</td>
+<td>Theorie der Berechenbarkeit, Theorie der formalen Sprachen, Automatentheorie</td>
+</tr>
+<tr>
+<td></td>
+<td>Praktische Informatik</td>
+<td>Betriebssysteme, Compilerbau, Graphische Datenverarbeitung, Softwaretechnik</td>
+</tr>
+<tr>
+<td></td>
+<td>Technische Informatik</td>
+<td>Rechnerarchitektur, Prozessdatumverarbeitung, Schaltungstechnik</td>
+</tr>
+<tr>
+<td>Angewandte Informatik</td>
+<td>Wirtschaftsinformatik</td>
+<td>Informations- und Planungssysteme</td>
+</tr>
+<tr>
+<td></td>
+<td>Medizin-Informatik</td>
+<td>Dokumentation und Diagnose</td>
+</tr>
+<tr>
+<td></td>
+<td>Verwaltungs-Informatik</td>
+<td>Öffentliche Verwaltung</td>
+</tr>
+<tr>
+<td></td>
+<td>Produktions-Informatik</td>
+<td>Arbeitsplanung und Arbeitssteuerung, Qualitätssicherung</td>
+</tr>
+<tr>
+<td></td>
+<td>Linguistische Informatik</td>
+<td>Verarbeitung natürlicher Sprachen</td>
+</tr>
+<tr>
+<td></td>
+<td>Unterrichts-Informatik</td>
+<td>individuelles Lernen, Lernplattformen</td>
+</tr>
+<tr>
+<td></td>
+<td>Kultur-Informatik</td>
+<td>Unterhaltung, Kunst</td>
+</tr>
+<tr>
+<td></td>
+<td>Gesellschafts-Informatik</td>
+<td>Datenschutz, Computerkriminalität</td>
+</tr>
+</tbody>
+</table><h2 id="historische-entwicklung-von-rechnerarchitekturen">Historische Entwicklung von Rechnerarchitekturen</h2>
+<p>Nachfolgende Übersicht zeigt wie weit die Grundlagen auf deren heutige Rechner basieren zurückreichen und wie rasant die Entwicklung seit der Erfindung des ersten freiprogrammierbaren Rechners durch Konrad Zuse bis heute verlief.</p>
+
+<table>
+<thead>
+<tr>
+<th>Ursprünge</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ca. 5000 v. Chr.</td>
+<td>Zahlensysteme zum systematischen Rechnen</td>
+</tr>
+<tr>
+<td>(500-300) v. Chr.</td>
+<td>Entwicklung der Logik (Platon, Aristoteles)</td>
+</tr>
+<tr>
+<td>um 0</td>
+<td>Nutzung erster Automaten (z.B. Türöffner)</td>
+</tr>
+<tr>
+<td>110</td>
+<td>Dezimales Zahlensystem</td>
+</tr>
+<tr>
+<td>820</td>
+<td>Anfänge von Algebra und Algorithmik (Al Chwarizmi)</td>
+</tr>
+<tr>
+<td>1623</td>
+<td>Zahnradgetriebene Rechenmaschine (Schickard)</td>
+</tr>
+<tr>
+<td>1679</td>
+<td>Arbeit über das Rechnen mit Dualzahlen (Leibniz)</td>
+</tr>
+<tr>
+<td>1800</td>
+<td>Konzept einer digitalen programmgesteuerten Rechenmaschine (Babbage)</td>
+</tr>
+<tr>
+<td>1889</td>
+<td>Elektromagnetische Sortier- und Zählmaschine mit Lochkarten (Hollerith)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Moderne Informatik</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1941</td>
+<td>programmierbaren Rechner mit elektromechanischen Komponenten (Relais) mit Binärsystem und Gleitpunktarithmetik (Zuse)</td>
+</tr>
+<tr>
+<td>um 1949</td>
+<td>Berechenbarkeitsüberlegung (Turing)</td>
+</tr>
+<tr>
+<td>1946 - 1954</td>
+<td>Rechner der 1. Generation, Relais und Röhren</td>
+</tr>
+<tr>
+<td>ab 1953</td>
+<td>höhere Programmiersprache FORTRAN</td>
+</tr>
+<tr>
+<td>1955 - 1962</td>
+<td>Rechner der 2. Generation (Transitoren)</td>
+</tr>
+<tr>
+<td>ab 1959</td>
+<td>Entwicklng erster Betriebssysteme, Stapelverarbeitung, höhere Programmiersprachen COBOL, LISP</td>
+</tr>
+<tr>
+<td>1962 - 1976</td>
+<td>Rechner der 3. Generation mit integrierten Schaltungen</td>
+</tr>
+<tr>
+<td>1967</td>
+<td>Small Scale INtegration (SSI) ab 50 Transistoren pro Chip</td>
+</tr>
+<tr>
+<td>1971</td>
+<td>Medium Scale Integration (MSI) 500 Transistoren pro Chip</td>
+</tr>
+<tr>
+<td>bis 1976</td>
+<td>Large Scale Integration (LSI) mehrere Tausend Transistoren pro Chip</td>
+</tr>
+<tr>
+<td>ab 1970</td>
+<td>Super-Computer-Architekturen (CDC-Star-100, ILLIAC IV, CRAY-1)</td>
+</tr>
+<tr>
+<td>1965 - 1975</td>
+<td>Multiuser/Multiprogramming Betriebssysteme</td>
+</tr>
+<tr>
+<td></td>
+<td>Datenbanken</td>
+</tr>
+<tr>
+<td></td>
+<td>Software-Engineering</td>
+</tr>
+<tr>
+<td></td>
+<td>Höhere Programmiersprache C (1968, Richie)</td>
+</tr>
+<tr>
+<td></td>
+<td>Pascal (1971, Wirth)</td>
+</tr>
+<tr>
+<td></td>
+<td>Prolog (1972, Colmenhauer)</td>
+</tr>
+<tr>
+<td>1976 - 1982</td>
+<td>Rechner der 4. Generation, Very Large Scale Integration (VLSI) Hundertausend Transistoren pro Chip</td>
+</tr>
+<tr>
+<td></td>
+<td>Rechnernetze und verteilte Informationsverarbeitung</td>
+</tr>
+<tr>
+<td></td>
+<td>Personalcomputer (1980)</td>
+</tr>
+<tr>
+<td></td>
+<td>RISC-Konzepte (1981)</td>
+</tr>
+<tr>
+<td>ab 1982 bis heute</td>
+<td>Rechner 5. Generation</td>
+</tr>
+<tr>
+<td></td>
+<td>Ultra Large Scale Integration (ULSI), mehrere hundert Millionen Transistoren pro Chip</td>
+</tr>
+<tr>
+<td></td>
+<td>Client/Server Anwendungen</td>
+</tr>
+<tr>
+<td></td>
+<td>PCs Tablets Smartphones</td>
+</tr>
+<tr>
+<td></td>
+<td>Internet für alle / Multimedia</td>
+</tr>
+</tbody>
+</table><h2 id="klassifikation-von-rechnerarchitekturen">Klassifikation von Rechnerarchitekturen</h2>
+<p>Nach FLYNN kann eine allgemeine Klassifikation von Rechnerarchitekturen bezogen auf die Befehlsströme und die Datenströme vorgenommen werdne. Diese Klassifikation unterscheidet Rechner mit einem oder mehreren (multiplen) Befehlsströmen oder einen oder mehreren (multiplen) Datenströmen.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Ein Befehl zu einer Zeit bearbeiten</th>
+<th>Mehrer Befehle zu einer Zeit bearbeiten</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ein Datenwert zu einer Zeit bearbeiten</td>
+<td>Single Instruction Stream over Single Data Stream (SISD)</td>
+<td>Multiple Instruction Stream over Single Data Stream (MISD)</td>
+</tr>
+<tr>
+<td>Mehrere Datenwerte zu einer Zeit bearbeiten</td>
+<td>Single Instruction Stream over Multiple Data Stream (SIMD)</td>
+<td>Multiple Instruction Stream over Multiple Data Stream (MIMD)</td>
+</tr>
+</tbody>
+</table><ul>
+<li>
+<p>Die Klasse SISD-Rechner entspricht der klassischen Einprozessor von Neumann-Architekturen.</p>
+</li>
+<li>
+<p>Die Klasse MISD ist leer, da es kein Sinn macht mehrere Befehle auf einem Datenwert <strong>zu einer Zeit</strong> (gleichezeitig) auszuführen.</p>
+</li>
+<li>
+<p>Die Klasse SIMD umfasst die Feld- und Vektorrechner. Feldrechner bestehen aus einem Feld von regelmäßig miteinander verbunden Verarbeitungseinheiten, die unter Kontrolle durch eine zentrale Steuereinheit dieselbe MaschinenOperation auf verschiedenen Daten ausführen Feldrechner können sehr viele Verarbeitungseinheiten enthalten. Die einzelnen Verarbeitungseinheiten besitzen lokale Speicher und sind entweder vollständige Prozessoren, können aber auch nur einzelne Bit verarbeitende Schaltungen sein. Ein gesamtes über die Verarbeitungseinheiten verteiltes Datenfeld wird in eine der zulässigen Kommunikationsrichtungen verschoben. Die Verbindungsstruktur ist ein Gitter mit vier oder acht Verbindungen zu jeweils den nächsten Nachbarnoten. Die Kommunikationsrichtungen heißen em anch Nord, Süd, Ost und West bei vier Kommunikationsrichtungen und zusätzlich Nord-Ost, Süd-West, Süd-Ost, Nord-West bei acht Kommunikationsrichtungen. Die Anwendung von Feldrechnern erfolgt bei speziellen Problemen, z.B. bei Signal- und Bildverarbeitung, allgemein dann wenn die Daten in Matrixform vorliegen. Beispiel für Feldrechner sind der historische ILLIAC IV mit 64 Prozessoren, die heutigen Rechner Connection Machines Typ CM-1, CM-2, CM-200, der DAP (distributed array processor) der englsichen Firma ICL und die Rechner MP-1, MP-2 der Firma MasPar.</p>
+<p>Bei einem Vektorrechner hat das Rechnerwerk mehrere arithmetische Funktionseinheiten, die nach dem Fließbandprinzip (Pipelining) mehrere Gleitpunktzahlen bearbeiten. Dabei wird mit speziellen Maschinenbefehlen, dem sog. Vektorbefehlen i.d.R. ein Paar von Vektoren, d.h. z.B. 128 oder 256 Gleitpunktzahlen</p>
+<p>Das Grundprinzip des Pipelining ist, Operationen in Teiloperationen zu zerlegen, die dann gleichzeitig von mehreren Funktonseinheiten ausgeführt werden. Die Addition von zwei Gleitkommazahlen besteht aaus mehreren Schritten z.B.</p>
+<ol>
+<li>Zyklus - Gleitpunktzahlen in Register laden</li>
+<li>Zyklus - Exponenten der Zahlen vergleicehn und eine Mantisse so shiften, dass die Exponenten gleich werden</li>
+<li>Zyklus - Mantisse addieren</li>
+<li>Zyklus - Ergebnis normalisieren, d.h. Mantisse falls notwendig mit Änderung des Exponenten in die Form <a href="http://0.xxx">0.xxx</a> bringend</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h1 id="vorlesung-3">Vorlesung 3</h1>
+<p>Double-Darstellung im Intel-Format, 8 Byte:</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>±</mo></mrow><annotation encoding="application/x-tex">\pm</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.58333em;"></span><span class="strut bottom" style="height: 0.66666em; vertical-align: -0.08333em;"></span><span class="base"><span class="mord">±</span></span></span></span></span></th>
+<th>52 Bit - <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mrow><mn>5</mn><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2^{52}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.814108em;"></span><span class="strut bottom" style="height: 0.814108em; vertical-align: 0em;"></span><span class="base"><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">5</span><span class="mord mathrm mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></span></th>
+<th><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>±</mo></mrow><annotation encoding="application/x-tex">\pm</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.58333em;"></span><span class="strut bottom" style="height: 0.66666em; vertical-align: -0.08333em;"></span><span class="base"><span class="mord">±</span></span></span></span></span></th>
+<th>10 Bit - <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mrow><mn>1</mn><mn>0</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2^{10}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.814108em;"></span><span class="strut bottom" style="height: 0.814108em; vertical-align: 0em;"></span><span class="base"><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">1</span><span class="mord mathrm mtight">0</span></span></span></span></span></span></span></span></span></span></span></span></span></th>
+<th></th>
+</tr>
+</thead>
+<tbody></tbody>
+</table><p>Dezimal: <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>±</mo><msup><mn>2</mn><mrow><mn>5</mn><mn>2</mn></mrow></msup><mo>=</mo><mo>±</mo><mo>…</mo><mo>⋅</mo><mn>1</mn><msup><mn>0</mn><mrow><mn>1</mn><mn>5</mn></mrow></msup><mtext>&nbsp;</mtext><mtext>&nbsp;</mtext><mo>⋅</mo><mn>1</mn><msup><mn>0</mn><mrow><mo>±</mo><mn>3</mn><mn>0</mn><mn>9</mn></mrow></msup></mrow><annotation encoding="application/x-tex">\pm 2^{52} = \pm \ldots \cdot 10^{15}\ \ \cdot 10^{\pm309}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.814108em;"></span><span class="strut bottom" style="height: 0.897438em; vertical-align: -0.08333em;"></span><span class="base"><span class="mord">±</span><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">5</span><span class="mord mathrm mtight">2</span></span></span></span></span></span></span></span></span><span class="mrel">=</span><span class="mord">±</span><span class="minner">…</span><span class="mbin">⋅</span><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">1</span><span class="mord mathrm mtight">5</span></span></span></span></span></span></span></span></span><span class="mbin"><span class="mspace">&nbsp;</span><span class="mspace">&nbsp;</span><span class="mbin">⋅</span></span><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">±</span><span class="mord mathrm mtight">3</span><span class="mord mathrm mtight">0</span><span class="mord mathrm mtight">9</span></span></span></span></span></span></span></span></span></span></span></span></span><br>
+D.h. 15 Dezimalstellen signifikant (Mantisse).</p>
+<hr>
+<p>Wenn jeder dieser Schritte in einem Zyklus ausgeführt wird, sind für jede Gleitkommaaddition vier Zyklen notwendig.<br>
+Beim Pipelining wird für jeden Zyklus der Kleitpunktaddition eine eigene Hardware-Einheit angelegt, wobei die einzelnen Einheiten aufeinanderfolgende Stufen in einer Pipeline bilden. Dabei wird Ausführung eines Teilschritts, also nach jedem Zyklus, das Resultat in die nächste Stufe weitergegeben.</p>
+<p>In jedem Zyklus wird also ein “neues” Zahlenpaar <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mrow><mo>(</mo><mi>i</mi><mo>)</mo></mrow></msub><mo separator="true">,</mo><msub><mi>B</mi><mrow><mo>(</mo><mi>i</mi><mo>)</mo></mrow></msub></mrow><annotation encoding="application/x-tex">A_{(i)}, B_{(i)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.68333em;"></span><span class="strut bottom" style="height: 1.03853em; vertical-align: -0.3552em;"></span><span class="base"><span class="mord"><span class="mord mathit">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.3448em;"><span class="" style="top: -2.5198em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathit mtight">i</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.3552em;"></span></span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right: 0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.3448em;"><span class="" style="top: -2.5198em; margin-left: -0.05017em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathit mtight">i</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.3552em;"></span></span></span></span></span></span></span></span></span> in die Papeline geladen. Obwohl die einzelne Gleitkommaaddition viel Zyklen dauert, wird nach der Anlaufzeit namens <strong>pipeline startup time</strong> von vier Zyklen nach jedem weiteren Zyklus ein Additionsergebnis festgestellt.</p>
+
+<table>
+<thead>
+<tr>
+<th align="right"></th>
+<th align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>Z</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">Z_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.68333em;"></span><span class="strut bottom" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right: 0.07153em;">Z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: -0.07153em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"></span></span></span></span></span></span></span></span></span></th>
+<th align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>Z</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">Z_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.68333em;"></span><span class="strut bottom" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right: 0.07153em;">Z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: -0.07153em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"></span></span></span></span></span></span></span></span></span></th>
+<th align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>Z</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">Z_3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.68333em;"></span><span class="strut bottom" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right: 0.07153em;">Z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: -0.07153em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"></span></span></span></span></span></span></span></span></span></th>
+<th align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>Z</mi><mn>4</mn></msub></mrow><annotation encoding="application/x-tex">Z_4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.68333em;"></span><span class="strut bottom" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right: 0.07153em;">Z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: -0.07153em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">4</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"></span></span></span></span></span></span></span></span></span></th>
+<th align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>Z</mi><mn>5</mn></msub></mrow><annotation encoding="application/x-tex">Z_5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.68333em;"></span><span class="strut bottom" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right: 0.07153em;">Z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: -0.07153em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">5</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"></span></span></span></span></span></span></span></span></span></th>
+<th align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>Z</mi><mn>6</mn></msub></mrow><annotation encoding="application/x-tex">Z_6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.68333em;"></span><span class="strut bottom" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right: 0.07153em;">Z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: -0.07153em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">6</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"></span></span></span></span></span></span></span></span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">Laden</td>
+<td align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>1</mn></msub><msub><mi>B</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">A_1 B_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.68333em;"></span><span class="strut bottom" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"></span></span></span></span></span><span class="mord"><span class="mord mathit" style="margin-right: 0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: -0.05017em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"></span></span></span></span></span></span></span></span></span></td>
+<td align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>2</mn></msub><msub><mi>B</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">A_2 B_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.68333em;"></span><span class="strut bottom" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"></span></span></span></span></span><span class="mord"><span class="mord mathit" style="margin-right: 0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: -0.05017em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"></span></span></span></span></span></span></span></span></span></td>
+<td align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>…</mo></mrow><annotation encoding="application/x-tex">\ldots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.12em;"></span><span class="strut bottom" style="height: 0.12em; vertical-align: 0em;"></span><span class="base"><span class="minner">…</span></span></span></span></span></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="right">Exponenten angleichen</td>
+<td align="center"></td>
+<td align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>1</mn></msub><msub><mi>B</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">A_1 B_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.68333em;"></span><span class="strut bottom" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"></span></span></span></span></span><span class="mord"><span class="mord mathit" style="margin-right: 0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: -0.05017em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"></span></span></span></span></span></span></span></span></span></td>
+<td align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>2</mn></msub><msub><mi>B</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">A_2 B_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.68333em;"></span><span class="strut bottom" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"></span></span></span></span></span><span class="mord"><span class="mord mathit" style="margin-right: 0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: -0.05017em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"></span></span></span></span></span></span></span></span></span></td>
+<td align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>…</mo></mrow><annotation encoding="application/x-tex">\ldots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.12em;"></span><span class="strut bottom" style="height: 0.12em; vertical-align: 0em;"></span><span class="base"><span class="minner">…</span></span></span></span></span></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="right">Mantissen angleichen</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>1</mn></msub><msub><mi>B</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">A_1 B_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.68333em;"></span><span class="strut bottom" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"></span></span></span></span></span><span class="mord"><span class="mord mathit" style="margin-right: 0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: -0.05017em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"></span></span></span></span></span></span></span></span></span></td>
+<td align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>2</mn></msub><msub><mi>B</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">A_2 B_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.68333em;"></span><span class="strut bottom" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"></span></span></span></span></span><span class="mord"><span class="mord mathit" style="margin-right: 0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: -0.05017em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"></span></span></span></span></span></span></span></span></span></td>
+<td align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>…</mo></mrow><annotation encoding="application/x-tex">\ldots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.12em;"></span><span class="strut bottom" style="height: 0.12em; vertical-align: 0em;"></span><span class="base"><span class="minner">…</span></span></span></span></span></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="right">Ergebnis normalisieren</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>1</mn></msub><msub><mi>B</mi><mn>1</mn></msub><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">A_1 B_1 = 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.68333em;"></span><span class="strut bottom" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"></span></span></span></span></span><span class="mord"><span class="mord mathit" style="margin-right: 0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: -0.05017em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"></span></span></span></span></span><span class="mrel">=</span><span class="mord mathrm">1</span></span></span></span></span></td>
+<td align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>2</mn></msub><msub><mi>B</mi><mn>2</mn></msub><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">A_2 B_2 = 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.68333em;"></span><span class="strut bottom" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"></span></span></span></span></span><span class="mord"><span class="mord mathit" style="margin-right: 0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: -0.05017em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"></span></span></span></span></span><span class="mrel">=</span><span class="mord mathrm">2</span></span></span></span></span></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table><p>Der Beschleunigungsfaktor der durch das Pipelining erreicht werden kann, nähert sich für lange Vektoren der Anzahl der Pipeline-Stufen (hier vierfache Beschleunigung).</p>
+<p>Architekturen der <strong>MIMD</strong>-Klasse bezeichnet man als Multiprozessorsysteme oder kurz als Multiprozessoren. Im Unterschied zu Feldrechnern können die einzelnen Prozessoren eines Multiprozessorsystems unabhängig voneinander programmiert werden; sie können Teilaufgaben einer übergeordneter Aufgabe bearbeiten. Um die parallel zu bearbeitenden Teilaufgaben miteinander abzustimmen und den Arbeitsfortschritt zu kontrollieren, ist Kommunikation und Synchronisation durch Austausch von Daten und Steuersignalen zwischen den Prozessoren erforderlich.</p>
+<p>Je nach Art der Prozessorkopplung unterscheidet man zwischen speichergekoppelten und nachrichtengekoppelten Multiprozessorsystemen. Bei speichergekoppelten Multiprozessoren besitzen alle Prozessoren einen gemeinsamen Adressraum. Kommunikation und Synchronisation erfolgt über gemeinsame Variablen. Die Prozessoren sind mit einem globalen Speicher, meist über einen Bus direkt verbunden.</p>
+<p>Eine andere Möglichkeit für speichergekoppelte Multiprozessoren sind die Distributed-Shared-Memory-Multiprozessoren (DSM-Systeme) der Prozessoren alle über den gleichen logischem Adressraum verfügbar, wobei der Speicher jedoch physikalisch auf die einzelnen Prozessoren verteilt ist.</p>
+<p>Mit diesem Konzept soll die unberenzte Skalierbarkeit eines nachrichtengekoppelten Multiprozessors mit der einfacheren Programmierung eines speichergekoppelten Multiprozessorsystems kombiniert werden. Dabei ist zu beachten, dass der Datenzugriff eines Prozessors auf dem für ihn lokalen Speicher schneller erfolgt als auf für ihn entfernten Speicher.</p>
+<p><strong>Nachrichtengekoppelte</strong> Multiprozessorsysteme haben keine gemeinsame Speicherbereiche. Die Adressräume sind zu den Prozessoren lokal. Die Kommunikation geschieht durch Austausch von Nachrichten über ein Verbindungsnetz. Synchronistation erfolgt implizit durch Kommunikation.</p>
+
+<p>Wesentliches Kriterium für die Klassifizierung als <strong>speichergekoppeltes</strong> Multiprozessorsystem ist das Vorhandensein eines <strong>gemeinsamen Adressraums</strong>.</p>
+<p>Bei speichergekoppelten Multiprozessoren werden bezüglich der Zugriffszeiten auf dem Speicher folgende Typen unterscheiden:</p>
+<ul>
+<li>
+<p>Uniform Memory Access (UMA): Die Zugriffszeit auf dem Speicher ist für alle Prozessoren gleich. Jeder Prozessor kann zusätzlich lokalen Cache-Speicher besitzen.<br>
+Symmetrische Multiprozessoren sind UMA-Systeme.</p>
+</li>
+<li>
+<p>Non Uniform Memory Access (NUMA): Die Zugriffzeiten der Prozessoren auf den gemeinsamen Speicher variieren je nach Ort, an dem sich die Speicherzelle befindet. Die Speichermodule des gemeinsamen Speichers sind physikalisch auf die Prozessoren verteilt. Der Zugriff auf lokale Module geht schneller als auf räumlich entfernte Module.<br>
+DSM-Multiprozessoren sind NUMA-Systeme.</p>
+</li>
+</ul>
