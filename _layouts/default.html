@@ -26,7 +26,6 @@
         <span id="logo"></span>
 
         <a href="{{ site.github.repository_url }}" class="button fork"><strong>View On GitHub</strong></a>
-	{% include nav-breadcrumbs.html %}
         {% if site.show_downloads %}
           <div class="downloads">
             <span>Downloads:</span>
@@ -47,6 +46,7 @@
 
       </section>
       <footer>
+	{% include nav-breadcrumbs.html %}
         {% if site.github.is_project_page %}
           <p>Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         {% endif %}
