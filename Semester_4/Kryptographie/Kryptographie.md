@@ -3,7 +3,7 @@ title: Kryptographie
 permalink: Semester_4/Kryptographie
 ---
 ## Skript
-[Skript Kryptographie (PDF)](Kryptographie/kryptographie_skript.pdf)
+[Skript Kryptographie (PDF)](Kryptographie/script/kryptographie_skript.pdf)
 
 ## Vorlesungen Kryptographie
 * [Vorlesung 22.01.2018](Kryptographie/2018-01-22_kryptographie)
