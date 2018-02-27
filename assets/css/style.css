@@ -3,6 +3,6 @@
 ---
 
 /* Import Sass partials  */
-@import "{{ site.theme }}"
-@import "css/KatexSpaces"
+@import "{{ site.theme }}";
+@import "css/KatexSpaces";
 
