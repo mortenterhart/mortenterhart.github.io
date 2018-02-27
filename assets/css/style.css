@@ -3,6 +3,10 @@
 
 @import "{{ site.theme }}";
 
-.mrel::before, ,mrel::after {
+.mrel {
+    color: red;
+}
+
+.mrel::before, .mre::after {
     content: "&nbsp;";
 }
