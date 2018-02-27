@@ -1,0 +1,8 @@
+---
+# Main CSS file
+---
+
+/* Import Sass partials  */
+@import "{{ site.theme }}"
+@import "css/KatexSpaces"
+
