@@ -1,0 +1,8 @@
+---
+---
+
+$katex_forced_space = "&nbsp;"
+
+.mrel::before, .mrel::after {
+    content: $katex_forced_space
+}
