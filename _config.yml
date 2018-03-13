@@ -30,6 +30,12 @@ theme: jekyll-theme-leap-day
 plugins:
   - jekyll-feed
 
+# Set SASS converter options
+sass:
+    sass_dir: _sass
+    style: compressed
+
+# Breadcrumbs plugin
 breadcrumbs:
   root:
     hide: false  # show breadcrumbs on root/home page
