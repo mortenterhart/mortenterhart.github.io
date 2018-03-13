@@ -1,9 +1,0 @@
----
-# Main CSS file
----
-
-/* Import Sass partials  */
-@import "{{ site.theme }}";
-@import "katexSpaces";
-@import "mermaid";
-

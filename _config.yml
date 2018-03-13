@@ -23,6 +23,9 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  mortenterhart
 show_downloads: "false"
 highlighter: rouge
+repository: mortenterhart/mortenterhart.github.io
+
+exclude: ['path']
 
 # Build settings
 markdown: kramdown
