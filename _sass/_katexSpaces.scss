@@ -2,7 +2,7 @@
 // or 'mbin' are separated from operands with a single space. Otherwise they
 // are way too near to each other and it is difficult to read.
 
-$forced_space = " "
+$forced_space: " ";
 
 .mrel::before, .mrel::after, .mbin::before, .mbin::after, .mpunct::after {
     content: $forced_space;
