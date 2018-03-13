@@ -5,20 +5,21 @@ var lineNumbersClass = 'line-numbers';
 var preTags = document.getElementsByTagName('pre');
 
 function tagContainsCode(tag) {
-    for (const className in tag.classList) {
-        if (className.match(/language-.*/)) {
+    var classIndex = 0;
+    while (tag.classList.item(classIndex) != null) {
+        if (className.item(classIndex).match(/language-.*/)) {
             return true;
         }
+        classIndex++;
     }
     return false;
 }
 
-for (const tag in preTags) {
-    console.log('Found pre tag');
-    console.log(tag);
-    console.log(tag.classList);
+var listIndex = 0;
+while (preTags.item(listIndex) != null) {
+    const tag = preTags.item(listIndex);
     if (tagContainsCode(tag)) {
-        console.log('Adding class line-numbers to ' + tag);
         tag.classList.add(lineNumbersClass);
     }
+    listIndex++;
 }
