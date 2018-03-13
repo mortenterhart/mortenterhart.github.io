@@ -4,10 +4,11 @@
 var lineNumbersClass = 'line-numbers';
 var preTags = document.getElementsByTagName('pre');
 
-function tagContainsCode(tag) {
+function checkTagHasLanguageClass(tag) {
     var classIndex = 0;
-    while (tag.classList.item(classIndex) != null) {
-        if (className.item(classIndex).match(/language-.*/)) {
+    while (tag.classList.item(classIndex) !== null) {
+        const className = tag.classList.item(classIndex);
+        if (className.match(/language-.*/)) {
             return true;
         }
         classIndex++;
@@ -16,9 +17,9 @@ function tagContainsCode(tag) {
 }
 
 var listIndex = 0;
-while (preTags.item(listIndex) != null) {
+while (preTags.item(listIndex) !== null) {
     const tag = preTags.item(listIndex);
-    if (tagContainsCode(tag)) {
+    if (checkTagHasLanguageClass(tag)) {
         tag.classList.add(lineNumbersClass);
     }
     listIndex++;
