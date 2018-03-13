@@ -12,8 +12,6 @@
     <!-- Include KaTeX -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha384-TEMocfGvRuD1rIAacqrknm5BQZ7W7uWitoih+jMNFXQIbNl16bO8OZmylH/Vi/Ei" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js" integrity="sha384-jmxIlussZWB7qCuB+PgKG1uLjjxbVVIayPJwi6cG6Zb4YKq0JIw+OMnkkEC7kYCq" crossorigin="anonymous"></script>
-    <!-- Enable line numbers plugin of Prism.js -->
-    <script type="text/javascript" src="{{ '/assets/scripts/insertLineNumbers.js' | relative_url }}"></script>
     <!-- Include Prism JS -->
     <script type="text/javascript" src="{{ '/assets/scripts/prism.js' | relative_url }}" ></script>
     <!--[if lt IE 9]>
@@ -52,6 +50,13 @@
         {{ content }}
 
       </section>
+
+    <!-- Enable line numbers plugin of Prism.js by adding
+         the class 'line-numbers' to all <pre> boxes that contain
+         a 'language-*' class. This must stand below the contents
+         of the side because <pre> tags have to be loaded first -->
+    <script type="text/javascript" src="{{ '/assets/scripts/insertLineNumbers.js' | relative_url }}"></script>
+
       <footer>
         {% if site.github.is_project_page %}
           <p>Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
