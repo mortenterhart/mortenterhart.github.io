@@ -4,6 +4,6 @@
 
 /* Import Sass partials  */
 @import "{{ site.theme }}";
-@import "css/katexSpaces";
-@import "css/mermaid";
+@import "katexSpaces";
+@import "mermaid";
 
