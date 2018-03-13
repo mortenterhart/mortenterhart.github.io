@@ -14,6 +14,9 @@ function tagContainsCode(tag) {
 }
 
 for (const tag in preTags) {
+    console.log('Found pre tag');
+    console.log(tag);
+    console.log(tag.classList);
     if (tagContainsCode(tag)) {
         console.log('Adding class line-numbers to ' + tag);
         tag.classList.add(lineNumbersClass);
