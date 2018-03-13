@@ -299,5 +299,14 @@ x = m \cdot b^e \quad \text{mit} b \in \{2, 8, 16\} \text{und} e \in \mathbb{Z} 
 </table><p>Der EBCDIC-Code vereinfacht die Konvertierung von Zeichen zu Zahlen und umgekehrt.</p>
 <p>Der zweite wichtige Zeichencode ist der ASCII-Code (<strong>A</strong>merican <strong>S</strong>tandard <strong>C</strong>ode <strong>I</strong>nformation <strong>I</strong>nterchange). Hier sind <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>7</mn></mrow><annotation encoding="application/x-tex">7</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.64444em;"></span><span class="strut bottom" style="height: 0.64444em; vertical-align: 0em;"></span><span class="base"><span class="mord mathrm">7</span></span></span></span></span> Bit für die Unterscheidung von 128 Zeichen belegt. Das achte Bit wird als Prüfbit zur Fehlererkennung bei der Übertragung von Zeichen verwendet.</p>
 <h2 id="maschinenbefehle">Maschinenbefehle</h2>
-<p>Ein Maschinenbefehl “befiehlt” eine Operation an spezifizierten Daten, nämlich den sogenannten <strong>Operanden</strong>. Im Rechner wird ein Befehl in einem Befehlswort kodiert. Ein Befehlswort besteht aus einem Operationsteil und in der Regel aus einem oder mehreren Adressteilen. Bei den meisten Rechnerarchitekturen</p>
+<p>Ein Maschinenbefehl “befiehlt” eine Operation an spezifizierten Daten, nämlich den sogenannten <strong>Operanden</strong>. Im Rechner wird ein Befehl in einem Befehlswort kodiert. Ein Befehlswort besteht aus einem Operationsteil und in der Regel aus einem oder mehreren Adressteilen. Bei den meisten Rechnerarchitekturen ist die Länge der Befehlsworte, z.B. wegen unterschiedlicher Anzahl von Adressteilen, unterschiedlich. Üblich sind 1-, 2-, 4- und 6-Byte lange Befehlsworte.</p>
+<p>Die wichtigsten Operationsarten des binär kodierten Operationsteils sind:</p>
+<ul>
+<li>arithmetische Operationen: Addition, Multiplikation, Inkrement, Dekrement</li>
+<li>logische Operationen: <code>AND</code>, <code>OR</code>, <code>XOR</code>, <code>NOT</code></li>
+<li>Schiebeoperationen</li>
+<li>Transportoperationen zwischen Registern und Arbeitsspeichern</li>
+<li>I/O - Operationen</li>
+<li>Programmablaufoperationen: Sprünge, Unterbrechungsoperationen (Interrupts)</li>
+</ul>
 
