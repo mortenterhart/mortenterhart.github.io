@@ -186,7 +186,7 @@ $Y_B$ geht an Alice.
 
 $\rightarrow$ Da $K = K'$ (gleich), haben Bob und Alice einen gemeinsamen Sitzungsschlüssel.
 
-![Key-Exchange Method](https://i.imgur.com/rqGbwK3.jpg)
+![Key-Exchange Method](images/Key_Exchange_Method.svg)
 
 Es gilt:
 $K = Y_B^{X_A} \mod{q}$ (Alice)
