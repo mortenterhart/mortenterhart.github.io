@@ -1,0 +1,56 @@
+---
+title: Rechnertechnik 15.03.2018
+layout: default
+permalink: Semester_4/Rechnertechnik/2018-03-15_rechnertechnik
+
+---
+
+<h1 id="ausführungsphasen-eines-maschinenbefehls">Ausführungsphasen eines Maschinenbefehls</h1>
+<p><em>aus der Vorlesung Rechnertechnik vom 15.03.2018</em></p>
+<hr>
+<p>Nach den bisherigen Überlegungen kann die Ausführung eines Maschinenbefehls in folgende Zeitphasen unterteilt werden.</p>
+<ul>
+<li><code>F</code>: (Fetch) Befehlswort aus dem Speicher (RAM) in das Befehlsregister (<em>Instruction Register</em>) laden.</li>
+<li><code>D</code>: (Decode) Befehl dekodieren.</li>
+<li><code>X</code>  (Execute) Befehl ausführen (ggf. vorher Operanden aus dem Arbeitsspeicher in allgemeine Register laden).</li>
+<li><code>S</code>: (Store) Resultate / Ergebnisse speichern.</li>
+</ul>
+<p>Im Einzelnen sind innerhalb dieser Phasen folgende Schritte in der Ablaufsteuerung notwendig:</p>
+<p><code>F</code>: Befehlszähler in Adressregister übertragen, um den nächsten Befehl aus dem Speicher zu lesen.<br>
+<code>F</code>: Befehlszähler inkrementieren<br>
+<code>F</code>: Befehl in Befehlsregister laden<br>
+<code>D</code>: Befehl dekodieren zur Ausführung durch den Datenprozessor<br>
+<code>X</code>: Operandenadressen aus Befehlsregister in Adressregister übertragen und Operanden in allgemeine Register laden.<br>
+<code>X</code>: Berechnungen mit den Operanden durchführen<br>
+<code>S</code>: Ergebnisse speichern.</p>
+<p>Bei einem Sprungbefehl entfällt die <code>S</code>-Phase. Die <code>X</code>-Phase (Ausführungsphase) sieht bei einem bedingten Sprungbefehl wie folgt aus:<br>
+<code>X</code>: Überprüfung der Sprungbedingung<br>
+<code>X</code>: Bei Erfüllen der Bedingung <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.36687em;"></span><span class="strut bottom" style="height: 0.36687em; vertical-align: 0em;"></span><span class="base"><span class="mrel">→</span></span></span></span></span> Übertragung der Sprungadresse vom Befehlsregister in den Befehlszähler</p>
+<p>Bei einem unbedingten Sprungbefehl reduziert sich die <code>X</code>-Phase zu:<br>
+<code>X</code>: Übertragen der Sprungadresse aus Befehlsregister in den Befehlszähler</p>
+<hr>
+<p><em>Minimale Erweiterung der von-Neumann Architektur</em>:</p>
+<p>Um in einen Rechner die Anzahl der ausführbaren Maschinenbefehle pro Zeit zu erhöhen, hat man neben schaltungstechnischen Maßnahmen auch früh schon architektonische Erweiterungen der von-Neumann Architektur vorgenommen.</p>
+<p>Ein bis heute verwendetes Prinzip ist das <strong>Befehls-Pipelining</strong>, das durch die verschiedenen Phasen in die Befehlsausführung möglich ist. Die Idee dahinter ist, die Hardware-Komponenten, die zur Ausführung in den einzelnen Phasen benötigt werden, so weit zu entkoppeln, dass diese parallel betrieben werden können. <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.36687em;"></span><span class="strut bottom" style="height: 0.36687em; vertical-align: 0em;"></span><span class="base"><span class="mrel">→</span></span></span></span></span> Dann muss nicht bis zum Ende der Ausführung eines Maschinenbefehls gewartet werden, bis die Ausführung des nächsten Befehls beginnen kann.</p>
+<p>anschaulich:</p>
+<pre><code>             F-Phase     D-Phase     X-Phase     S-Phase     
+Befehl 1  |-----------|-----------|-----------|-----------|  F-Phase     D-Phase
+Befehlsausführung                                         |-----------|-----------| ...
+ohne Pipelining
+</code></pre>
+<p>Mit Befehlspipelining kann der zweite Befehl bereits in der <code>D</code>-Phase des ersten Befehls geholt werden. Der einzelne Befehl wird dadurch schneller abgearbeitet, aber es werden nach einer Anlaufzeit (<em>Pipeline Startup Time</em>) mehr Befehle pro Zeit fertiggestellt.</p>
+<p>anschaulich:</p>
+<pre><code>                             F1-Phase    D1-Phase    X1-Phase    S1-Phase
+Befehl                  1: |-----------|-----------|-----------|-----------|
+                                         F2-Phase    D2-Phase    X2-Phase    S2-Phase
+Befehlsausführung       2:             |-----------|-----------|-----------|-----------|
+mit Pipelining                                       F3-Phase    D3-Phase    X3-Phase    S3-Phase
+                        3:                         |-----------|-----------|-----------|-----------|
+                                                                 F4-Phase    D4-Phase    X4-Phase    S4-Phase
+                        4:                                     |-----------|-----------|-----------|-----------|
+                                                                             F5-Phase    D5-Phase
+                        5:                                                 |-----------|-----------| ...
+</code></pre>
+<p>Man erkennt, mit dem 4-Phasen Befehlspipelining kann eine Beschleunigung bis maximal 4 erreicht werden. Die Voraussetzung dafür ist, dass alle Phasen gleich lang sind; was in der Realität meist nicht erreicht wird.</p>
+<p>Die Unterteilung in 4 Phasen erfolgte hier aus didaktischen Gründen. Bei realen Prozessoren ist eine weitaus feinere Unterteilung üblich, wodurch höhere Beschleunigungen erreicht werden.</p>
+
