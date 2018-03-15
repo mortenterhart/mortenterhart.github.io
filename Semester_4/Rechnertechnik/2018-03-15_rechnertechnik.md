@@ -1,4 +1,10 @@
-﻿# Ausführungsphasen eines Maschinenbefehls
+﻿---
+title: Rechnertechnik 15.03.2018
+layout: default
+permalink: Semester_4/Rechnertechnik/2018-03-15_rechnertechnik_md
+---
+
+# Ausführungsphasen eines Maschinenbefehls
 _aus der Vorlesung Rechnertechnik vom 15.03.2018_
 
 ---
