@@ -13,5 +13,5 @@ permalink: Semester_4/Betriebssysteme
 * [Übungsaufgaben 2](Betriebssysteme/exercises/Übungsaufgaben-2.pdf) ([Lösungen](Betriebssysteme/exercises/Lösungen für Übungsaufgaben INF16.pdf))
 
 ## Übungsklausur
-* [Übungsklausur](Betriebssysteme/exam/Übungsklausur.pdf) ([Lösungen](Betriebssysteme/exam/Lösungen Übungsklausur.pdf))
+* [Übungsklausur](Betriebssysteme/exam/Übungsklausur.pdf) ([Lösungen](Betriebssysteme/exam/Lösung Übungsklausur.pdf))
 
