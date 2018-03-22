@@ -12,5 +12,5 @@ permalink: Semester_4/Rechnertechnik
 * [Vorlesung 22.03.2018](Rechnertechnik/2018-03-22_rechnertechnik)
 
 ## Klausur
-* [Klausurhinweise](Rechnertechnik/2018-03-22_klausurhinweise)
+* [Klausurhinweise](Rechnertechnik/Klausurhinweise)
 
