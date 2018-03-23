@@ -1,10 +1,4 @@
-﻿---
-title: Rechnertechnik 21.03.2018
-layout: default
-permalink: Semester_4/Rechnertechnik/2018-03-21_rechnertechnik_md
----
-
-# Addierwerke in der arithmetisch logischen Einheit (ALU)
+﻿# Addierwerke in der arithmetisch logischen Einheit (ALU)
 _aus der Vorlesung Rechnertechnik vom 21.03.2018_
 
 ---
@@ -16,7 +10,6 @@ Mit den Schaltsymbolen
 * `AND`
 ![AND Gatter](images/ANDGate.png)
 _Abbildung 1: `AND`-Gatter_
-
 
 * `OR`
 ![OR Gatter](images/ORGate.png)
@@ -136,7 +129,7 @@ Sind alle $Y_i$ gleich 0, so terminiert der Algorithmus und die Summe steht im $
 |:---:|:---:|:---:|
 | 0. Durchlauf | $X^{(0)}$ | $0 \, 0 \, 1 \, 1 \, 0 \, 1 \, 0 \, 1$ |
 | | $Y^{(0)}$ | $0 \, 0 \, 0 \, 1 \, 1 \, 0 \, 0 \, 1$ |
-| 1. Durchlauf| $X^{(1)}$ | $0 \, 0 \, 1 \, 1 \, 0 \, 1 \, 0 \, 0$ |
+| 1. Durchlauf| $X^{(1)}$ | $0 \, 0 \, 1 \, 1 \, 1 \, 1 \, 0 \, 0$ |
 | | $Y^{(1)}$ | $0 \, 0 \, 1 \, 0 \, 0 \, 0 \, 1 \, 0 \leftarrow$ |
 | 2. Durchlauf | $X^{(2)}$ | $0 \, 0 \, 0 \, 0 \, 1 \, 1 \, 1 \, 0$ |
 | | $Y^{(2)}$ | $0 \, 1 \, 0 \, 0 \, 0 \, 0 \, 0 \, 0 \leftarrow$ |
