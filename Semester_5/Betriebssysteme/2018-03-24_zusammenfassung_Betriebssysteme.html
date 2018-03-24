@@ -1,0 +1,158 @@
+---
+title: Zusammenfassung Betriebssysteme
+layout: default
+permalink: Semester_4/Betriebssysteme/Zusammenfassung
+
+---
+
+<h1 id="zusammenfassung-betriebssysteme">Zusammenfassung Betriebssysteme</h1>
+<p><em>geschrieben von Morten Terhart am 24.03.2018</em></p>
+<hr>
+<h2 id="einführung">Einführung</h2>
+<h3 id="was-ist-ein-betriebssystem">Was ist ein Betriebssystem?</h3>
+<blockquote>
+<p><em>“Als Betriebssystem bezeichnet man die Software, die den Ablauf von Programmen auf der Hardware steuert und die vorhandenen Betriebsmittel verwaltet”</em>.</p>
+</blockquote>
+<p>Siehe dazu folgendes Schema:<br>
+<img src="images/Definition_Betriebssystem.png" alt="Definition Betriebssystem"><br>
+<em>Abbildung 1: Einordnung des Betriebssystems in die Abstraktionsebenen eines Rechners</em></p>
+<h3 id="anforderungen-an-ein-betriebssystem">Anforderungen an ein Betriebssystem</h3>
+<ul>
+<li>hohe Zuverlässigkeit</li>
+<li>hohe Benutzerfreundlichkeit</li>
+<li>geringe Kosten</li>
+<li>hohe Leistung</li>
+<li>einfache Wartbarkeit</li>
+</ul>
+<h3 id="betriebsarten-von-betriebssystem">Betriebsarten von Betriebssystem</h3>
+<ol>
+<li>Klassifikation nach Art der Auftragsbearbeitung
+<ul>
+<li>Stapelverarbeitung</li>
+<li>Interaktiver Betrieb</li>
+<li>Echtzeitbetrieb</li>
+</ul>
+</li>
+<li>Weitere Möglichkeit der Klassifikation
+<ul>
+<li>Einbenutzer- / Mehrbenutzerbetrieb</li>
+<li>Einprogramm- / Mehrprogrammbetrieb</li>
+<li>Einprozessor- / Mehrprozessorbetrieb</li>
+</ul>
+</li>
+</ol>
+<h3 id="aufgaben-eines-betriebssystems">Aufgaben eines Betriebssystems</h3>
+<ul>
+<li>Steuerung der Eingabe- / Ausgabe-Geräte (u.a. Treiber)</li>
+<li>Bereitstellung eines Dateisystems</li>
+<li>Benutzerschnittstelle</li>
+<li>Verwaltung der Betriebsmittel bei Mehrprogrammbetrieb</li>
+<li>Schutz der Anwenderprogramme bei Mehrprogrammbetrieb</li>
+</ul>
+<h3 id="dienste-eines-betriebssystems">Dienste eines Betriebssystems</h3>
+<ul>
+<li>Benutzerschnittstelle (Kommandozeile)</li>
+<li>Programmausführung</li>
+<li>Ein- und Ausgabeoperationen</li>
+<li>Dateiverwaltung</li>
+<li>Kommunikation (z.B. mit Ein- / Ausgabegeräten oder mit Speicher)</li>
+<li>Fehlerbehandlung / Schutzmechanismen</li>
+</ul>
+<h3 id="einblick-in-unix">Einblick in UNIX</h3>
+<p><img src="images/UNIX-components.png" alt="Komponenten von UNIX"><br>
+<em>Abbildung 2: Komponenten von UNIX (oben: Benutzerschnittstelle, unten: System- und Hardwareschicht und Kernel)</em></p>
+<ul>
+<li>System- und Benutzerprogramme werden auf gleicher Ebene als Prozesse ausgeführt, haben aber unterschiedliche Zugriffsrechte</li>
+<li>Ein- / Ausgabegeräte werden logisch getrennt behandelt</li>
+</ul>
+<h3 id="unterbrechungen-interrupts">Unterbrechungen (<em>Interrupts</em>)</h3>
+<ul>
+<li><strong>Ziel</strong>: Direktes Reagieren auf Ereignisse wie Benutzereingaben durch Unterbrechung eines aktiven Prozesses, Parallelität von Ein- / Ausgabe und Programmausführung
+<ul>
+<li>Dazu wird der Zustand des Prozesses im Hauptspeicher zwischengespeichert und nach Beendigung der Unterbrechung wiederhergestellt.</li>
+</ul>
+</li>
+<li><strong>Idee</strong>: Prozessor initialisiert Ein- / Ausgabe, sodass E/A-Werk ein Programm selbstständig ausführen kann</li>
+</ul>
+<p><strong>2 Arten der Unterbrechung</strong>:</p>
+<ul>
+<li><strong>externe Unterbrechung</strong>: E/A-Werk informiert den Prozessor über Zustand eines E/A-Geräts</li>
+<li><strong>interne Unterbrechung</strong>: Prozessor führt Ausnahmebehandlungen bei Fehlern durch (z.B. Division durch 0)</li>
+</ul>
+<p><strong>Ablauf einer Unterbrechung</strong>:</p>
+<ul>
+<li>Unterbrechungen werden nur <strong>nach</strong> einer Instruktion behandelt
+<ul>
+<li>Instruktionen werden nicht unterbrochen</li>
+</ul>
+</li>
+</ul>
+<p><img src="images/interrupt-sequence.png" alt="Ablauf einer Unterbrechung"><br>
+<em>Abbildung 3: Durchführung einer Unterbrechungssequenz</em><br>
+<code>PC</code> = Program Counter</p>
+<h2 id="prozesse">Prozesse</h2>
+<h3 id="definition">Definition</h3>
+<blockquote>
+<p><em>“Ein Prozess ist ein Programm während der Ausführung im Arbeitsspeicher einschließlich seiner Umgebung.”</em></p>
+</blockquote>
+<h3 id="umgebung-eines-prozessors">Umgebung eines Prozessors</h3>
+<ul>
+<li>Inhalt vom Programmzähler (<code>PC</code>)</li>
+<li>Inhalt von Daten-, Adress- und Statusregistern</li>
+<li>Daten im Speicher</li>
+<li>Programmcode</li>
+</ul>
+<h3 id="verhalten-eines-prozesses">Verhalten eines Prozesses</h3>
+<ul>
+<li>ein Prozess (= Eltern-Prozess) kann einen neuen Prozess erzeugen (= Kind-Prozess)</li>
+<li>Prozesse können unterbrochen werden</li>
+<li>auf einem Prozessor kann <strong>nur ein</strong> Prozess gleichzeitig ausgeführt werden</li>
+</ul>
+<h3 id="zustände-eines-prozesses">Zustände eines Prozesses</h3>
+<ul>
+<li><strong>bereit</strong> (<em>ready</em>): Prozess ist ausführbar, Prozessor ist aber belegt</li>
+<li><strong>aktiv</strong> (<em>running</em>): Prozess wird auf Prozessor ausgeführt</li>
+<li><strong>blockiert</strong> (<em>blocked</em>): Prozess wartet auf ein externes Ereignis <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>q</mi></mrow><annotation encoding="application/x-tex">q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.43056em;"></span><span class="strut bottom" style="height: 0.625em; vertical-align: -0.19444em;"></span><span class="base"><span class="mord mathit" style="margin-right: 0.03588em;">q</span></span></span></span></span></li>
+<li><strong>inaktiv</strong> (<em>idle</em>): Prozess wurde erzeugt oder ist terminiert.</li>
+</ul>
+<p><img src="images/process-status-schema.png" alt="Zustandsübergänge eines Prozesses"><br>
+<em>Abbildung 4: Zustandsübergänge eines Prozesses</em></p>
+<ul>
+<li><strong>Scheduler</strong> steuert die Übergänge <em>assign</em>/<em>deassign</em> und weist Prozesse damit der CPU zu</li>
+<li>eigene Warteschlangen für <em>ready</em> und <em>blocked</em>
+<ul>
+<li><em>ready</em>-Prozesse werden in der Reihenfolge ihrer Ankunft bearbeitet</li>
+<li><em>blocked</em>-Prozesse warten auf ein Ereignis, das sie wieder ans Ende der Bereit-Warteschlange stellt</li>
+</ul>
+</li>
+</ul>
+<p><img src="images/process-queues.png" alt="Prozesszustände und Warteschlangen"><br>
+<em>Abbildung 5: Prozesszustände und Warteschlangen</em></p>
+<ul>
+<li>bei Prozesswechsel müssen die Registerinhalte des vorherigen Prozesses auf dem Stack gesichert werden</li>
+</ul>
+<h2 id="prozessverwaltung">Prozessverwaltung</h2>
+<ul>
+<li><strong>Prozessverwaltung</strong>: Komponente eines Betriebssystems, die für die Zuteilung von Betriebsmitteln an wartende Prozesse zuständig ist</li>
+<li>alle für die Prozessverwaltung wichtigen Informationen sind im <strong>Prozessleitblock</strong> hinterlegt</li>
+<li>die Leitblöcke aller Prozesse sind in einer Systemprozesstabelle angegeben</li>
+</ul>
+<h3 id="steuerung-von-prozessen">Steuerung von Prozessen</h3>
+<ul>
+<li>Der <strong>Scheduler</strong> entscheidet nach einer Strategie, welcher Prozess wann und wie lange ausgeführt werden darf.</li>
+<li>verschiedene Strategien zur bestmöglichen Ausnutzung der CPU</li>
+<li>Ziele aller Strategien:
+<ul>
+<li>hohe Auslastung der CPU</li>
+<li>hoher Durchsatz an Prozessen</li>
+<li>größtmögliche Effektivität (geringste Gesamtwartezeit)</li>
+<li>kurze Antwortzeiten</li>
+</ul>
+</li>
+</ul>
+<h3 id="scheduling-strategien">Scheduling-Strategien</h3>
+<p><strong>2 Arten von Strategien</strong>:</p>
+<ul>
+<li><strong>non-preemptive</strong> (kooperative) Strategien:</li>
+</ul>
+
