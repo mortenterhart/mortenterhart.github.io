@@ -669,7 +669,7 @@ permalink: Semester_4/Betriebssysteme/Zusammenfassung
 <li><strong>E/A-Kontrolle</strong>: Treiber für Datenübertragung</li>
 <li><strong>Basic File System</strong>: veranlasst Treiber, physikalische Blöcke auf Festplatte zu schreiben bzw. von dort zu lesen</li>
 <li><strong>Dateiorganisationsmodul</strong>: Abbildung von logischen zu physikalischen Blockadressen</li>
-<li></li>
+<li><strong>Logisches Dateisystem</strong>: Neueintragung / Löschung von Dateien sowie E/A-Zugriffe auf eine Datei</li>
 </ul>
 
 <table>
@@ -680,7 +680,93 @@ permalink: Semester_4/Betriebssysteme/Zusammenfassung
 </thead>
 <tbody>
 <tr>
-<td align="center">lksndd</td>
+<td align="center">Anwendungsprogramme</td>
+</tr>
+<tr>
+<td align="center">logisches Dateisystem</td>
+</tr>
+<tr>
+<td align="center">Dateiorganisationsmodul</td>
+</tr>
+<tr>
+<td align="center">Basic-File-System</td>
+</tr>
+<tr>
+<td align="center">E/A-Kontrolle</td>
+</tr>
+<tr>
+<td align="center">Hardware</td>
 </tr>
 </tbody>
-</table>
+</table><p><img src="images/hard-drive-segments.png" alt="Segmente einer Festplatte"><br>
+<em>Abbildung 19: Segmente einer Festplatte</em></p>
+<ul>
+<li><em>Master Boot Record</em> (MBR) liegt immer im ersten Segment der Festplatte (Sektor 0)
+<ul>
+<li>enthält die Anfangs- und Endadressen jeder Partition</li>
+<li>Beim Boot-Vorgang wird der MBR vom BIOS (<em>Basic Input Output System</em>) ausgeführt</li>
+</ul>
+</li>
+<li><strong>Superblock</strong> (oder <em>Volume Control Block</em>)
+<ul>
+<li>enthält wichtige Parameter des Dateisystems</li>
+</ul>
+</li>
+</ul>
+<h3 id="allokationsstrategien-vom-dateisystem">Allokationsstrategien vom Dateisystem</h3>
+<p>Ein Dateisystem kann zwischen verschiedenen Möglichkeiten wählen, Blöcke von Daten wie Dateien auf die Festplatte zu schreiben:</p>
+<ul>
+<li>zusammenhängende Belegung</li>
+<li>verkettete Belegung</li>
+<li>Belegung durch verkettete Listen mit einer Tabelle im Arbeitsspeicher (<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.36687em;"></span><span class="strut bottom" style="height: 0.36687em; vertical-align: 0em;"></span><span class="base"><span class="mrel">→</span></span></span></span></span> <strong>indizierte Allokation</strong>)</li>
+</ul>
+<h4 id="zusammenhängende-belegung">Zusammenhängende Belegung</h4>
+<p><img src="images/filesystem-consecutive-allocation.png" alt="Zusammenhängende Block-Allokation"><br>
+<em>Abbildung 20: Zusammenhängende Block-Allokation</em></p>
+<p><strong>Zugehörige Struktur des Verzeichnisses</strong></p>
+
+<table>
+<thead>
+<tr>
+<th align="center">Datei</th>
+<th align="center">Start</th>
+<th align="center">Länge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Name1</td>
+<td align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.64444em;"></span><span class="strut bottom" style="height: 0.64444em; vertical-align: 0em;"></span><span class="base"><span class="mord mathrm">0</span></span></span></span></span></td>
+<td align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.64444em;"></span><span class="strut bottom" style="height: 0.64444em; vertical-align: 0em;"></span><span class="base"><span class="mord mathrm">2</span></span></span></span></span></td>
+</tr>
+<tr>
+<td align="center">Name2</td>
+<td align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mn>4</mn></mrow><annotation encoding="application/x-tex">14</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.64444em;"></span><span class="strut bottom" style="height: 0.64444em; vertical-align: 0em;"></span><span class="base"><span class="mord mathrm">1</span><span class="mord mathrm">4</span></span></span></span></span></td>
+<td align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.64444em;"></span><span class="strut bottom" style="height: 0.64444em; vertical-align: 0em;"></span><span class="base"><span class="mord mathrm">3</span></span></span></span></span></td>
+</tr>
+<tr>
+<td align="center">Name3</td>
+<td align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mn>9</mn></mrow><annotation encoding="application/x-tex">19</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.64444em;"></span><span class="strut bottom" style="height: 0.64444em; vertical-align: 0em;"></span><span class="base"><span class="mord mathrm">1</span><span class="mord mathrm">9</span></span></span></span></span></td>
+<td align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>6</mn></mrow><annotation encoding="application/x-tex">6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.64444em;"></span><span class="strut bottom" style="height: 0.64444em; vertical-align: 0em;"></span><span class="base"><span class="mord mathrm">6</span></span></span></span></span></td>
+</tr>
+<tr>
+<td align="center">Name4</td>
+<td align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mn>8</mn></mrow><annotation encoding="application/x-tex">28</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.64444em;"></span><span class="strut bottom" style="height: 0.64444em; vertical-align: 0em;"></span><span class="base"><span class="mord mathrm">2</span><span class="mord mathrm">8</span></span></span></span></span></td>
+<td align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.64444em;"></span><span class="strut bottom" style="height: 0.64444em; vertical-align: 0em;"></span><span class="base"><span class="mord mathrm">4</span></span></span></span></span></td>
+</tr>
+<tr>
+<td align="center">Name6</td>
+<td align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>6</mn></mrow><annotation encoding="application/x-tex">6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.64444em;"></span><span class="strut bottom" style="height: 0.64444em; vertical-align: 0em;"></span><span class="base"><span class="mord mathrm">6</span></span></span></span></span></td>
+<td align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.64444em;"></span><span class="strut bottom" style="height: 0.64444em; vertical-align: 0em;"></span><span class="base"><span class="mord mathrm">2</span></span></span></span></span></td>
+</tr>
+</tbody>
+</table><h4 id="verkettete-belegung">Verkettete Belegung</h4>
+<p><img src="images/filesystem-linked-allocation.png" alt="Verkettete Block-Allokation"><br>
+<em>Abbildung 21: Verkettete Block-Allokation</em></p>
+<ul>
+<li>Verzeichniseintrag enthält Zeiger auf den ersten und letzten Block der Datei und ihre Länge</li>
+<li>jeder Block hat einen Zeiger auf den nachfolgenden Block</li>
+<li>auch als doppelt verkettete Liste möglich (jeder Block hat einen Zeiger auf den vorherigen Block)</li>
+</ul>
+<h4 id="indizierte-belegung">Indizierte Belegung</h4>
+
