@@ -650,5 +650,38 @@ _Abbildung 30: Ablauf eines DMA-Transfers_
 `BRQ` = _Bus Request_
 `BGT` = _Bus Grant_
 
-
-
+### E/A-Scheduling-Strategien
+* _First In, First Out_ (FIFO)
+	* Bearbeitung der Auftragsliste nach Reihenfolge der Ankunft
+	* d.h. Folge von Spurnummern:
+	  $98, 183, 37, 122, 14, 124, 65, 67$
+	* Gesamtzahl der Spurwechsel: $640$
+![Spurenwechsel bei FIFO-Prinzip](images/ea-scheduling-fifo.png)
+_Abbildung 31: Spurenwechsel bei FIFO-Prinzip_
+* _Shortest Seek Time First_ (SSTF)
+	* Der Auftrag mit der niedrigsten Positionierungszeit wird bevorzugt
+	* d.h. Folge von Spurnummern
+	  $98, 183, 37, 122, 14, 124, 65, 67$
+	* Gesamtzahl der Spurwechsel: $236$
+![Spurenwechsel bei SSTF-Prinzip](images/ea-scheduling-sstf.png)
+_Abbildung 32: Spurenwechsel bei SSTF-Prinzip_
+* _Elevator_ (SCAN)
+	* Bewegung des Plattenarms in eine Richtung, bis keine Aufträge mehr vorhanden sind (**Fahrstuhlstrategie**)
+	* d.h. Folge von Spurnummern:
+	  $98, 183, 37, 122, 14, 124, 65, 67$
+	* Gesamtzahl der Spurwechsel: $208$
+![Spurenwechsel bei Elevator-Prinzip](images/ea-scheduling-elevator.png)
+_Abbildung 33: Spurenwechsel bei Elevator-Prinzip_
+* _Circular Scanning_ (C-SCAN)
+	* funktioniert ähnlich wie _Elevator_
+	1. arbeitet sich zum nächstgelegenen Ende der Platte vor
+	2. springt ans andere Ende der Platte
+	3. bearbeitet die nächstgelegenen Blöcke in der gleichen Richtung
+	* Gesamtzahl der Spurwechsel: $187$
+![Spurenwechsel bei C-SCAN-Prinzip](images/ea-scheduling-cscan.png)
+_Abbildung 34: Spurenwechsel bei C-SCAN-Prinzip_
+* _Circular Looking_ (C-LOOK)
+	* ähnlich wie _C-SCAN_
+	* einziger Unterschied zu _C-SCAN_ ist, dass _C-LOOK_ nicht ganz bis ans Ende der Spur fortschreitet, sondern direkt vom letzten zum ersten Block am anderen Ende springt
+![Spurenwechsel bei C-LOOK-Prinzip](images/ea-scheduling-clook.png)
+_Abbildung 35: Spurenwechsel bei C-LOOK-Prinzip_
