@@ -484,4 +484,93 @@ permalink: Semester_4/Betriebssysteme/Zusammenfassung
 <li>Präsenzbit <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.43056em;"></span><span class="strut bottom" style="height: 0.625em; vertical-align: -0.19444em;"></span><span class="base"><span class="mord mathit">p</span></span></span></span></span> gibt an, ob die Seite in den Hauptspeicher geladen wurde oder nicht.</li>
 <li>Seitentabelle kann noch Referenzbit <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>R</mi></mrow><annotation encoding="application/x-tex">R</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.68333em;"></span><span class="strut bottom" style="height: 0.68333em; vertical-align: 0em;"></span><span class="base"><span class="mord mathit" style="margin-right: 0.00773em;">R</span></span></span></span></span>, Modifikationsbit <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.68333em;"></span><span class="strut bottom" style="height: 0.68333em; vertical-align: 0em;"></span><span class="base"><span class="mord mathit" style="margin-right: 0.10903em;">M</span></span></span></span></span> (gibt an, ob die Seite im Hauptspeicher verändert wurde) und Zugriffsbits (Berechtigungen) enthalten</li>
 </ul>
+<h3 id="die-seitentabelle">Die Seitentabelle</h3>
+<p>Ein Seitentabelleneintrag kann folgendermaßen aussehen:</p>
+<p><img src="images/entry-page-table.png" alt="Beispiel eines Seitentabelleneintrages"><br>
+<em>Abbildung 13: Beispiel eines Seitentabelleneintrages</em></p>
+<p><strong>Seitentabellenattribute</strong>:</p>
+<ul>
+<li><strong>present</strong>: Seite befindet sich im Hauptspeicher</li>
+<li><strong>modified</strong>: schreibender Zugriff ist erfolgt (<em>“dirty”</em>)</li>
+<li><strong>used</strong>: irgendein Zugriff ist erfolgt</li>
+<li><strong>caching</strong>: ein/aus (z.B. wegen E/A)</li>
+<li><strong>protection</strong>: erlaubte Art von Zugriffen in Abhängigkeit von CPU-Modus</li>
+</ul>
+<h3 id="seitenwechselstrategien">Seitenwechselstrategien</h3>
+<p><strong>Einlagerungsstrategien</strong>:</p>
+<ul>
+<li><em>Pre-paging</em>
+<ul>
+<li>vorgeplante Einlagerung einer Seite, bevor sie von Programm adressiert wird</li>
+</ul>
+</li>
+<li><em>Demand-paging</em>
+<ul>
+<li>Seiten werden nur durch Unterbrechungen nach Seitenfehlern geladen</li>
+</ul>
+</li>
+</ul>
+<p><strong>Auslagerungsstrategien</strong>:</p>
+<ul>
+<li><em>Dandom</em>
+<ul>
+<li>Es wird eine zufällige Seite ausgelagert</li>
+</ul>
+</li>
+<li><em>First in, First out</em> (FIFO)
+<ul>
+<li>Es wird stets die Seite, die als erstes hinzugefügt wurde, ausgelagert</li>
+</ul>
+</li>
+<li><em>Last Recently Used</em> (LRU)
+<ul>
+<li>Es wird die Seite ausgelagert, die am längsten nicht mehr benutzt wurde (UNIX)</li>
+</ul>
+</li>
+<li><em>Last Frequently Used</em> (LFU)
+<ul>
+<li>Es wird die Seite ausgelagert, die am seltensten benutzt wurde</li>
+</ul>
+</li>
+<li><em>Optimal Replacement</em>
+<ul>
+<li>Es wird die Seite ausgelagert, die am spätesten in der Zukunft wiederverwendet wird.</li>
+</ul>
+</li>
+</ul>
+<h3 id="bewertung-des-virtuellen-speichers">Bewertung des virtuellen Speichers</h3>
+
+<table>
+<thead>
+<tr>
+<th align="left">Vorteile</th>
+<th align="left">Nachteile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">+ geringe E/A-Belastung</td>
+<td align="left">- hoher Speicherbedarf für Seitentabellen</td>
+</tr>
+<tr>
+<td align="left">+ automatischer Speicherschutz: jeder Prozess kann nur auf seine eigenen Seiten zugreifen</td>
+<td align="left">- hoher Implementierungsaufwand</td>
+</tr>
+<tr>
+<td align="left">+ beliebig große Prozesse ausführbar</td>
+<td align="left">- hoher CPU-Bedarf für Seitenverwaltung, falls keine Hardware-Unterstützung</td>
+</tr>
+<tr>
+<td align="left">+ keine externe Fragmentierung</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">+ dynamischer Speicherplatz</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table><ul>
+<li>Größe der Seitentabelle oder Geschwindigkeit der Abbildung können zum Problem werden</li>
+</ul>
+<h2 id="dateien-und-dateisysteme">Dateien und Dateisysteme</h2>
 
