@@ -1,8 +1,3 @@
-﻿---
-title: Zusammenfassung Betriebssysteme
-layout: default
-permalink: Semester_4/Betriebssysteme/Zusammenfassung_md
----
 # Zusammenfassung Betriebssysteme
 _geschrieben von Morten Terhart am 24.03.2018_
 
@@ -579,4 +574,42 @@ _Abbildung 25: UNIX Inodes_
 | + keine externe Fragmentierung | - interne Fragmentierung |
 
 ## Ein- und Ausgabekonzepte und Bussysteme
+Zur Realisierung einer geeigneten Ein- / Ausgabe benötigt man
+* eine Strategie der Ein- / Ausgabe
+* eine nach Möglichkeit standardisierte Schnittstelle (_interface_) zur Ein- / Ausgabe
+* Ein- / Ausgabegeräte oder Peripheriegeräte
+
+### Strategien der Ein- / Ausgabe
+* Programmierte Ein- / Ausgabe: Programme legen explizit fest, wann eine Ein- oder Ausgabe erfolgt
+* Unterbrechungen: bei Eintreffen neuer Daten kann ein Eingabebaustein eine Unterbrechung anfordern (_Interrupt Request_)
+	* sobald möglich, bestätigt die CPU die Unterbrechung (_Interrupt Acknowledgment_) und startet eine Behandlungsroutine
+
+### Kopplung der E/A-Bausteine
+* Kopplung von CPU und E/A-Geräten erfolgt über spezielle E/A-Bausteine am Systembus
+
+E/A-Bausteine haben folgende Register:
+* **Kontrollregister**
+	* Initialisierung und Parameterwahl durch CPU
+* **Datenregister**
+	* Zwischenspeicherung empfangener bzw. ausgegebener Daten
+* **Statusregister**
+	* Austausch von Statusinformationen zwischen E/A-Gerät und CPU
+
+### Kommunikation zwischen CPU und E/A-Geräten
+**2 Möglichkeiten der Datenübertragung**:
+* speicherbezogene Adressierung über den Hauptspeicher (_Memory Mapped IO_)
+* separater Adressraum für E/A-Bausteine (_Isolated IO_)
+
+**3 verschiedene Übertragungsprotokolle**
+* **Open-Loop Übertragung**
+	* keine Rückmeldung bei der Datenannahme
+![Open-Loop Datenübertragung](images/open-loop-broadcast.png)
+_Abbildung 26: Open-Loop Datenübertragung_
+* **Closed-Loop Übertragung** (auch _Handshaking_)
+	* Bestätigung der Datenannahme über Steuersignal
+![Closed-Loop Datenübertragung](images/closed-loop-broadcast.png)
+_Abbildung 27: Closed-Loop Datenübertragung_
+* **Fully-Interlocked Übertragung** (auch _Fully Interlocked Handshaking_)
+	* Bestätigung der Datenannahme als auch aller Steuersignale
+![Fully-Interlocked Datenübertragung](images/fully-interlocked-broadcast.png)
 
