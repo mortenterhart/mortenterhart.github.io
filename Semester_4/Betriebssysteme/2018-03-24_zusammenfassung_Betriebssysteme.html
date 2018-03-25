@@ -583,10 +583,10 @@ permalink: Semester_4/Betriebssysteme/Zusammenfassung
 <h3 id="massenspeicher--hintergrundspeicher">Massenspeicher / Hintergrundspeicher</h3>
 <ul>
 <li>physikalisches Medium mit Blockstruktur</li>
-<li>4 oder 8 Blöcke bilden ein Cluster (siehe Abbildung 13)</li>
+<li>4 oder 8 Blöcke bilden ein Cluster (siehe Abbildung 14)</li>
 </ul>
 <p><img src="images/hard-drive-cluster.png" alt="Clustering des Hintergrundspeichers"><br>
-<em>Abbildung 13: Clustering des Hintergrundspeichers</em></p>
+<em>Abbildung 14: Clustering des Hintergrundspeichers</em></p>
 <h3 id="datei-konzept">Datei-Konzept</h3>
 <p><strong>Datei</strong>: Eine mit Namen versehene Sammlung zusammengehöriger Informationen</p>
 <ul>
@@ -619,9 +619,9 @@ permalink: Semester_4/Betriebssysteme/Zusammenfassung
 </li>
 </ul>
 <h3 id="verzeichniskonzept">Verzeichniskonzept</h3>
-<p>Alle Dateien in einem Dateisystem werden durch optionale Partitionen auf der Festplatte und durch Verzeichnisse organisiert (siehe Abbildung 14).</p>
+<p>Alle Dateien in einem Dateisystem werden durch optionale Partitionen auf der Festplatte und durch Verzeichnisse organisiert (siehe Abbildung 15).</p>
 <p><img src="images/hard-drive-partitioning.png" alt="Organisation von Dateien auf Festplatten"><br>
-<em>Abbildung 14: Organisation von Dateien auf Festplatten</em></p>
+<em>Abbildung 15: Organisation von Dateien auf Festplatten</em></p>
 <p>Verzeichnisse bilden eine Struktur auf der Festplatte, unter der Dateien gespeichert werden können. In Verzeichnissen kann man</p>
 <ul>
 <li>nach einer Datei suchen</li>
@@ -634,13 +634,13 @@ permalink: Semester_4/Betriebssysteme/Zusammenfassung
 <ul>
 <li><strong>Single-Level-Verzeichnis</strong>: Alle Dateien in einem Verzeichnis<br>
 <img src="images/single-level-directory.png" alt="Single-Level-Verzeichnis"><br>
-<em>Abbildung 15: Single-Level-Verzeichnis</em></li>
+<em>Abbildung 16: Single-Level-Verzeichnis</em></li>
 <li><strong>Two-Level-Verzeichnis</strong>: Struktur mit zwei Ebenen, wobei jeder Benutzer sein eigenes Verzeichnis hat<br>
 <img src="images/two-level-directory.png" alt="Two-Level-Verzeichnis"><br>
-<em>Abbildung 16: Two-Level-Verzeichnis</em></li>
+<em>Abbildung 17: Two-Level-Verzeichnis</em></li>
 <li><strong>Baum-Verzeichnisstruktur</strong>: Struktur mit Verzeichnissen und beliebig vielen Unterverzeichnissen, Datei wird über absoluten Pfad vom Wurzelverzeichnis (unter UNIX <code>/</code>) identifiziert<br>
 <img src="images/tree-directory.png" alt="Baum-Verzeichnisstruktur"><br>
-<em>Abbildung 17: Baum-Verzeichnisstruktur</em></li>
+<em>Abbildung 18: Baum-Verzeichnisstruktur</em></li>
 </ul>
 <h3 id="operationen-auf-dateisystemen">Operationen auf Dateisystemen</h3>
 <ul>
@@ -654,7 +654,7 @@ permalink: Semester_4/Betriebssysteme/Zusammenfassung
 <ul>
 <li>Scheiben und Schreib- / Leseköpfen (beidseitig)</li>
 <li>Scheiben bestehen aus Spuren (<em>Tracks</em>)</li>
-<li>Spuren sind in Sektoren aufgeteilt (siehe Abbildung 18)</li>
+<li>Spuren sind in Sektoren aufgeteilt (siehe Abbildung 19)</li>
 </ul>
 </li>
 <li>Scheiben werden durch <em>spindle</em> rotiert</li>
@@ -662,7 +662,7 @@ permalink: Semester_4/Betriebssysteme/Zusammenfassung
 <li>Zugriffe werden durch Gerätecontroller (<em>disk controller</em>) gesteuert</li>
 </ul>
 <p><img src="images/hard-drive-composition.png" alt="Aufbau einer Festplatte"><br>
-<em>Abbildung 18: Aufbau einer Festplatte</em></p>
+<em>Abbildung 19: Aufbau einer Festplatte</em></p>
 <h3 id="implementierung-von-dateisystemen">Implementierung von Dateisystemen</h3>
 <p>Dateisysteme sind in Schichten realisiert:</p>
 <ul>
@@ -699,7 +699,7 @@ permalink: Semester_4/Betriebssysteme/Zusammenfassung
 </tr>
 </tbody>
 </table><p><img src="images/hard-drive-segments.png" alt="Segmente einer Festplatte"><br>
-<em>Abbildung 19: Segmente einer Festplatte</em></p>
+<em>Abbildung 20: Segmente einer Festplatte</em></p>
 <ul>
 <li><em>Master Boot Record</em> (MBR) liegt immer im ersten Segment der Festplatte (Sektor 0)
 <ul>
@@ -722,7 +722,7 @@ permalink: Semester_4/Betriebssysteme/Zusammenfassung
 </ul>
 <h4 id="zusammenhängende-belegung">Zusammenhängende Belegung</h4>
 <p><img src="images/filesystem-consecutive-allocation.png" alt="Zusammenhängende Block-Allokation"><br>
-<em>Abbildung 20: Zusammenhängende Block-Allokation</em></p>
+<em>Abbildung 21: Zusammenhängende Block-Allokation</em></p>
 <p><strong>Zugehörige Struktur des Verzeichnisses</strong></p>
 
 <table>
@@ -762,11 +762,13 @@ permalink: Semester_4/Betriebssysteme/Zusammenfassung
 </tbody>
 </table><h4 id="verkettete-belegung">Verkettete Belegung</h4>
 <p><img src="images/filesystem-linked-allocation.png" alt="Verkettete Block-Allokation"><br>
-<em>Abbildung 21: Verkettete Block-Allokation</em></p>
+<em>Abbildung 22: Verkettete Block-Allokation</em></p>
 <ul>
 <li>Verzeichniseintrag enthält Zeiger auf den ersten und letzten Block der Datei und ihre Länge</li>
 <li>jeder Block hat einen Zeiger auf den nachfolgenden Block</li>
 <li>auch als doppelt verkettete Liste möglich (jeder Block hat einen Zeiger auf den vorherigen Block)</li>
 </ul>
 <h4 id="indizierte-belegung">Indizierte Belegung</h4>
+<p><img src="images/filesystem-indexed-allocation.png" alt="Indizierte Block-Allokation"><br>
+<em>Abbildung 23: Indizierte Block-Allokation</em></p>
 
