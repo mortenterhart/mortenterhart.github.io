@@ -627,4 +627,28 @@ Ein System mit DMA-Baustein kann folgendermaßen aussehen
 ![Architektur eines Systems mit DMA-Baustein](images/system-DMA-architecture.png)
 _Abbildung 29: Architektur eines Systems mit DMA-Baustein_
 
+### Ablauf eines DMA-Transfers
+
+```mermaid
+sequenceDiagram
+    participant CPU as CPU
+    participant EA as E/A-Baustein
+    participant DMA as DMA-Baustein
+    participant RAM as Hauptspeicher
+    CPU ->> EA: initialisiert
+    CPU ->> DMA: initialisiert
+    EA ->> CPU: setzt TransferRQ
+    DMA ->> CPU: fordert Bus an (BRQ)
+    CPU ->> CPU: deaktiviert Bustreiber und setzt BGT
+    DMA ->> EA: signalisiert Beginn des Datentransfers
+    DMA ->> RAM: speichert Daten von E/A
+    DMA ->> CPU: gibt Bus wieder frei
+    DMA ->> CPU: signalisiert Ende des Datentransfers
+```
+_Abbildung 30: Ablauf eines DMA-Transfers_
+`TransferRQ` = _Transfer Request_
+`BRQ` = _Bus Request_
+`BGT` = _Bus Grant_
+
+
 
