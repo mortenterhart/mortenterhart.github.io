@@ -877,8 +877,20 @@ permalink: Semester_4/Betriebssysteme/Zusammenfassung
 <li><strong>Fully-Interlocked Übertragung</strong> (auch <em>Fully Interlocked Handshaking</em>)
 <ul>
 <li>Bestätigung der Datenannahme als auch aller Steuersignale<br>
-<img src="images/fully-interlocked-broadcast.png" alt="Fully-Interlocked Datenübertragung"></li>
+<img src="images/fully-interlocked-broadcast.png" alt="Fully-Interlocked Datenübertragung"><br>
+<em>Abbildung 28: Fully-Interlocked Datenübertragung</em></li>
 </ul>
 </li>
 </ul>
+<h3 id="direct-memory-access-dma">Direct Memory Access (DMA)</h3>
+<p>Um die CPU nicht mit trivialen Aufgaben wie der Weiterleitung von langen Datenströmen an Ausgabebausteine zu belasten, wird ein zusätzlicher DMA-Baustein benutzt, der nach einer Initialisierung durch die CPU den Speichertransfer eigenmächtig durchführt. Damit werden häufige Aufgaben wie das Inkrementieren von Adressen, Zählen von Datenwörtern oder Abfragen des Status der E/A-Bausteine ausgelagert.</p>
+<p>Ein DMA-Baustein besteht aus folgenden Komponenten:</p>
+<ul>
+<li>ein Quelladress- und Zieladressregister</li>
+<li>ein Zählregister</li>
+<li>ein Kontrollregister für Statusinformationen</li>
+</ul>
+<p>Ein System mit DMA-Baustein kann folgendermaßen aussehen</p>
+<p><img src="images/system-DMA-architecture.png" alt="Architektur eines Systems mit DMA-Baustein"><br>
+<em>Abbildung 29: Architektur eines Systems mit DMA-Baustein</em></p>
 
