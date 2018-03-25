@@ -815,4 +815,70 @@ permalink: Semester_4/Betriebssysteme/Zusammenfassung
 </tr>
 </tbody>
 </table><h2 id="ein--und-ausgabekonzepte-und-bussysteme">Ein- und Ausgabekonzepte und Bussysteme</h2>
+<p>Zur Realisierung einer geeigneten Ein- / Ausgabe benötigt man</p>
+<ul>
+<li>eine Strategie der Ein- / Ausgabe</li>
+<li>eine nach Möglichkeit standardisierte Schnittstelle (<em>interface</em>) zur Ein- / Ausgabe</li>
+<li>Ein- / Ausgabegeräte oder Peripheriegeräte</li>
+</ul>
+<h3 id="strategien-der-ein---ausgabe">Strategien der Ein- / Ausgabe</h3>
+<ul>
+<li>Programmierte Ein- / Ausgabe: Programme legen explizit fest, wann eine Ein- oder Ausgabe erfolgt</li>
+<li>Unterbrechungen: bei Eintreffen neuer Daten kann ein Eingabebaustein eine Unterbrechung anfordern (<em>Interrupt Request</em>)
+<ul>
+<li>sobald möglich, bestätigt die CPU die Unterbrechung (<em>Interrupt Acknowledgment</em>) und startet eine Behandlungsroutine</li>
+</ul>
+</li>
+</ul>
+<h3 id="kopplung-der-ea-bausteine">Kopplung der E/A-Bausteine</h3>
+<ul>
+<li>Kopplung von CPU und E/A-Geräten erfolgt über spezielle E/A-Bausteine am Systembus</li>
+</ul>
+<p>E/A-Bausteine haben folgende Register:</p>
+<ul>
+<li><strong>Kontrollregister</strong>
+<ul>
+<li>Initialisierung und Parameterwahl durch CPU</li>
+</ul>
+</li>
+<li><strong>Datenregister</strong>
+<ul>
+<li>Zwischenspeicherung empfangener bzw. ausgegebener Daten</li>
+</ul>
+</li>
+<li><strong>Statusregister</strong>
+<ul>
+<li>Austausch von Statusinformationen zwischen E/A-Gerät und CPU</li>
+</ul>
+</li>
+</ul>
+<h3 id="kommunikation-zwischen-cpu-und-ea-geräten">Kommunikation zwischen CPU und E/A-Geräten</h3>
+<p><strong>2 Möglichkeiten der Datenübertragung</strong>:</p>
+<ul>
+<li>speicherbezogene Adressierung über den Hauptspeicher (<em>Memory Mapped IO</em>)</li>
+<li>separater Adressraum für E/A-Bausteine (<em>Isolated IO</em>)</li>
+</ul>
+<p><strong>3 verschiedene Übertragungsprotokolle</strong></p>
+<ul>
+<li><strong>Open-Loop Übertragung</strong>
+<ul>
+<li>keine Rückmeldung bei der Datenannahme<br>
+<img src="images/open-loop-broadcast.png" alt="Open-Loop Datenübertragung"><br>
+<em>Abbildung 26: Open-Loop Datenübertragung</em></li>
+</ul>
+</li>
+<li><strong>Closed-Loop Übertragung</strong> (auch <em>Handshaking</em>)
+<ul>
+<li>Bestätigung der Datenannahme über Steuersignal<br>
+<img src="images/closed-loop-broadcast.png" alt="Closed-Loop Datenübertragung"><br>
+<em>Abbildung 27: Closed-Loop Datenübertragung</em></li>
+</ul>
+</li>
+<li><strong>Fully-Interlocked Übertragung</strong> (auch <em>Fully Interlocked Handshaking</em>)
+<ul>
+<li>Bestätigung der Datenannahme als auch aller Steuersignale<br>
+<img src="images/fully-interlocked-broadcast.png" alt="Fully-Interlocked Datenübertragung"></li>
+</ul>
+</li>
+</ul>
 
