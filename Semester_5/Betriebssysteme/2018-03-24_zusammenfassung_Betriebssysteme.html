@@ -153,6 +153,77 @@ permalink: Semester_4/Betriebssysteme/Zusammenfassung
 <h3 id="scheduling-strategien">Scheduling-Strategien</h3>
 <p><strong>2 Arten von Strategien</strong>:</p>
 <ul>
-<li><strong>non-preemptive</strong> (kooperative) Strategien:</li>
+<li><strong>non-preemptive</strong> (kooperative) Strategien: Prozess läuft so lange, bis er terminiert oder auf ein Ereignis wartet (<em>blocked</em>)</li>
+<li><strong>preemptive</strong> (verdrängende) Strategien: aktiver Prozess kann vom Scheduler aus der CPU gezogen und wieder in die Warteschlange eingeordnet werden</li>
+</ul>
+<p>Moderne Betriebssysteme verwenden ausschließlich preemptive Strategien.</p>
+<h3 id="non-preemptive-scheduling-strategien">Non-preemptive Scheduling-Strategien</h3>
+<ul>
+<li><em>First Come, First Serve</em> (FCFS)
+<ul>
+<li>Prozesse werden in der Reihenfolge ihrer Initiierung in die Warteschlange geordnet, diese wird nach dem FIFO-Prinzip (<em>First In, First Out</em>) bearbeitet.<br>
+<img src="images/first-come-first-serve.png" alt="Non-preemptive Strategie First Come, First Serve"><br>
+<em>Abbildung 6: Scheduling-Strategie “First Come, First Serve”</em></li>
+</ul>
+</li>
+<li><em>Shortest Job First</em> (SJF)
+<ul>
+<li>Prozesse mit geringsten Bedienzeiten werden zuerst behandelt.</li>
+<li>Ziel: Durchschnittliche Antwortzeit reduzieren</li>
+<li>Prozesse können bei hohen Prozess-Aufkommen “verhungern”</li>
+</ul>
+</li>
+<li><em>Highest Response Ratio Next</em> (HRRN)
+<ul>
+<li>Bevorzugt Prozesse mit höheren Antworzeit / Bedienzeit Verhältnissen</li>
+</ul>
+</li>
+<li><em>Priority Scheduling</em> (PS)
+<ul>
+<li>jeder Prozess <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.65952em;"></span><span class="strut bottom" style="height: 0.65952em; vertical-align: 0em;"></span><span class="base"><span class="mord mathit">i</span></span></span></span></span> hat eine Priorität <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.43056em;"></span><span class="strut bottom" style="height: 0.625em; vertical-align: -0.19444em;"></span><span class="base"><span class="mord mathit">p</span></span></span></span></span></li>
+<li>Bereit-Warteschlange wird nach Priorität sortiert und nach FIFO-Prinzip bearbeitet.</li>
+</ul>
+</li>
+</ul>
+<h3 id="preemptive-scheduling-strategien">Preemptive Scheduling-Strategien</h3>
+<ul>
+<li><em>Round Robin</em> (RR)
+<ul>
+<li>Zeitscheibenverfahren mit erhaltener Prozessreihenfolge durch FCFS</li>
+<li>jeder Prozess ist für eine festgelegte Zeit <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>t</mi><mtext>slice</mtext></msub></mrow><annotation encoding="application/x-tex">t_{\text{slice}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.61508em;"></span><span class="strut bottom" style="height: 0.76508em; vertical-align: -0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.336108em;"><span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mathrm mtight">slice</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"></span></span></span></span></span></span></span></span></span> aktiv und wird danach wieder ans Ende der Warteschlange angehängt<br>
+<img src="images/round-robin.png" alt="Scheduling-Strategie Round Robin"><br>
+<em>Abbildung 7: Scheduling-Strategie “Round Robin”</em></li>
+</ul>
+</li>
+<li><em>Dynamic Priority Round Robin</em> (DPRR)
+<ul>
+<li>Round Robin mit priorisierter Warteschlange wie bei PS</li>
+<li>Priorität wird bei jedem Durchgang erhöht</li>
+</ul>
+</li>
+<li><em>Shortest Remaining Time First</em> (SRTF)
+<ul>
+<li>nach jeder Unterbrechung erhält der Prozess mit der niedrigsten verbleibenden Ausführungszeit die CPU</li>
+<li>Problem: Restzeit ist oft schwer abzuschätzen</li>
+</ul>
+</li>
+</ul>
+<h3 id="prozess-scheduling-in-unix">Prozess-Scheduling in UNIX</h3>
+<ul>
+<li><em>Round Robin</em> kombiniert mit dynamischen Prioritäten</li>
+<li>jede Priorität hat seine eigene Warteschlange und die höchsten Prioritäten werden zuerst bearbeitet</li>
+</ul>
+<p><img src="images/unix-scheduling-model.png" alt="Prozessplanung unter UNIX"><br>
+<em>Abbildung 8: Prozessplanung unter UNIX</em></p>
+<h3 id="prozesshierarchie">Prozesshierarchie</h3>
+<ul>
+<li>Ein Prozess kann einen neuen Prozess auslösen
+<ul>
+<li>Vater-Prozess (<em>parent process</em>) ➡️ Kind-Prozess (<em>child process</em>)</li>
+</ul>
+</li>
+<li>Eltern- und Kindprozesse können miteinander kommunizieren</li>
+<li>Bei Abschluss des Elternprozesses werden üblicherweise alle Kindprozesse geschlossen</li>
+<li></li>
 </ul>
 
