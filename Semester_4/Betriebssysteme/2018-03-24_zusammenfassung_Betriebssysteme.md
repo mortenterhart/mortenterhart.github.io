@@ -612,4 +612,19 @@ _Abbildung 27: Closed-Loop Datenübertragung_
 * **Fully-Interlocked Übertragung** (auch _Fully Interlocked Handshaking_)
 	* Bestätigung der Datenannahme als auch aller Steuersignale
 ![Fully-Interlocked Datenübertragung](images/fully-interlocked-broadcast.png)
+_Abbildung 28: Fully-Interlocked Datenübertragung_
+
+### Direct Memory Access (DMA)
+Um die CPU nicht mit trivialen Aufgaben wie der Weiterleitung von langen Datenströmen an Ausgabebausteine zu belasten, wird ein zusätzlicher DMA-Baustein benutzt, der nach einer Initialisierung durch die CPU den Speichertransfer eigenmächtig durchführt. Damit werden häufige Aufgaben wie das Inkrementieren von Adressen, Zählen von Datenwörtern oder Abfragen des Status der E/A-Bausteine ausgelagert.
+
+Ein DMA-Baustein besteht aus folgenden Komponenten:
+* ein Quelladress- und Zieladressregister
+* ein Zählregister
+* ein Kontrollregister für Statusinformationen
+
+Ein System mit DMA-Baustein kann folgendermaßen aussehen
+
+![Architektur eines Systems mit DMA-Baustein](images/system-DMA-architecture.png)
+_Abbildung 29: Architektur eines Systems mit DMA-Baustein_
+
 
