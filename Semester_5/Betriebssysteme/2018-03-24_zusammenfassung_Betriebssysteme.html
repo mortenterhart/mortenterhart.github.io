@@ -301,14 +301,14 @@ permalink: Semester_4/Betriebssysteme/Zusammenfassung
 <span class="token function">V</span><span class="token punctuation">(</span>S<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Nachteil</strong>: rechenintensive Warteschleife in <code>P(S)</code> (<em>busy wait loop</em>)</p>
-<p><strong>effizientere Implementation</strong> mit <code>S</code> als Objekt mit den Attributen <code>ctrl</code> (Wert des Semaphors) und <code>list</code> (Liste wartender Prozesse):</p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token function">P</span><span class="token punctuation">(</span>S<span class="token punctuation">)</span> <span class="token operator">:</span><span class="token operator">=</span> <span class="token punctuation">[</span> S<span class="token punctuation">.</span>ctr <span class="token operator">=</span> S<span class="token punctuation">.</span>ctr – <span class="token number">1</span> <span class="token punctuation">;</span>
+<p><strong>effizientere Implementation</strong> mit <code>S</code> als Objekt mit den Attributen <code>ctr</code> (Wert des Semaphors) und <code>list</code> (Liste wartender Prozesse):</p>
+<pre class=" language-java"><code class="prism  language-java"><span class="token function">P</span><span class="token punctuation">(</span>S<span class="token punctuation">)</span> <span class="token operator">:</span><span class="token operator">=</span> <span class="token punctuation">[</span> S<span class="token punctuation">.</span>ctr <span class="token operator">=</span> S<span class="token punctuation">.</span>ctr – <span class="token number">1</span><span class="token punctuation">;</span>
           <span class="token keyword">if</span> <span class="token punctuation">(</span>S<span class="token punctuation">.</span>ctr <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
               put pid in S<span class="token punctuation">.</span>list<span class="token punctuation">;</span>
               <span class="token function">sleep</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
           <span class="token punctuation">}</span> 
         <span class="token punctuation">]</span>
-<span class="token function">V</span><span class="token punctuation">(</span>S<span class="token punctuation">)</span> <span class="token operator">:</span><span class="token operator">=</span> <span class="token punctuation">[</span> S<span class="token punctuation">.</span>ctr <span class="token operator">=</span> S<span class="token punctuation">.</span>ctr <span class="token operator">+</span> <span class="token number">1</span> <span class="token punctuation">;</span>
+<span class="token function">V</span><span class="token punctuation">(</span>S<span class="token punctuation">)</span> <span class="token operator">:</span><span class="token operator">=</span> <span class="token punctuation">[</span> S<span class="token punctuation">.</span>ctr <span class="token operator">=</span> S<span class="token punctuation">.</span>ctr <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
           <span class="token keyword">if</span> <span class="token punctuation">(</span>S<span class="token punctuation">.</span>ctr <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
               get pid from S<span class="token punctuation">.</span>list<span class="token punctuation">;</span>
               <span class="token function">wakeUp</span><span class="token punctuation">(</span>pid<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -316,4 +316,133 @@ permalink: Semester_4/Betriebssysteme/Zusammenfassung
         <span class="token punctuation">]</span>
 </code></pre>
 <p>Systemaufruf <code>sleep()</code> blockiert Prozess <code>pid</code> und verbraucht so keine CPU-Zeit mehr, bis er durch <code>wakeUp(pid)</code> wieder reaktiviert wird.</p>
+<h3 id="erzeuger---verbraucher-problem">Erzeuger- / Verbraucher-Problem</h3>
+<ul>
+<li>Erzeuger-Prozess (<em>producer</em>) erzeugt Daten und schreibt sie in einen Puffer mit <code>N</code> Speicherplätzen</li>
+<li>Verbraucher-Prozess (<em>consumer</em>) liest Daten aus Puffer mit unterschiedlicher Geschwindigkeit</li>
+</ul>
+<p><strong>1. Idee</strong>: Realisierung eines gegenseitigen Ausschlusses mit Semaphor <code>mutex = 1</code><br>
+<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.36687em;"></span><span class="strut bottom" style="height: 0.36687em; vertical-align: 0em;"></span><span class="base"><span class="mrel">→</span></span></span></span></span> unsicher, da Deadlocks auftreten können</p>
+<p><strong>2. Idee</strong>: Verwendung weiteres Semaphors für</p>
+<ol>
+<li>die Anzahl belegter Speicherplätze <code>used</code></li>
+<li>die Anzahl freier Speicherplätze <code>free</code></li>
+</ol>
+<h3 id="bewertung-des-semaphor-konzepts">Bewertung des Semaphor-Konzepts</h3>
+
+<table>
+<thead>
+<tr>
+<th align="left">Vorteile</th>
+<th align="left">Nachteile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">+ mächtiges Konzept</td>
+<td align="left">- teils schwierige Suche nach korrekter Lösung</td>
+</tr>
+<tr>
+<td align="left">+ flexibel</td>
+<td align="left">- Verklemmungen zwischen Prozessen ist möglich</td>
+</tr>
+<tr>
+<td align="left">+ vielseitig</td>
+<td align="left">- unübersichtlich (<code>P</code> und <code>V</code> im Code verstreut)</td>
+</tr>
+<tr>
+<td align="left">+ einfache Realisierung</td>
+<td align="left">- leichte Programmierfehler durch Vertauschungen</td>
+</tr>
+</tbody>
+</table><ul>
+<li>ein <strong>Monitor</strong> ist ein abstrakter Datentyp, mit dem eine Synchronisation von Prozessen auf höherer Ebene stattfinden kann</li>
+</ul>
+<h3 id="kommunikation-mittels-nachrichten">Kommunikation mittels Nachrichten</h3>
+<p><strong>2 Kommunikationsroutinen</strong>:</p>
+<ul>
+<li><code>send(destination, message)</code>: Senden einer Nachricht <code>message</code> an den Empfänger <code>destination</code></li>
+<li><code>message = receive(source)</code>: Empfangen einer Nachricht vom Sender <code>source</code></li>
+</ul>
+<p>Empfänger-Prozess blockiert, falls er keine Nachricht empfängt, und wartet auf eine Nachricht. Sender und Empfänger können sich auf demselben Rechner oder auf getrennten Rechnern befinden.</p>
+<p>Der Nachrichtenkanal wird als unsicher angesehen:</p>
+<ol>
+<li>Empfänger bestätigt Empfang einer Nachricht.</li>
+<li>Falls Sender nach einer vorgegebenen Zeitspanne keine Empfangsbestätigung erhält, wiederholt er das Senden der Nachricht.</li>
+<li>Empfänger muss nun die wiederholte Nachricht empfangen, da auch die Bestätigung verlorengehen kann.</li>
+</ol>
+<p><strong>Verschiedene Arbeitsweisen</strong>:</p>
+<ul>
+<li><strong>synchrones</strong> Senden einer Nachricht blockiert den Sender, bis eine Bestätigung eintrifft</li>
+<li><strong>asynchrones</strong> Senden einer Nachricht blockiert den Sender nicht, d.h. Sender arbeitet normal weiter
+<ul>
+<li>Betriebssystem puffert gesendete Nachrichten, die noch nicht empfangen wurden</li>
+</ul>
+</li>
+</ul>
+<h3 id="verklemmungen-deadlocks">Verklemmungen (<em>Deadlocks</em>)</h3>
+<ul>
+<li>jede Situation, in der Prozesse <strong>exklusiv</strong> auf Ressourcen (Variablen) zugreifen, kann eine Verklemmung auslösen</li>
+<li>Für das Auftreten einer Verklemmung müssen 4 Bedingungen erfüllt sein:
+<ol>
+<li>Exklusive Nutzung (<em>Mutual Exclusion</em>)</li>
+<li>Wartebedingung (<em>Hold &amp; Wait</em>)</li>
+<li>Nichtentziehbarkeit (<em>Non-Preemption</em>)</li>
+<li>Geschlossene Kette (<em>Circular Wait</em>)</li>
+</ol>
+</li>
+</ul>
+<h2 id="speicherverwaltung">Speicherverwaltung</h2>
+<h3 id="zu-bewältigende-aufgaben">Zu bewältigende Aufgaben</h3>
+<ul>
+<li>Bereitstellung von Adressräumen</li>
+<li>Verwaltung des Hauptspeichers als Betriebsmittel</li>
+<li>Schutz vor unerlaubten Zugriffen</li>
+<li>Organisation der Nutzung eines gemeinsamen Speicherbereiches</li>
+</ul>
+<p>Die Speicherverwaltung ist die Komponente, die Prozessen einen Bereich im Hauptspeicher (<strong>Kachel</strong>) zuweist. Der Arbeitsspeicher eines Systems aus <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.68333em;"></span><span class="strut bottom" style="height: 0.68333em; vertical-align: 0em;"></span><span class="base"><span class="mord mathit" style="margin-right: 0.05764em;">S</span></span></span></span></span> Worten wird eingeteilt in <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mi>S</mi></mrow><mrow><mi>K</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{S}{K}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.872331em;"></span><span class="strut bottom" style="height: 1.21733em; vertical-align: -0.345em;"></span><span class="base"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.872331em;"><span class="" style="top: -2.655em;"><span class="pstrut" style="height: 3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right: 0.07153em;">K</span></span></span></span><span class="" style="top: -3.23em;"><span class="pstrut" style="height: 3em;"></span><span class="frac-line hide-tail" style="height: 0.04em;"><svg width="400em" height="400em" viewBox="0 0 400000 400000" preserveAspectRatio="xMinYMin slice"><path d="M0 0 h400000 v400000 h-400000z M0 0 h400000 v400000 h-400000z"></path></svg></span></span><span class="" style="top: -3.394em;"><span class="pstrut" style="height: 3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right: 0.05764em;">S</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.345em;"></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span> Seiten aus jeweils <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>K</mi><mo>=</mo><mn>2</mn><mtext>k</mtext></mrow><annotation encoding="application/x-tex">K = 2\text{k}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.69444em;"></span><span class="strut bottom" style="height: 0.69444em; vertical-align: 0em;"></span><span class="base"><span class="mord mathit" style="margin-right: 0.07153em;">K</span><span class="mrel">=</span><span class="mord mathrm">2</span><span class="mord text"><span class="mord mathrm">k</span></span></span></span></span></span> Worten (typisch 4 Kbyte). Das Betriebssystem wird beim Startvorgang durch das BIOS (<em>Basic Input Output System</em>) in die ersten Kacheln des Hauptspeichers geladen. Die Anwendungsprogramme finden in den übrigen Kacheln Platz.</p>
+<h3 id="speicherpartitionierung-und-fragmentierung">Speicherpartitionierung und Fragmentierung</h3>
+<p>Ein Anwendungsprogramm benötigt einen zusammenhängenden Speicherbereich (u.U. eine Partition benachbarter Seiten). Durch die Speicherverwaltung werden nur ganze Seiten vergeben, was zu <strong>interner Fragmentierung</strong> führen kann (siehe Abbildung 9).</p>
+<p><img src="images/intern-fragmentation.png" alt="Beispiel einer internen Fragmentierung"><br>
+<em>Abbildung 9: Beispiel einer internen Fragmentierung</em></p>
+<p><strong>2 Arten der Speicheraufteilung</strong>:</p>
+<ul>
+<li><strong>feste Partitionen</strong>: Speicher ist unterteilt in mehrere Partitionen fester Größe, jeder neue Prozess bekommt die kleinste ausreichende Partition zugewiesen
+<ul>
+<li>Problem: große Partitionen bleiben ungenutzt oder sind durch kleine Prozesse belegt</li>
+</ul>
+</li>
+<li><strong>variable Partitionen</strong>: dynamisch variierende Anzahl und Größe der Partitionen
+<ul>
+<li>Problem: Ersetzung von Partitionen lässt viele kleine freie Speicherbereiche entstehen (<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.36687em;"></span><span class="strut bottom" style="height: 0.36687em; vertical-align: 0em;"></span><span class="base"><span class="mrel">→</span></span></span></span></span> <strong>externe Fragmentierung</strong>) und größere Prozesse können nicht mehr eingeordnet werden</li>
+</ul>
+</li>
+</ul>
+<h3 id="prozesseinordnungsalgorithmen">Prozesseinordnungsalgorithmen</h3>
+<p><strong>Ziel</strong>: Minimierung des Verschnitts, damit nicht mehr so viele kleine freie Bereiche entstehen</p>
+<p>Da die Suche nach einer freien Partition über die Belegungstabelle sehr aufwendig ist, bedient man sich einer verketteten <strong>Freiliste</strong>, die alle freien Partitionen beinhaltet und das Zusammenführen benachbarter freier Bereiche zulässt.</p>
+<p>Folgende Algorithmen suchen nach dem geringstmöglichen Verschnitt:</p>
+<ul>
+<li><em>First fit</em>
+<ul>
+<li>Durchsuchen der Freiliste von Anfang an</li>
+<li>Auswahl des ersten gefundenen Bereichs, der groß genug ist</li>
+</ul>
+</li>
+<li><em>Best fit</em>
+<ul>
+<li>Durchsuchen der Freiliste von Anfang an</li>
+<li>Auswahl des Bereichs mit der kleinsten ausreichenden Lücke</li>
+</ul>
+</li>
+<li><em>Buddy system</em>
+<ul>
+<li>dynamische Auswahl mithilfe mehrerer Freilisten abhängig von Seitengröße <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mi>k</mi></msup></mrow><annotation encoding="application/x-tex">2^k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.849108em;"></span><span class="strut bottom" style="height: 0.849108em; vertical-align: 0em;"></span><span class="base"><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.849108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right: 0.03148em;">k</span></span></span></span></span></span></span></span></span></span></span></span> und Blockgröße <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mi>s</mi></msup></mrow><annotation encoding="application/x-tex">2^s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.664392em;"></span><span class="strut bottom" style="height: 0.664392em; vertical-align: 0em;"></span><span class="base"><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.664392em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">s</span></span></span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+</li>
+</ul>
+<h3 id="swapping">Swapping</h3>
+<p>Falls der Arbeitsspeicher als Einlagerungsressource für Prozesse nicht ausreicht, fängt das Betriebssystem an, ganze Prozesse auf die Festplatte auszulagern. Dies kostet viel Zeit und die Prozesse auf dem Massenspeicher verlangsamen sich bei einer Transferrate von <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≤</mo><mn>1</mn><mn>0</mn><mtext>&nbsp;</mtext><mtext>MB/s</mtext></mrow><annotation encoding="application/x-tex">\le 10 \ \text{MB/s}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.75em;"></span><span class="strut bottom" style="height: 1em; vertical-align: -0.25em;"></span><span class="base"><span class="mrel">≤</span><span class="mord mathrm">1</span><span class="mord mathrm">0</span><span class="mord text"><span class="mspace">&nbsp;</span><span class="mord mathrm">MB/s</span></span></span></span></span></span>. Swapping ist sehr ineffizient, da immer ganze Prozesse aus- und eingelagert werden müssen. Außerdem bietet sich eine Speichergefährdung bei fehlerhafter Adressierung nach Relokation eines Prozesses, wodurch dieser die Daten anderer Prozesse manipulieren könnte.</p>
+<h3 id="der-adressraum">Der Adressraum</h3>
+<p><strong>Begriff</strong>:</p>
 
