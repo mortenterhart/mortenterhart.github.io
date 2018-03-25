@@ -5,6 +5,93 @@ permalink: Semester_4/Betriebssysteme/Zusammenfassung
 
 ---
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<p><strong>Inhaltsverzeichnis</strong></p>
+<ul>
+<li><a href="#zusammenfassung-betriebssysteme">Zusammenfassung Betriebssysteme</a>
+<ul>
+<li><a href="#einf%C3%BChrung">Einführung</a>
+<ul>
+<li><a href="#was-ist-ein-betriebssystem">Was ist ein Betriebssystem?</a></li>
+<li><a href="#anforderungen-an-ein-betriebssystem">Anforderungen an ein Betriebssystem</a></li>
+<li><a href="#betriebsarten-von-betriebssystem">Betriebsarten von Betriebssystem</a></li>
+<li><a href="#aufgaben-eines-betriebssystems">Aufgaben eines Betriebssystems</a></li>
+<li><a href="#dienste-eines-betriebssystems">Dienste eines Betriebssystems</a></li>
+<li><a href="#einblick-in-unix">Einblick in UNIX</a></li>
+<li><a href="#unterbrechungen-interrupts">Unterbrechungen (<em>Interrupts</em>)</a></li>
+</ul></li>
+<li><a href="#prozesse">Prozesse</a>
+<ul>
+<li><a href="#definition">Definition</a></li>
+<li><a href="#umgebung-eines-prozessors">Umgebung eines Prozessors</a></li>
+<li><a href="#verhalten-eines-prozesses">Verhalten eines Prozesses</a></li>
+<li><a href="#zust%C3%A4nde-eines-prozesses">Zustände eines Prozesses</a></li>
+</ul></li>
+<li><a href="#prozessverwaltung">Prozessverwaltung</a>
+<ul>
+<li><a href="#steuerung-von-prozessen">Steuerung von Prozessen</a></li>
+<li><a href="#scheduling-strategien">Scheduling-Strategien</a></li>
+<li><a href="#non-preemptive-scheduling-strategien">Non-preemptive Scheduling-Strategien</a></li>
+<li><a href="#preemptive-scheduling-strategien">Preemptive Scheduling-Strategien</a></li>
+<li><a href="#prozess-scheduling-in-unix">Prozess-Scheduling in UNIX</a></li>
+<li><a href="#prozesshierarchie">Prozesshierarchie</a></li>
+</ul></li>
+<li><a href="#threads-und-prozesse">Threads und Prozesse</a></li>
+<li><a href="#kommunikation-zwischen-prozessen">Kommunikation zwischen Prozessen</a>
+<ul>
+<li><a href="#m%C3%B6glichkeiten-der-prozesskommunikation">Möglichkeiten der Prozesskommunikation</a></li>
+<li><a href="#bedingungen-f%C3%BCr-den-gegenseitigen-ausschluss-mutual-exclusion">Bedingungen für den gegenseitigen Ausschluss (<em>mutual exclusion</em>)</a></li>
+<li><a href="#unterbrechungssperre">Unterbrechungssperre</a></li>
+<li><a href="#verwendung-eines-semaphors">Verwendung eines Semaphors</a></li>
+<li><a href="#erzeuger---verbraucher-problem">Erzeuger- / Verbraucher-Problem</a></li>
+<li><a href="#bewertung-des-semaphor-konzepts">Bewertung des Semaphor-Konzepts</a></li>
+<li><a href="#kommunikation-mittels-nachrichten">Kommunikation mittels Nachrichten</a></li>
+<li><a href="#verklemmungen-deadlocks">Verklemmungen (<em>Deadlocks</em>)</a></li>
+</ul></li>
+<li><a href="#speicherverwaltung">Speicherverwaltung</a>
+<ul>
+<li><a href="#zu-bew%C3%A4ltigende-aufgaben">Zu bewältigende Aufgaben</a></li>
+<li><a href="#speicherpartitionierung-und-fragmentierung">Speicherpartitionierung und Fragmentierung</a></li>
+<li><a href="#prozesseinordnungsalgorithmen">Prozesseinordnungsalgorithmen</a></li>
+<li><a href="#swapping">Swapping</a></li>
+<li><a href="#der-adressraum">Der Adressraum</a></li>
+<li><a href="#virtueller-speicher">Virtueller Speicher</a></li>
+<li><a href="#adressabbildung">Adressabbildung</a></li>
+<li><a href="#die-seitentabelle">Die Seitentabelle</a></li>
+<li><a href="#seitenwechselstrategien">Seitenwechselstrategien</a></li>
+<li><a href="#bewertung-des-virtuellen-speichers">Bewertung des virtuellen Speichers</a></li>
+</ul></li>
+<li><a href="#dateien-und-dateisysteme">Dateien und Dateisysteme</a>
+<ul>
+<li><a href="#massenspeicher--hintergrundspeicher">Massenspeicher / Hintergrundspeicher</a></li>
+<li><a href="#datei-konzept">Datei-Konzept</a></li>
+<li><a href="#verzeichniskonzept">Verzeichniskonzept</a></li>
+<li><a href="#verschiedene-varianten-von-verzeichnissen">Verschiedene Varianten von Verzeichnissen</a></li>
+<li><a href="#operationen-auf-dateisystemen">Operationen auf Dateisystemen</a></li>
+<li><a href="#implementierung-auf-festplatten">Implementierung auf Festplatten</a></li>
+<li><a href="#implementierung-von-dateisystemen">Implementierung von Dateisystemen</a></li>
+<li><a href="#allokationsstrategien-vom-dateisystem">Allokationsstrategien vom Dateisystem</a>
+<ul>
+<li><a href="#zusammenh%C3%A4ngende-belegung">Zusammenhängende Belegung</a></li>
+<li><a href="#verkettete-belegung">Verkettete Belegung</a></li>
+<li><a href="#indizierte-belegung">Indizierte Belegung</a></li>
+<li><a href="#multi-level-indexblock">Multi-Level-Indexblock</a></li>
+<li><a href="#unix-inodes">UNIX Inodes</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#ein--und-ausgabekonzepte-und-bussysteme">Ein- und Ausgabekonzepte und Bussysteme</a>
+<ul>
+<li><a href="#strategien-der-ein---ausgabe">Strategien der Ein- / Ausgabe</a></li>
+<li><a href="#kopplung-der-ea-bausteine">Kopplung der E/A-Bausteine</a></li>
+<li><a href="#kommunikation-zwischen-cpu-und-ea-ger%C3%A4ten">Kommunikation zwischen CPU und E/A-Geräten</a></li>
+<li><a href="#direct-memory-access-dma">Direct Memory Access (DMA)</a></li>
+<li><a href="#ablauf-eines-dma-transfers">Ablauf eines DMA-Transfers</a></li>
+<li><a href="#ea-scheduling-strategien">E/A-Scheduling-Strategien</a></li>
+</ul></li>
+</ul></li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <h1 id="zusammenfassung-betriebssysteme">Zusammenfassung Betriebssysteme</h1>
 <p><em>geschrieben von Morten Terhart am 24.03.2018</em></p>
 <hr>
