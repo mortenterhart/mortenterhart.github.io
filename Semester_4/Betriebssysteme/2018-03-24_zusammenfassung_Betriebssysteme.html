@@ -522,12 +522,12 @@ permalink: Semester_4/Betriebssysteme/Zusammenfassung
 <li>Es wird stets die Seite, die als erstes hinzugefügt wurde, ausgelagert</li>
 </ul>
 </li>
-<li><em>Last Recently Used</em> (LRU)
+<li><em>Least Recently Used</em> (LRU)
 <ul>
 <li>Es wird die Seite ausgelagert, die am längsten nicht mehr benutzt wurde (UNIX)</li>
 </ul>
 </li>
-<li><em>Last Frequently Used</em> (LFU)
+<li><em>Least Frequently Used</em> (LFU)
 <ul>
 <li>Es wird die Seite ausgelagert, die am seltensten benutzt wurde</li>
 </ul>
@@ -663,4 +663,24 @@ permalink: Semester_4/Betriebssysteme/Zusammenfassung
 </ul>
 <p><img src="images/hard-drive-composition.png" alt="Aufbau einer Festplatte"><br>
 <em>Abbildung 18: Aufbau einer Festplatte</em></p>
+<h3 id="implementierung-von-dateisystemen">Implementierung von Dateisystemen</h3>
+<p>Dateisysteme sind in Schichten realisiert:</p>
+<ul>
+<li><strong>E/A-Kontrolle</strong>: Treiber für Datenübertragung</li>
+<li><strong>Basic File System</strong>: veranlasst Treiber, physikalische Blöcke auf Festplatte zu schreiben bzw. von dort zu lesen</li>
+<li><strong>Dateiorganisationsmodul</strong>: Abbildung von logischen zu physikalischen Blockadressen</li>
+<li></li>
+</ul>
 
+<table>
+<thead>
+<tr>
+<th align="center">Schichten</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">lksndd</td>
+</tr>
+</tbody>
+</table>
