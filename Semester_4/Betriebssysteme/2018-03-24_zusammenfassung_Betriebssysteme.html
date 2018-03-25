@@ -771,4 +771,48 @@ permalink: Semester_4/Betriebssysteme/Zusammenfassung
 <h4 id="indizierte-belegung">Indizierte Belegung</h4>
 <p><img src="images/filesystem-indexed-allocation.png" alt="Indizierte Block-Allokation"><br>
 <em>Abbildung 23: Indizierte Block-Allokation</em></p>
+<ul>
+<li>Tabelle im Arbeitsspeicher (<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.36687em;"></span><span class="strut bottom" style="height: 0.36687em; vertical-align: 0em;"></span><span class="base"><span class="mrel">→</span></span></span></span></span> <strong>Indexblock</strong>) enthält alle Zeiger von Blöcken einer Datei</li>
+<li>Verzeichniseintrag enthält unter dem Dateinamen nur noch die Adresse des Indexblocks</li>
+</ul>
+<h4 id="multi-level-indexblock">Multi-Level-Indexblock</h4>
+<ul>
+<li>Indexblock referenziert den nächsten Indexblock in einer Hierarchie</li>
+<li>Lösungen
+<ul>
+<li><em>Linked Scheme</em>: Mehrere verkettete Indexblöcke</li>
+<li><em>Multi-Level Index</em>: Zweistufige Indexblocktabelle</li>
+<li><em>Combined scheme</em>: dynamische Anpassung der Indexblocktabelle für eine Datei abhängig von ihrer Größe</li>
+</ul>
+</li>
+</ul>
+<p><img src="images/multi-level-index.png" alt="Schema des Muli-Level-Indexblocks"><br>
+<em>Abbildung 24: Schema des Multi-Level-Indexblocks</em></p>
+<h4 id="unix-inodes">UNIX Inodes</h4>
+<p>Kombination aus</p>
+<ul>
+<li>indizierter Allokation und</li>
+<li>kaskadierten Indexblocktabellen</li>
+</ul>
+<p><img src="images/unix-inodes.png" alt="UNIX Inodes"><br>
+<em>Abbildung 25: UNIX Inodes</em></p>
+
+<table>
+<thead>
+<tr>
+<th align="left">Vorteile</th>
+<th align="left">Nachteile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">+ schneller Zugriff für kleine Dateien</td>
+<td align="left">- maximale Dateigröße ist begrenzt</td>
+</tr>
+<tr>
+<td align="left">+ keine externe Fragmentierung</td>
+<td align="left">- interne Fragmentierung</td>
+</tr>
+</tbody>
+</table><h2 id="ein--und-ausgabekonzepte-und-bussysteme">Ein- und Ausgabekonzepte und Bussysteme</h2>
 
