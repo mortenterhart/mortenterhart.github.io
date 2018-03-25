@@ -639,6 +639,25 @@ permalink: Semester_4/Betriebssysteme/Zusammenfassung
 <img src="images/two-level-directory.png" alt="Two-Level-Verzeichnis"><br>
 <em>Abbildung 16: Two-Level-Verzeichnis</em></li>
 <li><strong>Baum-Verzeichnisstruktur</strong>: Struktur mit Verzeichnissen und beliebig vielen Unterverzeichnissen, Datei wird über absoluten Pfad vom Wurzelverzeichnis (unter UNIX <code>/</code>) identifiziert<br>
-<img src="images/tree-directory.png" alt="Baum-Verzeichnisstruktur"></li>
+<img src="images/tree-directory.png" alt="Baum-Verzeichnisstruktur"><br>
+<em>Abbildung 17: Baum-Verzeichnisstruktur</em></li>
 </ul>
+<h3 id="operationen-auf-dateisystemen">Operationen auf Dateisystemen</h3>
+<ul>
+<li>Dateien oder Verzeichnisse können über Links an mehreren Stellen referenziert werden (<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.36687em;"></span><span class="strut bottom" style="height: 0.36687em; vertical-align: 0em;"></span><span class="base"><span class="mrel">→</span></span></span></span></span> azyklische Graphen / Referenzierung)</li>
+<li>andere Dateisysteme können in das Aktuelle an einen bestimmten Punkt eingehängt werden (<em>mount</em>)</li>
+</ul>
+<h3 id="implementierung-auf-festplatten">Implementierung auf Festplatten</h3>
+<ul>
+<li>Dateien werden magnetisch gespeichert</li>
+<li>Festplatte besteht aus
+<ul>
+<li>Scheiben und Schreib- / Leseköpfen (beidseitig)</li>
+<li>Scheiben bestehen aus Spuren (<em>Tracks</em>)</li>
+<li>Spuren sind in Sektoren aufgeteilt (siehe Abbildung 18)</li>
+</ul>
+</li>
+</ul>
+<p><img src="images/hard-drive-composition.png" alt="Aufbau einer Festplatte"><br>
+<em>Abbildung 18: Aufbau einer Festplatte</em></p>
 
