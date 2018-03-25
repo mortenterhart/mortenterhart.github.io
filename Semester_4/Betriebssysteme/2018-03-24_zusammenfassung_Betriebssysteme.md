@@ -1,4 +1,9 @@
-﻿# Zusammenfassung Betriebssysteme
+﻿---
+title: Zusammenfassung Betriebssysteme
+layout: default
+permalink: Semester_4/Betriebssysteme/Zusammenfassung_md
+---
+# Zusammenfassung Betriebssysteme
 _geschrieben von Morten Terhart am 24.03.2018_
 
 ---
