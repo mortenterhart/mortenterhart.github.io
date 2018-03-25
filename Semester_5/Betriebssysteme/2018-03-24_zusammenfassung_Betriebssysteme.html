@@ -219,11 +219,86 @@ permalink: Semester_4/Betriebssysteme/Zusammenfassung
 <ul>
 <li>Ein Prozess kann einen neuen Prozess auslösen
 <ul>
-<li>Vater-Prozess (<em>parent process</em>) ➡️ Kind-Prozess (<em>child process</em>)</li>
+<li>Vater-Prozess (<em>parent process</em>) <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.36687em;"></span><span class="strut bottom" style="height: 0.36687em; vertical-align: 0em;"></span><span class="base"><span class="mrel">→</span></span></span></span></span> Kind-Prozess (<em>child process</em>)</li>
 </ul>
 </li>
 <li>Eltern- und Kindprozesse können miteinander kommunizieren</li>
 <li>Bei Abschluss des Elternprozesses werden üblicherweise alle Kindprozesse geschlossen</li>
-<li></li>
 </ul>
+<h2 id="threads-und-prozesse">Threads und Prozesse</h2>
+<ul>
+<li>konventionelle Prozesse kombinieren Ressourcenverwaltung und internes Scheduling</li>
+<li>Entkopplung durch
+<ul>
+<li>Prozess <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.36687em;"></span><span class="strut bottom" style="height: 0.36687em; vertical-align: 0em;"></span><span class="base"><span class="mrel">→</span></span></span></span></span> Ressourcenverwaltung, virtueller Adressraum</li>
+<li>Thread <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.36687em;"></span><span class="strut bottom" style="height: 0.36687em; vertical-align: 0em;"></span><span class="base"><span class="mrel">→</span></span></span></span></span> Zuweisung eines Kind-Prozesses zur CPU (<em>Dispatching</em>)
+<ul>
+<li>Ausführungszustand (<em>running</em>, <em>ready</em>, …)</li>
+<li>Kontext</li>
+<li>Stack</li>
+<li>eigenes Prozessverwaltungssystem innerhalb des Prozesses</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Multithreading</strong>: Innerhalb eines Prozesses werden mehrere Tätigkeiten parallel vorgenommen, setzt Fähigkeit des Betriebssystem zum Multithreading voraus.</li>
+</ul>
+<h2 id="kommunikation-zwischen-prozessen">Kommunikation zwischen Prozessen</h2>
+<p>Prozesse müssen ständig miteinander kommunizieren, z.B. für den Aufbau von <strong>Pipelines</strong> (Übergabe der Ausgabe des vorherigen Prozesses an den nächsten Prozess).</p>
+<h3 id="möglichkeiten-der-prozesskommunikation">Möglichkeiten der Prozesskommunikation</h3>
+<ul>
+<li>Nutzung eines gemeinsamen Speicherbereiches</li>
+<li>Kommunikation über Dateien im Dateisystem</li>
+<li>expliziter Austausch von Nachrichten</li>
+<li>Kommunikation über <em>Pipes</em> (UNIX-spezifisch)</li>
+</ul>
+<p>Eine sichere Prozesskommunikation bedarf einer geeigneten Prozesssynchronisation, um den gegenseitigen Ausschluss umzusetzen.</p>
+<p><strong>Problem</strong>: mehrere Prozesse greifen gleichzeitig auf eine gemeinsame Ressource zu (z.B. Speichervariable)</p>
+<p>Code-Abschnitte, die nicht unterbrochen werden <strong>dürfen</strong>, weil sie bspw. eine Transaktion tätigen, bezeichnet man als <strong>kritischen Abschnitt</strong>. Daher dürfen sich mehrere Prozesse nicht gleichzeitig in ihren kritischen Abschnitten befinden.</p>
+<h3 id="bedingungen-für-den-gegenseitigen-ausschluss-mutual-exclusion">Bedingungen für den gegenseitigen Ausschluss (<em>mutual exclusion</em>)</h3>
+<ol>
+<li>Nur ein Prozess darf sich im kritischen Abschnitt befinden.</li>
+<li>Prozesse, die in den kritischen Abschnitt eintreten oder diesen verlassen, müssen die anderen wartenden Prozesse über dieses Ereignis informieren.</li>
+<li>Auch bei mehr als 2 Prozessen muss das Verfahren einwandfrei sein.</li>
+<li>Jeder Prozess soll gleiche Chancen auf den Eintritt in einen kritischen Abschnitt haben.</li>
+<li>Kein Prozess in einem kritischen Abschnitt darf andere blockieren.</li>
+<li>Kein Prozess soll unendlich lange warten müssen.</li>
+</ol>
+<h3 id="unterbrechungssperre">Unterbrechungssperre</h3>
+<p><strong>Idee</strong>: Unterbrechungen (<em>Interrupts</em>) werden bei Ausführungen eines kritischen Abschnitts ignoriert / maskiert. Selbst das Betriebssystem kann den laufenden Prozess nicht anhalten.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">Vorteile</th>
+<th align="left">Nachteile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">+ einfache Realisierung</td>
+<td align="left">- Anwender muss Maskierung wieder aufheben (kann leicht vergessen werden)</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">- hohe Reaktionszeit bei eintreffenden E/A-Unterbrechungsanforderungen können zu Datenverlust führen</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">- funktioniert nicht bei Mehrprozessorbetrieb</td>
+</tr>
+</tbody>
+</table><h3 id="verwendung-eines-semaphors">Verwendung eines Semaphors</h3>
+<p><strong>Definition</strong>: Ein Semaphor (DIJKSTRA, 1965) ist eine Variable <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.68333em;"></span><span class="strut bottom" style="height: 0.68333em; vertical-align: 0em;"></span><span class="base"><span class="mord mathit" style="margin-right: 0.05764em;">S</span></span></span></span></span>, auf der die zwei folgenden ununterbrechenbaren Operationen <code>P</code> (Passieren) und <code>V</code> (Verlassen) definiert sind:</p>
+<pre class=" language-java"><code class="prism  language-java"><span class="token function">P</span><span class="token punctuation">(</span>S<span class="token punctuation">)</span> <span class="token operator">:</span><span class="token operator">=</span> <span class="token punctuation">[</span> <span class="token keyword">while</span> <span class="token punctuation">(</span>S <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">/* do nothing */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span> S <span class="token operator">=</span> S <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token punctuation">]</span>
+<span class="token function">V</span><span class="token punctuation">(</span>S<span class="token punctuation">)</span> <span class="token operator">:</span><span class="token operator">=</span> <span class="token punctuation">[</span> S <span class="token operator">=</span> S <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token punctuation">]</span>
+</code></pre>
+<p>Initialisierung mit <code>S = 1</code>.</p>
+<p><strong>Implementation</strong>:</p>
+<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">int</span> S <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// Zahl der verfügbaren Betriebsmittel</span>
+<span class="token function">P</span><span class="token punctuation">(</span>S<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// kritischer Abschnitt hier</span>
+<span class="token function">V</span><span class="token punctuation">(</span>S<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>Nachteil</strong>: rechenintensive Warteschleife in <code>P(S)</code> (<em>busy wait loop</em>)</p>
 
