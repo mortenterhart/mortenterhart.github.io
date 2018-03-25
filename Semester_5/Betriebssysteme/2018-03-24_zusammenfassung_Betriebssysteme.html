@@ -11,7 +11,7 @@ permalink: Semester_4/Betriebssysteme/Zusammenfassung
 <h2 id="einführung">Einführung</h2>
 <h3 id="was-ist-ein-betriebssystem">Was ist ein Betriebssystem?</h3>
 <blockquote>
-<p><em>“Als Betriebssystem bezeichnet man die Software, die den Ablauf von Programmen auf der Hardware steuert und die vorhandenen Betriebsmittel verwaltet”</em>.</p>
+<p><em>“Als Betriebssystem bezeichnet man die Software, die den Ablauf von Programmen auf der Hardware steuert und die vorhandenen Betriebsmittel verwaltet.”</em></p>
 </blockquote>
 <p>Siehe dazu folgendes Schema:<br>
 <img src="images/Definition_Betriebssystem.png" alt="Definition Betriebssystem"><br>
@@ -301,4 +301,19 @@ permalink: Semester_4/Betriebssysteme/Zusammenfassung
 <span class="token function">V</span><span class="token punctuation">(</span>S<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Nachteil</strong>: rechenintensive Warteschleife in <code>P(S)</code> (<em>busy wait loop</em>)</p>
+<p><strong>effizientere Implementation</strong> mit <code>S</code> als Objekt mit den Attributen <code>ctrl</code> (Wert des Semaphors) und <code>list</code> (Liste wartender Prozesse):</p>
+<pre class=" language-java"><code class="prism  language-java"><span class="token function">P</span><span class="token punctuation">(</span>S<span class="token punctuation">)</span> <span class="token operator">:</span><span class="token operator">=</span> <span class="token punctuation">[</span> S<span class="token punctuation">.</span>ctr <span class="token operator">=</span> S<span class="token punctuation">.</span>ctr – <span class="token number">1</span> <span class="token punctuation">;</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>S<span class="token punctuation">.</span>ctr <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              put pid in S<span class="token punctuation">.</span>list<span class="token punctuation">;</span>
+              <span class="token function">sleep</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span> 
+        <span class="token punctuation">]</span>
+<span class="token function">V</span><span class="token punctuation">(</span>S<span class="token punctuation">)</span> <span class="token operator">:</span><span class="token operator">=</span> <span class="token punctuation">[</span> S<span class="token punctuation">.</span>ctr <span class="token operator">=</span> S<span class="token punctuation">.</span>ctr <span class="token operator">+</span> <span class="token number">1</span> <span class="token punctuation">;</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>S<span class="token punctuation">.</span>ctr <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              get pid from S<span class="token punctuation">.</span>list<span class="token punctuation">;</span>
+              <span class="token function">wakeUp</span><span class="token punctuation">(</span>pid<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+</code></pre>
+<p>Systemaufruf <code>sleep()</code> blockiert Prozess <code>pid</code> und verbraucht so keine CPU-Zeit mehr, bis er durch <code>wakeUp(pid)</code> wieder reaktiviert wird.</p>
 
