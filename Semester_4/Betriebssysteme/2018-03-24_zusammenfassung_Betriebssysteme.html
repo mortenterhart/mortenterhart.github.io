@@ -574,5 +574,52 @@ permalink: Semester_4/Betriebssysteme/Zusammenfassung
 </ul>
 <h2 id="dateien-und-dateisysteme">Dateien und Dateisysteme</h2>
 <p><strong>Problem</strong>: Größe vom Hauptspeicher ist begrenzt, Daten gehen verloren, sobald der Prozess beendet wird</p>
-<p><strong>Lösung</strong>: Einlagerung der Daten auf dem permanenten Massenspeicher</p>
+<p><strong>Lösung</strong>: Sicherung der Daten auf dem permanenten Massenspeicher mit großer Kapazität</p>
+<p>Betriebssystem muss bei Dateien auf dem Massenspeicher darauf achten, dass</p>
+<ul>
+<li>ein effizienter und schneller Zugriff gewährleistet ist und</li>
+<li>andere Benutzer nicht auf meine Dateien zugreifen können (Zugriffsberechtigungen).</li>
+</ul>
+<h3 id="massenspeicher--hintergrundspeicher">Massenspeicher / Hintergrundspeicher</h3>
+<ul>
+<li>physikalisches Medium mit Blockstruktur</li>
+<li>4 oder 8 Blöcke bilden ein Cluster (siehe Abbildung 13)</li>
+</ul>
+<p><img src="images/hard-drive-cluster.png" alt="Clustering des Hintergrundspeichers"><br>
+<em>Abbildung 13: Clustering des Hintergrundspeichers</em></p>
+<h3 id="datei-konzept">Datei-Konzept</h3>
+<p><strong>Datei</strong>: Eine mit Namen versehene Sammlung zusammengehöriger Informationen</p>
+<ul>
+<li>verschiedene Dateitypen (Textdatei, Quelltext, Bitmap, Binärdatei, Programmdatei, …)</li>
+<li>Dateiattribute
+<ul>
+<li>Dateiname</li>
+<li>Datei-Identifikator</li>
+<li>Typinformationen, Format</li>
+<li>Metadaten (Tabelle mit Informationen zur Datei)</li>
+</ul>
+</li>
+<li>Datei-Operationen
+<ul>
+<li>Erzeugen</li>
+<li>Schreiben</li>
+<li>Lesen</li>
+<li>Löschen</li>
+<li>Umbenennen</li>
+<li>Kopieren</li>
+<li>Anhängen</li>
+</ul>
+</li>
+<li>Operationen erfordern das Auffinden einer Datei in einem Verzeichnis (<em>Open File Table</em> (OFT) enthält eine Liste aller offenen Dateien)</li>
+<li>Zugriffsarten
+<ul>
+<li>Sequenzieller Zugriff</li>
+<li>Direkter Zugriff (<em>Direct Access</em>)</li>
+</ul>
+</li>
+</ul>
+<h3 id="verzeichniskonzept">Verzeichniskonzept</h3>
+<p>Alle Dateien in einem Dateisystem werden durch optionale Partitionen auf der Festplatte und durch Verzeichnisse organisiert (siehe Abbildung 14).</p>
+<p><img src="images/hard-drive-partitioning.png" alt="Organisation von Dateien auf Festplatten"><br>
+<em>Abbildung 14: Organisation von Dateien auf Festplatten</em></p>
 
