@@ -203,6 +203,8 @@ Moderne Betriebssysteme verwenden ausschließlich preemptive Strategien.
 	* Prozesse werden in der Reihenfolge ihrer Initiierung in die Warteschlange geordnet, diese wird nach dem FIFO-Prinzip (_First In, First Out_) bearbeitet.
 ![Non-preemptive Strategie First Come, First Serve](images/first-come-first-serve.png)
 _Abbildung 6: Scheduling-Strategie "First Come, First Serve"_
+* _Last Come, First Serve_ (LCFS)
+    * Prozesse werden in der Reihenfolge ihrer Ankunft in die Warteschlange eingereiht, diese wird nach dem LIFO-Prinzip (_Last In, First Out_) bearbeitet, d.h. der zuletzt eingetroffene Prozess wird als erstes von der CPU behandelt
 * _Shortest Job First_ (SJF)
 	* Prozesse mit geringsten Bedienzeiten werden zuerst behandelt.
 	* Ziel: Durchschnittliche Antwortzeit reduzieren
