@@ -8,6 +8,28 @@ permalink: Semester_4/Kryptographie/Wichtige_Konzepte
 <h1 id="wichtige-kryptographische-begriffe-und-konzepte">Wichtige kryptographische Begriffe und Konzepte</h1>
 <p><em>vom 26.03.2018</em></p>
 <hr>
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<p><strong>Inhaltsverzeichnis</strong></p>
+<ul>
+<li><a href="#was-ist-kryptologie">Was ist Kryptologie?</a></li>
+<li><a href="#anforderungen-an-kryptographische-systeme">Anforderungen an kryptographische Systeme</a></li>
+<li><a href="#weitere-begriffe">Weitere Begriffe</a>
+<ul>
+<li><a href="#datenschutz-und-datensicherheit">Datenschutz und Datensicherheit</a>
+<ul>
+<li><a href="#datenschutz">Datenschutz</a></li>
+<li><a href="#datensicherheit">Datensicherheit</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#klartext-und-chiffrierung">Klartext und Chiffrierung</a></li>
+<li><a href="#grundlegendes-szenario">Grundlegendes Szenario</a></li>
+<li><a href="#probleme-bei-symmetrischen-verfahren">Probleme bei symmetrischen Verfahren</a></li>
+<li><a href="#asymmetrische-verfahren">Asymmetrische Verfahren</a></li>
+<li><a href="#block--und-strom-chiffren">Block- und Strom-Chiffren</a></li>
+<li><a href="#grunds%C3%A4tzliche-kryptographische-operationen">Grundsätzliche kryptographische Operationen</a></li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <h2 id="was-ist-kryptologie">Was ist Kryptologie?</h2>
 <p>Kryptologie ist eine Wissenschaft, die sich mit Methoden der Verschlüsselung und damit verwandten Verfahren befasst. Kryptologen sind ausgebildete High-End-Mathematiker.</p>
 <div class="mermaid"><svg xmlns="http://www.w3.org/2000/svg" id="mermaid-svg-p5kgJV8hkHVR05v6" height="100%" viewBox="0 0 353.140625 202" style="max-width:353.140625px;"><g><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath" style="opacity: 1;"><path class="path" d="M124.89070638020834,66L80.2109375,91L80.2109375,116" marker-end="url(#arrowhead5981)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead5981" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M207.10148111979166,66L251.78125,91L251.78125,116" marker-end="url(#arrowhead5982)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead5982" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node" id="A" transform="translate(165.99609375,43)" style="opacity: 1;"><rect rx="0" ry="0" x="-50.8671875" y="-23" width="101.734375" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-40.8671875,-13)"><foreignObject width="81.734375" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Kryptologie</div></foreignObject></g></g></g><g class="node" id="B" transform="translate(80.2109375,139)" style="opacity: 1;"><rect rx="0" ry="0" x="-60.2109375" y="-23" width="120.421875" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-50.2109375,-13)"><foreignObject width="100.421875" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Kryptographie</div></foreignObject></g></g></g><g class="node" id="C" transform="translate(251.78125,139)" style="opacity: 1;"><rect rx="0" ry="0" x="-61.359375" y="-23" width="122.71875" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-51.359375,-13)"><foreignObject width="102.71875" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Kryptoanalysis</div></foreignObject></g></g></g></g></g></g></svg></div>
