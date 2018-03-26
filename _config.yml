@@ -33,6 +33,9 @@ theme: jekyll-theme-leap-day
 plugins:
   - jekyll-feed
 
+# Google Analytics
+google_analytics: UA-116473915-1
+
 # Set SASS converter options
 sass:
     sass_dir: _sass
