@@ -474,4 +474,15 @@ $\text{links:} \quad \ \ \, (5^{11} \cdot 11^5) \mod{13} &#x3D; 4 \mod{13}$
 $\text{rechts:} \quad \ 7^{10} \mod{13} &#x3D; 4 \mod{13}$
 $\Rightarrow$ Beide Terme sind gleich.
 
+## Die FEISTEL-Chiffre
+_von HORST FEISTEL_, ~1970 IBM
+
+Die **FEISTEL-Chiffre** / oder **FEISTEL-Netzwerk** ist eine Vorlage / Muster für viele symmetrische Block-Chiffren, z.B.
+
+&lt;center&gt;DES, Blowfish, Twofish, CAST, RC5, MARS, ...&lt;/center&gt;
+
+Bei der FEISTEL-Chiffre ist die Ver- / Entschlüsselung (fast) identisch, der Unterschied liegt lediglich in der Reihenfolge der Anwendung der sogenannten **Rundenschlüssel**.
+
+![Das Feistel-Netzwerk](images/feistel-chiffre.png)
+_Abbildung 1: Aufbau eines Feistel-Netzwerkes_ ([Quelle](https://de.wikipedia.org/wiki/Feistelchiffre))
 
