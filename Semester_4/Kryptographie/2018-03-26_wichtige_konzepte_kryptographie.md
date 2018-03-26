@@ -486,3 +486,29 @@ Bei der FEISTEL-Chiffre ist die Ver- / Entschlüsselung (fast) identisch, der Un
 ![Das Feistel-Netzwerk](images/feistel-chiffre.png)
 _Abbildung 1: Aufbau eines Feistel-Netzwerkes_ ([Quelle](https://de.wikipedia.org/wiki/Feistelchiffre))
 
+## Betriebsmodi von Block-Chiffren
+**Jede** Block-Chiffre kann in verschiedenen Arbeitsmodi eingesetzt werden (NIST FiPS PUB 81 und weitere)
+
+* Electronic Code Book Mode (ECB)
+* Cipher Block Chaining Mode (CBC)
+* Cipher Feedback Mode (CFB)
+* Output Feedback Mode (OFB)
+
+**Neu**:
+* Counter Mode (CTR)
+* Galois Counter Mode (GCM) $\leftarrow$ eingebaute Authentifizierung
+
+### Electronic Code Block Mode (ECB)
+Jedes $n$-Bit Klartextblock wird unabhängig von anderen mit dem gleichen Schlüssel $K$ verschlüsselt.
+
+![ECB Block-Chiffren](images/ecb-encryption.png)
+_Abbildung 2: Verschlüsselung mittels ECB_ ([Quelle](https://de.wikipedia.org/wiki/Electronic_Code_Book_Mode))
+
+### Cipher Block Chaining Mode (CBC)
+Input des Verschlüsselungsalgorithmus ist die &#x60;XOR&#x60;-Verknüpfung des letzten Chiffreblocks mit dem Klartextblock. Die Verkettung der Klartextblöcke mit den Chiffretextblöcken führt dazu, dass statistische Eigenschaften des Klartextes nicht auf das Chiffrat übertragen werden.
+
+![CBC Block-Chiffre](images/cbc-encryption.png)
+_Abbildung 3: Verschlüsselung mittels CBC_ ([Quelle](https://de.wikipedia.org/wiki/Cipher_Block_Chaining_Mode))
+
+CFB, OFB und CTR dienen dazu, eine Block-Chiffre als Strom-Chiffre zu betreiben.
+
