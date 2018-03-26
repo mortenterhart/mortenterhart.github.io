@@ -9,6 +9,9 @@ permalink: Semester_4/Kryptographie
 * [Vorlesung 22.01.2018](Kryptographie/2018-01-22_kryptographie)
 * [Vorlesung 14.03.2018](Kryptographie/2018-03-14_kryptographie)
 
+## Zusammenfassung
+* [Wichtige Begriffe und Konzepte](Kryptographie/Wichtige_Konzepte)
+
 ## Scans
 * [A Kurs 05.02.2018](Kryptographie/scans/2018-02-05_A_kurs_kryptographie_scan.pdf)
 * [B Kurs 05.02.2018](Kryptographie/scans/2018-02-05_B_kurs_kryptographie_scan.pdf)
