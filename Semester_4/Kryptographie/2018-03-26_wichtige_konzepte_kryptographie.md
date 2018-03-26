@@ -10,7 +10,6 @@ _vom 26.03.2018_
 
 ---------
 
-**Inhaltsverzeichnis**
 
 - [Was ist Kryptologie?](#was-ist-kryptologie)
 - [Anforderungen an kryptographische Systeme](#anforderungen-an-kryptographische-systeme)
@@ -35,6 +34,16 @@ _vom 26.03.2018_
 - [Mathematische Grundlagen (kurz)](#mathematische-grundlagen-kurz)
   - [Relativ prime Zahlen](#relativ-prime-zahlen)
   - [Totientenfunktion](#totientenfunktion)
+  - [Kleiner Satz von FERMAT](#kleiner-satz-von-fermat)
+- [RSA-Algorithmus](#rsa-algorithmus)
+- [DIFFIE-HELLMAN Key-Exchange Verfahren](#diffie-hellman-key-exchange-verfahren)
+  - [Das DH-Key-Exchange Kryptosystem](#das-dh-key-exchange-kryptosystem)
+- [ELGAMAL-Kryptosysteme (TAHER ELGAMAL, 1985)](#elgamal-kryptosysteme-taher-elgamal-1985)
+  - [Digitale Signatur](#digitale-signatur)
+- [Die FEISTEL-Chiffre](#die-feistel-chiffre)
+- [Betriebsmodi von Block-Chiffren](#betriebsmodi-von-block-chiffren)
+  - [Electronic Code Block Mode (ECB)](#electronic-code-block-mode-ecb)
+  - [Cipher Block Chaining Mode (CBC)](#cipher-block-chaining-mode-cbc)
 
 ## Was ist Kryptologie?
 Kryptologie ist eine Wissenschaft, die sich mit Methoden der Verschlüsselung und damit verwandten Verfahren befasst. Kryptologen sind ausgebildete High-End-Mathematiker.
