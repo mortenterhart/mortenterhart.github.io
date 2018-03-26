@@ -214,6 +214,7 @@ In der Kryptographie wird in der Regel streng auf das KERCKHOFFs-Prinzip geachte
 &gt; Die Sicherheit eines Kryptosystems darf **niemals** von der Geheimhaltung des Verschlüsselungsalgorithmus abhängen, sondern ausschließlich von der Geheimhaltung des Schlüssels.
 
 ## Monoalphabetische Chiffren
+
 ### Shift-Chiffre
 * Buchstaben des Klartextes werden um ein $k \in \mathbb{Z}_{26}$ verschoben
 * Anmerkungen: $k &#x3D; 3$ heißt üblicherweise CÄSAR-Chiffre
@@ -239,5 +240,43 @@ mit $\alpha^{-1} \cdot \alpha \equiv 1 \mod 26$.
 1. Die Shift-Chiffre ist in der affinen Chiffre enthalten.
 2. Schlüsselraum: Es gibt $12 \cdot 26 &#x3D; 312$ verschiedene Schlüssel, da $\phi(26) &#x3D; 12$.
 3. Monoalphabetisch $\rightarrow$ Statistische Struktur bleibt erhalten.
-ä
+
+## Polyalphabetische Chiffren
+
+### Die Vigenére-Chiffre
+Die Shift- und die affine Chiffre sind Beispiele von monoalphabetischen Chiffren, d.h. mit der Wahl eines Schlüssels wird jedes Klartextzeichen auf genau ein Chiffretextzeichen abgebildet (Eigenschaft, dass die statistische Struktur des Klartextes auf den Chiffretext übertragen wird).
+
+Die Vigenére-Chiffre (1586 veröffentlicht) galt lange als nicht brechbar, bis in den 1860er Jahren Friedrich Kasicki und **Charles Babbage** daherkamen.
+
+**Definition**: Sei $m$ eine positive ganze Zahl und
+$$
+M &#x3D; C &#x3D; K &#x3D; (\mathbb{Z}_{26})^m &#x3D; \mathbb{Z}_{26} \times \mathbb{Z}_{26} \times \ldots \times \mathbb{Z}_{26}
+$$
+
+Für einen festen Schlüsselwert $\vec{K} &#x3D; (K_1, \ldots, K_m)$ ist
+$$
+V_k: \mathbb{Z}_{26} \rightarrow \mathbb{Z}_{26}
+$$
+
+$$
+x \mapsto V_k(\vec{x})
+$$
+
+**Dechiffrierung**:
+$V_k^{-1}: \mathbb{Z}_{26} \rightarrow \mathbb{Z}_{26}$
+$y \mapsto (\vec{x} - \vec{k}) \mod 26$
+$\quad \quad &#x3D; [(x_1 - k_1) \mod 26, \ldots, (x_m - k_m) \mod 26]$.
+
+**Entschlüsselung**: Mit dem gleichen Schlüsselwort einfach abziehen
+$\rightarrow (x_i - k_i) \mod 26$
+
+**Schlüsselraum**: $|K| &#x3D; 26 \cdot 26 \cdot \ldots \cdot 26 &#x3D; 26^m$ mit $\vec{k} &#x3D; (k_1, k_2, \ldots, k_m)$.
+
+Die Vigenére-Chiffre ist eine **polyalphabetische Chiffre**, weil durch die Wahl des Schlüssels $\vec{k} &#x3D; (k_1, k_2, \ldots, k_m)$ (ohne Buchstabenwiederholung) ein Klartextzeichen auf $m$ mögliche Chiffrezeichen abgebildet wird.
+
+### Die HILL-Chiffre
+
+1. Auswahl eines Schlüssels
+	* Wähle eine Zahl, z.B. $k &#x3D; 3;$ der Schlüssel ist eine $n \times m$-Matrix $M$, deren Einträge Zahlen $\mod 26$ sind.
+2. **Verschlüsselung**: 
 
