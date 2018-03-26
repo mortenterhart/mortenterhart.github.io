@@ -24,7 +24,9 @@ The following JavaScript context will be passed to the template:
   files.0.content.yamlProperties.permalink += "_md";
 </script>
 ---
-
+title: Kryptographische Begriffe und Konzepte
+layout: default
+permalink: Semester_4/Kryptographie/Wichtige_Konzepte
 
 ---
 
