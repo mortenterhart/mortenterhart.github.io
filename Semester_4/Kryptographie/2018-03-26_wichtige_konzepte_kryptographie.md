@@ -278,5 +278,22 @@ Die Vigenére-Chiffre ist eine **polyalphabetische Chiffre**, weil durch die Wah
 
 1. Auswahl eines Schlüssels
 	* Wähle eine Zahl, z.B. $k &#x3D; 3;$ der Schlüssel ist eine $n \times m$-Matrix $M$, deren Einträge Zahlen $\mod 26$ sind.
-2. **Verschlüsselung**: 
+2. **Verschlüsselung**
+	* Der Klartext wird in Zeilenvektoren aufgeteilt mit Länge $n$, d.h. die HILL-Chiffre ist eine **Block-Chiffre**, bei der Blöcke fester Länge in einem Vorgang verschlüsselt werden.
+3. **Dechiffrierung**
+	* Dazu benötigt man die zu $M$ inverse Matrix, die wir $N$ nennen; diese erfüllt:
+$$
+M \cdot N \equiv \mathbb{1}_{3 \times 3} \mod 26
+$$
+
+**Notation**: $\mathbb{1}_{3 \times 3} &#x3D; \begin{pmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1 \\
+\end{pmatrix}$ (Einheitsmatrix)
+
+## Eigenschaften von Block-Chiffren
+Eine wichtige Eigenschaft von Block-Chiffren ist die **Diffusion** (_Shannon_); d.h. die Änderung eines Klartextzeichens hat zur Folge, dass sich mehrere Chiffrezeichen ändern.
+
+Diese Eigenschaft müssen heutige Block-Chiffren (DES, AES) aufweisen; dadurch wird die statistische Struktur von Klartextblöcken verschleiert.
 
