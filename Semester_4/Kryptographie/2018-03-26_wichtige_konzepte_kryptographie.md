@@ -510,13 +510,13 @@ _Abbildung 1: Aufbau eines Feistel-Netzwerkes_ ([Quelle](https://de.wikipedia.or
 ### Electronic Code Block Mode (ECB)
 Jedes $n$-Bit Klartextblock wird unabhängig von anderen mit dem gleichen Schlüssel $K$ verschlüsselt.
 
-![ECB Block-Chiffren](images/ecb-encryption.png)
+![ECB Block-Chiffren](images/ecb-encryption.svg)
 _Abbildung 2: Verschlüsselung mittels ECB_ ([Quelle](https://de.wikipedia.org/wiki/Electronic_Code_Book_Mode))
 
 ### Cipher Block Chaining Mode (CBC)
 Input des Verschlüsselungsalgorithmus ist die &#x60;XOR&#x60;-Verknüpfung des letzten Chiffreblocks mit dem Klartextblock. Die Verkettung der Klartextblöcke mit den Chiffretextblöcken führt dazu, dass statistische Eigenschaften des Klartextes nicht auf das Chiffrat übertragen werden.
 
-![CBC Block-Chiffre](images/cbc-encryption.png)
+![CBC Block-Chiffre](images/cbc-encryption.svg)
 _Abbildung 3: Verschlüsselung mittels CBC_ ([Quelle](https://de.wikipedia.org/wiki/Cipher_Block_Chaining_Mode))
 
 CFB, OFB und CTR dienen dazu, eine Block-Chiffre als Strom-Chiffre zu betreiben.
