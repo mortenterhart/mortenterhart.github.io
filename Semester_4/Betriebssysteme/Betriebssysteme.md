@@ -15,8 +15,8 @@ permalink: Semester_4/Betriebssysteme
 * [Zusammenfassung Betriebssysteme](Betriebssysteme/Zusammenfassung)
 
 ## Übungen
-* [Übungsaufgaben 1](Betriebssysteme/exercises/Übungsaufgaben INF16.pdf) ([Lösungen](Betriebssysteme/exercises/Lösungen für Übungsaufgaben-2.pdf))
-* [Übungsaufgaben 2](Betriebssysteme/exercises/Übungsaufgaben-2.pdf) ([Lösungen](Betriebssysteme/exercises/Lösungen für Übungsaufgaben INF16.pdf))
+* [Übungsaufgaben 1](Betriebssysteme/exercises/Übungsaufgaben INF16.pdf) ([Lösungen](Betriebssysteme/exercises/Lösungen für Übungsaufgaben INF16.pdf))
+* [Übungsaufgaben 2](Betriebssysteme/exercises/Übungsaufgaben-2.pdf) ([Lösungen](Betriebssysteme/exercises/Lösungen für Übungsaufgaben-2.pdf))
 
 ## Übungsklausur
 * [Übungsklausur](Betriebssysteme/exam/Übungsklausur.pdf) ([Lösungen](Betriebssysteme/exam/Lösung Übungsklausur.pdf))
