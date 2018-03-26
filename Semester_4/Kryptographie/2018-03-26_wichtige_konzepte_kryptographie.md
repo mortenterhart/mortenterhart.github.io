@@ -297,3 +297,13 @@ Eine wichtige Eigenschaft von Block-Chiffren ist die **Diffusion** (_Shannon_); 
 
 Diese Eigenschaft müssen heutige Block-Chiffren (DES, AES) aufweisen; dadurch wird die statistische Struktur von Klartextblöcken verschleiert.
 
+## Relativ prime Zahlen
+**Definition**: Zwei Zahlen $a, b \in \mathbb{Z}$ heißen **relativ prim**, **coprim** oder teilerfremd, falls sie keinen Primfaktor gemeinsam haben. Dies ist insbesondere dann der Fall, falls
+$$
+\text{ggT}(a, b) &#x3D; 1
+$$
+
+gilt.
+
+
+
