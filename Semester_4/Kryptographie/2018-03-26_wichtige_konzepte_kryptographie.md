@@ -10,8 +10,8 @@ _vom 26.03.2018_
 
 ---------
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+&lt;!-- START doctoc generated TOC please keep comment here to allow auto update --&gt;
+&lt;!-- DON&#x27;T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE --&gt;
 **Inhaltsverzeichnis**
 
 - [Was ist Kryptologie?](#was-ist-kryptologie)
@@ -27,7 +27,7 @@ _vom 26.03.2018_
 - [Block- und Strom-Chiffren](#block--und-strom-chiffren)
 - [Grundsätzliche kryptographische Operationen](#grunds%C3%A4tzliche-kryptographische-operationen)
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+&lt;!-- END doctoc generated TOC please keep comment here to allow auto update --&gt;
 
 ## Was ist Kryptologie?
 Kryptologie ist eine Wissenschaft, die sich mit Methoden der Verschlüsselung und damit verwandten Verfahren befasst. Kryptologen sind ausgebildete High-End-Mathematiker.
