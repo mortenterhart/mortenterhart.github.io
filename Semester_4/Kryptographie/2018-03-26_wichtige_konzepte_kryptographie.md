@@ -328,3 +328,150 @@ Es gilt: $\phi(p) &#x3D; p - 1$, falls $p$ eine Primzahl ist.
 **Folgerung**: Wenn $p, q$ zwei Primzahlen sind und $n &#x3D; p \cdot q$
 $\Rightarrow \phi(n) &#x3D; \phi(p \cdot q) &#x3D; (p - 1) \cdot (q - 1)$.
 
+### Kleiner Satz von FERMAT
+Falls $p$ eine Primzahl ist und $a$ eine positive ganze Zahl, die nicht durch $p$ geteilt wird, dann gilt
+$$
+a^{p - 1} \mod p \equiv 1 \mod p
+$$
+
+Der kleine Satz von FERMAT ist die Grundlage **aller Primzahltests**; diese prüfen (ohne zu faktorisieren), ob eine Zahl eine Primzahl ist oder nicht.
+
+---
+
+Falls für irgendwelche zufällig gewählten Zahlen $a$ der Ausdruck
+$$
+a^{p - 1} -a
+$$
+
+kein Vielfaches von $p$ ist, dann ist $p$ keine Primzahl.
+
+---
+
+## RSA-Algorithmus
+Mit diesen Werkzeugen kann man den RSA-Algorithmus durchbrechen.
+
+Dieser lautet:
+1. Man wähle zwei zufällige Primzahlen $p, q$ ($512, 1024, 2048, 4096$ Bit) und berechne
+$$
+n &#x3D; p \cdot q
+$$
+
+2. Berechne $\phi(n) &#x3D; (p - 1)(q - 1)$.
+3. Wähle ein $e$ mit $1 &lt; e &lt; \phi(n), \ \text{ggT}(e, \phi(n)) &#x3D; 1$.
+4. Berechne $d$ mit $e \cdot d \equiv 1 \mod \phi(n)$.
+5. $K_{\text{pub}} &#x3D; (e, n), K_{\text{priv}} &#x3D; (d, n)$.
+
+**Verschlüsselung**: $M$ geeignet als Zahl codiert $M &lt; n$
+$$
+C &#x3D; M^e \mod n
+$$
+
+**Entschlüsselung**:
+$$
+M &#x3D; C^d \mod n
+$$
+
+## DIFFIE-HELLMAN Key-Exchange Verfahren
+Dieses Verfahren wurde in der Arbeit &quot;_New Directions in Cryptography_&quot; vorgestellt und zählt zu den Public-Key Verfahren, erlaubt aber
+* keine Verschlüsselung
+* keine digitale Signatur
+
+Generell nutzen Public-Key Verfahren immer sogenannte **Trapdoor-Funktionen**; das sind Funktionen, die in der einen Richtung einfach sind, die Umkehrung jedoch schwierig bis unmöglich.
+
+RSA: $p \cdot q \xrightleftharpoons[\text{schwierig}]{\text{einfach}} n &#x3D; p \cdot q$
+
+Eine andere Trapdoor-Funktion ist z.B.
+$\rightarrow$ Berechne $\displaystyle \prod_{i &#x3D; 1}^{11} \; (x - i ) &#x3D; (x - 1) (x - 2) (x - 3) \ldots (x - 11)$
+$\quad \qquad \qquad \qquad \qquad \ \ \, &#x3D; x^{11} - 66x^{10} + 1925x^9 - 32670x^8$
+$\quad \qquad \qquad \qquad \qquad \ \ \, \quad + 35742x^7 - 39916800x^6$
+
+Das DH-Key-Exchange-Verfahren nutzt den **diskreten Logarithmus** als Trapdoor-Funktion; d.h. die Sicherheit des DH-Verfahrens hängt davon ab, dass es **sehr** schwierig (bis unmöglich) ist, diskrete Logarithmen zu berechnen.
+
+Betrachte wieder die Menge $\mathbb{Z}_p &#x3D; \{ 0, 1, \ldots, p - 1 \}$. Eine **primitive Wurzel** einer Primzahl $p$ ist eine Zahl in $\mathbb{Z}_p \backslash \{ 0 \}$, deren Potenzen alle Zahlen von $1$ bis $p - 1$ generiert. Ist $a$ eine primitive Wurzel, dann sind
+
+$$
+a \mod{p}, a^2 \mod{p}, a^3 \mod{p}, \ldots, a^{p - 1} \mod{p}
+$$
+
+alle unterschiedlich und bestehen aus den Zahlen $1$ bis $p - 1$ in irgendeiner (wilden!) Reihenfolge.
+
+### Das DH-Key-Exchange Kryptosystem
+1. **Szenario**: Alice und Bob wollen einen gemeinsamen Schlüssel erzeugen, den nur sie kennen, ohne sich zuvor begegnet zu sein.
+2. Alice und Bob einigen sich (öffentlich) auf eine Primzahl $q$ und eine primitive Wurzel $a$ ($(q, a)$ ist eine Art Public Key).
+3. **Geheimer Schlüssel Alice**
+Alice wählt eine Zahl $X_A$ ($X_A &lt; q$) und wird Alice benannt. Alice berechnet
+$$
+Y_A &#x3D; a^{X_A} \mod{q}
+$$
+$Y_A$ geht an Bob.
+4. **Geheimer Schlüssel Bob**
+Bob wählt eine Zahl $X_B$ ($X_B &lt; q$) und wird Bob benannt. Bob berechnet
+$$
+Y_B &#x3D; a^{X_B} \mod{q}
+$$
+$Y_B$ geht an Alice.
+5. Alice berechnet $K &#x3D; (Y_B)^{X_A} \mod{q}$.
+6. Bob berechnet $K&#x27; &#x3D; (Y_A)^{X_B} \mod{q}$.
+
+$\rightarrow$ Da $K &#x3D; K&#x27;$ (gleich), haben Bob und Alice einen gemeinsamen Sitzungsschlüssel.
+
+![Key-Exchange Method](https://i.imgur.com/rqGbwK3.jpg)
+
+## ELGAMAL-Kryptosysteme (TAHER ELGAMAL, 1985)
+
+### Digitale Signatur
+**Schlüssel**: Wähle eine Primzahl $p$ mit zwei Zufallszahlen $g, x$ mit $g, x &lt; p$.
+Berechne $y &#x3D; g^x \mod{p}$
+
+$K_{\text{pub}} &#x3D; [y, g, p]$
+$K_{\text{priv}} &#x3D; [x]$
+
+**Signatur**: $M$ soll signiert werden.
+Wähle eine zufällige Zahl $k$, so dass $k$ und $p - 1$ coprim sind, d.h.
+$$
+\text{ggT}(k, p - 1) &#x3D; 1.
+$$
+
+Berechne
+$$
+a &#x3D; g^k \mod{p}.
+$$
+
+Berechne $b$ aus
+$$
+M \equiv (xa + kb) \mod{(p - 1)}
+$$
+
+Signatur: $(a, b)$, $k$ bleibt geheim.
+
+Bob verifiziert die Signatur wie folgt:
+Es muss gelten:
+$$
+y^a \cdot a^b \mod{p} \overset{!}{&#x3D;} g^M \mod{p}
+$$
+
+Klartext, der von Alice signiert wird, ist $M &#x3D; 10$.
+Zum Signieren muss Alice die Zahlen $a, b$ bestimmen:
+
+1. Alice wählt zufällige Zahl $k &#x3D; 5$, ist ok: $\text{ggT}(5, 12) &#x3D; 1$
+2. $a &#x3D; g^k \mod{p}$
+$\ \ \ &#x3D; 7^5 \mod{13} \equiv 11 \mod{13}$
+3. Berechne $b$ aus
+$M &#x3D; (xa + kb) \mod{(p - 1)}$
+$10 &#x3D; (3 \cdot 11 + 5 \cdot b) \mod{12}$
+$\quad \ &#x3D; (9 + 5 \cdot b) \mod{12}$
+$\iff 1 \equiv 5 \cdot b \mod{12}$
+$\qquad \rightarrow \underline{b &#x3D; 5}$
+
+An Bob wird gesendet:
+* Klartext $M$
+* Signaturwerte $[a, b] &#x3D; [11, 5]$
+* $K_{\text{pub}}$ von Alice: $K_{\overset{A}{\text{pub}}} &#x3D; [p &#x3D; 13, g &#x3D; 7, y &#x3D; 5]$
+
+**Verifikation**:
+$\qquad \qquad (y^a \cdot a^b) \mod{p} \overset{!}{&#x3D;} g^M \mod{p}$
+$\text{links:} \quad \ \ \, (5^{11} \cdot 11^5) \mod{13} &#x3D; 4 \mod{13}$
+$\text{rechts:} \quad \ 7^{10} \mod{13} &#x3D; 4 \mod{13}$
+$\Rightarrow$ Beide Terme sind gleich.
+
+
