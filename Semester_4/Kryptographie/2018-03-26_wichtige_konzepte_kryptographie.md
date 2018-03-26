@@ -297,7 +297,9 @@ Eine wichtige Eigenschaft von Block-Chiffren ist die **Diffusion** (_Shannon_); 
 
 Diese Eigenschaft müssen heutige Block-Chiffren (DES, AES) aufweisen; dadurch wird die statistische Struktur von Klartextblöcken verschleiert.
 
-## Relativ prime Zahlen
+## Mathematische Grundlagen (kurz)
+
+### Relativ prime Zahlen
 **Definition**: Zwei Zahlen $a, b \in \mathbb{Z}$ heißen **relativ prim**, **coprim** oder teilerfremd, falls sie keinen Primfaktor gemeinsam haben. Dies ist insbesondere dann der Fall, falls
 $$
 \text{ggT}(a, b) &#x3D; 1
@@ -305,5 +307,17 @@ $$
 
 gilt.
 
+### Totientenfunktion
+Ein wichtiges Konzept ist die EULER-Funktion oder **EULER-Totietennfunktion**.
 
+$\phi(n)$ gibt an, wieviele Zahlen $a \in \mathbb{N}, a \ge 1$ existieren mit $a &lt; n$ und $\text{ggT}(a, n) &#x3D; 1$
+
+$\phi(n)$ gibt des Weiteren an, wieviele coprime Zahlen $&lt; n$ existieren.
+
+Es gilt: $\phi(p) &#x3D; p - 1$, falls $p$ eine Primzahl ist.
+
+**Satz**: Falls $\text{ggT}(m, n) &#x3D; 1 \Rightarrow \phi(m, n) &#x3D; \phi(m \cdot n)$
+
+**Folgerung**: Wenn $p, q$ zwei Primzahlen sind und $n &#x3D; p \cdot q$
+$\Rightarrow \phi(n) &#x3D; \phi(p \cdot q) &#x3D; (p - 1) \cdot (q - 1)$.
 
