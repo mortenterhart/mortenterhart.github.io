@@ -10,8 +10,6 @@ _vom 26.03.2018_
 
 ---------
 
-&lt;!-- START doctoc generated TOC please keep comment here to allow auto update --&gt;
-&lt;!-- DON&#x27;T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE --&gt;
 **Inhaltsverzeichnis**
 
 - [Was ist Kryptologie?](#was-ist-kryptologie)
@@ -26,8 +24,17 @@ _vom 26.03.2018_
 - [Asymmetrische Verfahren](#asymmetrische-verfahren)
 - [Block- und Strom-Chiffren](#block--und-strom-chiffren)
 - [Grundsätzliche kryptographische Operationen](#grunds%C3%A4tzliche-kryptographische-operationen)
-
-&lt;!-- END doctoc generated TOC please keep comment here to allow auto update --&gt;
+- [Kerckhoff&amp;#x27;sches Prinzip](#kerckhoffx27sches-prinzip)
+- [Monoalphabetische Chiffren](#monoalphabetische-chiffren)
+  - [Shift-Chiffre](#shift-chiffre)
+  - [Affine Chiffre](#affine-chiffre)
+- [Polyalphabetische Chiffren](#polyalphabetische-chiffren)
+  - [Die Vigenére-Chiffre](#die-vigen%C3%A9re-chiffre)
+  - [Die HILL-Chiffre](#die-hill-chiffre)
+- [Eigenschaften von Block-Chiffren](#eigenschaften-von-block-chiffren)
+- [Mathematische Grundlagen (kurz)](#mathematische-grundlagen-kurz)
+  - [Relativ prime Zahlen](#relativ-prime-zahlen)
+  - [Totientenfunktion](#totientenfunktion)
 
 ## Was ist Kryptologie?
 Kryptologie ist eine Wissenschaft, die sich mit Methoden der Verschlüsselung und damit verwandten Verfahren befasst. Kryptologen sind ausgebildete High-End-Mathematiker.
