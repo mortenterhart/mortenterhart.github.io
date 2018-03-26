@@ -206,3 +206,38 @@ Es gibt in den meisten kryptographischen Systemen zwei grundsätzliche Operation
 
 Moderne Verfahren benutzen eine Vielzahl von Substitutions- bzw. Transpositionsoperationen.
 
+--------
+
+## Kerckhoff&#x27;sches Prinzip
+In der Kryptographie wird in der Regel streng auf das KERCKHOFFs-Prinzip geachtet (1883).
+
+&gt; Die Sicherheit eines Kryptosystems darf **niemals** von der Geheimhaltung des Verschlüsselungsalgorithmus abhängen, sondern ausschließlich von der Geheimhaltung des Schlüssels.
+
+## Monoalphabetische Chiffren
+### Shift-Chiffre
+* Buchstaben des Klartextes werden um ein $k \in \mathbb{Z}_{26}$ verschoben
+* Anmerkungen: $k &#x3D; 3$ heißt üblicherweise CÄSAR-Chiffre
+
+Die Shift-Chiffre ist eine sogenannte **monoalphabetische Chiffre**, d.h. das Klartextalphabet wird genau auf ein Chiffretextalphabet abgebildet. Dies hat zur Folge, dass die statistische Struktur des Klartextes erhalten bleibt.
+
+### Affine Chiffre
+**Definition**: Sei $\{M\} &#x3D; \{C\} &#x3D; \mathbb{Z}_{26}$ und $\{K\} &#x3D; \{(\alpha, \beta ) \in \mathbb{Z}_{26} \times \mathbb{Z}_{26} \ | \ \text{ggT}(\alpha, 26) &#x3D; 1\}$.
+
+**Verschlüsselung**:
+$A_{(\alpha, \beta)}: \mathbb{Z}_{26} \rightarrow \mathbb{Z}_{26}$
+$x \mapsto y &#x3D; A_{(\alpha, \beta)}(x)$
+$\qquad \quad &#x3D; (\alpha \cdot x + \beta) \mod{26}$
+
+Die **Entschlüsselung** ist:
+$A_{(\alpha, \beta)}^{-1}: \mathbb{Z}_{26} \times \mathbb{Z}_{26}$
+$y \mapsto x &#x3D; A_{(\alpha, \beta)}^{-1}(y) \quad \text{mit Klartextzeichen} \ x$
+$\qquad \quad &#x3D; (\alpha^{-1} (y - \beta)) \mod 26$
+
+mit $\alpha^{-1} \cdot \alpha \equiv 1 \mod 26$.
+
+**Anmerkungen**:
+1. Die Shift-Chiffre ist in der affinen Chiffre enthalten.
+2. Schlüsselraum: Es gibt $12 \cdot 26 &#x3D; 312$ verschiedene Schlüssel, da $\phi(26) &#x3D; 12$.
+3. Monoalphabetisch $\rightarrow$ Statistische Struktur bleibt erhalten.
+ä
+
