@@ -1,7 +1,7 @@
 ---
 title: Kryptographische Begriffe und Konzepte
 layout: default
-permalink: Semester_4_md/Kryptographie/Wichtige_Konzepte
+permalink: Semester_4/Kryptographie/Wichtige_Konzepte_md
 
 ---
 
