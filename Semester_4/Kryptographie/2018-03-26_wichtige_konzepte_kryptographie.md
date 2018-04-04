@@ -43,7 +43,7 @@ _vom 26.03.2018_
   - [Digitale Signatur](#digitale-signatur)
 - [Die FEISTEL-Chiffre](#die-feistel-chiffre)
 - [Betriebsmodi von Block-Chiffren](#betriebsmodi-von-block-chiffren)
-  - [Electronic Code Block Mode (ECB)](#electronic-code-block-mode-ecb)
+  - [Electronic Code Book Mode (ECB)](#electronic-code-book-mode-ecb)
   - [Cipher Block Chaining Mode (CBC)](#cipher-block-chaining-mode-cbc)
 
 ## Was ist Kryptologie?
@@ -508,7 +508,7 @@ _Abbildung 1: Aufbau eines Feistel-Netzwerkes_ ([Quelle](https://de.wikipedia.or
 * Counter Mode (CTR)
 * Galois Counter Mode (GCM) $\leftarrow$ eingebaute Authentifizierung
 
-### Electronic Code Block Mode (ECB)
+### Electronic Code Book Mode (ECB)
 Jedes $n$-Bit Klartextblock wird unabhängig von anderen mit dem gleichen Schlüssel $K$ verschlüsselt.
 
 ![ECB Block-Chiffren](images/ecb-encryption.svg)
