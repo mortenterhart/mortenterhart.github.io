@@ -1,0 +1,8 @@
+$headerOffSet: 170px;
+
+:target:before {
+    content: "";
+    display: block;
+    height: $headerOffSet; /* fixed header height*/
+    margin: -$headerOffSet 0 0; /* negative fixed header height */
+}

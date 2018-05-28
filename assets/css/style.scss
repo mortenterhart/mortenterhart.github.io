@@ -5,6 +5,7 @@
 /* Import Sass partials  */
 @import "{{ site.theme }}";
 @import "katexSpaces";
+@import "headerAnchorOffset";
 @import "mermaid";
 @import "prism";
 
