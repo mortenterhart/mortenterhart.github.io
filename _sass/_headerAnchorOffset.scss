@@ -1,3 +1,6 @@
+// For modern browsers, just add the CSS3 :target selector to the page
+// taken from: https://www.itsupportguides.com/knowledge-base/tech-tips-tricks/how-to-offset-anchor-tag-link-using-css/
+
 $headerOffSet: 170px;
 
 :target:before {
