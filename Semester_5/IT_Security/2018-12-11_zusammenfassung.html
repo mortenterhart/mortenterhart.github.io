@@ -8,6 +8,190 @@ permalink: Semester_5/IT_Security/2018-12-11_zusammenfassung
 <h1 id="zusammenfassung-it-security">Zusammenfassung IT-Security</h1>
 <p><em>geschrieben am 11.12.18 von Morten Terhart</em></p>
 <hr>
+<ul>
+<li><a href="#einf%C3%BChrung-in-die-informationssicherheit">Einführung in die Informationssicherheit</a>
+<ul>
+<li><a href="#m%C3%B6gliche-angriffe">Mögliche Angriffe</a></li>
+<li><a href="#mom-motive-opportunity-method">MOM (Motive, Opportunity, Method)</a></li>
+<li><a href="#motive-f%C3%BCr-einen-angriff">Motive für einen Angriff</a></li>
+<li><a href="#begriff-der-informationssicherheit">Begriff der Informationssicherheit</a></li>
+<li><a href="#ma%C3%9Fnahmen-zur-informationssicherheit">Maßnahmen zur Informationssicherheit</a></li>
+<li><a href="#ziele-der-informationssicherheit">Ziele der Informationssicherheit</a></li>
+<li><a href="#bedeutung">Bedeutung</a></li>
+<li><a href="#ziele-und-ursachen-von-bedrohungen">Ziele und Ursachen von Bedrohungen</a></li>
+<li><a href="#angriff-und-schutz">Angriff und Schutz</a></li>
+<li><a href="#bedrohungen-und-ma%C3%9Fnahmen">Bedrohungen und Maßnahmen</a></li>
+<li><a href="#klassifizierung-von-informationen">Klassifizierung von Informationen</a></li>
+<li><a href="#management-der-informationssicherheit">Management der Informationssicherheit</a></li>
+<li><a href="#ma%C3%9Fnahmen-zur-gew%C3%A4hrleistung-der-informationssicherheit">Maßnahmen zur Gewährleistung der Informationssicherheit</a></li>
+<li><a href="#funktionsweise-eines-isms-systems">Funktionsweise eines ISMS-Systems</a>
+<ul>
+<li><a href="#schritte-zu-einem-isms-system">Schritte zu einem ISMS-System</a></li>
+</ul>
+</li>
+<li><a href="#schutz-der-infrastruktur">Schutz der Infrastruktur</a>
+<ul>
+<li><a href="#firewall">Firewall</a></li>
+<li><a href="#demilitarisierte-zone-dmz">Demilitarisierte Zone (DMZ)</a></li>
+<li><a href="#intrusion-detection-systeme-ids">Intrusion Detection Systeme (IDS)</a></li>
+<li><a href="#intrusion-prevention-system-ips">Intrusion Prevention System (IPS)</a></li>
+<li><a href="#trennung-der-netzwerke">Trennung der Netzwerke</a></li>
+<li><a href="#zugriffsbeschr%C3%A4nkungen">Zugriffsbeschränkungen</a></li>
+<li><a href="#redundanz-der-systeme">Redundanz der Systeme</a></li>
+</ul>
+</li>
+<li><a href="#schutz-der-daten">Schutz der Daten</a>
+<ul>
+<li><a href="#verteilte-datenhaltung">Verteilte Datenhaltung</a></li>
+</ul>
+</li>
+<li><a href="#penetrationstests">Penetrationstests</a>
+<ul>
+<li><a href="#ziele">Ziele</a></li>
+<li><a href="#legalit%C3%A4t">Legalität</a></li>
+<li><a href="#vorgehensweise">Vorgehensweise</a></li>
+<li><a href="#risiken">Risiken</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#secure-development-life-cycle-sdlc">Secure Development Life Cycle (SDLC)</a>
+<ul>
+<li><a href="#ziele-1">Ziele</a></li>
+<li><a href="#kryptofehler">Kryptofehler</a></li>
+<li><a href="#phasen-eines-sdlc">Phasen eines SDLC</a>
+<ul>
+<li><a href="#vorbereitungsphase">Vorbereitungsphase</a></li>
+<li><a href="#design-phase">Design-Phase</a></li>
+<li><a href="#entwicklungsphase">Entwicklungsphase</a></li>
+<li><a href="#testphase">Testphase</a></li>
+<li><a href="#vorproduktionsphase">Vorproduktionsphase</a></li>
+<li><a href="#produktionsphase">Produktionsphase</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#erweiterte-security-analyse">Erweiterte Security-Analyse</a>
+<ul>
+<li><a href="#security-analyse-durch-reverse-code-engineering">Security-Analyse durch Reverse Code Engineering</a></li>
+<li><a href="#gr%C3%BCnde-f%C3%BCr-den-einsatz-von-it-forensik">Gründe für den Einsatz von IT-Forensik</a></li>
+</ul>
+</li>
+<li><a href="#der-heartbleed-bug">Der Heartbleed-Bug</a>
+<ul>
+<li><a href="#wodurch-ist-der-bug-entstanden">Wodurch ist der Bug entstanden?</a></li>
+<li><a href="#bedrohungen-durch-den-bug">Bedrohungen durch den Bug</a></li>
+<li><a href="#probleme-durch-den-bug">Probleme durch den Bug</a></li>
+<li><a href="#schutzm%C3%B6glichkeiten">Schutzmöglichkeiten</a></li>
+</ul>
+</li>
+<li><a href="#aktive-it-security-analysen">Aktive IT-Security-Analysen</a>
+<ul>
+<li><a href="#voraussetzungen">Voraussetzungen</a></li>
+<li><a href="#vorhandene-tools">Vorhandene Tools</a></li>
+<li><a href="#potentielle-schwachstellen">Potentielle Schwachstellen</a></li>
+</ul>
+</li>
+<li><a href="#web-security">Web-Security</a>
+<ul>
+<li><a href="#penetrationstest">Penetrationstest</a></li>
+<li><a href="#techniken">Techniken</a></li>
+<li><a href="#cross-site-scripting-xss">Cross Site Scripting (XSS)</a>
+<ul>
+<li><a href="#typen-von-xss">Typen von XSS</a></li>
+</ul>
+</li>
+<li><a href="#xml-external-entity-processing-xxe">XML External Entity Processing (XXE)</a>
+<ul>
+<li><a href="#angriffsarten">Angriffsarten</a></li>
+<li><a href="#besonderheiten">Besonderheiten</a></li>
+<li><a href="#vermeidung-von-xxe">Vermeidung von XXE</a></li>
+</ul>
+</li>
+<li><a href="#path-traversal">Path Traversal</a>
+<ul>
+<li><a href="#beispiel">Beispiel</a></li>
+</ul>
+</li>
+<li><a href="#sql-injection">SQL Injection</a></li>
+<li><a href="#session-manipulation">Session Manipulation</a>
+<ul>
+<li><a href="#techniken-1">Techniken</a></li>
+</ul>
+</li>
+<li><a href="#werkzeuge-eines-penetrationstesters">Werkzeuge eines Penetrationstesters</a></li>
+<li><a href="#gegenma%C3%9Fnahmen">Gegenmaßnahmen</a></li>
+</ul>
+</li>
+<li><a href="#web-application-firewall-waf">Web Application Firewall (WAF)</a>
+<ul>
+<li><a href="#gr%C3%BCnde-f%C3%BCr-eine-waf">Gründe für eine WAF</a></li>
+<li><a href="#implementierung">Implementierung</a></li>
+<li><a href="#web-intrusion-detection--prevention">Web Intrusion Detection / Prevention</a></li>
+<li><a href="#ans%C3%A4tze-f%C3%BCr-web-intrusion-prevention">Ansätze für Web Intrusion Prevention</a></li>
+<li><a href="#erkennungsformen">Erkennungsformen</a></li>
+<li><a href="#apache-webserver-als-waf">Apache Webserver als WAF</a></li>
+</ul>
+</li>
+<li><a href="#kryptographie-in-der-praxis">Kryptographie in der Praxis</a>
+<ul>
+<li><a href="#begriffe-aus-der-kryptographie">Begriffe aus der Kryptographie</a></li>
+<li><a href="#sehr-unsichere-verschl%C3%BCsselungsverfahren">Sehr unsichere Verschlüsselungsverfahren</a></li>
+<li><a href="#symmetrische-und-asymmetrische-verfahren">Symmetrische und asymmetrische Verfahren</a></li>
+<li><a href="#hybride-verschl%C3%BCsselung">Hybride Verschlüsselung</a></li>
+<li><a href="#rsa-verschl%C3%BCsselung">RSA-Verschlüsselung</a></li>
+<li><a href="#vorsicht-beim-rsa">Vorsicht beim RSA</a></li>
+<li><a href="#sichere-kommunikation-mit-symmetrischer-verschl%C3%BCsselung">Sichere Kommunikation mit symmetrischer Verschlüsselung</a></li>
+<li><a href="#sicherheit-des-diffie-hellman-verfahrens">Sicherheit des Diffie-Hellman-Verfahrens</a></li>
+<li><a href="#transport-layer-security-tls">Transport Layer Security (TLS)</a>
+<ul>
+<li><a href="#funktionsweise">Funktionsweise</a></li>
+<li><a href="#vorteile-von-tls">Vorteile von TLS</a></li>
+<li><a href="#nachteile-von-tls">Nachteile von TLS</a></li>
+</ul>
+</li>
+<li><a href="#ecb-modus-f%C3%BCr-blockchiffren">ECB-Modus für Blockchiffren</a></li>
+<li><a href="#cbc-modus-f%C3%BCr-blockchiffren">CBC-Modus für Blockchiffren</a></li>
+</ul>
+</li>
+<li><a href="#security-analyse-komplexer-systemumgebungen">Security-Analyse komplexer Systemumgebungen</a>
+<ul>
+<li><a href="#ziele-2">Ziele</a></li>
+<li><a href="#eigenschaften-von-security-analysen-in-unterschiedlichem-ausma%C3%9F">Eigenschaften von Security-Analysen in unterschiedlichem Ausmaß</a></li>
+<li><a href="#vorgehen-bei-der-security-analyse">Vorgehen bei der Security-Analyse</a>
+<ul>
+<li><a href="#1-schritt-identifikation-und-clusterung-der-schutzziele">1. Schritt: Identifikation und Clusterung der Schutzziele</a></li>
+<li><a href="#2-schritt-identifikation-der-kommunikationsbeziehungen">2. Schritt: Identifikation der Kommunikationsbeziehungen</a></li>
+<li><a href="#3-schritt-schutzziele-und-kommunikationsbeziehungen-analysieren">3. Schritt: Schutzziele und Kommunikationsbeziehungen analysieren</a></li>
+<li><a href="#4-schritt-identifikation-m%C3%B6glicher-bedrohungen-und-verwundbarkeiten">4. Schritt: Identifikation möglicher Bedrohungen und Verwundbarkeiten</a></li>
+<li><a href="#5-schritt-ermitteln-von-ma%C3%9Fnahmen-zur-reduzierung-der-mo%CC%88glichen-bedrohungen-und-verwundbarkeiten">5. Schritt: Ermitteln von Maßnahmen zur Reduzierung der möglichen Bedrohungen und Verwundbarkeiten</a></li>
+<li><a href="#6-schritt-durchf%C3%BChrung-von-risikoanalyse-und-risikoakzeptanz">6. Schritt: Durchführung von Risikoanalyse und Risikoakzeptanz</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%C3%9Cbungen-zur-netzwerkanalyse">Übungen zur Netzwerkanalyse</a>
+<ul>
+<li><a href="#nmap---netzwerk--und-portscanner">nmap - Netzwerk- und Portscanner</a></li>
+<li><a href="#wireshark">Wireshark</a></li>
+</ul>
+</li>
+<li><a href="#%C3%9Cbungen-zum-website-pentesting">Übungen zum Website-Pentesting</a>
+<ul>
+<li><a href="#arp-spoofing">ARP-Spoofing</a>
+<ul>
+<li><a href="#vorgehensweise-1">Vorgehensweise</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#remote-und-reverse-shell">Remote und Reverse Shell</a>
+<ul>
+<li><a href="#remote-shell">Remote Shell</a></li>
+<li><a href="#reverse-shell">Reverse Shell</a></li>
+</ul>
+</li>
+</ul>
 <h2 id="einführung-in-die-informationssicherheit">Einführung in die Informationssicherheit</h2>
 <h3 id="mögliche-angriffe">Mögliche Angriffe</h3>
 <ul>
@@ -750,7 +934,7 @@ permalink: Semester_5/IT_Security/2018-12-11_zusammenfassung
 <li>SSLv2 und SSLv3.0 sollten wegen bekannter Sicherheitslücken nicht mehr verwendet werden</li>
 </ul>
 <h4 id="funktionsweise">Funktionsweise</h4>
-<div class="mermaid"><svg xmlns="http://www.w3.org/2000/svg" id="mermaid-svg-2sTfjDBx5HcqkkSm" height="100%" width="100%" style="max-width:536.6000061035156px;" viewBox="-93.30000305175781 -10 536.6000061035156 466"><g></g><g><line id="actor623" x1="75" y1="5" x2="75" y2="455" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="0" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="75" y="32.5" style="text-anchor: middle;" dominant-baseline="central" alignment-baseline="central" class="actor"><tspan x="75" dy="0">Client</tspan></text></g><g><line id="actor624" x1="275" y1="5" x2="275" y2="455" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="200" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="275" y="32.5" style="text-anchor: middle;" dominant-baseline="central" alignment-baseline="central" class="actor"><tspan x="275" dy="0">Server</tspan></text></g><defs><marker id="arrowhead" refX="5" refY="2" markerWidth="6" markerHeight="4" orient="auto"><path d="M 0,0 V 4 L6,2 Z"></path></marker></defs><defs><marker id="crosshead" markerWidth="15" markerHeight="8" orient="auto" refX="16" refY="4"><path fill="black" stroke="#000000" style="stroke-dasharray: 0, 0;" stroke-width="1px" d="M 9,2 V 6 L16,4 Z"></path><path fill="none" stroke="#000000" style="stroke-dasharray: 0, 0;" stroke-width="1px" d="M 0,1 L 6,7 M 6,1 L 0,7"></path></marker></defs><g><text x="175" y="93" style="text-anchor: middle;" class="messageText">baut Verbindung auf</text><line x1="75" y1="100" x2="275" y2="100" style="stroke-dasharray: 3, 3; fill: none;" class="messageLine1" stroke-width="2" stroke="black" marker-end="url(#arrowhead)"></line></g><g><text x="175" y="128" style="text-anchor: middle;" class="messageText">authentifiziert sich mit X.509 Zertifikat</text><line x1="275" y1="135" x2="75" y2="135" style="stroke-dasharray: 3, 3; fill: none;" class="messageLine1" stroke-width="2" stroke="black" marker-end="url(#arrowhead)"></line></g><g><text x="175" y="163" style="text-anchor: middle;" class="messageText">überprüft Übereinstimmung Servername mit Zertifikat</text><line x1="75" y1="170" x2="275" y2="170" style="stroke-dasharray: 3, 3; fill: none;" class="messageLine1" stroke-width="2" stroke="black" marker-end="url(#arrowhead)"></line></g><g><text x="175" y="198" style="text-anchor: middle;" class="messageText">schickt mit Public-Key des Servers verschlüsselte Zufallszahl</text><line x1="75" y1="205" x2="275" y2="205" style="stroke-dasharray: 3, 3; fill: none;" class="messageLine1" stroke-width="2" stroke="black" marker-end="url(#arrowhead)"></line></g><g><text x="75" y="233" style="text-anchor: middle;" class="messageText">berechnet geheimen Schlüssel K1</text><path d="M 75,240 C 135,230 135,270 75,260" style="stroke-dasharray: 3, 3; fill: none;" class="messageLine1" stroke-width="2" stroke="black" marker-end="url(#arrowhead)"></path></g><g><text x="275" y="298" style="text-anchor: middle;" class="messageText">berechnet geheimen Schlüssel K2</text><path d="M 275,305 C 335,295 335,335 275,325" style="stroke-dasharray: 3, 3; fill: none;" class="messageLine1" stroke-width="2" stroke="black" marker-end="url(#arrowhead)"></path></g><g><text x="175" y="363" style="text-anchor: middle;" class="messageText">K1 = K2</text><line x1="75" y1="370" x2="275" y2="370" style="stroke-dasharray: 3, 3; fill: none;" class="messageLine1" stroke-width="2" stroke="black"></line></g><g><rect x="0" y="390" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="75" y="422.5" style="text-anchor: middle;" dominant-baseline="central" alignment-baseline="central" class="actor"><tspan x="75" dy="0">Client</tspan></text></g><g><rect x="200" y="390" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="275" y="422.5" style="text-anchor: middle;" dominant-baseline="central" alignment-baseline="central" class="actor"><tspan x="275" dy="0">Server</tspan></text></g></svg></div>
+<div class="mermaid"><svg xmlns="http://www.w3.org/2000/svg" id="mermaid-svg-TKRaOlmbm9pJywnt" height="100%" width="100%" style="max-width:536.6000061035156px;" viewBox="-93.30000305175781 -10 536.6000061035156 466"><g></g><g><line id="actor2" x1="75" y1="5" x2="75" y2="455" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="0" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="75" y="32.5" style="text-anchor: middle;" dominant-baseline="central" alignment-baseline="central" class="actor"><tspan x="75" dy="0">Client</tspan></text></g><g><line id="actor3" x1="275" y1="5" x2="275" y2="455" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="200" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="275" y="32.5" style="text-anchor: middle;" dominant-baseline="central" alignment-baseline="central" class="actor"><tspan x="275" dy="0">Server</tspan></text></g><defs><marker id="arrowhead" refX="5" refY="2" markerWidth="6" markerHeight="4" orient="auto"><path d="M 0,0 V 4 L6,2 Z"></path></marker></defs><defs><marker id="crosshead" markerWidth="15" markerHeight="8" orient="auto" refX="16" refY="4"><path fill="black" stroke="#000000" style="stroke-dasharray: 0, 0;" stroke-width="1px" d="M 9,2 V 6 L16,4 Z"></path><path fill="none" stroke="#000000" style="stroke-dasharray: 0, 0;" stroke-width="1px" d="M 0,1 L 6,7 M 6,1 L 0,7"></path></marker></defs><g><text x="175" y="93" style="text-anchor: middle;" class="messageText">baut Verbindung auf</text><line x1="75" y1="100" x2="275" y2="100" style="stroke-dasharray: 3, 3; fill: none;" class="messageLine1" stroke-width="2" stroke="black" marker-end="url(#arrowhead)"></line></g><g><text x="175" y="128" style="text-anchor: middle;" class="messageText">authentifiziert sich mit X.509 Zertifikat</text><line x1="275" y1="135" x2="75" y2="135" style="stroke-dasharray: 3, 3; fill: none;" class="messageLine1" stroke-width="2" stroke="black" marker-end="url(#arrowhead)"></line></g><g><text x="175" y="163" style="text-anchor: middle;" class="messageText">überprüft Übereinstimmung Servername mit Zertifikat</text><line x1="75" y1="170" x2="275" y2="170" style="stroke-dasharray: 3, 3; fill: none;" class="messageLine1" stroke-width="2" stroke="black" marker-end="url(#arrowhead)"></line></g><g><text x="175" y="198" style="text-anchor: middle;" class="messageText">schickt mit Public-Key des Servers verschlüsselte Zufallszahl</text><line x1="75" y1="205" x2="275" y2="205" style="stroke-dasharray: 3, 3; fill: none;" class="messageLine1" stroke-width="2" stroke="black" marker-end="url(#arrowhead)"></line></g><g><text x="75" y="233" style="text-anchor: middle;" class="messageText">berechnet geheimen Schlüssel K1</text><path d="M 75,240 C 135,230 135,270 75,260" style="stroke-dasharray: 3, 3; fill: none;" class="messageLine1" stroke-width="2" stroke="black" marker-end="url(#arrowhead)"></path></g><g><text x="275" y="298" style="text-anchor: middle;" class="messageText">berechnet geheimen Schlüssel K2</text><path d="M 275,305 C 335,295 335,335 275,325" style="stroke-dasharray: 3, 3; fill: none;" class="messageLine1" stroke-width="2" stroke="black" marker-end="url(#arrowhead)"></path></g><g><text x="175" y="363" style="text-anchor: middle;" class="messageText">K1 = K2</text><line x1="75" y1="370" x2="275" y2="370" style="stroke-dasharray: 3, 3; fill: none;" class="messageLine1" stroke-width="2" stroke="black"></line></g><g><rect x="0" y="390" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="75" y="422.5" style="text-anchor: middle;" dominant-baseline="central" alignment-baseline="central" class="actor"><tspan x="75" dy="0">Client</tspan></text></g><g><rect x="200" y="390" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="275" y="422.5" style="text-anchor: middle;" dominant-baseline="central" alignment-baseline="central" class="actor"><tspan x="275" dy="0">Server</tspan></text></g></svg></div>
 <p>Nach der Berechnung des geheimen Schlüssels kann eine symmetrische Verschlüsselung stattfinden, da <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>K</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">K_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="mord"><span style="margin-right: 0.07153em;" class="mord mathit">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: -0.07153em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span></span></span></span></span> und <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>K</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">K_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="mord"><span style="margin-right: 0.07153em;" class="mord mathit">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: -0.07153em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span></span></span></span></span> gleich sind.</p>
 <h4 id="vorteile-von-tls">Vorteile von TLS</h4>
 <ul>
