@@ -1,733 +1,915 @@
 ---
 title: Zusammenfassung IT-Security
 layout: default
-permalink: Semester_5/IT_Security/2018-12-11_zusammenfassung_md
+permalink: Semester_5/IT_Security/2018-12-11_zusammenfassung
 
 ---
 
-# Zusammenfassung IT-Security
-_geschrieben am 11.12.18 von Morten Terhart_
-
----
-
-## Einführung in die Informationssicherheit
-
-### Mögliche Angriffe
-* Unauthorized Access  
-* Mobile Device Attack  
-* System Compromise  
-* Cyber Espionage  
-* Social Engeneering  
-* Spam  
-* Maleware  
-* Indsiders  
-* DoS  
-* Data Leakage  
-* Phishing  
-* Identy Theft
-
-### MOM (Motive, Opportunity, Method)
-Ein Angreifer muss MOM haben:
-* **Motive**: Einen Grund, warum der Angreifer das System angreifen möchte
-* **Opportunity**: Die Gelegenheit und Zeit, um den Angriff durchzuführen
-* **Method**: Die notwendigen Fähigkeiten und Programme/Werkzeuge, um den Angriff durchzuführen
-
-### Motive für einen Angriff
-Mögliche Ziele eines Angriffs umfassen:
-* Finanzdaten (Handelsgeheimnisse, Finanzkraft, Besitzverhältnisse und Finanzierung)
-* Innovations-/Produktdaten (Entwicklungsdaten, Designs, Informationen über Schlüsselpositionen, Wissen über Kernprozesse)
-
-### Begriff der Informationssicherheit
-* Gewährleistung der Vertraulichkeit, Verfügbarkeit und Integrität (siehe auch CIA-Grundsatz) in einem informationsverarbeitenden System
-* dient dem Schutz vor Gefahren, Bedrohungen, Vermeidung von Schäden und Risiken
-* betrifft auch die Sicherheit von nicht elektronischen Informationen
-
-### Maßnahmen zur Informationssicherheit
-**auf sozialer Ebene**
-* Sicherheitsrichtlinien (Security Policies)
-* Absicherung der Prozesse
-* Sensibilisierung für Gefahren, Trainings
-
-**auf technischer Ebene**
-* Information Security Management System (ISMS)
-* Firewalls
-* Virenschutz
-* Einbruchsentdeckung und -verhinderung (IDS/IPS)
-* Authentifizierung und Autorisierung
-* Verschlüsselung
-* Überprüfung und Begutachtung
-* Datenbackups
-
-### Ziele der Informationssicherheit
-* Datensicherheit
-* Authentizität
-* Verbindlichkeit, Rückverfolgung möglich (Nachweisbarkeit)
-* Zugriffssteuerung
-
-### Bedeutung
-* ständig neue Anforderungen an Informationssicherheit
-* jeder ist auf IT-Systeme angewiesen
-	* $\Rightarrow$ Unternehmen zu Informationssicherheit verpflichtet, Teil des Risikomanagements
-
-### Ziele und Ursachen von Bedrohungen
-**Ziele**:
-* technischer Systemausfall
-* Missbrauch des Systems
-* Sabotage
-* Spionage
-* Betrug
-* Diebstahl
-
-**Ursachen**:
-* höhere Gewalt (Naturkatastrophen)
-* menschliche Fehler (z.B. Fehlbedienung)
-* Viren oder Malware
-* Spoofing, Phishing, Pharming
-* Denial of Service (DoS)
-* Man-in-the-middle-Angriff
-
-### Angriff und Schutz
-**Angriff**: jeder Vorgang, der das Ziel des Verlustes der Informationssicherheit hat (inklusive technisches Versagen)
-
-**Schutz**: Statistische Informationssicherheit (Aufwand höher als Nutzen) und Absolute Informationssicherheit (kein Angriff möglich)
-
-### Bedrohungen und Maßnahmen
-* Aufkommen von Bedrohungen durch Mangel an Informationssicherheit
-* Systeme sind kompromittiert, wenn ein Einbruch erfolgt ist
-	* System gilt als unsicher und sollte nicht mehr benutzt werden
-	* sofortige Maßnahmen zur Minimierung der Schäden (z.B. Datenrettung, Beweissicherung)
-
-### Klassifizierung von Informationen
-**Der CIA-Grundsatz**
-* Vertraulichkeit (**C**onidentiality): Verhinderung von nicht autorisierter Veröffentlichung von Informationen
-* Integrität (**I**ntegrity): Verhinderung von nicht autorisierter Erweiterung oder Zerstörung von Informationen
-* Verfügbarkeit (**A**vailability): Verhinderung von nicht autorisierter Zurückhaltung von Informationen
-
-### Management der Informationssicherheit
-* Verabschieden von firmenweiten Informationssicherheitsrichtlinien (Security Policies)
-* Einsatz eines Sicherheitsmanagementsystems (Information Security Management System (ISMS))
-	* operative Umsetzung und Kontrolle der Security Policies
-	* Schaffung geeigneter Organisations- und Managementstrukturen
-	* ISMS nach ISO/IEC 2700x im Jahre 2005/2008
-
-### Maßnahmen zur Gewährleistung der Informationssicherheit
-* physische Sicherung der Daten
-* Zugriffskontrollen
-* fehlertolerante Systeme (Ausfallsicherheit)
-* Verschlüsselung von Daten
-
-**konkrete Maßnahmen**:
-* Softwareaktualisierungen (besonders Sicherheitsupdates)
-* Schutz vor Malware (Virenscanner)
-* Einsatz von Firewalls (am besten verschiedene Hersteller, keine Monokulturen)
-* Einschränkung der Benutzerrechte auf das Mindeste
-* Erstellung von Backups
-* Protokollierung
-* Einsatz sicherer Entwicklungs- und Laufzeitumgebungen
-* Sensibilisierung der Mitarbeiter (Security Audits etc.)
-
-### Funktionsweise eines ISMS-Systems
-![ISMS Funktionsweise](https://i.imgur.com/5AkFRp8.png)
-#### Schritte zu einem ISMS-System
-1. Unterstützung für das Management bekommen
-2. Definiere den Wirkungsbereich des ISMS-Systems
-3. Erhalte Informationen über die IT-Systeme (Inventory)
-4. Lege Methoden des Risikomanagements fest und konsultiere die Berichte des Risikomanagements
-5. Bereite den Einsatz des ISMS und den Plan für die Risikobehandlung vor
-6. Entwickle Pläne für das ISMS-System
-
-### Schutz der Infrastruktur
-
-#### Firewall
-* Beschränkung des Netzwerkzugriffs durch Regeln (bestimmte Adressen, Ports etc.)
-* Einsatz von Filtertechnologien (z.B. Contentfilter)
-
-#### Demilitarisierte Zone (DMZ)
-* Subnetz mit stark kontrolliertem Zugriff auf die darin befindlichen Rechner/Server
-* Isolation der Systeme gegenüber äußeren Netzwerken wie dem Internet
-* Trennung der Netzwerke durch Firewalls
-
-#### Intrusion Detection Systeme (IDS)
-* System zur Erkennung von Angriffen auf ein Computersystem oder -netzwerk
-* Ergänzung zur Firewall
-* zwei Funktionen:
-	* Vergleich bekannter Angriffssignaturen
-	* heuristische Analysen zur Erkennung unbekannter Angriffssignaturen
-* IDS löst Alarm aus, verhindert aber keinen Angriff
-
-#### Intrusion Prevention System (IPS)
-* Erweiterung eines IDS um Aktionen zur Verhinderung von Angriffen
-* mögliche Aktionen bei netzwerkbasierten IPS:
-	* Veränderung der Datenverbindung bei Angriff
-	* Beeinflussung von Firewall-Regeln
-
-#### Trennung der Netzwerke
-* DMZ innerhalb eines Firmennetzwerkes
-* Trennung der Netzwerke in unterschiedliche Verantwortungsbereiche (Office, Produktion, WLAN etc.)
-* Zwischenschaltung von Firewalls, IDS/IPS und Routern mit ACL
-
-#### Zugriffsbeschränkungen
-* Rechte und Rollen gemäß dem Need-To-Know-Prinzip
-* Authentifizierung bei jeglicher Software/Netzwerk
-* Zugriff auf Werkzeuge/Materialien
-* Zutritt in Gebäude
-
-#### Redundanz der Systeme
-* wichtige Kernsysteme redundant aufstellen
-	* Rechenzentrum
-	* Netzwerkinfrastruktur
-	* Nutzung verschiedener Medien (Kabel, Funk, Satellit, WAN)
-* **räumliche Trennung der Systeme** (z.B. bei Gebäudebrand oder Naturkatastrophen)
-* Einsatz von Notstromsystemen
-
-### Schutz der Daten
-* durch **Verschlüsselung** (z.B. Daten, Datenbanksysteme, E-Mails)
-* durch Gewährleistung der **Integrität** und **Authentizität**
-* durch **RAID-Systeme** (**R**edundant **A**rray of **I**ndependent **D**isks)
-	* Verteilung des logischen Speichers auf mehrere physikalische Festplatten
-	* Ziel: Erhöhung der Datenverfügbarkeit und Datenlese- bzw. -schreibgeschwindigkeiten
-* durch **Backups** (müssen regelmäßig auf Integrität überprüft werden)
-
-#### Verteilte Datenhaltung
-* Erhöhung der Informationssicherheit durch redundante Datenhaltung über mehrere Standorte hinweg (bei unkritischen Daten auch in Cloud möglich)
-* geographische Trennung zwischen Betrieb und Backup
-* Probleme:
-	* Vertraulichkeit und Integrität muss sichergestellt sein
-	* rechtliche Probleme bei Cloud-Backups wegen anderer Datenschutzbestimmungen im Ausland
-	* sichere Verbindung zwischen Standorten während eines Backups
-
-### Penetrationstests
-* **Penetrationstest**: umfassende Sicherheitsüberprüfungen von Rechnern, Anwendungen (z.B. Websites) oder der Netzwerkinfrastruktur
-* Einsatz von Mitteln, Wissen und Methoden eines Angreifers, um Zugang zum System zu erhalten
-
-#### Ziele
-* Identifikation von Schwachstellen
-* Aufdecken von Fehlern
-* Erhöhung der Sicherheit auf technischer und organisatorischer Ebene
-
-#### Legalität
-* Penetrationstests nur erlaubt, wenn sie mit der Organisation, die die Hoheit über das zu testende System innehat, vereinbart sind
-
-#### Vorgehensweise
-* Vorbereitungsphase mit Zielsetzung
-* Informationsbeschaffungsphase mit Sicherheitsanalysten
-* Bewertung der gewonnenen Informationen
-* Aktive Eindringungsversuche
-* Berichten der Ergebnisse
-
-#### Risiken
-* Störungen des normalen IT-Betriebs (z.B. Ausfall eines Systems)
-* DoS-Tests vorher unbedint mit Betreibern absprechen
-* Penetrationstesteer können an unternehmenskritische Informationen gelangen
-
-## Secure Development Life Cycle (SDLC)
-
-### Ziele
-* Anwendung adäquater Sicherheitsverfahren in einem Entwicklungsprozess
-* **Sicherheitsbedarf früh als nicht-funktionale Anforderung aufnehmen**
-* Entstehungskosten reduzieren
-* Sicherheit der Anwendung erhöhen
-* Konformität zu den Sicherheitsrichtlinien
-* Überblick über implementierte Sicherheit
-
-### Kryptofehler
-* DISCO: Don&#x27;t Invent Super Crypto on your Own!
-* auf bewährte Verfahren zurückgreifen
-* Kryptoimplementierungen kritisch testen
-
-### Phasen eines SDLC
-1. Vorbereitungsphase (Kommunizieren, Planen, Anwendungsfälle analysieren, Anforderungen)
-2. Design-Phase
-3. Entwicklungsphase
-4. Testphase
-5. Vorproduktionsphase
-6. Produktionsphase
-7. Betriebsphase / Wartungsarbeiten
-8. Ablösungsphase
-
-#### Vorbereitungsphase
-* Klassifizierung der Daten
-* Definition der Sicherheitsanforderunge
-
-#### Design-Phase
-* Ermittlung von Bedrohungen
-* Risikoanalyse
-* Maßnahmen zur Risikominimierung festlegen und im Design umsetzen
-
-#### Entwicklungsphase
-* Programmieren mit Berücksichtigung der Sicherheit
-* bekannte Fehler vermeiden
-* Anwendung testen
-* Qualitätssicherung
-
-#### Testphase
-* spätestens hier Penetrationstest durchführen
-* ggf. Code Audits
-* Beheben der gefundenen Fehler
-
-#### Vorproduktionsphase
-* Akzeptanz von Restrisiken
-* Aufbereiten des Quellcodes (Kommentare entfernen etc.)
-* ggf. Webserver-Hardening (WAF)
-
-#### Produktionsphase
-* Monitoring
-* regelmäßige Überprüfung der Sicherheit durch Penetrationstests
-
-## Erweiterte Security-Analyse
-
-### Security-Analyse durch Reverse Code Engineering
-* Tool für Analyse kompilierter Programme (Binärdateien) notwendig (z.B. IDApro)
-* mögliche Schwachstelle: Passwort in Quellcode hart kodiert
-	* Herausfinden des Passworts mittels einer Dissassembler-Analyse möglich
-	* Statisches Hinterlegen von Passwörten und Krypto-Schlüsseln sehr anfällig
-* Warum Reverse Code Engineering?
-	* kein Zugriff auf Quellcode
-	* Überprüfen der Security-Anforderungen
-	* Überprüfen des kompilierten Programms auf mögliche Schwachstellen
-
-### Gründe für den Einsatz von IT-Forensik
-* Wiederherstellung gelöschter Informationen
-* Analyse von Sicherheitsvorfällen
-* post mortem Analyse: IT-Forensiker hat Hinterlassenschaften/Spuren des Angriffs zur Verfügung (Logfiles, Timestamps etc.)
-* Sicherheitsvorfälle so schell wie möglich melden
-
-## Der Heartbleed-Bug
-* schwerwiegender Programmierfehler in OpenSSL (fehlende Überprüfung der gesendeten Payload-Länge)
-* veröffentlicht mit der Version 1.0.1 am 14. Märt 2012
-* Angriff hinterlässt keine verwertbaren Spuren auf dem System
-* betroffen waren alle Systeme, die OpenSSL in den entsprechenden Versionen verwendet haben
-	* viele verschiedene Protokolle/Kommunikationskanäle betroffen
-	* viele Server betroffen, da OpenSSL die meist verwendete SSL/TLS-Bibliothek bei Webservern ist
-
-### Wodurch ist der Bug entstanden?
-* Implementierung von Heartbeat-Verfahren für DTLS-Verbindungen
-* Funktion wurde von einem Studenten in seiner Dissertation zum SCTP-Protokoll entwickelt und als Entwurf bei OpenSSL eingereicht
-* 2011 wurde es offiziell bei OpenSSL eingeführt
-* Hauptproblem hierbei: eigene Funktionen für Allokation (&#x60;malloc&#x60;) und Deallokation (&#x60;free&#x60;) von Speicher implementiert, fehlende Überprüfung der tatsächlichen übergebenen Länge der Daten
-
-### Bedrohungen durch den Bug
-* Auslesen des Speichers der Anwendung (z.B. Zugangsdaten (Benutername, Passwort), privater Server-Key)
-* Man-in-the-Middle-Angriffe mit dem ausgelesenen Server-Key
-* Entschlüsselung von SSL/TLS-verschlüsselten Verbindungen
-* Bug ist über 27 Monate in OpenSSL
-
-### Probleme durch den Bug
-* Kompromittierung sensibler Daten (Aussphähung) (Passwörter, Kreditkarteninformationen, VPN-Verbindungen etc.)
-* SSL-Zertifikate können nicht zuverlässig und flächendeckend gesperrt werden
-	* Browser arbeiten meist mit statischen Sperrlisten
-	* Online-Überprüfung nur teilweise genutzt
-* Vertrauensverlust auf Betreiberseite
-
-### Schutzmöglichkeiten
-* Perfect Forward Secrecy: Schutz gegenüber nachträglichem Entschlüsseln aufgezeichneter verschlüsselter Daten
-* Einsatz von IDS/IPS: Muster hinzufügen/anpassen, das Heartbleed-Angriffe erkennt
-* Erstellen neuer SSL/TLS-Server-Keys und Zertifikate
-* Austausch aller genutzten SSL-Zertifikate
-* Benutzer informieren
-* Passwörter ändern
-
-## Aktive IT-Security-Analysen
-
-### Voraussetzungen
-* Systeme für die Analyse festlegen
-* Rahmenbedingungen schaffen
-	* Festlegen der eingesetzten Tools
-	* Intensität der Kompromittierung bzw. Tiefe der Eindringung festlegen
-	* Umfang und Details der Dokumentation
-* Ziele der Security-Analyse definieren
-	* System verwundbar?
-	* Verwundbarkeiten ausnutzen?
-	* Maßnahmenplan für die Mitigation von Verwundbarkeiten
-
-### Vorhandene Tools
-* nmap (Netzwerkanalysewerkzeug und Portscanner)
-	* kann sensible Informationen über verwendete Protokolle, Versionsnummern, Webserver und Betriebssysteme liefern (z.B. ssh v5.5p1, Apache 2.2.16 Debian, Linux 2.2.32)
-	* darüber lassen sich Verwundbarkeiten in den einzelnen Komponenten herausfinden
-
-### Potentielle Schwachstellen
-* SQL-Injections und Cross Site Scripting (XSS) durch fehlende Eingabevalidierung
-	* **Maßnahme**: Eingabevalidierung für alle vom Client an den Server übergebenen Parameter (GET und POST)
-* Path Traversal durch Angabe eines eigenen Pfades in einer File-Upload-Funktion
-	* **Maßnahme**: Filterung des Dateinamen auf unzulässige Zeichen
-* Konfigurationsfehler (z.B. in der Upload-Funktion): Automatisches Setzen des Execute-Flags für hochgeladene Dateien
-	* **Maßnahme**: Funktion so umschreiben, dass Execute-Flag nicht mehr gesetzt wird
-* Verstecktes Admin-Menü
-	* **Maßnahme**: Anzeigen der Seite nur nach Überprüfung der notwendigen Berechtigungen
-* Unverschlüsselte Datenübertragung
-	* **Maßnahme**: Umstellen von HTTP auf HTTPS-Verbindungen und Setzen der Secure-Cookie-Funktion im Webserver
-	* kein Einsatz von bereits geknackten SSL-Versionen (am besten TLS)
-* &#x60;robots.txt&#x60;-Datei: gibt sensible Daten über Datei-/Verzeichnispfade auf dem Webserver frei
-	* **Maßnahme**: keine Verzeichnisse auflisten, die durch einen Webcrawler gefunden werden können
-
-## Web-Security
-
-### Penetrationstest
-* ein umfangreicher Sicherheitstest einzelner Rechner oder Netzwerke
-* Prüfung der Sicherheit möglichst aller Systembestandteile und Anwendungskomponenten
-* Nutzen von Mitteln und Methoden eines Angreifers
-* **Ziel**: unautorisiert Zugang zu einem System bekommen
-
-### Techniken
-* Bufferoverflow Angriffe
-* Code Injection und Code Execution
-* Cross Site Scripting (XSS)
-* XML External Entity Processing (XXE)
-* Man-in-the-Middle-Angriffe
-* Path Traversal Angriffe
-* SQL Injection
-* Session Manipulation
-
-### Cross Site Scripting (XSS)
-* **Problem**: fremder Code eines Angreifers wird durch Eingabeparameter oder Eingabefelder in eine Website eingeschleust
-* bösartiger Code kann durch Anfrageparameter, Formulare oder Suchmasken übergeben werden
-* **Ziel**: Unterschiebung manipulierter Daten zu einem Benutzer
-	* Auslesen von Session-IDs, Cookies (Übernehmen der Benutzer-Session)
-	* Abfangen von User-Credentials
-	* Manipulation von übertragenen Daten
-
-#### Typen von XSS
-* **Reflektiert**
-	* kurzzeitige einmalige Ausführung von JavaScript über einen Link oder falsche Eingabe
-	* Opfer werden einzeln infiziert
-* **Persistent**
-	* dauerhafte Ausführung des Codes, wenn man die Seite aufruft
-	* z.B. Foreneintrag oder Nutzername
-	* XSS steht hierbei meistens direkt in der Datenbank
-	* alle Benutzer der Seite sind betroffen
-* **DOM-Based**
-	* Code liest Anfrageparameter aus der URL aus
-	* Anfrageparameter enthalten JavaScript
-	* schwierig zu finden
-
-### XML External Entity Processing (XXE)
-* Angriff auf den zugrundeliegenden XML-Parser
-&#x60;&#x60;&#x60;xml
-&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;ISO-8859-1&quot;?&gt;
-  &lt;!DOCTYPE foo [
-    &lt;!ELEMENT foo ANY &gt;
-    &lt;!ENTITY xxe SYSTEM &quot;file:///dev/random&quot; &gt;]&gt;&lt;foo&gt;&amp;xxe;&lt;/foo&gt;
-&#x60;&#x60;&#x60;
-
-* Zeile 1: Document Type Definition (DTD)
-* Zeile 2: Ausgabe
-* &#x60;xxe&#x60;: Variable wird deklariert
-* &#x60;&amp;xxe;&#x60;: Variable wird eingefügt
-* &#x60;file:&#x60;: Gibt das Protokoll an
-
-#### Angriffsarten
-* Auslesen von Dateien
-* Portscan interner Ressourcen
-* Ansteuern von REST APIs
-* Mails verschicken
-
-#### Besonderheiten
-* JRE und SMTP sind beide Plain-Text-Protokolle und erlauben somit die Versendung von Kontrollzeichen wie bspw. Line Feeds &#x60;&lt;LF&gt;&#x60; oder Carriage Returns &#x60;&lt;CR&gt;&#x60;
-
-#### Vermeidung von XXE
-* XML External Entity Processing beim XML-Parser deaktivieren
-* ansonsten: Input sanitization, Output Encoding
-
-### Path Traversal
-* Zugriff auf andere Dateien im Dateisystem erlangen (außerhalb des Webserver-Verzeichnisses)
-* direkt über URL-Parameter möglich (&quot;Dot-Dot-Slash-Methode&quot;: &#x60;../../../file&#x60;)
-
-#### Beispiel
-* &#x60;http://some_site.lan/get-files?file&#x3D;../../../../some.dir/some.file&#x60;
-
-### SQL Injection
-* Einschleusung von SQL-Anweisungen über Eingabefelder
-* Auslesen zusätzlicher Daten aus der Datenbank
-* Verändern von Daten (&#x60;DELETE&#x60;,  &#x60;INSERT&#x60;, &#x60;UPDATE&#x60;)
-* Erraten der Datenbankstruktur
-* Ausführen administrativer Operationen (Shutdown, Drop-Table, Dateien einlesen)
-
-### Session Manipulation
-* **Ziel**: Authentifizierung umgehen und sich Zugriff mit erweiterten Rechten verschaffen
-
-#### Techniken
-* **Session Prediction**: gültige Session-ID vorhersagen
-* **Session Fixating**: Mitnutzen einer gültigen Session-ID
-* **Session Hijacking**: In Besitz einer aktiven Session gelangen (Session eines Benutzers übernehmen)
-
-### Werkzeuge eines Penetrationstesters
-* Netzwerkanalyse-Tools (z.B. nmap)
-* Proxy-Tools zur Abhörung von Anwendungsanfragen (z.B. Burp Suite)
-* verschiedene Betriebssysteme und Webbrowser
-* Software-Entwicklungs- und Reverse-Engineering-Tools
-* Sammlung von Exploits
-* **wichtigstes Werkzeug: Wissen und Erfahrung**
-
-### Gegenmaßnahmen
-* regelmäßig über aktuelle Verwundbarkeiten informieren
-* Absicherung der Webserver (Betriebssystem, DBMS)
-* Planung von Intranet-Anwendungen für spätere Internet-Zwecke
-
-## Web Application Firewall (WAF)
-
-### Gründe für eine WAF
-* Prinzip &quot;Defense in Depth&quot;
-* Firewall für HTTP-Verbindungen, daher gerade für Webanwendungen
-* Filterung auf Basis von
-	* Request/Response-Feldern
-	* Sessions
-	* Adressen
-* bietet Schutz vor
-	* Bruteforce-Angriffen
-	* injectionbasierten Angriffen
-	* XSS
-
-### Implementierung
-* als passives Netzwerkgerät
-* als aktives Netzwerkgerät
-* als Reverse Proxy
-* eingebettet (Embedded)
-
-### Web Intrusion Detection / Prevention
-* Web IDS/IPS gerne als WAF eingesetzt
-* heutige Systeme prüfen Netzwerkverkehr in Echtzeit
-* ermöglicht sofortige Erkennung und Verhinderung von bekannten Angriffen
-
-### Ansätze für Web Intrusion Prevention
-* **Negative Security Modell**
-	* Blacklisting: beschreibt, welche Anfragen verboten sind
-	* Wissen über gefährliche Anfragen, um diese zu blockieren
-	* öfters eingesetzt, da Regelsätze für viele Anwendungen bereits vorhanden sind
-* **Positive Security Modell**
-	* Whitelisting: beschreibt, welche Anfragen erlaubt sind
-	* komplex umzusetzen, da eine Vielzahl an Informationen miteinbezogen werden muss
-
-### Erkennungsformen
-* regelbasierte Erkennung von Angriffen
-	* Abarbeitung festgelegter Regeln/Tests
-	* bei negativem Test wird der Request blockiert
-	* gut geeignet zur Abwehrung bekannter Angriffe, schlecht für Zero Days
-* anomaliebasierte Erkennung von Angriffen
-	* Aufzeichnung von legitimen Verkehr (Trainingsphase)
-	* sehr gute Abwehrung von Angriffen, wenn WAF trainiert ist
-
-### Apache Webserver als WAF
-* OpenSource Web Application Firewall
-* arbeitet als Modul im Apache Webserver
-* kostenlos
-* weit verbreitet
-* stabil und zuverlässig
-* gut skalierbar
-* gut dokumentiert
-* bietet Negative und Positive Security Modell an
-
-## Kryptographie in der Praxis
-
-### Begriffe aus der Kryptographie
-* **Verschlüsselung** (Encryption): Umwandlung von Klartext in Geheimtext mithilfe eines Schlüssels
-* **Schlüssel** (Key): Parameter für die Ver- und Entschlüsselung
-* **Entschlüsselung** (Decryption): Umwandlung des Geheimtextes in Klartext mithilfe des Schlüssels
-* **Entzifferung** (Kryptoanalyse): Techniken zur Entschlüsselung eines Geheimtextes ohne Schlüssel
-
-### Sehr unsichere Verschlüsselungsverfahren
-* Cäsar-Chiffre: Rotation eines Zeichen um $k$ Stellen im Alphabet, $k$ ist der Schlüssel der Verschlüsselung
-* sehr schwaches Verschlüsselungsverfahren, da eine statistische Häufigkeit von Buchstaben in der Chiffre erkennbar ist
-* Buchstabenhäufigkeitsanalyse oder Brute-Force-Angriff führt schnell zum gesuchten Schlüssel
-
-### Symmetrische und asymmetrische Verfahren
-**symmetrisch**:
-* Ver- und Entschlüsselung verwenden den gleichen Schlüssel
-* Vorteil: hohe Geschwindigkeit beim Ver-/Entschlüsseln
-* Nachteil: aufwändiger Schlüsselaustausch notwendig
-* Beispiel: AES, DES, 3-DES
-
-**asymmetrisch**:
-* Ver- und Entschlüsselung verwenden unterschiedliche Schlüssel (Private/Public-Keypairs)
-* Vorteil: einfacher Schlüsselaustausch, Public-Key ist öffentlich
-* Nachteil: aufwändige und langsame Berechnung der Schlüssel
-* Beispiel: RSA
-
-### Hybride Verschlüsselung
-* Kombination aus symmetrischer und asymmetrischer Verschlüsselung
-* asymmetrische Verschlüsselung für den Austausch eines Session-Keys (symmetrischer Schlüssel)
-* symmetrische Verschlüsselung für Datenaustausch (verschlüsselt mit Session-Key)
-* Anwendung in SSL/TLS und PGP
-
-### RSA-Verschlüsselung
-* asymmetrisches Verschlüsselungsverfahren für Verschlüsselung und digitale Signatur
-* privater Schlüssel für Entschlüsselung
-* öffentlicher Schlüssel für Verschlüsselung oder Überprüfung der digitalen Signatur
-* Aufwand für Berechnung des privaten Schlüssels aus öffentlichem Schlüssel extrem aufwändig
-* RSA ist eine Falltürfunktion:
-	* Berechnung des Produkts zweier Primzahlen ist ziemlich einfach
-	* Rückschließen auf die Primzahlen aus dem Produkt ist sehr schwierig, sofern die Primzahlen und das Produkt groß genug gewählt sind
-
-### Vorsicht beim RSA
-* Primzahlen $p$ und $q$ und Eulersche Zahl $\Phi(n)$ müssen nach Erzeugung der Schlüssel unbedingt vernichtet werden
-
-### Sichere Kommunikation mit symmetrischer Verschlüsselung
-* **Problem**: Schlüsselaustausch über unsicheren Kommunikationskanal
-* Lösung 1: Schlüssel über sicheren Kommunikationskanal austauschen
-* Lösung 2: Diffie-Hellman-Schlüsselaustausch
-	* eine Nachricht wird über einen unsicheren Kommunikationskanal übertragen und aus dieser wird der private Schlüssel berechnet
-	* ein Angreifer kann den geheimen Schlüssel nicht berechnen
-
-### Sicherheit des Diffie-Hellman-Verfahrens
-* der Schlüssel $K$ kann nur aus den privaten Zufallszahlen $a$ und $b$ berechnet werden
-* **Problem**: DH-Verfahren ist gegen einen Man-in-the-Middle-Angriff nicht sicher
-	* Schutz gegen MitM mithilfe einer Authentifizierung der Nachrichten über einen weiteren sicheren Kanal
-	* Einsatz von Ephermal Diffie-Hellman und Forward Secrecy bei TLS
-
-### Transport Layer Security (TLS)
-* Weiterentwicklung von SSL (Secure Socket Layer)
-* hybrides Verschlüsselungsprotokoll zur Datenübertragung über TCP/IP
-* Hauptanwendung ist HTTPS und SSL-VPNs
-* SSLv2 und SSLv3.0 sollten wegen bekannter Sicherheitslücken nicht mehr verwendet werden
-
-#### Funktionsweise
-&#x60;&#x60;&#x60;mermaid
-sequenceDiagram
-  participant C as Client
-  participant S as Server
-  C --&gt;&gt; S: baut Verbindung auf
-  S --&gt;&gt; C: authentifiziert sich mit X.509 Zertifikat
-  C --&gt;&gt; S: überprüft Übereinstimmung Servername mit Zertifikat
-  C --&gt;&gt; S: schickt mit Public-Key des Servers verschlüsselte Zufallszahl
-  C --&gt;&gt; C: berechnet geheimen Schlüssel K1
-  S --&gt;&gt; S: berechnet geheimen Schlüssel K2
-  C --&gt; S: K1 &#x3D; K2
-&#x60;&#x60;&#x60;
-Nach der Berechnung des geheimen Schlüssels kann eine symmetrische Verschlüsselung stattfinden, da $K_1$ und $K_2$ gleich sind.
-
-#### Vorteile von TLS
-* höhere Protokolle (z.B. HTTPS aus Anwendungsebene) können auf TLS aufbauen
-* wenig CPU-Last durch symmetrische Verschlüsselung
-
-#### Nachteile von TLS
-* Verbindungsaufbau durch RSA und DH serverseitig rechenintensiv
-* Komprimierung der verschlüsselten Daten kaum möglich
-* TLS verschlüsselt nur die Kommunikation zwischen den beiden direkten Kommunikationspartnern
-
-### ECB-Modus für Blockchiffren
-* ECB (Electronic Code Book)
-* Klartext wird in $n$ Blöcken mit dem gleichen Schlüssel verschlüsselt
-
-### CBC-Modus für Blockchiffren
-* CBC (Cipher Block Chaining)
-* Klartext wird in $n$ Blöcke aufgeteilt, jeder Block wird nacheinander $m$-mal mit dem Verschlüsselungsalgorithmus verschlüsselt
-
-## Security-Analyse komplexer Systemumgebungen
-
-### Ziele
-* Umgang mit Security-Analysen in komplexen Umgebungen
-* Identifizieren potentieller Bedrohungen und Gefahren in Systemumgebungen
-* Ableiten sinnvoller Gegenmaßnahmen
-* Umgang mit Risikoanalyse und Risikoakzeptanz
-
-### Eigenschaften von Security-Analysen in unterschiedlichem Ausmaß
-**Einzelne Systeme**:
-* überschaubare Komplexität
-* Penetrationstests
-* System-Reviews
-* WhiteBox- und BlackBox-Tests
-
-**Systemumgebungen**:
-* beliebig komplex
-* komplexe Kommunikationsbeziehungen
-* vielseitige Bedrohungen und Verwundbarkeiten
-
-### Vorgehen bei der Security-Analyse
-
-#### 1. Schritt: Identifikation und Clusterung der Schutzziele
-* Welche Systeme müssen geschützt werden?
-* Wie kritisch sind die Systeme?
-* Ermitteln von Schutzzonen in einem Netzwerk
-* Bilden der Schutzzonen
-
-#### 2. Schritt: Identifikation der Kommunikationsbeziehungen
-* Erstellung einer Kommunikationsmatrix mit allen bekannten Kommunikationskanälen und möglichen Seitenkanälen
-* Mögliche Mittel: LAN-Analyse (Wireshark), Monitoring-Port von Switches, Monitoring Software, SIEM (Security Information and Event Management)
-* Probleme:
-	* zeitaufwändig
-	* Komplexität der Daten
-
-#### 3. Schritt: Schutzziele und Kommunikationsbeziehungen analysieren
-* Anpassung der Kommunikationsmatrix durch Eliminierung ungenutzter Seitenkanäle
-* Schutz der Kommunikationsbeziehungen festlegen
-* direkte Verbindungen zwischen Schutzzonen (potentielle Verwundbarkeit) durch Firewalls oder IDS/IPS absichern
-
-#### 4. Schritt: Identifikation möglicher Bedrohungen und Verwundbarkeiten
-* vorhandene direkte Verbindungen zwischen Schutzzonen als Verwundbarkeit bewerten
-* kritische Systeme sind oft lohnenswerte Angriffsziele
-* mögliche Bedrohungen:
-	* Systeme über VPN
-	* administrative Systeme
-	* Entwicklungssysteme
-	* Übergangspunkte zu anderen Netzwerken
-
-**Verwundbarkeiten**:
-* Internet-Anwender: Kommunikation über unverschlüsselte Verbindungen können abgehört werden
-* VPN-Teilnehmer: es kann unbeabsichtigt in die IT-Infrastruktur eingedrungen werden (z.B. aufgrund von unregelmäßigen Sicherheitsupdates)
-* ISP-Übergabepunkt: falsch konfigurierte Firewall-Regeln können ungewollt Kommunikationskanäle freilegen
-
-#### 5. Schritt: Ermitteln von Maßnahmen zur Reduzierung der möglichen Bedrohungen und Verwundbarkeiten
-* Umsetzung der Einteilung in Schutzzonen
-* Reduzierung der Kommunikationsbeziehungen auf das Notwendigste
-* durchgehender Einsatz von Perimeterschutz (Firewalls, IDS/IPS, Router mit ACL)
-* VPN-Teilnehmer vor Zugriff auf neueste Version aktualisieren
-* ständiges Monitoring der kritischen IT-Systeme
-* regelmäßige Security-Überprüfungen aller kritischen Server und Anwendungen als auch der Perimeterschutzsysteme
-
-#### 6. Schritt: Durchführung von Risikoanalyse und Risikoakzeptanz
-* wenn Bedrohungen/Verwundbarkeiten nicht vermieden werden können, muss eine Risikoanalyse durchgeführt werden
-* **Risiko**: Eintrittswahrscheinlichkeit und Auswirkung (Schaden)
-* ermittelte Risiken müssen vom Management oder einer leitenden Stelle akzeptiert werden
-* keine dauerhafte Lösung
-
-## Übungen zur Netzwerkanalyse
-
-### nmap - Netzwerk- und Portscanner
-* Netzwerkanalyse- und Portscanning-Tool
-* OpenSource und frei verfügbar
-* sehr flexibel und über Lua-ScriptingEngine sehr erweiterbar
-* verschiedene Portscan-Möglichkeiten (TCP Connect &#x60;-sT&#x60;, TCP SYN &#x60;-sS&#x60;, TCP ACK &#x60;-sA&#x60;, UDP Scan &#x60;-sU&#x60;)
-* erweiterte Hosterkennung möglich
-
-### Wireshark
-* Tool für die Analyse von Netzwerkdaten (wie Kommandozeilentool &#x60;tcpdump&#x60;)
-* Analyse aller Daten über Ethernet und WLAN
-* Netzwerkanalyse in Echtzeit oder Snapshot mit einer gespeicherten PCAP-Datei
-* Auslesen einer Nachricht über Optionenpunkt &quot;Follow TCP Stream&quot; (ermöglicht Anzeige des kompletten Datenverkehrs)
-
-## Übungen zum Website-Pentesting
-
-### ARP-Spoofing
-* nutzt gefälschte ARP-Pakete, um die ARP-Tabelle der Zielsysteme zu manipulieren
-* **Ziel**: Datenverkehr des Zielsystems über das ARP-Spoofing-System zu leiten (Man in the Middle)
-* ARP-Spoofing-System dient hierbei als Proxy
-* alle Systeme müssen sich im gleichen Layer-2-Netzwerk befinden
-
-#### Vorgehensweise
-* Dem Linux-Kernel mitteilen, dass IP-Pakete weiter geleitet werden sollen
-&#x60;&#x60;&#x60;bash
-echo 1 &gt; /proc/sys/net/ipv4/ip_forward            # IPv4
-echo 1 &gt; /proc/sys/net/ipv6/conf/all/forwarding   # IPv6
-&#x60;&#x60;&#x60;
-* ARP-Spoofing starten
-&#x60;&#x60;&#x60;bash
-arpspoof –t &quot;&lt;target IP&gt;&quot; –r &quot;&lt;gateway IP&gt;&quot;
-&#x60;&#x60;&#x60;
-* nun in Wireshark mithilfe der &quot;Follow TCP Stream&quot; Funktion alle Daten einer Verbindung auslesen
-* mit HTTPS nicht ohne Weiteres möglich
-
-## Remote und Reverse Shell
-
-### Remote Shell
-* **Grundvoraussetzung**: Zielsystem muss ohne oder über falsch konfigurierte Firewall erreichbar sein
-* ein Angreifer kann über einen angebotenen Service Schadcode auf dem Zielsystem ausführen (z.B. Remote Code Injection)
-* ein Angreifer startet einen Listener auf dem Zielsystem, mit dem er sich verbinden kann und so Shell-Zugriff auf dem System erhält
-![Remote Shell](https://i.imgur.com/p5Vwu9M.png)
-
-### Reverse Shell
-* **Problem**: Firewall blockiert alle Verbindungen bis auf HTTP und HTTPS
-* **Grundvoraussetzung**: Zielsystem muss externe Systeme über die Firewall erreichen können
-* ein Angreifer kann über einen Service auf dem System Schadcode ausführen (z.B. Remote Code Injection oder PHP-, ASP-, JSP-Skripte)
-* der Angreifer startet auf seinem System einen Listener
-* der Angreifer startet dann auf dem Zielsystem eine Reverse Shell, die sich zum Listener auf dem Angreifersystem verbindet
-![Reverse Shell](https://i.imgur.com/x5OAGfk.png)
+<h1 id="zusammenfassung-it-security">Zusammenfassung IT-Security</h1>
+<p><em>geschrieben am 11.12.18 von Morten Terhart</em></p>
+<hr>
+<h2 id="einführung-in-die-informationssicherheit">Einführung in die Informationssicherheit</h2>
+<h3 id="mögliche-angriffe">Mögliche Angriffe</h3>
+<ul>
+<li>Unauthorized Access</li>
+<li>Mobile Device Attack</li>
+<li>System Compromise</li>
+<li>Cyber Espionage</li>
+<li>Social Engeneering</li>
+<li>Spam</li>
+<li>Maleware</li>
+<li>Indsiders</li>
+<li>DoS</li>
+<li>Data Leakage</li>
+<li>Phishing</li>
+<li>Identy Theft</li>
+</ul>
+<h3 id="mom-motive-opportunity-method">MOM (Motive, Opportunity, Method)</h3>
+<p>Ein Angreifer muss MOM haben:</p>
+<ul>
+<li><strong>Motive</strong>: Einen Grund, warum der Angreifer das System angreifen möchte</li>
+<li><strong>Opportunity</strong>: Die Gelegenheit und Zeit, um den Angriff durchzuführen</li>
+<li><strong>Method</strong>: Die notwendigen Fähigkeiten und Programme/Werkzeuge, um den Angriff durchzuführen</li>
+</ul>
+<h3 id="motive-für-einen-angriff">Motive für einen Angriff</h3>
+<p>Mögliche Ziele eines Angriffs umfassen:</p>
+<ul>
+<li>Finanzdaten (Handelsgeheimnisse, Finanzkraft, Besitzverhältnisse und Finanzierung)</li>
+<li>Innovations-/Produktdaten (Entwicklungsdaten, Designs, Informationen über Schlüsselpositionen, Wissen über Kernprozesse)</li>
+</ul>
+<h3 id="begriff-der-informationssicherheit">Begriff der Informationssicherheit</h3>
+<ul>
+<li>Gewährleistung der Vertraulichkeit, Verfügbarkeit und Integrität (siehe auch CIA-Grundsatz) in einem informationsverarbeitenden System</li>
+<li>dient dem Schutz vor Gefahren, Bedrohungen, Vermeidung von Schäden und Risiken</li>
+<li>betrifft auch die Sicherheit von nicht elektronischen Informationen</li>
+</ul>
+<h3 id="maßnahmen-zur-informationssicherheit">Maßnahmen zur Informationssicherheit</h3>
+<p><strong>auf sozialer Ebene</strong></p>
+<ul>
+<li>Sicherheitsrichtlinien (Security Policies)</li>
+<li>Absicherung der Prozesse</li>
+<li>Sensibilisierung für Gefahren, Trainings</li>
+</ul>
+<p><strong>auf technischer Ebene</strong></p>
+<ul>
+<li>Information Security Management System (ISMS)</li>
+<li>Firewalls</li>
+<li>Virenschutz</li>
+<li>Einbruchsentdeckung und -verhinderung (IDS/IPS)</li>
+<li>Authentifizierung und Autorisierung</li>
+<li>Verschlüsselung</li>
+<li>Überprüfung und Begutachtung</li>
+<li>Datenbackups</li>
+</ul>
+<h3 id="ziele-der-informationssicherheit">Ziele der Informationssicherheit</h3>
+<ul>
+<li>Datensicherheit</li>
+<li>Authentizität</li>
+<li>Verbindlichkeit, Rückverfolgung möglich (Nachweisbarkeit)</li>
+<li>Zugriffssteuerung</li>
+</ul>
+<h3 id="bedeutung">Bedeutung</h3>
+<ul>
+<li>ständig neue Anforderungen an Informationssicherheit</li>
+<li>jeder ist auf IT-Systeme angewiesen
+<ul>
+<li><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⇒</mo></mrow><annotation encoding="application/x-tex">\Rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.36687em; vertical-align: 0em;"></span><span class="mrel">⇒</span></span></span></span></span> Unternehmen zu Informationssicherheit verpflichtet, Teil des Risikomanagements</li>
+</ul>
+</li>
+</ul>
+<h3 id="ziele-und-ursachen-von-bedrohungen">Ziele und Ursachen von Bedrohungen</h3>
+<p><strong>Ziele</strong>:</p>
+<ul>
+<li>technischer Systemausfall</li>
+<li>Missbrauch des Systems</li>
+<li>Sabotage</li>
+<li>Spionage</li>
+<li>Betrug</li>
+<li>Diebstahl</li>
+</ul>
+<p><strong>Ursachen</strong>:</p>
+<ul>
+<li>höhere Gewalt (Naturkatastrophen)</li>
+<li>menschliche Fehler (z.B. Fehlbedienung)</li>
+<li>Viren oder Malware</li>
+<li>Spoofing, Phishing, Pharming</li>
+<li>Denial of Service (DoS)</li>
+<li>Man-in-the-middle-Angriff</li>
+</ul>
+<h3 id="angriff-und-schutz">Angriff und Schutz</h3>
+<p><strong>Angriff</strong>: jeder Vorgang, der das Ziel des Verlustes der Informationssicherheit hat (inklusive technisches Versagen)</p>
+<p><strong>Schutz</strong>: Statistische Informationssicherheit (Aufwand höher als Nutzen) und Absolute Informationssicherheit (kein Angriff möglich)</p>
+<h3 id="bedrohungen-und-maßnahmen">Bedrohungen und Maßnahmen</h3>
+<ul>
+<li>Aufkommen von Bedrohungen durch Mangel an Informationssicherheit</li>
+<li>Systeme sind kompromittiert, wenn ein Einbruch erfolgt ist
+<ul>
+<li>System gilt als unsicher und sollte nicht mehr benutzt werden</li>
+<li>sofortige Maßnahmen zur Minimierung der Schäden (z.B. Datenrettung, Beweissicherung)</li>
+</ul>
+</li>
+</ul>
+<h3 id="klassifizierung-von-informationen">Klassifizierung von Informationen</h3>
+<p><strong>Der CIA-Grundsatz</strong></p>
+<ul>
+<li>Vertraulichkeit (<strong>C</strong>onidentiality): Verhinderung von nicht autorisierter Veröffentlichung von Informationen</li>
+<li>Integrität (<strong>I</strong>ntegrity): Verhinderung von nicht autorisierter Erweiterung oder Zerstörung von Informationen</li>
+<li>Verfügbarkeit (<strong>A</strong>vailability): Verhinderung von nicht autorisierter Zurückhaltung von Informationen</li>
+</ul>
+<h3 id="management-der-informationssicherheit">Management der Informationssicherheit</h3>
+<ul>
+<li>Verabschieden von firmenweiten Informationssicherheitsrichtlinien (Security Policies)</li>
+<li>Einsatz eines Sicherheitsmanagementsystems (Information Security Management System (ISMS))
+<ul>
+<li>operative Umsetzung und Kontrolle der Security Policies</li>
+<li>Schaffung geeigneter Organisations- und Managementstrukturen</li>
+<li>ISMS nach ISO/IEC 2700x im Jahre 2005/2008</li>
+</ul>
+</li>
+</ul>
+<h3 id="maßnahmen-zur-gewährleistung-der-informationssicherheit">Maßnahmen zur Gewährleistung der Informationssicherheit</h3>
+<ul>
+<li>physische Sicherung der Daten</li>
+<li>Zugriffskontrollen</li>
+<li>fehlertolerante Systeme (Ausfallsicherheit)</li>
+<li>Verschlüsselung von Daten</li>
+</ul>
+<p><strong>konkrete Maßnahmen</strong>:</p>
+<ul>
+<li>Softwareaktualisierungen (besonders Sicherheitsupdates)</li>
+<li>Schutz vor Malware (Virenscanner)</li>
+<li>Einsatz von Firewalls (am besten verschiedene Hersteller, keine Monokulturen)</li>
+<li>Einschränkung der Benutzerrechte auf das Mindeste</li>
+<li>Erstellung von Backups</li>
+<li>Protokollierung</li>
+<li>Einsatz sicherer Entwicklungs- und Laufzeitumgebungen</li>
+<li>Sensibilisierung der Mitarbeiter (Security Audits etc.)</li>
+</ul>
+<h3 id="funktionsweise-eines-isms-systems">Funktionsweise eines ISMS-Systems</h3>
+<p><img src="https://i.imgur.com/5AkFRp8.png" alt="ISMS Funktionsweise"></p>
+<h4 id="schritte-zu-einem-isms-system">Schritte zu einem ISMS-System</h4>
+<ol>
+<li>Unterstützung für das Management bekommen</li>
+<li>Definiere den Wirkungsbereich des ISMS-Systems</li>
+<li>Erhalte Informationen über die IT-Systeme (Inventory)</li>
+<li>Lege Methoden des Risikomanagements fest und konsultiere die Berichte des Risikomanagements</li>
+<li>Bereite den Einsatz des ISMS und den Plan für die Risikobehandlung vor</li>
+<li>Entwickle Pläne für das ISMS-System</li>
+</ol>
+<h3 id="schutz-der-infrastruktur">Schutz der Infrastruktur</h3>
+<h4 id="firewall">Firewall</h4>
+<ul>
+<li>Beschränkung des Netzwerkzugriffs durch Regeln (bestimmte Adressen, Ports etc.)</li>
+<li>Einsatz von Filtertechnologien (z.B. Contentfilter)</li>
+</ul>
+<h4 id="demilitarisierte-zone-dmz">Demilitarisierte Zone (DMZ)</h4>
+<ul>
+<li>Subnetz mit stark kontrolliertem Zugriff auf die darin befindlichen Rechner/Server</li>
+<li>Isolation der Systeme gegenüber äußeren Netzwerken wie dem Internet</li>
+<li>Trennung der Netzwerke durch Firewalls</li>
+</ul>
+<h4 id="intrusion-detection-systeme-ids">Intrusion Detection Systeme (IDS)</h4>
+<ul>
+<li>System zur Erkennung von Angriffen auf ein Computersystem oder -netzwerk</li>
+<li>Ergänzung zur Firewall</li>
+<li>zwei Funktionen:
+<ul>
+<li>Vergleich bekannter Angriffssignaturen</li>
+<li>heuristische Analysen zur Erkennung unbekannter Angriffssignaturen</li>
+</ul>
+</li>
+<li>IDS löst Alarm aus, verhindert aber keinen Angriff</li>
+</ul>
+<h4 id="intrusion-prevention-system-ips">Intrusion Prevention System (IPS)</h4>
+<ul>
+<li>Erweiterung eines IDS um Aktionen zur Verhinderung von Angriffen</li>
+<li>mögliche Aktionen bei netzwerkbasierten IPS:
+<ul>
+<li>Veränderung der Datenverbindung bei Angriff</li>
+<li>Beeinflussung von Firewall-Regeln</li>
+</ul>
+</li>
+</ul>
+<h4 id="trennung-der-netzwerke">Trennung der Netzwerke</h4>
+<ul>
+<li>DMZ innerhalb eines Firmennetzwerkes</li>
+<li>Trennung der Netzwerke in unterschiedliche Verantwortungsbereiche (Office, Produktion, WLAN etc.)</li>
+<li>Zwischenschaltung von Firewalls, IDS/IPS und Routern mit ACL</li>
+</ul>
+<h4 id="zugriffsbeschränkungen">Zugriffsbeschränkungen</h4>
+<ul>
+<li>Rechte und Rollen gemäß dem Need-To-Know-Prinzip</li>
+<li>Authentifizierung bei jeglicher Software/Netzwerk</li>
+<li>Zugriff auf Werkzeuge/Materialien</li>
+<li>Zutritt in Gebäude</li>
+</ul>
+<h4 id="redundanz-der-systeme">Redundanz der Systeme</h4>
+<ul>
+<li>wichtige Kernsysteme redundant aufstellen
+<ul>
+<li>Rechenzentrum</li>
+<li>Netzwerkinfrastruktur</li>
+<li>Nutzung verschiedener Medien (Kabel, Funk, Satellit, WAN)</li>
+</ul>
+</li>
+<li><strong>räumliche Trennung der Systeme</strong> (z.B. bei Gebäudebrand oder Naturkatastrophen)</li>
+<li>Einsatz von Notstromsystemen</li>
+</ul>
+<h3 id="schutz-der-daten">Schutz der Daten</h3>
+<ul>
+<li>durch <strong>Verschlüsselung</strong> (z.B. Daten, Datenbanksysteme, E-Mails)</li>
+<li>durch Gewährleistung der <strong>Integrität</strong> und <strong>Authentizität</strong></li>
+<li>durch <strong>RAID-Systeme</strong> (<strong>R</strong>edundant <strong>A</strong>rray of <strong>I</strong>ndependent <strong>D</strong>isks)
+<ul>
+<li>Verteilung des logischen Speichers auf mehrere physikalische Festplatten</li>
+<li>Ziel: Erhöhung der Datenverfügbarkeit und Datenlese- bzw. -schreibgeschwindigkeiten</li>
+</ul>
+</li>
+<li>durch <strong>Backups</strong> (müssen regelmäßig auf Integrität überprüft werden)</li>
+</ul>
+<h4 id="verteilte-datenhaltung">Verteilte Datenhaltung</h4>
+<ul>
+<li>Erhöhung der Informationssicherheit durch redundante Datenhaltung über mehrere Standorte hinweg (bei unkritischen Daten auch in Cloud möglich)</li>
+<li>geographische Trennung zwischen Betrieb und Backup</li>
+<li>Probleme:
+<ul>
+<li>Vertraulichkeit und Integrität muss sichergestellt sein</li>
+<li>rechtliche Probleme bei Cloud-Backups wegen anderer Datenschutzbestimmungen im Ausland</li>
+<li>sichere Verbindung zwischen Standorten während eines Backups</li>
+</ul>
+</li>
+</ul>
+<h3 id="penetrationstests">Penetrationstests</h3>
+<ul>
+<li><strong>Penetrationstest</strong>: umfassende Sicherheitsüberprüfungen von Rechnern, Anwendungen (z.B. Websites) oder der Netzwerkinfrastruktur</li>
+<li>Einsatz von Mitteln, Wissen und Methoden eines Angreifers, um Zugang zum System zu erhalten</li>
+</ul>
+<h4 id="ziele">Ziele</h4>
+<ul>
+<li>Identifikation von Schwachstellen</li>
+<li>Aufdecken von Fehlern</li>
+<li>Erhöhung der Sicherheit auf technischer und organisatorischer Ebene</li>
+</ul>
+<h4 id="legalität">Legalität</h4>
+<ul>
+<li>Penetrationstests nur erlaubt, wenn sie mit der Organisation, die die Hoheit über das zu testende System innehat, vereinbart sind</li>
+</ul>
+<h4 id="vorgehensweise">Vorgehensweise</h4>
+<ul>
+<li>Vorbereitungsphase mit Zielsetzung</li>
+<li>Informationsbeschaffungsphase mit Sicherheitsanalysten</li>
+<li>Bewertung der gewonnenen Informationen</li>
+<li>Aktive Eindringungsversuche</li>
+<li>Berichten der Ergebnisse</li>
+</ul>
+<h4 id="risiken">Risiken</h4>
+<ul>
+<li>Störungen des normalen IT-Betriebs (z.B. Ausfall eines Systems)</li>
+<li>DoS-Tests vorher unbedint mit Betreibern absprechen</li>
+<li>Penetrationstesteer können an unternehmenskritische Informationen gelangen</li>
+</ul>
+<h2 id="secure-development-life-cycle-sdlc">Secure Development Life Cycle (SDLC)</h2>
+<h3 id="ziele-1">Ziele</h3>
+<ul>
+<li>Anwendung adäquater Sicherheitsverfahren in einem Entwicklungsprozess</li>
+<li><strong>Sicherheitsbedarf früh als nicht-funktionale Anforderung aufnehmen</strong></li>
+<li>Entstehungskosten reduzieren</li>
+<li>Sicherheit der Anwendung erhöhen</li>
+<li>Konformität zu den Sicherheitsrichtlinien</li>
+<li>Überblick über implementierte Sicherheit</li>
+</ul>
+<h3 id="kryptofehler">Kryptofehler</h3>
+<ul>
+<li>DISCO: Don’t Invent Super Crypto on your Own!</li>
+<li>auf bewährte Verfahren zurückgreifen</li>
+<li>Kryptoimplementierungen kritisch testen</li>
+</ul>
+<h3 id="phasen-eines-sdlc">Phasen eines SDLC</h3>
+<ol>
+<li>Vorbereitungsphase (Kommunizieren, Planen, Anwendungsfälle analysieren, Anforderungen)</li>
+<li>Design-Phase</li>
+<li>Entwicklungsphase</li>
+<li>Testphase</li>
+<li>Vorproduktionsphase</li>
+<li>Produktionsphase</li>
+<li>Betriebsphase / Wartungsarbeiten</li>
+<li>Ablösungsphase</li>
+</ol>
+<h4 id="vorbereitungsphase">Vorbereitungsphase</h4>
+<ul>
+<li>Klassifizierung der Daten</li>
+<li>Definition der Sicherheitsanforderunge</li>
+</ul>
+<h4 id="design-phase">Design-Phase</h4>
+<ul>
+<li>Ermittlung von Bedrohungen</li>
+<li>Risikoanalyse</li>
+<li>Maßnahmen zur Risikominimierung festlegen und im Design umsetzen</li>
+</ul>
+<h4 id="entwicklungsphase">Entwicklungsphase</h4>
+<ul>
+<li>Programmieren mit Berücksichtigung der Sicherheit</li>
+<li>bekannte Fehler vermeiden</li>
+<li>Anwendung testen</li>
+<li>Qualitätssicherung</li>
+</ul>
+<h4 id="testphase">Testphase</h4>
+<ul>
+<li>spätestens hier Penetrationstest durchführen</li>
+<li>ggf. Code Audits</li>
+<li>Beheben der gefundenen Fehler</li>
+</ul>
+<h4 id="vorproduktionsphase">Vorproduktionsphase</h4>
+<ul>
+<li>Akzeptanz von Restrisiken</li>
+<li>Aufbereiten des Quellcodes (Kommentare entfernen etc.)</li>
+<li>ggf. Webserver-Hardening (WAF)</li>
+</ul>
+<h4 id="produktionsphase">Produktionsphase</h4>
+<ul>
+<li>Monitoring</li>
+<li>regelmäßige Überprüfung der Sicherheit durch Penetrationstests</li>
+</ul>
+<h2 id="erweiterte-security-analyse">Erweiterte Security-Analyse</h2>
+<h3 id="security-analyse-durch-reverse-code-engineering">Security-Analyse durch Reverse Code Engineering</h3>
+<ul>
+<li>Tool für Analyse kompilierter Programme (Binärdateien) notwendig (z.B. IDApro)</li>
+<li>mögliche Schwachstelle: Passwort in Quellcode hart kodiert
+<ul>
+<li>Herausfinden des Passworts mittels einer Dissassembler-Analyse möglich</li>
+<li>Statisches Hinterlegen von Passwörten und Krypto-Schlüsseln sehr anfällig</li>
+</ul>
+</li>
+<li>Warum Reverse Code Engineering?
+<ul>
+<li>kein Zugriff auf Quellcode</li>
+<li>Überprüfen der Security-Anforderungen</li>
+<li>Überprüfen des kompilierten Programms auf mögliche Schwachstellen</li>
+</ul>
+</li>
+</ul>
+<h3 id="gründe-für-den-einsatz-von-it-forensik">Gründe für den Einsatz von IT-Forensik</h3>
+<ul>
+<li>Wiederherstellung gelöschter Informationen</li>
+<li>Analyse von Sicherheitsvorfällen</li>
+<li>post mortem Analyse: IT-Forensiker hat Hinterlassenschaften/Spuren des Angriffs zur Verfügung (Logfiles, Timestamps etc.)</li>
+<li>Sicherheitsvorfälle so schell wie möglich melden</li>
+</ul>
+<h2 id="der-heartbleed-bug">Der Heartbleed-Bug</h2>
+<ul>
+<li>schwerwiegender Programmierfehler in OpenSSL (fehlende Überprüfung der gesendeten Payload-Länge)</li>
+<li>veröffentlicht mit der Version 1.0.1 am 14. Märt 2012</li>
+<li>Angriff hinterlässt keine verwertbaren Spuren auf dem System</li>
+<li>betroffen waren alle Systeme, die OpenSSL in den entsprechenden Versionen verwendet haben
+<ul>
+<li>viele verschiedene Protokolle/Kommunikationskanäle betroffen</li>
+<li>viele Server betroffen, da OpenSSL die meist verwendete SSL/TLS-Bibliothek bei Webservern ist</li>
+</ul>
+</li>
+</ul>
+<h3 id="wodurch-ist-der-bug-entstanden">Wodurch ist der Bug entstanden?</h3>
+<ul>
+<li>Implementierung von Heartbeat-Verfahren für DTLS-Verbindungen</li>
+<li>Funktion wurde von einem Studenten in seiner Dissertation zum SCTP-Protokoll entwickelt und als Entwurf bei OpenSSL eingereicht</li>
+<li>2011 wurde es offiziell bei OpenSSL eingeführt</li>
+<li>Hauptproblem hierbei: eigene Funktionen für Allokation (<code>malloc</code>) und Deallokation (<code>free</code>) von Speicher implementiert, fehlende Überprüfung der tatsächlichen übergebenen Länge der Daten</li>
+</ul>
+<h3 id="bedrohungen-durch-den-bug">Bedrohungen durch den Bug</h3>
+<ul>
+<li>Auslesen des Speichers der Anwendung (z.B. Zugangsdaten (Benutername, Passwort), privater Server-Key)</li>
+<li>Man-in-the-Middle-Angriffe mit dem ausgelesenen Server-Key</li>
+<li>Entschlüsselung von SSL/TLS-verschlüsselten Verbindungen</li>
+<li>Bug ist über 27 Monate in OpenSSL</li>
+</ul>
+<h3 id="probleme-durch-den-bug">Probleme durch den Bug</h3>
+<ul>
+<li>Kompromittierung sensibler Daten (Aussphähung) (Passwörter, Kreditkarteninformationen, VPN-Verbindungen etc.)</li>
+<li>SSL-Zertifikate können nicht zuverlässig und flächendeckend gesperrt werden
+<ul>
+<li>Browser arbeiten meist mit statischen Sperrlisten</li>
+<li>Online-Überprüfung nur teilweise genutzt</li>
+</ul>
+</li>
+<li>Vertrauensverlust auf Betreiberseite</li>
+</ul>
+<h3 id="schutzmöglichkeiten">Schutzmöglichkeiten</h3>
+<ul>
+<li>Perfect Forward Secrecy: Schutz gegenüber nachträglichem Entschlüsseln aufgezeichneter verschlüsselter Daten</li>
+<li>Einsatz von IDS/IPS: Muster hinzufügen/anpassen, das Heartbleed-Angriffe erkennt</li>
+<li>Erstellen neuer SSL/TLS-Server-Keys und Zertifikate</li>
+<li>Austausch aller genutzten SSL-Zertifikate</li>
+<li>Benutzer informieren</li>
+<li>Passwörter ändern</li>
+</ul>
+<h2 id="aktive-it-security-analysen">Aktive IT-Security-Analysen</h2>
+<h3 id="voraussetzungen">Voraussetzungen</h3>
+<ul>
+<li>Systeme für die Analyse festlegen</li>
+<li>Rahmenbedingungen schaffen
+<ul>
+<li>Festlegen der eingesetzten Tools</li>
+<li>Intensität der Kompromittierung bzw. Tiefe der Eindringung festlegen</li>
+<li>Umfang und Details der Dokumentation</li>
+</ul>
+</li>
+<li>Ziele der Security-Analyse definieren
+<ul>
+<li>System verwundbar?</li>
+<li>Verwundbarkeiten ausnutzen?</li>
+<li>Maßnahmenplan für die Mitigation von Verwundbarkeiten</li>
+</ul>
+</li>
+</ul>
+<h3 id="vorhandene-tools">Vorhandene Tools</h3>
+<ul>
+<li>nmap (Netzwerkanalysewerkzeug und Portscanner)
+<ul>
+<li>kann sensible Informationen über verwendete Protokolle, Versionsnummern, Webserver und Betriebssysteme liefern (z.B. ssh v5.5p1, Apache 2.2.16 Debian, Linux 2.2.32)</li>
+<li>darüber lassen sich Verwundbarkeiten in den einzelnen Komponenten herausfinden</li>
+</ul>
+</li>
+</ul>
+<h3 id="potentielle-schwachstellen">Potentielle Schwachstellen</h3>
+<ul>
+<li>SQL-Injections und Cross Site Scripting (XSS) durch fehlende Eingabevalidierung
+<ul>
+<li><strong>Maßnahme</strong>: Eingabevalidierung für alle vom Client an den Server übergebenen Parameter (GET und POST)</li>
+</ul>
+</li>
+<li>Path Traversal durch Angabe eines eigenen Pfades in einer File-Upload-Funktion
+<ul>
+<li><strong>Maßnahme</strong>: Filterung des Dateinamen auf unzulässige Zeichen</li>
+</ul>
+</li>
+<li>Konfigurationsfehler (z.B. in der Upload-Funktion): Automatisches Setzen des Execute-Flags für hochgeladene Dateien
+<ul>
+<li><strong>Maßnahme</strong>: Funktion so umschreiben, dass Execute-Flag nicht mehr gesetzt wird</li>
+</ul>
+</li>
+<li>Verstecktes Admin-Menü
+<ul>
+<li><strong>Maßnahme</strong>: Anzeigen der Seite nur nach Überprüfung der notwendigen Berechtigungen</li>
+</ul>
+</li>
+<li>Unverschlüsselte Datenübertragung
+<ul>
+<li><strong>Maßnahme</strong>: Umstellen von HTTP auf HTTPS-Verbindungen und Setzen der Secure-Cookie-Funktion im Webserver</li>
+<li>kein Einsatz von bereits geknackten SSL-Versionen (am besten TLS)</li>
+</ul>
+</li>
+<li><code>robots.txt</code>-Datei: gibt sensible Daten über Datei-/Verzeichnispfade auf dem Webserver frei
+<ul>
+<li><strong>Maßnahme</strong>: keine Verzeichnisse auflisten, die durch einen Webcrawler gefunden werden können</li>
+</ul>
+</li>
+</ul>
+<h2 id="web-security">Web-Security</h2>
+<h3 id="penetrationstest">Penetrationstest</h3>
+<ul>
+<li>ein umfangreicher Sicherheitstest einzelner Rechner oder Netzwerke</li>
+<li>Prüfung der Sicherheit möglichst aller Systembestandteile und Anwendungskomponenten</li>
+<li>Nutzen von Mitteln und Methoden eines Angreifers</li>
+<li><strong>Ziel</strong>: unautorisiert Zugang zu einem System bekommen</li>
+</ul>
+<h3 id="techniken">Techniken</h3>
+<ul>
+<li>Bufferoverflow Angriffe</li>
+<li>Code Injection und Code Execution</li>
+<li>Cross Site Scripting (XSS)</li>
+<li>XML External Entity Processing (XXE)</li>
+<li>Man-in-the-Middle-Angriffe</li>
+<li>Path Traversal Angriffe</li>
+<li>SQL Injection</li>
+<li>Session Manipulation</li>
+</ul>
+<h3 id="cross-site-scripting-xss">Cross Site Scripting (XSS)</h3>
+<ul>
+<li><strong>Problem</strong>: fremder Code eines Angreifers wird durch Eingabeparameter oder Eingabefelder in eine Website eingeschleust</li>
+<li>bösartiger Code kann durch Anfrageparameter, Formulare oder Suchmasken übergeben werden</li>
+<li><strong>Ziel</strong>: Unterschiebung manipulierter Daten zu einem Benutzer
+<ul>
+<li>Auslesen von Session-IDs, Cookies (Übernehmen der Benutzer-Session)</li>
+<li>Abfangen von User-Credentials</li>
+<li>Manipulation von übertragenen Daten</li>
+</ul>
+</li>
+</ul>
+<h4 id="typen-von-xss">Typen von XSS</h4>
+<ul>
+<li><strong>Reflektiert</strong>
+<ul>
+<li>kurzzeitige einmalige Ausführung von JavaScript über einen Link oder falsche Eingabe</li>
+<li>Opfer werden einzeln infiziert</li>
+</ul>
+</li>
+<li><strong>Persistent</strong>
+<ul>
+<li>dauerhafte Ausführung des Codes, wenn man die Seite aufruft</li>
+<li>z.B. Foreneintrag oder Nutzername</li>
+<li>XSS steht hierbei meistens direkt in der Datenbank</li>
+<li>alle Benutzer der Seite sind betroffen</li>
+</ul>
+</li>
+<li><strong>DOM-Based</strong>
+<ul>
+<li>Code liest Anfrageparameter aus der URL aus</li>
+<li>Anfrageparameter enthalten JavaScript</li>
+<li>schwierig zu finden</li>
+</ul>
+</li>
+</ul>
+<h3 id="xml-external-entity-processing-xxe">XML External Entity Processing (XXE)</h3>
+<ul>
+<li>Angriff auf den zugrundeliegenden XML-Parser</li>
+</ul>
+<pre class=" language-xml"><code class="prism  language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;</span>
+  <span class="token doctype">&lt;!DOCTYPE foo [
+    &lt;!ELEMENT foo ANY &gt;</span>
+    &lt;!ENTITY xxe SYSTEM "file:///dev/random" &gt;]&gt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>foo</span><span class="token punctuation">&gt;</span></span><span class="token entity" title="&amp;xxe;">&amp;xxe;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>foo</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<ul>
+<li>Zeile 1: Document Type Definition (DTD)</li>
+<li>Zeile 2: Ausgabe</li>
+<li><code>xxe</code>: Variable wird deklariert</li>
+<li><code>&amp;xxe;</code>: Variable wird eingefügt</li>
+<li><code>file:</code>: Gibt das Protokoll an</li>
+</ul>
+<h4 id="angriffsarten">Angriffsarten</h4>
+<ul>
+<li>Auslesen von Dateien</li>
+<li>Portscan interner Ressourcen</li>
+<li>Ansteuern von REST APIs</li>
+<li>Mails verschicken</li>
+</ul>
+<h4 id="besonderheiten">Besonderheiten</h4>
+<ul>
+<li>JRE und SMTP sind beide Plain-Text-Protokolle und erlauben somit die Versendung von Kontrollzeichen wie bspw. Line Feeds <code>&lt;LF&gt;</code> oder Carriage Returns <code>&lt;CR&gt;</code></li>
+</ul>
+<h4 id="vermeidung-von-xxe">Vermeidung von XXE</h4>
+<ul>
+<li>XML External Entity Processing beim XML-Parser deaktivieren</li>
+<li>ansonsten: Input sanitization, Output Encoding</li>
+</ul>
+<h3 id="path-traversal">Path Traversal</h3>
+<ul>
+<li>Zugriff auf andere Dateien im Dateisystem erlangen (außerhalb des Webserver-Verzeichnisses)</li>
+<li>direkt über URL-Parameter möglich (“Dot-Dot-Slash-Methode”: <code>../../../file</code>)</li>
+</ul>
+<h4 id="beispiel">Beispiel</h4>
+<ul>
+<li><code>http://some_site.lan/get-files?file=../../../../some.dir/some.file</code></li>
+</ul>
+<h3 id="sql-injection">SQL Injection</h3>
+<ul>
+<li>Einschleusung von SQL-Anweisungen über Eingabefelder</li>
+<li>Auslesen zusätzlicher Daten aus der Datenbank</li>
+<li>Verändern von Daten (<code>DELETE</code>,  <code>INSERT</code>, <code>UPDATE</code>)</li>
+<li>Erraten der Datenbankstruktur</li>
+<li>Ausführen administrativer Operationen (Shutdown, Drop-Table, Dateien einlesen)</li>
+</ul>
+<h3 id="session-manipulation">Session Manipulation</h3>
+<ul>
+<li><strong>Ziel</strong>: Authentifizierung umgehen und sich Zugriff mit erweiterten Rechten verschaffen</li>
+</ul>
+<h4 id="techniken-1">Techniken</h4>
+<ul>
+<li><strong>Session Prediction</strong>: gültige Session-ID vorhersagen</li>
+<li><strong>Session Fixating</strong>: Mitnutzen einer gültigen Session-ID</li>
+<li><strong>Session Hijacking</strong>: In Besitz einer aktiven Session gelangen (Session eines Benutzers übernehmen)</li>
+</ul>
+<h3 id="werkzeuge-eines-penetrationstesters">Werkzeuge eines Penetrationstesters</h3>
+<ul>
+<li>Netzwerkanalyse-Tools (z.B. nmap)</li>
+<li>Proxy-Tools zur Abhörung von Anwendungsanfragen (z.B. Burp Suite)</li>
+<li>verschiedene Betriebssysteme und Webbrowser</li>
+<li>Software-Entwicklungs- und Reverse-Engineering-Tools</li>
+<li>Sammlung von Exploits</li>
+<li><strong>wichtigstes Werkzeug: Wissen und Erfahrung</strong></li>
+</ul>
+<h3 id="gegenmaßnahmen">Gegenmaßnahmen</h3>
+<ul>
+<li>regelmäßig über aktuelle Verwundbarkeiten informieren</li>
+<li>Absicherung der Webserver (Betriebssystem, DBMS)</li>
+<li>Planung von Intranet-Anwendungen für spätere Internet-Zwecke</li>
+</ul>
+<h2 id="web-application-firewall-waf">Web Application Firewall (WAF)</h2>
+<h3 id="gründe-für-eine-waf">Gründe für eine WAF</h3>
+<ul>
+<li>Prinzip “Defense in Depth”</li>
+<li>Firewall für HTTP-Verbindungen, daher gerade für Webanwendungen</li>
+<li>Filterung auf Basis von
+<ul>
+<li>Request/Response-Feldern</li>
+<li>Sessions</li>
+<li>Adressen</li>
+</ul>
+</li>
+<li>bietet Schutz vor
+<ul>
+<li>Bruteforce-Angriffen</li>
+<li>injectionbasierten Angriffen</li>
+<li>XSS</li>
+</ul>
+</li>
+</ul>
+<h3 id="implementierung">Implementierung</h3>
+<ul>
+<li>als passives Netzwerkgerät</li>
+<li>als aktives Netzwerkgerät</li>
+<li>als Reverse Proxy</li>
+<li>eingebettet (Embedded)</li>
+</ul>
+<h3 id="web-intrusion-detection--prevention">Web Intrusion Detection / Prevention</h3>
+<ul>
+<li>Web IDS/IPS gerne als WAF eingesetzt</li>
+<li>heutige Systeme prüfen Netzwerkverkehr in Echtzeit</li>
+<li>ermöglicht sofortige Erkennung und Verhinderung von bekannten Angriffen</li>
+</ul>
+<h3 id="ansätze-für-web-intrusion-prevention">Ansätze für Web Intrusion Prevention</h3>
+<ul>
+<li><strong>Negative Security Modell</strong>
+<ul>
+<li>Blacklisting: beschreibt, welche Anfragen verboten sind</li>
+<li>Wissen über gefährliche Anfragen, um diese zu blockieren</li>
+<li>öfters eingesetzt, da Regelsätze für viele Anwendungen bereits vorhanden sind</li>
+</ul>
+</li>
+<li><strong>Positive Security Modell</strong>
+<ul>
+<li>Whitelisting: beschreibt, welche Anfragen erlaubt sind</li>
+<li>komplex umzusetzen, da eine Vielzahl an Informationen miteinbezogen werden muss</li>
+</ul>
+</li>
+</ul>
+<h3 id="erkennungsformen">Erkennungsformen</h3>
+<ul>
+<li>regelbasierte Erkennung von Angriffen
+<ul>
+<li>Abarbeitung festgelegter Regeln/Tests</li>
+<li>bei negativem Test wird der Request blockiert</li>
+<li>gut geeignet zur Abwehrung bekannter Angriffe, schlecht für Zero Days</li>
+</ul>
+</li>
+<li>anomaliebasierte Erkennung von Angriffen
+<ul>
+<li>Aufzeichnung von legitimen Verkehr (Trainingsphase)</li>
+<li>sehr gute Abwehrung von Angriffen, wenn WAF trainiert ist</li>
+</ul>
+</li>
+</ul>
+<h3 id="apache-webserver-als-waf">Apache Webserver als WAF</h3>
+<ul>
+<li>OpenSource Web Application Firewall</li>
+<li>arbeitet als Modul im Apache Webserver</li>
+<li>kostenlos</li>
+<li>weit verbreitet</li>
+<li>stabil und zuverlässig</li>
+<li>gut skalierbar</li>
+<li>gut dokumentiert</li>
+<li>bietet Negative und Positive Security Modell an</li>
+</ul>
+<h2 id="kryptographie-in-der-praxis">Kryptographie in der Praxis</h2>
+<h3 id="begriffe-aus-der-kryptographie">Begriffe aus der Kryptographie</h3>
+<ul>
+<li><strong>Verschlüsselung</strong> (Encryption): Umwandlung von Klartext in Geheimtext mithilfe eines Schlüssels</li>
+<li><strong>Schlüssel</strong> (Key): Parameter für die Ver- und Entschlüsselung</li>
+<li><strong>Entschlüsselung</strong> (Decryption): Umwandlung des Geheimtextes in Klartext mithilfe des Schlüssels</li>
+<li><strong>Entzifferung</strong> (Kryptoanalyse): Techniken zur Entschlüsselung eines Geheimtextes ohne Schlüssel</li>
+</ul>
+<h3 id="sehr-unsichere-verschlüsselungsverfahren">Sehr unsichere Verschlüsselungsverfahren</h3>
+<ul>
+<li>Cäsar-Chiffre: Rotation eines Zeichen um <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.69444em; vertical-align: 0em;"></span><span style="margin-right: 0.03148em;" class="mord mathit">k</span></span></span></span></span> Stellen im Alphabet, <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.69444em; vertical-align: 0em;"></span><span style="margin-right: 0.03148em;" class="mord mathit">k</span></span></span></span></span> ist der Schlüssel der Verschlüsselung</li>
+<li>sehr schwaches Verschlüsselungsverfahren, da eine statistische Häufigkeit von Buchstaben in der Chiffre erkennbar ist</li>
+<li>Buchstabenhäufigkeitsanalyse oder Brute-Force-Angriff führt schnell zum gesuchten Schlüssel</li>
+</ul>
+<h3 id="symmetrische-und-asymmetrische-verfahren">Symmetrische und asymmetrische Verfahren</h3>
+<p><strong>symmetrisch</strong>:</p>
+<ul>
+<li>Ver- und Entschlüsselung verwenden den gleichen Schlüssel</li>
+<li>Vorteil: hohe Geschwindigkeit beim Ver-/Entschlüsseln</li>
+<li>Nachteil: aufwändiger Schlüsselaustausch notwendig</li>
+<li>Beispiel: AES, DES, 3-DES</li>
+</ul>
+<p><strong>asymmetrisch</strong>:</p>
+<ul>
+<li>Ver- und Entschlüsselung verwenden unterschiedliche Schlüssel (Private/Public-Keypairs)</li>
+<li>Vorteil: einfacher Schlüsselaustausch, Public-Key ist öffentlich</li>
+<li>Nachteil: aufwändige und langsame Berechnung der Schlüssel</li>
+<li>Beispiel: RSA</li>
+</ul>
+<h3 id="hybride-verschlüsselung">Hybride Verschlüsselung</h3>
+<ul>
+<li>Kombination aus symmetrischer und asymmetrischer Verschlüsselung</li>
+<li>asymmetrische Verschlüsselung für den Austausch eines Session-Keys (symmetrischer Schlüssel)</li>
+<li>symmetrische Verschlüsselung für Datenaustausch (verschlüsselt mit Session-Key)</li>
+<li>Anwendung in SSL/TLS und PGP</li>
+</ul>
+<h3 id="rsa-verschlüsselung">RSA-Verschlüsselung</h3>
+<ul>
+<li>asymmetrisches Verschlüsselungsverfahren für Verschlüsselung und digitale Signatur</li>
+<li>privater Schlüssel für Entschlüsselung</li>
+<li>öffentlicher Schlüssel für Verschlüsselung oder Überprüfung der digitalen Signatur</li>
+<li>Aufwand für Berechnung des privaten Schlüssels aus öffentlichem Schlüssel extrem aufwändig</li>
+<li>RSA ist eine Falltürfunktion:
+<ul>
+<li>Berechnung des Produkts zweier Primzahlen ist ziemlich einfach</li>
+<li>Rückschließen auf die Primzahlen aus dem Produkt ist sehr schwierig, sofern die Primzahlen und das Produkt groß genug gewählt sind</li>
+</ul>
+</li>
+</ul>
+<h3 id="vorsicht-beim-rsa">Vorsicht beim RSA</h3>
+<ul>
+<li>Primzahlen <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.19444em;"></span><span class="mord mathit">p</span></span></span></span></span> und <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>q</mi></mrow><annotation encoding="application/x-tex">q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.19444em;"></span><span style="margin-right: 0.03588em;" class="mord mathit">q</span></span></span></span></span> und Eulersche Zahl <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">Φ</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\Phi(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord">Φ</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></span> müssen nach Erzeugung der Schlüssel unbedingt vernichtet werden</li>
+</ul>
+<h3 id="sichere-kommunikation-mit-symmetrischer-verschlüsselung">Sichere Kommunikation mit symmetrischer Verschlüsselung</h3>
+<ul>
+<li><strong>Problem</strong>: Schlüsselaustausch über unsicheren Kommunikationskanal</li>
+<li>Lösung 1: Schlüssel über sicheren Kommunikationskanal austauschen</li>
+<li>Lösung 2: Diffie-Hellman-Schlüsselaustausch
+<ul>
+<li>eine Nachricht wird über einen unsicheren Kommunikationskanal übertragen und aus dieser wird der private Schlüssel berechnet</li>
+<li>ein Angreifer kann den geheimen Schlüssel nicht berechnen</li>
+</ul>
+</li>
+</ul>
+<h3 id="sicherheit-des-diffie-hellman-verfahrens">Sicherheit des Diffie-Hellman-Verfahrens</h3>
+<ul>
+<li>der Schlüssel <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span style="margin-right: 0.07153em;" class="mord mathit">K</span></span></span></span></span> kann nur aus den privaten Zufallszahlen <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathit">a</span></span></span></span></span> und <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.69444em; vertical-align: 0em;"></span><span class="mord mathit">b</span></span></span></span></span> berechnet werden</li>
+<li><strong>Problem</strong>: DH-Verfahren ist gegen einen Man-in-the-Middle-Angriff nicht sicher
+<ul>
+<li>Schutz gegen MitM mithilfe einer Authentifizierung der Nachrichten über einen weiteren sicheren Kanal</li>
+<li>Einsatz von Ephermal Diffie-Hellman und Forward Secrecy bei TLS</li>
+</ul>
+</li>
+</ul>
+<h3 id="transport-layer-security-tls">Transport Layer Security (TLS)</h3>
+<ul>
+<li>Weiterentwicklung von SSL (Secure Socket Layer)</li>
+<li>hybrides Verschlüsselungsprotokoll zur Datenübertragung über TCP/IP</li>
+<li>Hauptanwendung ist HTTPS und SSL-VPNs</li>
+<li>SSLv2 und SSLv3.0 sollten wegen bekannter Sicherheitslücken nicht mehr verwendet werden</li>
+</ul>
+<h4 id="funktionsweise">Funktionsweise</h4>
+<div class="mermaid"><svg xmlns="http://www.w3.org/2000/svg" id="mermaid-svg-a6pZYHd0J11C0m1N" height="100%" width="100%" style="max-width:536.6000061035156px;" viewBox="-93.30000305175781 -10 536.6000061035156 466"><g></g><g><line id="actor621" x1="75" y1="5" x2="75" y2="455" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="0" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="75" y="32.5" style="text-anchor: middle;" dominant-baseline="central" alignment-baseline="central" class="actor"><tspan x="75" dy="0">Client</tspan></text></g><g><line id="actor622" x1="275" y1="5" x2="275" y2="455" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="200" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="275" y="32.5" style="text-anchor: middle;" dominant-baseline="central" alignment-baseline="central" class="actor"><tspan x="275" dy="0">Server</tspan></text></g><defs><marker id="arrowhead" refX="5" refY="2" markerWidth="6" markerHeight="4" orient="auto"><path d="M 0,0 V 4 L6,2 Z"></path></marker></defs><defs><marker id="crosshead" markerWidth="15" markerHeight="8" orient="auto" refX="16" refY="4"><path fill="black" stroke="#000000" style="stroke-dasharray: 0, 0;" stroke-width="1px" d="M 9,2 V 6 L16,4 Z"></path><path fill="none" stroke="#000000" style="stroke-dasharray: 0, 0;" stroke-width="1px" d="M 0,1 L 6,7 M 6,1 L 0,7"></path></marker></defs><g><text x="175" y="93" style="text-anchor: middle;" class="messageText">baut Verbindung auf</text><line x1="75" y1="100" x2="275" y2="100" style="stroke-dasharray: 3, 3; fill: none;" class="messageLine1" stroke-width="2" stroke="black" marker-end="url(#arrowhead)"></line></g><g><text x="175" y="128" style="text-anchor: middle;" class="messageText">authentifiziert sich mit X.509 Zertifikat</text><line x1="275" y1="135" x2="75" y2="135" style="stroke-dasharray: 3, 3; fill: none;" class="messageLine1" stroke-width="2" stroke="black" marker-end="url(#arrowhead)"></line></g><g><text x="175" y="163" style="text-anchor: middle;" class="messageText">überprüft Übereinstimmung Servername mit Zertifikat</text><line x1="75" y1="170" x2="275" y2="170" style="stroke-dasharray: 3, 3; fill: none;" class="messageLine1" stroke-width="2" stroke="black" marker-end="url(#arrowhead)"></line></g><g><text x="175" y="198" style="text-anchor: middle;" class="messageText">schickt mit Public-Key des Servers verschlüsselte Zufallszahl</text><line x1="75" y1="205" x2="275" y2="205" style="stroke-dasharray: 3, 3; fill: none;" class="messageLine1" stroke-width="2" stroke="black" marker-end="url(#arrowhead)"></line></g><g><text x="75" y="233" style="text-anchor: middle;" class="messageText">berechnet geheimen Schlüssel K1</text><path d="M 75,240 C 135,230 135,270 75,260" style="stroke-dasharray: 3, 3; fill: none;" class="messageLine1" stroke-width="2" stroke="black" marker-end="url(#arrowhead)"></path></g><g><text x="275" y="298" style="text-anchor: middle;" class="messageText">berechnet geheimen Schlüssel K2</text><path d="M 275,305 C 335,295 335,335 275,325" style="stroke-dasharray: 3, 3; fill: none;" class="messageLine1" stroke-width="2" stroke="black" marker-end="url(#arrowhead)"></path></g><g><text x="175" y="363" style="text-anchor: middle;" class="messageText">K1 = K2</text><line x1="75" y1="370" x2="275" y2="370" style="stroke-dasharray: 3, 3; fill: none;" class="messageLine1" stroke-width="2" stroke="black"></line></g><g><rect x="0" y="390" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="75" y="422.5" style="text-anchor: middle;" dominant-baseline="central" alignment-baseline="central" class="actor"><tspan x="75" dy="0">Client</tspan></text></g><g><rect x="200" y="390" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="275" y="422.5" style="text-anchor: middle;" dominant-baseline="central" alignment-baseline="central" class="actor"><tspan x="275" dy="0">Server</tspan></text></g></svg></div>
+<p>Nach der Berechnung des geheimen Schlüssels kann eine symmetrische Verschlüsselung stattfinden, da <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>K</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">K_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="mord"><span style="margin-right: 0.07153em;" class="mord mathit">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: -0.07153em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span></span></span></span></span> und <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>K</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">K_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="mord"><span style="margin-right: 0.07153em;" class="mord mathit">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: -0.07153em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span></span></span></span></span> gleich sind.</p>
+<h4 id="vorteile-von-tls">Vorteile von TLS</h4>
+<ul>
+<li>höhere Protokolle (z.B. HTTPS aus Anwendungsebene) können auf TLS aufbauen</li>
+<li>wenig CPU-Last durch symmetrische Verschlüsselung</li>
+</ul>
+<h4 id="nachteile-von-tls">Nachteile von TLS</h4>
+<ul>
+<li>Verbindungsaufbau durch RSA und DH serverseitig rechenintensiv</li>
+<li>Komprimierung der verschlüsselten Daten kaum möglich</li>
+<li>TLS verschlüsselt nur die Kommunikation zwischen den beiden direkten Kommunikationspartnern</li>
+</ul>
+<h3 id="ecb-modus-für-blockchiffren">ECB-Modus für Blockchiffren</h3>
+<ul>
+<li>ECB (Electronic Code Book)</li>
+<li>Klartext wird in <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathit">n</span></span></span></span></span> Blöcken mit dem gleichen Schlüssel verschlüsselt</li>
+</ul>
+<h3 id="cbc-modus-für-blockchiffren">CBC-Modus für Blockchiffren</h3>
+<ul>
+<li>CBC (Cipher Block Chaining)</li>
+<li>Klartext wird in <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathit">n</span></span></span></span></span> Blöcke aufgeteilt, jeder Block wird nacheinander <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathit">m</span></span></span></span></span>-mal mit dem Verschlüsselungsalgorithmus verschlüsselt</li>
+</ul>
+<h2 id="security-analyse-komplexer-systemumgebungen">Security-Analyse komplexer Systemumgebungen</h2>
+<h3 id="ziele-2">Ziele</h3>
+<ul>
+<li>Umgang mit Security-Analysen in komplexen Umgebungen</li>
+<li>Identifizieren potentieller Bedrohungen und Gefahren in Systemumgebungen</li>
+<li>Ableiten sinnvoller Gegenmaßnahmen</li>
+<li>Umgang mit Risikoanalyse und Risikoakzeptanz</li>
+</ul>
+<h3 id="eigenschaften-von-security-analysen-in-unterschiedlichem-ausmaß">Eigenschaften von Security-Analysen in unterschiedlichem Ausmaß</h3>
+<p><strong>Einzelne Systeme</strong>:</p>
+<ul>
+<li>überschaubare Komplexität</li>
+<li>Penetrationstests</li>
+<li>System-Reviews</li>
+<li>WhiteBox- und BlackBox-Tests</li>
+</ul>
+<p><strong>Systemumgebungen</strong>:</p>
+<ul>
+<li>beliebig komplex</li>
+<li>komplexe Kommunikationsbeziehungen</li>
+<li>vielseitige Bedrohungen und Verwundbarkeiten</li>
+</ul>
+<h3 id="vorgehen-bei-der-security-analyse">Vorgehen bei der Security-Analyse</h3>
+<h4 id="schritt-identifikation-und-clusterung-der-schutzziele">1. Schritt: Identifikation und Clusterung der Schutzziele</h4>
+<ul>
+<li>Welche Systeme müssen geschützt werden?</li>
+<li>Wie kritisch sind die Systeme?</li>
+<li>Ermitteln von Schutzzonen in einem Netzwerk</li>
+<li>Bilden der Schutzzonen</li>
+</ul>
+<h4 id="schritt-identifikation-der-kommunikationsbeziehungen">2. Schritt: Identifikation der Kommunikationsbeziehungen</h4>
+<ul>
+<li>Erstellung einer Kommunikationsmatrix mit allen bekannten Kommunikationskanälen und möglichen Seitenkanälen</li>
+<li>Mögliche Mittel: LAN-Analyse (Wireshark), Monitoring-Port von Switches, Monitoring Software, SIEM (Security Information and Event Management)</li>
+<li>Probleme:
+<ul>
+<li>zeitaufwändig</li>
+<li>Komplexität der Daten</li>
+</ul>
+</li>
+</ul>
+<h4 id="schritt-schutzziele-und-kommunikationsbeziehungen-analysieren">3. Schritt: Schutzziele und Kommunikationsbeziehungen analysieren</h4>
+<ul>
+<li>Anpassung der Kommunikationsmatrix durch Eliminierung ungenutzter Seitenkanäle</li>
+<li>Schutz der Kommunikationsbeziehungen festlegen</li>
+<li>direkte Verbindungen zwischen Schutzzonen (potentielle Verwundbarkeit) durch Firewalls oder IDS/IPS absichern</li>
+</ul>
+<h4 id="schritt-identifikation-möglicher-bedrohungen-und-verwundbarkeiten">4. Schritt: Identifikation möglicher Bedrohungen und Verwundbarkeiten</h4>
+<ul>
+<li>vorhandene direkte Verbindungen zwischen Schutzzonen als Verwundbarkeit bewerten</li>
+<li>kritische Systeme sind oft lohnenswerte Angriffsziele</li>
+<li>mögliche Bedrohungen:
+<ul>
+<li>Systeme über VPN</li>
+<li>administrative Systeme</li>
+<li>Entwicklungssysteme</li>
+<li>Übergangspunkte zu anderen Netzwerken</li>
+</ul>
+</li>
+</ul>
+<p><strong>Verwundbarkeiten</strong>:</p>
+<ul>
+<li>Internet-Anwender: Kommunikation über unverschlüsselte Verbindungen können abgehört werden</li>
+<li>VPN-Teilnehmer: es kann unbeabsichtigt in die IT-Infrastruktur eingedrungen werden (z.B. aufgrund von unregelmäßigen Sicherheitsupdates)</li>
+<li>ISP-Übergabepunkt: falsch konfigurierte Firewall-Regeln können ungewollt Kommunikationskanäle freilegen</li>
+</ul>
+<h4 id="schritt-ermitteln-von-maßnahmen-zur-reduzierung-der-möglichen-bedrohungen-und-verwundbarkeiten">5. Schritt: Ermitteln von Maßnahmen zur Reduzierung der möglichen Bedrohungen und Verwundbarkeiten</h4>
+<ul>
+<li>Umsetzung der Einteilung in Schutzzonen</li>
+<li>Reduzierung der Kommunikationsbeziehungen auf das Notwendigste</li>
+<li>durchgehender Einsatz von Perimeterschutz (Firewalls, IDS/IPS, Router mit ACL)</li>
+<li>VPN-Teilnehmer vor Zugriff auf neueste Version aktualisieren</li>
+<li>ständiges Monitoring der kritischen IT-Systeme</li>
+<li>regelmäßige Security-Überprüfungen aller kritischen Server und Anwendungen als auch der Perimeterschutzsysteme</li>
+</ul>
+<h4 id="schritt-durchführung-von-risikoanalyse-und-risikoakzeptanz">6. Schritt: Durchführung von Risikoanalyse und Risikoakzeptanz</h4>
+<ul>
+<li>wenn Bedrohungen/Verwundbarkeiten nicht vermieden werden können, muss eine Risikoanalyse durchgeführt werden</li>
+<li><strong>Risiko</strong>: Eintrittswahrscheinlichkeit und Auswirkung (Schaden)</li>
+<li>ermittelte Risiken müssen vom Management oder einer leitenden Stelle akzeptiert werden</li>
+<li>keine dauerhafte Lösung</li>
+</ul>
+<h2 id="übungen-zur-netzwerkanalyse">Übungen zur Netzwerkanalyse</h2>
+<h3 id="nmap---netzwerk--und-portscanner">nmap - Netzwerk- und Portscanner</h3>
+<ul>
+<li>Netzwerkanalyse- und Portscanning-Tool</li>
+<li>OpenSource und frei verfügbar</li>
+<li>sehr flexibel und über Lua-ScriptingEngine sehr erweiterbar</li>
+<li>verschiedene Portscan-Möglichkeiten (TCP Connect <code>-sT</code>, TCP SYN <code>-sS</code>, TCP ACK <code>-sA</code>, UDP Scan <code>-sU</code>)</li>
+<li>erweiterte Hosterkennung möglich</li>
+</ul>
+<h3 id="wireshark">Wireshark</h3>
+<ul>
+<li>Tool für die Analyse von Netzwerkdaten (wie Kommandozeilentool <code>tcpdump</code>)</li>
+<li>Analyse aller Daten über Ethernet und WLAN</li>
+<li>Netzwerkanalyse in Echtzeit oder Snapshot mit einer gespeicherten PCAP-Datei</li>
+<li>Auslesen einer Nachricht über Optionenpunkt “Follow TCP Stream” (ermöglicht Anzeige des kompletten Datenverkehrs)</li>
+</ul>
+<h2 id="übungen-zum-website-pentesting">Übungen zum Website-Pentesting</h2>
+<h3 id="arp-spoofing">ARP-Spoofing</h3>
+<ul>
+<li>nutzt gefälschte ARP-Pakete, um die ARP-Tabelle der Zielsysteme zu manipulieren</li>
+<li><strong>Ziel</strong>: Datenverkehr des Zielsystems über das ARP-Spoofing-System zu leiten (Man in the Middle)</li>
+<li>ARP-Spoofing-System dient hierbei als Proxy</li>
+<li>alle Systeme müssen sich im gleichen Layer-2-Netzwerk befinden</li>
+</ul>
+<h4 id="vorgehensweise-1">Vorgehensweise</h4>
+<ul>
+<li>Dem Linux-Kernel mitteilen, dass IP-Pakete weiter geleitet werden sollen</li>
+</ul>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token keyword">echo</span> 1 <span class="token operator">&gt;</span> /proc/sys/net/ipv4/ip_forward            <span class="token comment"># IPv4</span>
+<span class="token keyword">echo</span> 1 <span class="token operator">&gt;</span> /proc/sys/net/ipv6/conf/all/forwarding   <span class="token comment"># IPv6</span>
+</code></pre>
+<ul>
+<li>ARP-Spoofing starten</li>
+</ul>
+<pre class=" language-bash"><code class="prism  language-bash">arpspoof –t <span class="token string">"&lt;target IP&gt;"</span> –r <span class="token string">"&lt;gateway IP&gt;"</span>
+</code></pre>
+<ul>
+<li>nun in Wireshark mithilfe der “Follow TCP Stream” Funktion alle Daten einer Verbindung auslesen</li>
+<li>mit HTTPS nicht ohne Weiteres möglich</li>
+</ul>
+<h2 id="remote-und-reverse-shell">Remote und Reverse Shell</h2>
+<h3 id="remote-shell">Remote Shell</h3>
+<ul>
+<li><strong>Grundvoraussetzung</strong>: Zielsystem muss ohne oder über falsch konfigurierte Firewall erreichbar sein</li>
+<li>ein Angreifer kann über einen angebotenen Service Schadcode auf dem Zielsystem ausführen (z.B. Remote Code Injection)</li>
+<li>ein Angreifer startet einen Listener auf dem Zielsystem, mit dem er sich verbinden kann und so Shell-Zugriff auf dem System erhält<br>
+<img src="https://i.imgur.com/p5Vwu9M.png" alt="Remote Shell"></li>
+</ul>
+<h3 id="reverse-shell">Reverse Shell</h3>
+<ul>
+<li><strong>Problem</strong>: Firewall blockiert alle Verbindungen bis auf HTTP und HTTPS</li>
+<li><strong>Grundvoraussetzung</strong>: Zielsystem muss externe Systeme über die Firewall erreichen können</li>
+<li>ein Angreifer kann über einen Service auf dem System Schadcode ausführen (z.B. Remote Code Injection oder PHP-, ASP-, JSP-Skripte)</li>
+<li>der Angreifer startet auf seinem System einen Listener</li>
+<li>der Angreifer startet dann auf dem Zielsystem eine Reverse Shell, die sich zum Listener auf dem Angreifersystem verbindet<br>
+<img src="https://i.imgur.com/x5OAGfk.png" alt="Reverse Shell"></li>
+</ul>
 
