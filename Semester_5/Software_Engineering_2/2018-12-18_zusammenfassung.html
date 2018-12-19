@@ -8,6 +8,169 @@ layout: default
 <h1 id="zusammenfassung-software-engineering-ii">Zusammenfassung Software Engineering II</h1>
 <p><em>geschrieben am 18.12.2018 von Morten Terhart</em></p>
 <hr>
+<p><strong>Inhaltsverzeichnis</strong></p>
+<ul>
+<li><a href="#2-qualit%C3%A4tssicherung">2 Qualitätssicherung</a>
+<ul>
+<li><a href="#21-warum-testen-wir">2.1 Warum testen wir?</a></li>
+<li><a href="#22-auswirkung">2.2 Auswirkung</a></li>
+<li><a href="#24-arten-der-qualit%C3%A4tssicherung">2.4 Arten der Qualitätssicherung</a></li>
+<li><a href="#25-early-error-detection">2.5 Early Error Detection</a></li>
+</ul>
+</li>
+<li><a href="#3-requirements-engineering">3 Requirements Engineering</a>
+<ul>
+<li><a href="#31-warum-erstellen-wir-anforderungen">3.1 Warum erstellen wir Anforderungen?</a>
+<ul>
+<li><a href="#definition-der-anforderung">Definition der Anforderung</a></li>
+<li><a href="#quellen-f%C3%BCr-anforderungen">Quellen für Anforderungen</a></li>
+<li><a href="#requirements-engineering">Requirements Engineering</a></li>
+</ul>
+</li>
+<li><a href="#32-arten-von-anforderungen">3.2 Arten von Anforderungen</a>
+<ul>
+<li><a href="#funktionale-anforderungen">Funktionale Anforderungen</a></li>
+<li><a href="#qualit%C3%A4tsanforderungen--nicht-funktionale-anforderungen">Qualitätsanforderungen / Nicht-funktionale Anforderungen</a></li>
+<li><a href="#rand---rahmenbedingungen">Rand- / Rahmenbedingungen</a></li>
+</ul>
+</li>
+<li><a href="#33-system-und-systemkontext-abgrenzen">3.3 System und Systemkontext abgrenzen</a></li>
+<li><a href="#34-anforderungen-ermitteln">3.4 Anforderungen ermitteln</a>
+<ul>
+<li><a href="#341-anforderungsquellen">3.4.1 Anforderungsquellen</a></li>
+<li><a href="#342-anforderungskategorisierung-nach-dem-kano-modell">3.4.2 Anforderungskategorisierung nach dem Kano-Modell</a></li>
+<li><a href="#343-ermittlungstechniken">3.4.3 Ermittlungstechniken</a></li>
+</ul>
+</li>
+<li><a href="#35-anforderungen-dokumentieren">3.5 Anforderungen dokumentieren</a>
+<ul>
+<li><a href="#351-arten-der-dokumentation">3.5.1 Arten der Dokumentation</a></li>
+<li><a href="#352-inhalte-von-anforderungsdokumenten">3.5.2 Inhalte von Anforderungsdokumenten</a></li>
+</ul>
+</li>
+<li><a href="#36-anforderungen-verwalten">3.6 Anforderungen verwalten</a></li>
+</ul>
+</li>
+<li><a href="#4-grundlagen-des-softwaretestens">4 Grundlagen des Softwaretestens</a>
+<ul>
+<li><a href="#41-fehlerbegriff">4.1 Fehlerbegriff</a></li>
+<li><a href="#44-qualit%C3%A4tsmerkmale">4.4 Qualitätsmerkmale</a></li>
+<li><a href="#45-fundamentaler-testprozess">4.5 Fundamentaler Testprozess</a></li>
+<li><a href="#451-testplanung-und-steuerung">4.5.1 Testplanung und Steuerung</a>
+<ul>
+<li><a href="#begrifflichkeiten">Begrifflichkeiten</a></li>
+</ul>
+</li>
+<li><a href="#452-testanalyse-und-testentwurf">4.5.2 Testanalyse und Testentwurf</a>
+<ul>
+<li><a href="#begrifflichkeiten-1">Begrifflichkeiten</a></li>
+</ul>
+</li>
+<li><a href="#453-testrealisierung-und-testdurchf%C3%BChrung">4.5.3 Testrealisierung und Testdurchführung</a>
+<ul>
+<li><a href="#begrifflichkeiten-2">Begrifflichkeiten</a></li>
+</ul>
+</li>
+<li><a href="#454-bewertung-von-endekriterien-und-bericht">4.5.4 Bewertung von Endekriterien und Bericht</a></li>
+<li><a href="#455-abschluss-der-testaktivit%C3%A4ten">4.5.5 Abschluss der Testaktivitäten</a></li>
+</ul>
+</li>
+<li><a href="#5-testen-im-softwarelebenszyklus">5 Testen im Softwarelebenszyklus</a>
+<ul>
+<li><a href="#51-v-modell">5.1 V-Modell</a>
+<ul>
+<li><a href="#unterscheidung-von-verifikation-und-validierung">Unterscheidung von Verifikation und Validierung</a></li>
+</ul>
+</li>
+<li><a href="#52-scrum">5.2 Scrum</a></li>
+<li><a href="#53-testen-innerhalb-von-entwicklungszyklen">5.3 Testen innerhalb von Entwicklungszyklen</a></li>
+<li><a href="#54-teststufen">5.4 Teststufen</a>
+<ul>
+<li><a href="#541-komponententests">5.4.1 Komponententests</a></li>
+<li><a href="#542-integrationstest">5.4.2 Integrationstest</a></li>
+<li><a href="#543-systemtest">5.4.3 Systemtest</a>
+<ul>
+<li><a href="#begrifflichkeiten-3">Begrifflichkeiten</a></li>
+</ul>
+</li>
+<li><a href="#544-abnahmetest">5.4.4 Abnahmetest</a>
+<ul>
+<li><a href="#auspr%C3%A4gungen-des-abnahmetests">Ausprägungen des Abnahmetests</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#55-testarten">5.5 Testarten</a>
+<ul>
+<li><a href="#551-funktionaler-test">5.5.1 Funktionaler Test</a></li>
+<li><a href="#552-nicht-funktionaler-test">5.5.2 Nicht-funktionaler Test</a></li>
+<li><a href="#553-strukturbasierter-test">5.5.3 Strukturbasierter Test</a></li>
+<li><a href="#554-fehlernachtest-und-regressionstest">5.5.4 Fehlernachtest und Regressionstest</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#6-dynamischer-test">6 Dynamischer Test</a>
+<ul>
+<li><a href="#61-blackbox--vs-whitebox-testverfahren">6.1 BlackBox- vs. WhiteBox-Testverfahren</a>
+<ul>
+<li><a href="#blackbox-test">BlackBox-Test</a></li>
+<li><a href="#whitebox-test">WhiteBox-Test</a></li>
+</ul>
+</li>
+<li><a href="#62-blackbox-verfahren">6.2 BlackBox-Verfahren</a>
+<ul>
+<li><a href="#621-%C3%A4quivalenzklassenanalyse">6.2.1 Äquivalenzklassenanalyse</a></li>
+<li><a href="#622-grenzwertanalyse">6.2.2 Grenzwertanalyse</a></li>
+<li><a href="#623-entscheidungstabellentest">6.2.3 Entscheidungstabellentest</a></li>
+<li><a href="#625-anwendungsfallbasierter-test">6.2.5 Anwendungsfallbasierter Test</a></li>
+</ul>
+</li>
+<li><a href="#63-whitebox-verfahren">6.3 WhiteBox-Verfahren</a>
+<ul>
+<li><a href="#631-anweisungstest-und--%C3%BCberdeckung">6.3.1 Anweisungstest und -überdeckung</a></li>
+<li><a href="#632-entscheidungstest-und-%C3%BCberdeckung">6.3.2 Entscheidungstest und überdeckung</a></li>
+<li><a href="#633-bedingungstest-und--%C3%BCberdeckung">6.3.3 Bedingungstest und -überdeckung</a>
+<ul>
+<li><a href="#einfache-bedingungs%C3%BCberdeckung">Einfache Bedingungsüberdeckung</a></li>
+<li><a href="#mehrfachbedingungs%C3%BCberdeckung">Mehrfachbedingungsüberdeckung</a></li>
+<li><a href="#minimale-mehrfachbedingungs%C3%BCberdeckung">Minimale Mehrfachbedingungsüberdeckung</a></li>
+</ul>
+</li>
+<li><a href="#634-pfadtest-und--%C3%BCberdeckung">6.3.4 Pfadtest und -überdeckung</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#7-statischer-test">7 Statischer Test</a>
+<ul>
+<li><a href="#71-statische-pr%C3%BCftechniken">7.1 Statische Prüftechniken</a></li>
+<li><a href="#72-reviewprozess">7.2 Reviewprozess</a>
+<ul>
+<li><a href="#721-aktivit%C3%A4ten-eines-formalen-reviews">7.2.1 Aktivitäten eines formalen Reviews</a></li>
+<li><a href="#722-rollen-und-verantwortlichkeiten">7.2.2 Rollen und Verantwortlichkeiten</a></li>
+<li><a href="#723-reviewarten">7.2.3 Reviewarten</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#8-testmanagement">8 Testmanagement</a>
+<ul>
+<li><a href="#81-testmanagement-prozessrahmen">8.1 Testmanagement Prozessrahmen</a></li>
+<li><a href="#82-testvorgehen-konzipieren-und-planen">8.2 Testvorgehen konzipieren und planen</a>
+<ul>
+<li><a href="#821-zu-testendes-system-definieren">8.2.1 Zu testendes System definieren</a></li>
+<li><a href="#822-testziele-und-testarten-festlegen">8.2.2 Testziele und Testarten festlegen</a></li>
+<li><a href="#823-teststufen-festlegen">8.2.3 Teststufen festlegen</a></li>
+<li><a href="#824-testobjekte-definieren">8.2.4 Testobjekte definieren</a></li>
+<li><a href="#825-testmethodik-festlegen">8.2.5 Testmethodik festlegen</a></li>
+<li><a href="#826-risikoanalyse-durchf%C3%BChren">8.2.6 Risikoanalyse durchführen</a></li>
+<li><a href="#827-testplanung-durchf%C3%BChren">8.2.7 Testplanung durchführen</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h2 id="qualitätssicherung">2 Qualitätssicherung</h2>
 <h3 id="warum-testen-wir">2.1 Warum testen wir?</h3>
 <p><strong>Ziele des Testens</strong></p>
@@ -304,7 +467,7 @@ layout: default
 <p><strong>Übertragbarkeit</strong>: Eignung der Software zur Übertragung in eine andere Umgebung</p>
 <h3 id="fundamentaler-testprozess">4.5 Fundamentaler Testprozess</h3>
 <p>Der fundamentale Testprozess gliedert die Testaktivitäten in fünf Hauptaktivitäten:</p>
-<div class="mermaid"><svg xmlns="http://www.w3.org/2000/svg" id="mermaid-svg-yEps2IFxm5Ik1WJC" width="100%" style="max-width: 326.8999938964844px;" viewBox="0 0 326.8999938964844 449.5832977294922"><g transform="translate(-12, -12)"><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath" style="opacity: 1;"><path class="path" d="M175.4499969482422,66.71665954589844L175.4499969482422,91.71665954589844L175.4499969482422,116.71665954589844" marker-end="url(#arrowhead6143)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead6143" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M175.4499969482422,163.43331909179688L175.4499969482422,188.43331909179688L175.4499969482422,213.43331909179688" marker-end="url(#arrowhead6144)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead6144" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M175.4499969482422,260.1499786376953L175.4499969482422,285.1499786376953L175.4499969482422,310.1499786376953" marker-end="url(#arrowhead6145)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead6145" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M175.4499969482422,356.86663818359375L175.4499969482422,381.86663818359375L175.4499969482422,406.86663818359375" marker-end="url(#arrowhead6146)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead6146" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node" style="opacity: 1;" id="s1" transform="translate(175.4499969482422,43.35832977294922)"><rect rx="5" ry="5" x="-105.625" y="-23.35832977294922" width="211.25" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-95.625,-13.358329772949219)"><foreignObject width="191.25" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Testplanung und Steuerung</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="s2" transform="translate(175.4499969482422,140.07498931884766)"><rect rx="5" ry="5" x="-107.03333282470703" y="-23.35832977294922" width="214.06666564941406" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-97.03333282470703,-13.358329772949219)"><foreignObject width="194.06666564941406" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Testanalyse und Testenwurf</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="s3" transform="translate(175.4499969482422,236.7916488647461)"><rect rx="5" ry="5" x="-143.86666870117188" y="-23.35832977294922" width="287.73333740234375" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-133.86666870117188,-13.358329772949219)"><foreignObject width="267.73333740234375" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Testrealisierung und Testdurchführung</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="s4" transform="translate(175.4499969482422,333.50830841064453)"><rect rx="5" ry="5" x="-155.4499969482422" y="-23.35832977294922" width="310.8999938964844" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-145.4499969482422,-13.358329772949219)"><foreignObject width="290.8999938964844" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Bewertung von Endekriterien und Bericht</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="s5" transform="translate(175.4499969482422,430.22496795654297)"><rect rx="5" ry="5" x="-111.94166564941406" y="-23.35832977294922" width="223.88333129882812" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-101.94166564941406,-13.358329772949219)"><foreignObject width="203.88333129882812" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Abschluss der Testaktivitäten</div></foreignObject></g></g></g></g></g></g></svg></div>
+<div class="mermaid"><svg xmlns="http://www.w3.org/2000/svg" id="mermaid-svg-SHwsEGWl84XIa0Gw" width="100%" style="max-width: 326.8999938964844px;" viewBox="0 0 326.8999938964844 449.5832977294922"><g transform="translate(-12, -12)"><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath" style="opacity: 1;"><path class="path" d="M175.4499969482422,66.71665954589844L175.4499969482422,91.71665954589844L175.4499969482422,116.71665954589844" marker-end="url(#arrowhead190)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead190" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M175.4499969482422,163.43331909179688L175.4499969482422,188.43331909179688L175.4499969482422,213.43331909179688" marker-end="url(#arrowhead191)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead191" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M175.4499969482422,260.1499786376953L175.4499969482422,285.1499786376953L175.4499969482422,310.1499786376953" marker-end="url(#arrowhead192)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead192" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M175.4499969482422,356.86663818359375L175.4499969482422,381.86663818359375L175.4499969482422,406.86663818359375" marker-end="url(#arrowhead193)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead193" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node" style="opacity: 1;" id="s1" transform="translate(175.4499969482422,43.35832977294922)"><rect rx="5" ry="5" x="-105.625" y="-23.35832977294922" width="211.25" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-95.625,-13.358329772949219)"><foreignObject width="191.25" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Testplanung und Steuerung</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="s2" transform="translate(175.4499969482422,140.07498931884766)"><rect rx="5" ry="5" x="-107.03333282470703" y="-23.35832977294922" width="214.06666564941406" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-97.03333282470703,-13.358329772949219)"><foreignObject width="194.06666564941406" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Testanalyse und Testenwurf</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="s3" transform="translate(175.4499969482422,236.7916488647461)"><rect rx="5" ry="5" x="-143.86666870117188" y="-23.35832977294922" width="287.73333740234375" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-133.86666870117188,-13.358329772949219)"><foreignObject width="267.73333740234375" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Testrealisierung und Testdurchführung</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="s4" transform="translate(175.4499969482422,333.50830841064453)"><rect rx="5" ry="5" x="-155.4499969482422" y="-23.35832977294922" width="310.8999938964844" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-145.4499969482422,-13.358329772949219)"><foreignObject width="290.8999938964844" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Bewertung von Endekriterien und Bericht</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="s5" transform="translate(175.4499969482422,430.22496795654297)"><rect rx="5" ry="5" x="-111.94166564941406" y="-23.35832977294922" width="223.88333129882812" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-101.94166564941406,-13.358329772949219)"><foreignObject width="203.88333129882812" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Abschluss der Testaktivitäten</div></foreignObject></g></g></g></g></g></g></svg></div>
 <h3 id="testplanung-und-steuerung">4.5.1 Testplanung und Steuerung</h3>
 <p>Zur Testplanung gehören folgende zwei Aktivitäten:</p>
 <ul>
@@ -836,7 +999,7 @@ C_2 = \frac{\text{Anzahl ausführbarer Pfade}}{\text{Anzahl aller Pfade}} \cdot 
 </ul>
 <h4 id="aktivitäten-eines-formalen-reviews">7.2.1 Aktivitäten eines formalen Reviews</h4>
 <p>Ein typisches formales Review besteht aus folgenden sechs Hauptaktivitäten:</p>
-<div class="mermaid"><svg xmlns="http://www.w3.org/2000/svg" id="mermaid-svg-qcx31y9FxewxMkUJ" width="100%" style="max-width: 211.6666717529297px;" viewBox="0 0 211.6666717529297 546.2999572753906"><g transform="translate(-12, -12)"><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath" style="opacity: 1;"><path class="path" d="M117.83333587646484,66.71665954589844L117.83333587646484,91.71665954589844L117.83333587646484,116.71665954589844" marker-end="url(#arrowhead6173)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead6173" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M117.83333587646484,163.43331909179688L117.83333587646484,188.43331909179688L117.83333587646484,213.43331909179688" marker-end="url(#arrowhead6174)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead6174" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M117.83333587646484,260.1499786376953L117.83333587646484,285.1499786376953L117.83333587646484,310.1499786376953" marker-end="url(#arrowhead6175)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead6175" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M117.83333587646484,356.86663818359375L117.83333587646484,381.86663818359375L117.83333587646484,406.86663818359375" marker-end="url(#arrowhead6176)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead6176" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M117.83333587646484,453.5832977294922L117.83333587646484,478.5832977294922L117.83333587646484,503.5832977294922" marker-end="url(#arrowhead6177)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead6177" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node" style="opacity: 1;" id="s1" transform="translate(117.83333587646484,43.35832977294922)"><rect rx="5" ry="5" x="-33.80833435058594" y="-23.35832977294922" width="67.61666870117188" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-23.808334350585938,-13.358329772949219)"><foreignObject width="47.616668701171875" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Planen</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="s2" transform="translate(117.83333587646484,140.07498931884766)"><rect rx="5" ry="5" x="-39.59166717529297" y="-23.35832977294922" width="79.18333435058594" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-29.59166717529297,-13.358329772949219)"><foreignObject width="59.18333435058594" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Kick-Off</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="s3" transform="translate(117.83333587646484,236.7916488647461)"><rect rx="5" ry="5" x="-97.83333587646484" y="-23.35832977294922" width="195.6666717529297" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-87.83333587646484,-13.358329772949219)"><foreignObject width="175.6666717529297" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Individuelle Vorbereitung</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="s4" transform="translate(117.83333587646484,333.50830841064453)"><rect rx="5" ry="5" x="-60.30833435058594" y="-23.35832977294922" width="120.61666870117188" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-50.30833435058594,-13.358329772949219)"><foreignObject width="100.61666870117188" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Reviewsitzung</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="s5" transform="translate(117.83333587646484,430.22496795654297)"><rect rx="5" ry="5" x="-56.40833282470703" y="-23.35832977294922" width="112.81666564941406" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-46.40833282470703,-13.358329772949219)"><foreignObject width="92.81666564941406" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Überarbeiten</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="s6" transform="translate(117.83333587646484,526.9416275024414)"><rect rx="5" ry="5" x="-57.39167022705078" y="-23.35832977294922" width="114.78334045410156" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-47.39167022705078,-13.358329772949219)"><foreignObject width="94.78334045410156" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Nachbereiten</div></foreignObject></g></g></g></g></g></g></svg></div>
+<div class="mermaid"><svg xmlns="http://www.w3.org/2000/svg" id="mermaid-svg-rZv7P3YaKEqGytYm" width="100%" style="max-width: 211.6666717529297px;" viewBox="0 0 211.6666717529297 546.2999572753906"><g transform="translate(-12, -12)"><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath" style="opacity: 1;"><path class="path" d="M117.83333587646484,66.71665954589844L117.83333587646484,91.71665954589844L117.83333587646484,116.71665954589844" marker-end="url(#arrowhead220)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead220" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M117.83333587646484,163.43331909179688L117.83333587646484,188.43331909179688L117.83333587646484,213.43331909179688" marker-end="url(#arrowhead221)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead221" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M117.83333587646484,260.1499786376953L117.83333587646484,285.1499786376953L117.83333587646484,310.1499786376953" marker-end="url(#arrowhead222)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead222" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M117.83333587646484,356.86663818359375L117.83333587646484,381.86663818359375L117.83333587646484,406.86663818359375" marker-end="url(#arrowhead223)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead223" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M117.83333587646484,453.5832977294922L117.83333587646484,478.5832977294922L117.83333587646484,503.5832977294922" marker-end="url(#arrowhead224)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead224" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node" style="opacity: 1;" id="s1" transform="translate(117.83333587646484,43.35832977294922)"><rect rx="5" ry="5" x="-33.80833435058594" y="-23.35832977294922" width="67.61666870117188" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-23.808334350585938,-13.358329772949219)"><foreignObject width="47.616668701171875" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Planen</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="s2" transform="translate(117.83333587646484,140.07498931884766)"><rect rx="5" ry="5" x="-39.59166717529297" y="-23.35832977294922" width="79.18333435058594" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-29.59166717529297,-13.358329772949219)"><foreignObject width="59.18333435058594" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Kick-Off</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="s3" transform="translate(117.83333587646484,236.7916488647461)"><rect rx="5" ry="5" x="-97.83333587646484" y="-23.35832977294922" width="195.6666717529297" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-87.83333587646484,-13.358329772949219)"><foreignObject width="175.6666717529297" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Individuelle Vorbereitung</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="s4" transform="translate(117.83333587646484,333.50830841064453)"><rect rx="5" ry="5" x="-60.30833435058594" y="-23.35832977294922" width="120.61666870117188" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-50.30833435058594,-13.358329772949219)"><foreignObject width="100.61666870117188" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Reviewsitzung</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="s5" transform="translate(117.83333587646484,430.22496795654297)"><rect rx="5" ry="5" x="-56.40833282470703" y="-23.35832977294922" width="112.81666564941406" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-46.40833282470703,-13.358329772949219)"><foreignObject width="92.81666564941406" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Überarbeiten</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="s6" transform="translate(117.83333587646484,526.9416275024414)"><rect rx="5" ry="5" x="-57.39167022705078" y="-23.35832977294922" width="114.78334045410156" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-47.39167022705078,-13.358329772949219)"><foreignObject width="94.78334045410156" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Nachbereiten</div></foreignObject></g></g></g></g></g></g></svg></div>
 <ol>
 <li><strong>Planen</strong> (beteiligt: Manager, Moderator)
 <ul>
