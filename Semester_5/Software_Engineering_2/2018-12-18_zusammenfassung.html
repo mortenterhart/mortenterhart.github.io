@@ -1,0 +1,951 @@
+---
+title: Zusammenfassung Software Engineering II
+permalink: Semester_5/Software_Engineering_2/2018-12-18_zusammenfassung
+layout: default
+
+---
+
+<h1 id="zusammenfassung-software-engineering-ii">Zusammenfassung Software Engineering II</h1>
+<p><em>geschrieben am 18.12.2018 von Morten Terhart</em></p>
+<hr>
+<h2 id="qualitätssicherung">2 Qualitätssicherung</h2>
+<h3 id="warum-testen-wir">2.1 Warum testen wir?</h3>
+<p><strong>Ziele des Testens</strong></p>
+<ul>
+<li>Aufdecken von Fehlern</li>
+<li>Erzeugen von Vertrauen bezüglich des Qualitätsniveaus des Systems</li>
+<li>Liefern von Informationen zur Entscheidungsfindung</li>
+<li>Vorbeugen von Fehlern</li>
+</ul>
+<p><strong>Hinweis</strong></p>
+<blockquote>
+<p><em>Testen erhöht nicht die Qualität der Software, sondern kann die Qualität nur messen. Die Qualität kann nur durch die Beseitigung von Fehlern erhöht werden.</em></p>
+</blockquote>
+<h3 id="auswirkung">2.2 Auswirkung</h3>
+<p>Fehlerhafte Software kann zu Schäden wie <strong>Geld-, Zeit- oder Imageverlust</strong> und <strong>Personenschäden</strong> wie Verletzung oder Tod führen.</p>
+<h3 id="arten-der-qualitätssicherung">2.4 Arten der Qualitätssicherung</h3>
+<p><strong>Qualitätssicherung</strong>: jede geplante und systematische Maßnahme zur Erfüllung der Qualitätsanforderungen</p>
+<p><img src="https://i.imgur.com/vZ6Fz5S.jpg" alt="Qualitätssicherungsarten"><em>Abbildung 1: Arten der Qualitätssicherung</em></p>
+<p>konstruktive Qualitätssicherung:</p>
+<ul>
+<li>sorgt dafür, dassSoftware im Vorfeld bestimmte Eigenschaften hat</li>
+<li>Prinzip der maximalen konstruktiven Qualitätssicherung: Vorbeugen besser als Beheben und nicht gemachte Fehler müssen nicht behoben werden</li>
+</ul>
+<p>analytische Qualitätssicherung:</p>
+<ul>
+<li>misst das existierende Qualitätsniveau der Software</li>
+<li>Unterscheidung von dynamischen und statischen Methoden</li>
+</ul>
+<h3 id="early-error-detection">2.5 Early Error Detection</h3>
+<p><strong>Ziel</strong>: Fehler in frühen Entwicklungsstufen finden</p>
+<ul>
+<li>typischerweise entstehen Fehler in einer frühen Projektphase und werden erst in einer der letzten Projektphasen, der Testphase, gefunden</li>
+<li>Folge: hohe Behebungskosten</li>
+<li>ein Fehler, der am Anfang gefunden wird, verursacht geringe Kosten</li>
+<li>ein Fehler, der nach dem Produktivgang gefunden wird, verursacht mehr Kosten und bewirkt, dass die Phasen davor nochmal durchlaufen werden müssen</li>
+</ul>
+<h2 id="requirements-engineering">3 Requirements Engineering</h2>
+<h3 id="warum-erstellen-wir-anforderungen">3.1 Warum erstellen wir Anforderungen?</h3>
+<p>Anforderungen an das System müssen bekannt und gut dokumentiert sein.</p>
+<h4 id="definition-der-anforderung">Definition der Anforderung</h4>
+<ol>
+<li>Bedingung oder Fähigkeit, die von einem Benutzer zur Lösung eines Problems oder zur Erreichung eines Ziels benötigt wird.</li>
+<li>Bedingung oder Fähigkeit, die das System erfüllen muss, um vorgegebene Spezifikationen (Vertrag, Norm, Dokumente) zu erfüllen</li>
+<li>dokumentierte Repräsentation einer Bedingung oder Fähigkeit nach 1. und 2.</li>
+</ol>
+<h4 id="quellen-für-anforderungen">Quellen für Anforderungen</h4>
+<ul>
+<li>Stakeholder des Projektes (wichtigste Quelle)</li>
+<li>bestehende Systeme/Konzepte</li>
+<li>vorgegebene Spezifikationen (Dokumente, Normen, Gesetzestexte)</li>
+</ul>
+<h4 id="requirements-engineering-1">Requirements Engineering</h4>
+<p><strong>Definition</strong>:</p>
+<ol>
+<li>systematischer und disziplinierter Ansatz zur Spezifikation und zum Management von Anforderungen. Folgende Ziele:</li>
+<li>relevante Anforderungen kennen, Konsens unter den Stakeholdern über die Anforderungen herstellen, Anforderungen konform zu Standards dokumentieren und zu managen</li>
+<li>Wünsche und Bedürfnisse von Stakeholdern verstehen und dokumentieren, Anforderungen spezifizieren und verwalten
+<ul>
+<li>Ziel: Risiko minimieren, dass das System nicht den Wünschen und Bedürfnissen der Stakeholder entspricht</li>
+</ul>
+</li>
+</ol>
+<p><strong>Aufgaben</strong>:</p>
+<ul>
+<li>Anforderungen <strong>ermitteln</strong></li>
+<li>Anforderungen <strong>dokumentieren</strong></li>
+<li>Anforderungen <strong>prüfen</strong> und <strong>abstimmen</strong></li>
+<li>Anforderungen <strong>verwalten</strong></li>
+</ul>
+<h3 id="arten-von-anforderungen">3.2 Arten von Anforderungen</h3>
+<h4 id="funktionale-anforderungen">Funktionale Anforderungen</h4>
+<ul>
+<li>legen die Funktionalität der Software fest</li>
+<li>Unterteilung in Funktions-, Verhaltens- und Strukturanforderungen</li>
+</ul>
+<h4 id="qualitätsanforderungen--nicht-funktionale-anforderungen">Qualitätsanforderungen / Nicht-funktionale Anforderungen</h4>
+<ul>
+<li>legen die gewünschte Qualität des Systems fest</li>
+<li>meistens größerer Einfluss auf die Systemarchitektur als die funktionalen Anforderungen</li>
+<li>beziehen sich typischerweise auf Performance, Verfügbarkeit, Zuverlässigkeit, Skalierbarkeit und Portabilität</li>
+</ul>
+<h4 id="rand---rahmenbedingungen">Rand- / Rahmenbedingungen</h4>
+<ul>
+<li>können von Projektbeteiligten nicht beeinflusst werden</li>
+<li>können sich auf das System und den Entwicklungsprozess beziehen</li>
+<li>werden nicht umgesetzt, sondern schränken Lösungsmöglichkeiten ein</li>
+</ul>
+<h3 id="system-und-systemkontext-abgrenzen">3.3 System und Systemkontext abgrenzen</h3>
+<p><strong>Systemkontext</strong>: der Teil der Systemumgebung, der für die Definition und das Verständnis des Systems relevant sind</p>
+<p>Zwei Abgrenzungsprozesse zur Abgrenzung des Systemkontextes:</p>
+<ol>
+<li><strong>Systemabgrenzung</strong>: Bestimmung der Systemgrenze zur Abdeckung der Teile und Aspekte des geplanten Systems</li>
+<li><strong>Kontextabgrenzung</strong>: Grenze des Systemkontextes zur irrelevanten Umgebung</li>
+</ol>
+<h3 id="anforderungen-ermitteln">3.4 Anforderungen ermitteln</h3>
+<h4 id="anforderungsquellen">3.4.1 Anforderungsquellen</h4>
+<ol>
+<li><strong>Stakeholder</strong>
+<ul>
+<li>eine Person oder Organisation, die direkt oder indirekt Einfluss auf das Projekt und die Anforderungen hat</li>
+<li>Identifizierung relevanter Stakeholder ist zentrale Aufgabe des Requirements Engineering</li>
+<li>Ausgangsbasis hierzu sind meist Vorschläge vom Management oder von Fachexperten</li>
+<li>Risiken bei unvollständiger Liste an Stakeholdern
+<ul>
+<li>bestimmte Aspekte des Systems bleiben unbeachtet</li>
+<li>das Projektziel wird verfehlt</li>
+<li>spätere Anpassungen verursachen Mehrkosten</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Dokumente</strong>
+<ul>
+<li>Informationen aus bestehenden Dokumenten für Anforderungen</li>
+<li>Beispiele:
+<ul>
+<li>Normen/Standards</li>
+<li>Gesetzestexte</li>
+<li>branchenspezifische Dokumente</li>
+<li>Fehlerberichte des Altsystems</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Systeme in Betrieb</strong>
+<ul>
+<li>Alt- und Vorgängersysteme, aber auch Konkurrenzsysteme</li>
+<li>Stakeholder können Altsystem ausprobieren und Erweiterungen des neuen Systems vorschlagen</li>
+</ul>
+</li>
+</ol>
+<h4 id="anforderungskategorisierung-nach-dem-kano-modell">3.4.2 Anforderungskategorisierung nach dem Kano-Modell</h4>
+<p>Kano-Modell unterteilt Zufriedenheit der Stakeholder bezüglich der Anforderungen in drei Kategorien:</p>
+<ol>
+<li><strong>Basisfaktoren</strong>: selbstverständlich vorausgesetzte Systemmerkmale</li>
+<li><strong>Leistungsfaktoren</strong>: explizit geforderte Systemmerkmale</li>
+<li><strong>Begeisterungsfaktoren</strong>: Systemmerkmale, welche die Stakeholder nicht kennen und positiv überraschen (als nützlich erachten)</li>
+</ol>
+
+<table>
+<thead>
+<tr>
+<th align="center"><strong>Kategorien</strong></th>
+<th align="center"><strong>Wissensart</strong></th>
+<th align="center"><strong>Ermittlungstechniken</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Basisfaktoren</td>
+<td align="center">Unterbewusste Anforderung</td>
+<td align="center">Beobachtungstechniken, dokumentenzentrierte Techniken</td>
+</tr>
+<tr>
+<td align="center">Leistungsfaktoren</td>
+<td align="center">Bewusste Anforderung</td>
+<td align="center">Befragungstechniken</td>
+</tr>
+<tr>
+<td align="center">Begeisterungsfaktoren</td>
+<td align="center">Unbewusste Anforderung</td>
+<td align="center">Kreativitätstechniken</td>
+</tr>
+</tbody>
+</table><h4 id="ermittlungstechniken">3.4.3 Ermittlungstechniken</h4>
+<p><strong>Ziel</strong>: Unterstützung bei der Ermittlung von Wissen und Anforderungen der Stakeholder</p>
+<ol>
+<li><strong>Beobachtungstechniken</strong>:
+<ul>
+<li>Beobachtung der Stakeholder bei der Arbeit</li>
+<li>Dokumentierung der Arbeitsschritte</li>
+<li>Ermittlung potentieller Fehler, Risiken und Fragen</li>
+<li>Ermittlungstechniken:
+<ul>
+<li><em>Feldbeobachtung</em>: der Beobachter ist vor Ort bei den Anwendern des Systems und dokumentiert die unmittelbaren Arbeitsabläufe</li>
+<li><em>Apprenticing</em>: der Beobachter erlernt die Tätigkeit des Stakeholders/des Anwenders selbst</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Dokumentenzentrierte Techniken</strong>:
+<ul>
+<li>verwenden Lösungen und Erfahrungen bestehender Systeme</li>
+<li>bei Ablösung eines Altsystems kann gesamte Funktionalität des Altsystems identifiziert werden</li>
+<li>Unterteilung in
+<ul>
+<li><em>Systemarchäologie</em>: Informationen aus Dokumentation und Implementierung eines Altsystems ziehen</li>
+<li><em>Perspektivenbasiertes Lesen</em>: ein Dokument aus einer vorbestimmten Perspektive lesen (z.B. aus der des Testers oder Realisierers)</li>
+<li><em>Wiederverwendung</em>: einmal erarbeitete qualitative Anforderungen werden für das neue System übernommen</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Befragungstechniken</strong>:
+<ul>
+<li>Informationen und Aussagen über die Anforderungen direkt von den Stakeholdern erhalten</li>
+<li>entweder in Form von <em>Interviews</em> oder <em>Fragebögen</em> möglich
+<ul>
+<li><em>Interview</em>: Stellen und Protokollieren von vorgegebenen Fragen in einem Gespräch, zusätzlich unbewusste Anforderungen durch geschicktes Hinterfragen aufdecken</li>
+<li><em>Fragebogen</em>: Aushändigung von offenen oder geschlossenen Fragen, die bis zu einem bestimmten Zeitpunkt zu beantworten sind</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Kreativitätstechniken</strong>:
+<ul>
+<li>innovative Anforderungen entwickeln</li>
+<li>erste Vision des neuen Systems festlegen</li>
+<li>Begeisterungsfaktoren ermitteln</li>
+<li>Unterteilung in
+<ul>
+<li><em>Brainstorming</em>: Sammeln von Ideen in einer Gruppe und Protokollierung der Ideen ohne Kommentierung</li>
+<li><em>Brainstorming paradox</em>: Erweiterung des <em>Brainstorming</em>: Sammeln von Ergebnissen, die nicht erreicht werden sollen</li>
+<li><em>Perspektivenwechsel</em>: jeder Teilnehmer nimmt eine andere Perspektive ein (Sechs-Hut-Methode)</li>
+<li><em>Analogietechnik</em>: ähnliche Problemstellungen und Lösungen werden anhand analoger Strukturen gesucht</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="anforderungen-dokumentieren">3.5 Anforderungen dokumentieren</h3>
+<h4 id="arten-der-dokumentation">3.5.1 Arten der Dokumentation</h4>
+<p>Die Anforderungen an ein System können in drei unterschiedlichen Perspektiven dokumentiert werden:</p>
+<ol>
+<li><strong>Strukturperspektive</strong>: die statische Perspektive auf die Anforderungen an das System wird eingenommen</li>
+<li><strong>Funktionsperspektive</strong>: Dokumentierung der Funktionen, die Daten aus dem Systemkontext manipulieren</li>
+<li><strong>Verhaltensperspektive</strong>: Dokumentierung des Systems und dessen Einbettung in den Systemkontext</li>
+</ol>
+<p><strong>Anforderungen in natürlicher Sprache</strong>:</p>
+<ul>
+<li>die in der Praxis am häufigsten genutzte Dokumentationsform für Anforderungen</li>
+<li>Vorteil: Stakeholder können Anforderungen einfach lesen und Sprache ist vielseitig nutzbar</li>
+<li>Nachteil: Anforderungen können mehrdeutig verstanden werden</li>
+</ul>
+<p><strong>Anforderungen durch konzeptuelle Modelle</strong>:</p>
+<ul>
+<li>stellen die dokumentierten Anforderungen kompakter dar als natürliche Sprache</li>
+<li>Nachteil: nicht so universell einsetzbar</li>
+<li>konzeptuelle Modelle:
+<ul>
+<li>Use-Case-Diagramm</li>
+<li>Klassendiagramm</li>
+<li>Aktivitätsdiagramm</li>
+<li>Zustandsdiagrammm</li>
+</ul>
+</li>
+</ul>
+<h4 id="inhalte-von-anforderungsdokumenten">3.5.2 Inhalte von Anforderungsdokumenten</h4>
+<ul>
+<li>Zweck</li>
+<li>Systemumfang</li>
+<li>Stakeholder</li>
+<li>Referenzen</li>
+<li>Nutzer und Zielgruppen</li>
+<li>Architekturbeschreibung</li>
+<li>Randbedingungen</li>
+</ul>
+<h3 id="anforderungen-verwalten">3.6 Anforderungen verwalten</h3>
+<ul>
+<li>Anforderungen werden mit Attributen belegt, um diese zu priorisieren, Änderungen nachzuhalten und Verantwortlichkeiten zu definieren</li>
+<li>Anforderungen können mithilfe von Schablonen mit den Attributen dokumentiert werden</li>
+</ul>
+<h2 id="grundlagen-des-softwaretestens">4 Grundlagen des Softwaretestens</h2>
+<h3 id="fehlerbegriff">4.1 Fehlerbegriff</h3>
+<p><strong>Fehler</strong>:</p>
+<ul>
+<li>Nicht anforderungskonformes Verhalten des Systems</li>
+<li>Abweichung zwischen Ist- und Soll-Verhalten</li>
+</ul>
+<p><strong>Mangel</strong>:</p>
+<ul>
+<li>Anforderung ist nicht angemessen erfüllt</li>
+<li>Beeinträchtigung der Verwendbarkeit bei gleichzeitiger Erfüllung der Funktionalität</li>
+</ul>
+<p>Der Fehler zieht eine Abhängigkeitskette von Fehlhandlung, Fehlerzustand und Fehlerwirkung hinter sich her:</p>
+<ol>
+<li><strong>Fehlhandlung</strong>: der Zeitpunkt, zu welchem der Fehler entsteht (meistens während der Entwicklung des Quelltextes)</li>
+<li><strong>Fehlerzustand</strong>: Nach Abschluss des Quelltextes wird die Fehlhandlung zu einem Fehlerzustand (z.B. falsch programmierte oder vergessene Anweisung im Programm); wird auch als <em>Defekt</em> oder <em>innerer Fehler</em> bezeichnet</li>
+<li><strong>Fehlerwirkung</strong>: Wirkung der Fehlerzustände zeigt sich bei der Ausführung des Programmes in der <em>Fehlerwirkung</em>. Der Fehler wird im Betrieb für den Tester/Anwender sichtbar; wird auch als <em>Defekt</em>, <em>äußerer Fehler</em> oder <em>Ausfall</em> bezeichnet</li>
+</ol>
+<p><strong>Maskierte Fehler</strong>:</p>
+<ul>
+<li>ein Fehlerzustand überlagert einen anderen Fehlerzustand, wodurch die Fehlerwirkung zum ersten Fehler nicht ersichtlich ist</li>
+<li>Fehlerwirkung tritt erst auf, wenn der zweite Fehlerzustand behoben wurde</li>
+</ul>
+<h3 id="qualitätsmerkmale">4.4 Qualitätsmerkmale</h3>
+<p>Die Norm ISO/IEC 9126 ist ein Modell, um Softwarequalität sicherzustellen. Sie bezieht sich mit ihren Kriterien ausschließlich auf die Qualität der Software als Produkt und unterscheidet 6 Merkmale:<br>
+<img src="https://i.imgur.com/iPln0GS.jpg" alt="Qualitätsmerkmale nach ISO/IEC 9126"><em>Abbildung 2: Qualitätsmerkmale nach ISO/IEC 9126</em></p>
+<p><strong>Funktionalität</strong>: Vorhandensein von geforderten Funktionen mit festgelegten Eigenschaften</p>
+<p><strong>Zuverlässigkeit</strong>: Fähigkeit der Software, ihr Leistungsniveau unter festgelegten Bedingungen zu bewahren</p>
+<p><strong>Benutzbarkeit</strong>: Aufwand, der zur Benutzung erforderlich ist, und individuelle Beurteilung der Benutzung durch eine Benutzergruppe</p>
+<p><strong>Effizienz</strong>: Verhältnis zwischen dem Leistungsniveau der Software und dem Umfang der eingesetzten Betriebsmittel</p>
+<p><strong>Wartbarkeit</strong>: Aufwand zur Durchführung von Änderungen (Korrekturen, Verbesserungen, Anpassungen an Änderungen)</p>
+<p><strong>Übertragbarkeit</strong>: Eignung der Software zur Übertragung in eine andere Umgebung</p>
+<h3 id="fundamentaler-testprozess">4.5 Fundamentaler Testprozess</h3>
+<p>Der fundamentale Testprozess gliedert die Testaktivitäten in fünf Hauptaktivitäten:</p>
+<div class="mermaid"><svg xmlns="http://www.w3.org/2000/svg" id="mermaid-svg-WAjO2XfELVL4xsdP" width="100%" style="max-width: 326.8999938964844px;" viewBox="0 0 326.8999938964844 449.5832977294922"><g transform="translate(-12, -12)"><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath" style="opacity: 1;"><path class="path" d="M175.4499969482422,66.71665954589844L175.4499969482422,91.71665954589844L175.4499969482422,116.71665954589844" marker-end="url(#arrowhead6031)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead6031" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M175.4499969482422,163.43331909179688L175.4499969482422,188.43331909179688L175.4499969482422,213.43331909179688" marker-end="url(#arrowhead6032)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead6032" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M175.4499969482422,260.1499786376953L175.4499969482422,285.1499786376953L175.4499969482422,310.1499786376953" marker-end="url(#arrowhead6033)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead6033" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M175.4499969482422,356.86663818359375L175.4499969482422,381.86663818359375L175.4499969482422,406.86663818359375" marker-end="url(#arrowhead6034)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead6034" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node" style="opacity: 1;" id="s1" transform="translate(175.4499969482422,43.35832977294922)"><rect rx="5" ry="5" x="-105.625" y="-23.35832977294922" width="211.25" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-95.625,-13.358329772949219)"><foreignObject width="191.25" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Testplanung und Steuerung</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="s2" transform="translate(175.4499969482422,140.07498931884766)"><rect rx="5" ry="5" x="-107.03333282470703" y="-23.35832977294922" width="214.06666564941406" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-97.03333282470703,-13.358329772949219)"><foreignObject width="194.06666564941406" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Testanalyse und Testenwurf</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="s3" transform="translate(175.4499969482422,236.7916488647461)"><rect rx="5" ry="5" x="-143.86666870117188" y="-23.35832977294922" width="287.73333740234375" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-133.86666870117188,-13.358329772949219)"><foreignObject width="267.73333740234375" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Testrealisierung und Testdurchführung</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="s4" transform="translate(175.4499969482422,333.50830841064453)"><rect rx="5" ry="5" x="-155.4499969482422" y="-23.35832977294922" width="310.8999938964844" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-145.4499969482422,-13.358329772949219)"><foreignObject width="290.8999938964844" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Bewertung von Endekriterien und Bericht</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="s5" transform="translate(175.4499969482422,430.22496795654297)"><rect rx="5" ry="5" x="-111.94166564941406" y="-23.35832977294922" width="223.88333129882812" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-101.94166564941406,-13.358329772949219)"><foreignObject width="203.88333129882812" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Abschluss der Testaktivitäten</div></foreignObject></g></g></g></g></g></g></svg></div>
+<h3 id="testplanung-und-steuerung">4.5.1 Testplanung und Steuerung</h3>
+<p>Zur Testplanung gehören folgende zwei Aktivitäten:</p>
+<ul>
+<li>die Definition der Testziele / Nicht-Ziele</li>
+<li>die Festlegung der Testaktivitäten, die notwendig sind, um Aufgabenumfang und Testziele zu erreichen</li>
+</ul>
+<h4 id="begrifflichkeiten">Begrifflichkeiten</h4>
+<ul>
+<li><strong>Teststeuerung</strong>: die fortlaufende Aktivität, den aktuellen Testfortschritt mit dem Plan zu vergleichen und den Status samt Abweichungen zu berichten, gegebenenfalls Korrekturmaßnahmen einleiten</li>
+<li><strong>Testziel</strong>: ein Grund für den Entwurf und die Ausführung eines Tests</li>
+<li><strong>Teststrategie</strong>: abstrakte Beschreibung der vorgesehenen Teststufen und der Vorgehensweise</li>
+</ul>
+<h3 id="testanalyse-und-testentwurf">4.5.2 Testanalyse und Testentwurf</h3>
+<ul>
+<li>Konkretisierung der allgemeinen Testziele zu Testbedingungen und Testfällen</li>
+</ul>
+<h4 id="begrifflichkeiten-1">Begrifflichkeiten</h4>
+<ul>
+<li><strong>Testbasis</strong>: Alle Dokumente, die zur Erstellung der Testfälle nützlich sind</li>
+<li><strong>Testobjekt</strong>: Die Komponente oder das System, das getestet wird</li>
+<li><strong>Testdaten</strong>: Daten, die vor der Ausführung eines Tests existieren und speziell für die Tests vorhanden sind</li>
+</ul>
+<h3 id="testrealisierung-und-testdurchführung">4.5.3 Testrealisierung und Testdurchführung</h3>
+<ul>
+<li>Konfiguration der Testumgebung, in der die Tests ausgeführt werden</li>
+<li>Spezifizierung von Testabläufen und Testskripts</li>
+</ul>
+<h4 id="begrifflichkeiten-2">Begrifflichkeiten</h4>
+<ul>
+<li><strong>Testskript</strong>: bezeichnet eine Testablaufspezifikation (besonders automatisiert)</li>
+<li><strong>Testszenario</strong>: ein Dokument, das eine Folge von Schritten zur Testausführung definiert</li>
+<li><strong>Testrahmen</strong>: eine Testumgebung mit den benötigten Treibern und Platzhaltern</li>
+<li><strong>Testsuite</strong>: Zusammenstellung mehrerer Testfälle für den Test einer Komponente</li>
+<li><strong>Fehlernachtest</strong>: Wiederholung aller Testfälle, die vor der Fehlerkorrektur fehlgeschlagen sind; dient der Überprüfung der Fehlerkorrektur</li>
+<li><strong>Regressionstest</strong>: erneutes Testen eines bereits getesteten Programmes oder einer Funktionalität nach einer Änderung</li>
+</ul>
+<h3 id="bewertung-von-endekriterien-und-bericht">4.5.4 Bewertung von Endekriterien und Bericht</h3>
+<ul>
+<li>Testaktivitäten werden auf ihre Ziele hin untersucht</li>
+<li>diese Phase sollte in jeder Teststufe abgehandelt werden</li>
+</ul>
+<h3 id="abschluss-der-testaktivitäten">4.5.5 Abschluss der Testaktivitäten</h3>
+<ul>
+<li>Daten von abgeschlossenen Testphasen werden gesammelt und ausgewertet (Erfahrungen, Testmittel, Fakten, Zahlen)</li>
+<li>Testabschlussaktivitäten sind Projektmeilensteine</li>
+</ul>
+<h2 id="testen-im-softwarelebenszyklus">5 Testen im Softwarelebenszyklus</h2>
+<h3 id="v-modell">5.1 V-Modell</h3>
+<p><img src="https://i.imgur.com/uzCyC1n.jpg" alt="V-Modell"><em>Abbildung 3: Das V-Modell</em></p>
+<ul>
+<li>jede Entwurfsphase hat eine gegenüberliegende Testphase</li>
+<li>soll zu einer höheren Testabdeckung führen</li>
+</ul>
+<h4 id="unterscheidung-von-verifikation-und-validierung">Unterscheidung von Verifikation und Validierung</h4>
+<ul>
+<li><strong>Verifikation</strong>: prüft gegenüber der nächsthöheren Stufe, ob das Produkt die davor definierten Standards erfüllt und konform zu den Spezifikationen ist</li>
+<li><strong>Validierung</strong>: prüft, ob das System die Anforderungen in der Praxis erfüllt</li>
+</ul>
+<h3 id="scrum">5.2 Scrum</h3>
+<ul>
+<li>Ansatz der iterativ-inkrementellen Modelle</li>
+<li>typische Eigenschaften:
+<ul>
+<li>kleinere Entwicklungszyklen</li>
+<li>kurze Feedbackzyklen</li>
+<li>Integrations- und Regressionstests haben einen hohen Stellenwert</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://i.imgur.com/I3lTMVr.jpg" alt="Scrum"><em>Abbildung 4: Scrum</em></p>
+<h3 id="testen-innerhalb-von-entwicklungszyklen">5.3 Testen innerhalb von Entwicklungszyklen</h3>
+<p>Jeder Entwicklungszyklus beinhaltet einige Charakteristika für gutes Testen:</p>
+<ul>
+<li>jede Entwicklungsaktivität hat eine zugehörige Testaktivität</li>
+<li>jede Teststufe hat Testziele, die spezifisch für diese Stufe sind</li>
+<li>Analyse und Entwurf der Tests für eine Teststufe sollten während der zugehörigen Entwicklungsaktivität beginnen</li>
+</ul>
+<h3 id="teststufen">5.4 Teststufen</h3>
+<h4 id="komponententests">5.4.1 Komponententests</h4>
+<ul>
+<li><strong>Ziel</strong>: separat zu testende Softwareteile (Module, Programme, Objekte, Klassen) prüfen und Fehler darin finden</li>
+<li>Isolation der Komponente vom Rest des Systems für Testzwecke
+<ul>
+<li>meist durch Platzhalter, Treiber und Simulatoren erreicht</li>
+</ul>
+</li>
+<li>kann funktionale und nicht-funktionale Aspekte prüfen</li>
+<li>Testern stehen beim Komponententest der Quellcode sowie die Unterstützung der Entwicklungsabteilung zur Verfügung
+<ul>
+<li>gefundene Fehlerzustände können dann sofort korrigiert werden anstatt sie formell zu behandeln</li>
+</ul>
+</li>
+<li>testgetriebene Entwicklung: Testfälle vor der Implementierung der Funktionalität schreiben</li>
+</ul>
+<h4 id="integrationstest">5.4.2 Integrationstest</h4>
+<ul>
+<li>prüft die Schnittstellen zwischen Komponenten und deren Interaktionen</li>
+<li>mehrere Integrationsstufen mit Testobjekten unterschiedlicher Größe möglich:
+<ol>
+<li><em>Komponentenintegrationstest</em>: prüft das Zusammenspiel der Softwarekomponenten (Durchführung nach Komponententest)</li>
+<li><em>Systemintegrationstest</em>: prüft das Zusammenspiel verschiedener Softwaresysteme oder zwischen Hardware und Software (Durchführung nach Systemtest), Entwicklungsteam hat hierbei oft nur die eine Seite der Schnittstelle zum Test zur Verfügung</li>
+</ol>
+</li>
+<li>Basis von Integrationsstrategien sind:
+<ul>
+<li>Systemarchitektur (z.B. Top-Down oder Bottom-Up)</li>
+<li>funktionale Aufgaben</li>
+<li>Transaktionsverarbeitungssequenzen</li>
+<li>andere Aspekte des Systems und seiner Komponenten</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>Top-Down-Strategie</strong>:</p>
+<ul>
+<li>Test beginnt auf der <strong>obersten</strong> Ebene und wird komponentenweise nach unten zu einem System zusammengefasst</li>
+<li>nur <em>Platzhalter</em> und mindestens ein Treiber notwendig</li>
+</ul>
+<p><strong>Bottom-Up-Strategie</strong>:</p>
+<ul>
+<li>Test beginnt auf der <strong>untersten</strong> Ebene und wird komponentenweise nach oben zu einem System zusammengefasst</li>
+<li>nur <em>Treiber</em> und mindestens ein Platzhalter notwendig</li>
+</ul>
+<hr>
+<ul>
+<li>Tester  sollten Systemarchitektur verstehen und Einfluss auf die Integrationsplanung nehmen können</li>
+</ul>
+<h4 id="systemtest">5.4.3 Systemtest</h4>
+<ul>
+<li>beschäftigt sich mit dem Verhalten eines Gesamtsystems</li>
+<li>Testziel soll deutlich im Testkonzept festgelegt sein</li>
+<li>Testumgebung sollte mit der finalen Produktivumgebung möglichst übereinstimmen, um das Risiko umgebungsspezifischer Fehler zu reduzieren</li>
+<li>Systemtests können Tests einschließen basierend auf
+<ul>
+<li>Risikoanalysen</li>
+<li>Anforderungsspezifikationen</li>
+<li>Geschäftsprozesse</li>
+<li>Anwendungsfälle</li>
+<li>Modelle des Systemverhaltens</li>
+<li>Interaktionen mit dem Betriebssystem</li>
+</ul>
+</li>
+<li>Systemtests sollen funktionale und nicht-funktionale Anforderungen und die Datenqualität untersuchen</li>
+</ul>
+<h5 id="begrifflichkeiten-3">Begrifflichkeiten</h5>
+<ul>
+<li><strong>Testkonzept</strong>: ein Dokument, das u.a. den Gültigkeitsbereich, die Vorgehensweise, die Ressourcen und die Zeitplanung der beabsichtigten Tests beschreibt</li>
+</ul>
+<h4 id="abnahmetest">5.4.4 Abnahmetest</h4>
+<ul>
+<li>liegt im Verantwortlichkeitsbereich der Kunden und Benutzer des Systems</li>
+<li>andere Stakeholder können auch beteiligt sein</li>
+<li><strong>Ziel</strong>: Vertrauen in das System gewinnen</li>
+<li>Abnahmetests prüfen die Reife des Systems für den Einsatz und die Nutzung</li>
+</ul>
+<h5 id="ausprägungen-des-abnahmetests">Ausprägungen des Abnahmetests</h5>
+<ul>
+<li><strong>Anwender-Abnahmetest</strong>:
+<ul>
+<li>prüft die Tauglichkeit eines Systems zum Gebrauch durch Anwender</li>
+</ul>
+</li>
+<li><strong>Betrieblicher Abnahmetest</strong>:
+<ul>
+<li>Abnahme durch den Systemadministrator
+<ul>
+<li>Erstellen und Wiedereinspielen von Sicherungskopien</li>
+<li>Wiederherstellbarkeit nach Ausfällen</li>
+<li>Wartungsarbeiten</li>
+<li>Überprüfung nach Sicherheitslücken</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Regulatorischer und vertraglicher Abnahmetest</strong>:
+<ul>
+<li>kundenindividuelle Software wird explizit gegen die vertraglichen Abnahmekriterien geprüft
+<ul>
+<li>Abnahmekriterien werden beim Vertragsabschluss definiert</li>
+<li>auch gegen Gesetze und Standards geprüft</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Alpha- und Beta-Test (oder Feldtest)</strong>
+<ul>
+<li>Erhalt von Feedback von bestehenden oder potenziellen Kunden vor Marktveröffentlichung der Software</li>
+<li>Alpha-Test wird am Herstellerstandort durchgeführt</li>
+<li>Beta-Test wird von den Kunden am Kundenstandort durchgeführt</li>
+</ul>
+</li>
+</ul>
+<h3 id="testarten">5.5 Testarten</h3>
+<ul>
+<li>Testaktivitäten sind darauf ausgerichtet, das Softwaresystem entweder aus einem bestimmten Grund oder mit einem bestimmten Testziel zu prüfen</li>
+</ul>
+<h4 id="funktionaler-test">5.5.1 Funktionaler Test</h4>
+<ul>
+<li>das von außen sichtbare Ein-/Ausgabeverhältnis eines Testobjektes wird geprüft</li>
+<li>funktionale Testfälle werden mithilfe von BlackBox-Verfahren erstellt und basieren auf funktionalen Anforderungen</li>
+<li>funktionale Anforderungen spezifizieren das Verhalten des Systems oder der Komponente</li>
+<li>Erstellung von funktionalen Anforderungen anhand der ISO/IEC 9126:
+<ul>
+<li>Angemessenheit</li>
+<li>Richtigkeit</li>
+<li>Interoperabilität</li>
+<li>Sicherheit</li>
+<li>Ordnungsmäßigkeit</li>
+<li>Konformität</li>
+</ul>
+</li>
+</ul>
+<h4 id="nicht-funktionaler-test">5.5.2 Nicht-funktionaler Test</h4>
+<ul>
+<li>nicht-funktionale Anforderungen beschreiben Eigenschaften des funktionalen Verhaltens</li>
+<li>nicht-funktionales Testen kann in allen Teststufen zur Anwendung kommen</li>
+<li>der nicht-funktionale Test bezeichnet Testarten, die zur Prüfung von Software- und Systemmerkmalen verwendet werden</li>
+<li>unterschiedliche Maßstäbe zur Quantifizierung der Merkmale (z.B. Antwortzeiten beim Performancetest)</li>
+<li>nicht-funktionale Tests betrachten das nach außen sichtbare Verhalten</li>
+<li>verwenden meistens BlackBox-Testentwurfsverfahren</li>
+</ul>
+<h4 id="strukturbasierter-test">5.5.3 Strukturbasierter Test</h4>
+<ul>
+<li>kann in allen Teststufen angewendet werden</li>
+<li>werden am besten nach den spezifikationsorientierten Testentwurfsverfahren eingesetzt</li>
+<li>Testüberdeckung: Maß für Überdeckung einer Struktur durch eine Testsuite (in prozentualem Anteil angegeben)</li>
+</ul>
+<h4 id="fehlernachtest-und-regressionstest">5.5.4 Fehlernachtest und Regressionstest</h4>
+<ul>
+<li><strong>Fehlernachtest</strong>: nach Entdeckung und Korrektur eines Fehlerzustands wird die Software erneut getestet, um die erfolgreiche Entfernung des Fehlers zu bestätigen</li>
+<li><strong>Regressionstest</strong>: das wiederholte Testen eines bereits getesteten Programmes nach einer Modifikation
+<ul>
+<li>Ziel: Nachweis, dass die Modifikation keine neuen Fehlerzustände eingebaut hat</li>
+</ul>
+</li>
+</ul>
+<h2 id="dynamischer-test">6 Dynamischer Test</h2>
+<h3 id="blackbox--vs.-whitebox-testverfahren">6.1 BlackBox- vs. WhiteBox-Testverfahren</h3>
+<ul>
+<li>dynamische Testverfahren gehören zur analytischen Qualitätssicherung und dienen der Fehlerfindung</li>
+<li>dynamischer und statischer Test unterscheiden sich dadurch, dass ein dynamischer Test die Software ausführt und ein statischer Test nicht</li>
+</ul>
+<h4 id="blackbox-test">BlackBox-Test</h4>
+<ul>
+<li>Innenleben/Inhalt der Software ist nicht bekannt</li>
+<li>die Ein- und Ausgabe des Programmes wird auf Richtigkeit überprüft</li>
+<li>werden nicht vom Entwickler selbst ausgeführt, sondern durch unabhängige Testinstanzen</li>
+</ul>
+<h4 id="whitebox-test">WhiteBox-Test</h4>
+<ul>
+<li>Programmablauf und Innenleben der Software sind bekannt</li>
+<li>werden durch den Entwickler selbst ausgeführt</li>
+</ul>
+<h3 id="blackbox-verfahren">6.2 BlackBox-Verfahren</h3>
+<h4 id="äquivalenzklassenanalyse">6.2.1 Äquivalenzklassenanalyse</h4>
+<ul>
+<li>Software wird in die möglichen Eingabewerte zerlegt</li>
+<li>jeder Eingabewert wird in gültige und ungültige Äquivalenzklassen zerlegt</li>
+</ul>
+<p><strong>Beispiel</strong></p>
+
+<table>
+<thead>
+<tr>
+<th align="center"><strong>Äquivalenzklasse</strong></th>
+<th align="center"><strong>Ausprägung</strong></th>
+<th align="center"><strong>Wirkung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Aktuelles Jahr - Geburtsjahr <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≥</mo></mrow><annotation encoding="application/x-tex">\geq</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.77194em; vertical-align: -0.13597em;"></span><span class="mrel">≥</span></span></span></span></span> 18 und Aktuelles Jahr - Geburtsjahr <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≤</mo></mrow><annotation encoding="application/x-tex">\leq</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.77194em; vertical-align: -0.13597em;"></span><span class="mrel">≤</span></span></span></span></span> 65</td>
+<td align="center">Gültige Klasse</td>
+<td align="center">Konto wird eröffnet</td>
+</tr>
+<tr>
+<td align="center">Aktuelles Jahr - Geburtsjahr <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&amp;lt;</mo></mrow><annotation encoding="application/x-tex">&amp;lt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.5782em; vertical-align: -0.0391em;"></span><span class="mrel">&lt;</span></span></span></span></span> 18</td>
+<td align="center">Ungültige Klasse</td>
+<td align="center">Konto wird nicht eröffnet, zu jung</td>
+</tr>
+<tr>
+<td align="center">Aktuelles Jahr - Geburtsjahr <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&amp;gt;</mo></mrow><annotation encoding="application/x-tex">&amp;gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.5782em; vertical-align: -0.0391em;"></span><span class="mrel">&gt;</span></span></span></span></span> 65</td>
+<td align="center">Ungültige Klasse</td>
+<td align="center">Konto wird nicht eröffnet, zu alt</td>
+</tr>
+<tr>
+<td align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">≠</mi></mrow><annotation encoding="application/x-tex">\neq</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.88888em; vertical-align: -0.19444em;"></span><span class="mrel"><span class="mrel"><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.69444em;"><span class="" style="top: -3em;"><span class="pstrut" style="height: 3em;"></span><span class="rlap"><span class="strut" style="height: 0.88888em; vertical-align: -0.19444em;"></span><span class="inner"><span class="mrel latin_fallback"≯</span></span><span class="fix"></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.19444em;"><span class=""></span></span></span></span></span></span><span class="mrel">=</span></span></span></span></span></span> vierstellige Zahl</td>
+<td align="center">Ungültige Klasse</td>
+<td align="center">falsche Eingabe</td>
+</tr>
+</tbody>
+</table><ul>
+<li>beim Testen sollte jede Äquivalenzklasse berücksichtigt werden</li>
+</ul>
+<h4 id="grenzwertanalyse">6.2.2 Grenzwertanalyse</h4>
+<ul>
+<li>basierend auf Äquivalenzklassenanalyse wird eine Grenzwertanalyse durchgeführt</li>
+<li>die Grenzwerte jeder Klasse werden untersucht, da hier mit erhöhter Wahrscheinlichkeit Fehler auftreten</li>
+<li>Grenzwerte sind der größte und der kleinste Wert der Äquivalenzklasse</li>
+<li>Entwurf von Tests für gültige und ungültige Grenzwerte, ein Test für jeden Grenzwert</li>
+</ul>
+<p><strong>Beispiel</strong></p>
+
+<table>
+<thead>
+<tr>
+<th align="center"><strong>Äquivalenzklasse</strong></th>
+<th align="center"><strong>Grenzwerte</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Aktuelles Jahr - Geburtsjahr <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≥</mo></mrow><annotation encoding="application/x-tex">\geq</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.77194em; vertical-align: -0.13597em;"></span><span class="mrel">≥</span></span></span></span></span> 18 und Aktuelles Jahr - Geburtsjahr <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≤</mo></mrow><annotation encoding="application/x-tex">\leq</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.77194em; vertical-align: -0.13597em;"></span><span class="mrel">≤</span></span></span></span></span> 65</td>
+<td align="center">17, 18, 65, 66</td>
+</tr>
+<tr>
+<td align="center">Aktuelles Jahr - Geburtsjahr <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&amp;lt;</mo></mrow><annotation encoding="application/x-tex">&amp;lt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.5782em; vertical-align: -0.0391em;"></span><span class="mrel">&lt;</span></span></span></span></span> 18</td>
+<td align="center">17, 18</td>
+</tr>
+<tr>
+<td align="center">Aktuelles Jahr - Geburtsjahr <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&amp;gt;</mo></mrow><annotation encoding="application/x-tex">&amp;gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.5782em; vertical-align: -0.0391em;"></span><span class="mrel">&gt;</span></span></span></span></span> 65</td>
+<td align="center">65, 66</td>
+</tr>
+<tr>
+<td align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">≠</mi></mrow><annotation encoding="application/x-tex">\neq</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.88888em; vertical-align: -0.19444em;"></span><span class="mrel"><span class="mrel"><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.69444em;"><span class="" style="top: -3em;"><span class="pstrut" style="height: 3em;"></span><span class="rlap"><span class="strut" style="height: 0.88888em; vertical-align: -0.19444em;"></span><span class="inner"><span class="mrel latin_fallback"≯</span></span><span class="fix"></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.19444em;"><span class=""></span></span></span></span></span></span><span class="mrel">=</span></span></span></span></span></span> vierstellige Zahl</td>
+<td align="center">A, B, C, D, E, …, Z</td>
+</tr>
+</tbody>
+</table><p>Für unsere erste Äquivalenzklasse sind die Grenzwerte 17, 18, 65 und 66. Da alle Grenzwerte dort bereits Bestandteil anderer Klassen sind, können diese für die Klassen gestrichen werden.</p>
+
+<table>
+<thead>
+<tr>
+<th align="center"><strong>Äquivalenzklasse</strong></th>
+<th align="center"><strong>Grenzwerte</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Aktuelles Jahr - Geburtsjahr <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≥</mo></mrow><annotation encoding="application/x-tex">\geq</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.77194em; vertical-align: -0.13597em;"></span><span class="mrel">≥</span></span></span></span></span> 18 und Aktuelles Jahr - Geburtsjahr <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≤</mo></mrow><annotation encoding="application/x-tex">\leq</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.77194em; vertical-align: -0.13597em;"></span><span class="mrel">≤</span></span></span></span></span> 65</td>
+<td align="center"><s>17</s>, 18, 65, <s>66</s></td>
+</tr>
+<tr>
+<td align="center">Aktuelles Jahr - Geburtsjahr <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&amp;lt;</mo></mrow><annotation encoding="application/x-tex">&amp;lt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.5782em; vertical-align: -0.0391em;"></span><span class="mrel">&lt;</span></span></span></span></span> 18</td>
+<td align="center">17, <s>18</s></td>
+</tr>
+<tr>
+<td align="center">Aktuelles Jahr - Geburtsjahr <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&amp;gt;</mo></mrow><annotation encoding="application/x-tex">&amp;gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.5782em; vertical-align: -0.0391em;"></span><span class="mrel">&gt;</span></span></span></span></span> 65</td>
+<td align="center"><s>65</s>, 66</td>
+</tr>
+<tr>
+<td align="center"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">≠</mi></mrow><annotation encoding="application/x-tex">\neq</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.88888em; vertical-align: -0.19444em;"></span><span class="mrel"><span class="mrel"><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.69444em;"><span class="" style="top: -3em;"><span class="pstrut" style="height: 3em;"></span><span class="rlap"><span class="strut" style="height: 0.88888em; vertical-align: -0.19444em;"></span><span class="inner"><span class="mrel latin_fallback"≯</span></span><span class="fix"></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.19444em;"><span class=""></span></span></span></span></span></span><span class="mrel">=</span></span></span></span></span></span> vierstellige Zahl</td>
+<td align="center">A, B, C, D, E, …, Z</td>
+</tr>
+</tbody>
+</table><ul>
+<li>Grenzwertanalyse kann in allen Teststufen angewendet werden</li>
+<li>hohes Potenzial, Fehlerzustände aufzudecken</li>
+</ul>
+<h4 id="entscheidungstabellentest">6.2.3 Entscheidungstabellentest</h4>
+<ul>
+<li>gute Möglichkeit, um komplexe Regeln in Geschäftsprozessen zu erfassen und zu testen</li>
+<li>innerhalb des Systems existieren mehrere Abhängigkeiten zwischen unabhängigen Werten</li>
+<li>aus den Werten ergibt sich die mögliche Wirkung</li>
+</ul>
+<p><strong>Notation für Entscheidungstabellen</strong>:</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="center">Testfall 1</th>
+<th align="center">Testfall 2</th>
+<th align="center">Testfall 3</th>
+<th align="center">…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Bedingung 1</td>
+<td align="center">❌</td>
+<td align="center">❌</td>
+<td align="center"></td>
+<td align="center">…</td>
+</tr>
+<tr>
+<td align="left">Bedingung 2</td>
+<td align="center"></td>
+<td align="center">❌</td>
+<td align="center">❌</td>
+<td align="center">…</td>
+</tr>
+<tr>
+<td align="left">Bedingung 3</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">❌</td>
+<td align="center">…</td>
+</tr>
+<tr>
+<td align="left">Wirkung 1</td>
+<td align="center">❌</td>
+<td align="center">❌</td>
+<td align="center">❌</td>
+<td align="center">…</td>
+</tr>
+<tr>
+<td align="left">Wirkung 2</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">…</td>
+</tr>
+</tbody>
+</table><ul>
+<li>können genutzt werden, um mehrere Elemente aus Äquivalenzklassen zu kombinieren
+<ul>
+<li>jede Äquivalenzklasse entspricht einer Zeile in der Entscheidungstabelle</li>
+</ul>
+</li>
+<li>Entscheidungstabellentest beruht auf Standardüberdeckungsgrad (pro Tabellenspalte wird mindestens ein Testfall benötigt, Abdeckung aller Kombinationen der Bedingungen)</li>
+<li>Vorteil: Kombinationen von Bedingungen werden aufgeführt, die andernfalls nicht getestet worden wären</li>
+</ul>
+<h4 id="anwendungsfallbasierter-test">6.2.5 Anwendungsfallbasierter Test</h4>
+<ul>
+<li>falls Anwendungsfälle in den Anforderungen beschrieben sind, können auf dieser Basis Testfälle definiert werden</li>
+<li>ein Anwendungsfall beschreibt die Interaktion zwischen Akteuren (Anwender oder System), die ein gewünschtes Ergebnis zur Folge hat</li>
+<li>Testfälle eignen sich gut, Fehlerzustände in den Prozessen während der praktischen Anwendung aufzudecken</li>
+</ul>
+<h3 id="whitebox-verfahren">6.3 WhiteBox-Verfahren</h3>
+<h4 id="anweisungstest-und--überdeckung">6.3.1 Anweisungstest und -überdeckung</h4>
+<ul>
+<li>die Anweisungen des Testobjektes werden auf Ausführung untersucht</li>
+<li>Testfälle müssen Quote an ausgeführten Anweisungen erfüllen oder auch alle Anweisungen ausführen</li>
+<li><strong>Anweisungsüberdeckung (<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>C</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">C_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="mord"><span style="margin-right: 0.07153em;" class="mord mathit">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: -0.07153em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span></span></span></span></span>-Maß)</strong>: Verhältnis der Anzahl ausführbarer Anweisungen, die durch Testfälle überdeckt sind, mit der Anzahl aller Anweisungen<br>
+<span class="katex--display"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>C</mi><mn>0</mn></msub><mo>=</mo><mfrac><mrow><mtext>Anzahl&nbsp;ausf</mtext><mover accent="true"><mtext>u</mtext><mo>¨</mo></mover><mtext>hrbarer&nbsp;Anweisungen</mtext></mrow><mtext>Anzahl&nbsp;aller&nbsp;Anweisungen</mtext></mfrac><mo>⋅</mo><mn>100</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">
+C_0 = \frac{\text{Anzahl ausführbarer Anweisungen}}{\text{Anzahl aller Anweisungen}} \cdot 100\%
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="mord"><span style="margin-right: 0.07153em;" class="mord mathit">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: -0.07153em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 2.25188em; vertical-align: -0.88044em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 1.37144em;"><span class="" style="top: -2.314em;"><span class="pstrut" style="height: 3em;"></span><span class="mord"><span class="mord text"><span class="mord">Anzahl&nbsp;aller&nbsp;Anweisungen</span></span></span></span><span class="" style="top: -3.23em;"><span class="pstrut" style="height: 3em;"></span><span class="frac-line" style="border-bottom-width: 0.04em;"></span></span><span class="" style="top: -3.677em;"><span class="pstrut" style="height: 3em;"></span><span class="mord"><span class="mord text"><span class="mord">Anzahl&nbsp;ausf</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.66786em;"><span class="" style="top: -3em;"><span class="pstrut" style="height: 3em;"></span><span class="mord">u</span></span><span class="" style="top: -3em;"><span class="pstrut" style="height: 3em;"></span><span class="accent-body" style="left: -0.25em;">¨</span></span></span></span></span></span><span class="mord">hrbarer&nbsp;Anweisungen</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.88044em;"><span class=""></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.80556em; vertical-align: -0.05556em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">%</span></span></span></span></span></span></li>
+</ul>
+<h4 id="entscheidungstest-und-überdeckung">6.3.2 Entscheidungstest und überdeckung</h4>
+<ul>
+<li>Ableitung von Testfällen zum Durchlauf bestimmter Entscheidungen</li>
+<li>Trennung in verschiedene Abzweigungen an Entscheidungspunkten des Programmcodes (z.B. <code>if</code>-Anweisungen)</li>
+<li><strong>Entscheidungsüberdeckung (<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>C</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">C_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="mord"><span style="margin-right: 0.07153em;" class="mord mathit">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: -0.07153em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span></span></span></span></span>-Maß)</strong>: prozentualer Anteil eines Entscheidungsergebnisses, bestimmt durch die Anzahl aller Entscheidungsausgänge, die durch Testfälle überdeckt sind, dividiert durch die Anzahl aller Entscheidungsausgänge<br>
+<span class="katex--display"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>=</mo><mfrac><mrow><mtext>Anzahl&nbsp;ausf</mtext><mover accent="true"><mtext>u</mtext><mo>¨</mo></mover><mtext>hrbarer&nbsp;Zweige</mtext></mrow><mtext>Anzahl&nbsp;aller&nbsp;Zweige</mtext></mfrac><mo>⋅</mo><mn>100</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">
+C_1 = \frac{\text{Anzahl ausführbarer Zweige}}{\text{Anzahl aller Zweige}} \cdot 100\%
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="mord"><span style="margin-right: 0.07153em;" class="mord mathit">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: -0.07153em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 2.25188em; vertical-align: -0.88044em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 1.37144em;"><span class="" style="top: -2.314em;"><span class="pstrut" style="height: 3em;"></span><span class="mord"><span class="mord text"><span class="mord">Anzahl&nbsp;aller&nbsp;Zweige</span></span></span></span><span class="" style="top: -3.23em;"><span class="pstrut" style="height: 3em;"></span><span class="frac-line" style="border-bottom-width: 0.04em;"></span></span><span class="" style="top: -3.677em;"><span class="pstrut" style="height: 3em;"></span><span class="mord"><span class="mord text"><span class="mord">Anzahl&nbsp;ausf</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.66786em;"><span class="" style="top: -3em;"><span class="pstrut" style="height: 3em;"></span><span class="mord">u</span></span><span class="" style="top: -3em;"><span class="pstrut" style="height: 3em;"></span><span class="accent-body" style="left: -0.25em;">¨</span></span></span></span></span></span><span class="mord">hrbarer&nbsp;Zweige</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.88044em;"><span class=""></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.80556em; vertical-align: -0.05556em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">%</span></span></span></span></span></span></li>
+<li>eine Form des kontrollflussbasierten Tests</li>
+<li>Entscheidungsüberdeckung ist stärker als Anweisungsüberdeckung</li>
+</ul>
+<h4 id="bedingungstest-und--überdeckung">6.3.3 Bedingungstest und -überdeckung</h4>
+<ul>
+<li>bei Entscheidungsüberdeckung lediglich der ermittelte Ergebniswahrheitswert berücksichtigt</li>
+<li>anhand dieses Wertes wird entschieden, welche Verzweigung als nächstes ausgeführt wird</li>
+<li>bei Bedingung aus mehreren Teilbedingungen muss die Komplexität der Bedingung berücksichtigt werden</li>
+</ul>
+<h5 id="einfache-bedingungsüberdeckung">Einfache Bedingungsüberdeckung</h5>
+<ul>
+<li>jede Teilbedingung kann im Test die Werte “wahr” und "falsch annehmen</li>
+<li>eine Bedingung kann aus mehreren Teilbedingungen bestehen, die mittels <code>AND</code> und <code>OR</code> verknüpft sind</li>
+</ul>
+<h5 id="mehrfachbedingungsüberdeckung">Mehrfachbedingungsüberdeckung</h5>
+<ul>
+<li>möglichst alle Kombinationen der Wahrheitswerte aus Teilbedingungen sollen berücksichtigt werden</li>
+<li>Problem: nicht alle Kombinationen können durch einen Test abgebildet werden (Beispiel: <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>≤</mo><mi>x</mi><mtext>&nbsp;AND&nbsp;</mtext><mi>x</mi><mo>&amp;lt;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">3 \leq x \ \text{AND}\ x &amp;lt; 5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.78041em; vertical-align: -0.13597em;"></span><span class="mord">3</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.72243em; vertical-align: -0.0391em;"></span><span class="mord mathit">x</span><span class="mspace">&nbsp;</span><span class="mord text"><span class="mord">AND</span></span><span class="mspace">&nbsp;</span><span class="mord mathit">x</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">5</span></span></span></span></span>)</li>
+</ul>
+<h5 id="minimale-mehrfachbedingungsüberdeckung">Minimale Mehrfachbedingungsüberdeckung</h5>
+<ul>
+<li>nur jede mögliche Kombination von Wahrheitswerten muss berücksichtigt werden</li>
+<li>beseitigt das Problem der Mehrfachbedingungsüberdeckung</li>
+</ul>
+<h4 id="pfadtest-und--überdeckung">6.3.4 Pfadtest und -überdeckung</h4>
+<ul>
+<li>fordert die Ausführung aller unterschiedlichen Pfade durch ein Testobjekt</li>
+<li>berücksichtigt auch Kontrollstrukturen wie Schleifen</li>
+<li><strong>Pfadüberdeckung (<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>C</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">C_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="mord"><span style="margin-right: 0.07153em;" class="mord mathit">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: -0.07153em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span></span></span></span></span>-Maß)</strong>: Verhältnis der Anzahl aller Pfade, die durch Testfälle überdeckt sind, mit der Anzahl aller Pfade des Programmes<br>
+<span class="katex--display"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>C</mi><mn>2</mn></msub><mo>=</mo><mfrac><mrow><mtext>Anzahl&nbsp;ausf</mtext><mover accent="true"><mtext>u</mtext><mo>¨</mo></mover><mtext>hrbarer&nbsp;Pfade</mtext></mrow><mtext>Anzahl&nbsp;aller&nbsp;Pfade</mtext></mfrac><mo>⋅</mo><mn>100</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">
+C_2 = \frac{\text{Anzahl ausführbarer Pfade}}{\text{Anzahl aller Pfade}} \cdot 100\%
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="mord"><span style="margin-right: 0.07153em;" class="mord mathit">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: -0.07153em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 2.05744em; vertical-align: -0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 1.37144em;"><span class="" style="top: -2.314em;"><span class="pstrut" style="height: 3em;"></span><span class="mord"><span class="mord text"><span class="mord">Anzahl&nbsp;aller&nbsp;Pfade</span></span></span></span><span class="" style="top: -3.23em;"><span class="pstrut" style="height: 3em;"></span><span class="frac-line" style="border-bottom-width: 0.04em;"></span></span><span class="" style="top: -3.677em;"><span class="pstrut" style="height: 3em;"></span><span class="mord"><span class="mord text"><span class="mord">Anzahl&nbsp;ausf</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.66786em;"><span class="" style="top: -3em;"><span class="pstrut" style="height: 3em;"></span><span class="mord">u</span></span><span class="" style="top: -3em;"><span class="pstrut" style="height: 3em;"></span><span class="accent-body" style="left: -0.25em;">¨</span></span></span></span></span></span><span class="mord">hrbarer&nbsp;Pfade</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.686em;"><span class=""></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.80556em; vertical-align: -0.05556em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">%</span></span></span></span></span></span></li>
+<li>Vorsicht: Bei Schleifen zählt jede mögliche Anzahl von Schleifenwiederholungen als ein möglicher Pfad.
+<ul>
+<li>100%-ige Überdeckung aller Pfade ist nicht erreichbar</li>
+</ul>
+</li>
+</ul>
+<h2 id="statischer-test">7 Statischer Test</h2>
+<h3 id="statische-prüftechniken">7.1 Statische Prüftechniken</h3>
+<ul>
+<li>statische Tests basieren auf der manuellen Überprüfung (Review) oder automatisierten Quellcode-Analyse des Programmes, ohne das Programm auszuführen</li>
+<li>Reviews können lange vor dynamischen Tests durchgeführt werden
+<ul>
+<li>gefundene Fehlerzustände können kostengünstig behoben werden</li>
+</ul>
+</li>
+<li>statische Prüftechniken finden eher die Ursachen von Fehlerwirkungen (Fehlerzustände) als die Fehlerwirkungen</li>
+</ul>
+<h3 id="reviewprozess">7.2 Reviewprozess</h3>
+<ul>
+<li>wichtigste Aufgabe des Reviews: Prüfung und Kommentierung eines Arbeitsergebnisses</li>
+<li>jedes Arbeitsergebnis kann einem Review unterzogen werden:
+<ul>
+<li>Anforderungsspezifikationen</li>
+<li>Designspezifikationen</li>
+<li>Quellcode</li>
+<li>Testkonzepte</li>
+<li>Testspezifikationen</li>
+<li>Testfälle</li>
+<li>Testskripte</li>
+<li>Anwenderhandbücher</li>
+<li>Websites</li>
+</ul>
+</li>
+</ul>
+<p><strong>Vorteile von Reviews</strong>:</p>
+<ul>
+<li>frühe Aufdeckung und Korrektur von Fehlerzuständen</li>
+<li>Verbesserung der Entwicklungsproduktivität</li>
+<li>reduzierte Enwicklungsdauer, reduzierte Testkosten und -dauer</li>
+<li>können Lücken in Anforderungen aufdecken</li>
+</ul>
+<p><strong>Arten von Reviews</strong>:</p>
+<ul>
+<li><em>formell</em>: (in Anlehung an IEEE 729) formal geplanter und strukturierter Analyse- und Bewertungsprozess</li>
+<li><em>informell</em>: fehlende schriftliche Vorgaben für Gutachter</li>
+<li><em>systematisch</em>: Einbindung eines Reviewteams, dokumentierte Reviewergebnisse und dokumentierte Review-Abläufe)</li>
+</ul>
+<h4 id="aktivitäten-eines-formalen-reviews">7.2.1 Aktivitäten eines formalen Reviews</h4>
+<p>Ein typisches formales Review besteht aus folgenden sechs Hauptaktivitäten:</p>
+<div class="mermaid"><svg xmlns="http://www.w3.org/2000/svg" id="mermaid-svg-s8Rzo8c1pfwjXfkp" width="100%" style="max-width: 211.6666717529297px;" viewBox="0 0 211.6666717529297 546.2999572753906"><g transform="translate(-12, -12)"><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath" style="opacity: 1;"><path class="path" d="M117.83333587646484,66.71665954589844L117.83333587646484,91.71665954589844L117.83333587646484,116.71665954589844" marker-end="url(#arrowhead6061)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead6061" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M117.83333587646484,163.43331909179688L117.83333587646484,188.43331909179688L117.83333587646484,213.43331909179688" marker-end="url(#arrowhead6062)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead6062" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M117.83333587646484,260.1499786376953L117.83333587646484,285.1499786376953L117.83333587646484,310.1499786376953" marker-end="url(#arrowhead6063)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead6063" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M117.83333587646484,356.86663818359375L117.83333587646484,381.86663818359375L117.83333587646484,406.86663818359375" marker-end="url(#arrowhead6064)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead6064" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M117.83333587646484,453.5832977294922L117.83333587646484,478.5832977294922L117.83333587646484,503.5832977294922" marker-end="url(#arrowhead6065)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead6065" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node" style="opacity: 1;" id="s1" transform="translate(117.83333587646484,43.35832977294922)"><rect rx="5" ry="5" x="-33.80833435058594" y="-23.35832977294922" width="67.61666870117188" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-23.808334350585938,-13.358329772949219)"><foreignObject width="47.616668701171875" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Planen</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="s2" transform="translate(117.83333587646484,140.07498931884766)"><rect rx="5" ry="5" x="-39.59166717529297" y="-23.35832977294922" width="79.18333435058594" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-29.59166717529297,-13.358329772949219)"><foreignObject width="59.18333435058594" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Kick-Off</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="s3" transform="translate(117.83333587646484,236.7916488647461)"><rect rx="5" ry="5" x="-97.83333587646484" y="-23.35832977294922" width="195.6666717529297" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-87.83333587646484,-13.358329772949219)"><foreignObject width="175.6666717529297" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Individuelle Vorbereitung</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="s4" transform="translate(117.83333587646484,333.50830841064453)"><rect rx="5" ry="5" x="-60.30833435058594" y="-23.35832977294922" width="120.61666870117188" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-50.30833435058594,-13.358329772949219)"><foreignObject width="100.61666870117188" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Reviewsitzung</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="s5" transform="translate(117.83333587646484,430.22496795654297)"><rect rx="5" ry="5" x="-56.40833282470703" y="-23.35832977294922" width="112.81666564941406" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-46.40833282470703,-13.358329772949219)"><foreignObject width="92.81666564941406" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Überarbeiten</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="s6" transform="translate(117.83333587646484,526.9416275024414)"><rect rx="5" ry="5" x="-57.39167022705078" y="-23.35832977294922" width="114.78334045410156" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-47.39167022705078,-13.358329772949219)"><foreignObject width="94.78334045410156" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Nachbereiten</div></foreignObject></g></g></g></g></g></g></svg></div>
+<ol>
+<li><strong>Planen</strong> (beteiligt: Manager, Moderator)
+<ul>
+<li>Festlegen von Review-/Prüfkriterien</li>
+<li>Auswahl der beteiligten Personen und Rollen</li>
+<li>Festlegen der Eingangs- und Endekriterien</li>
+<li>Auswahl der zu prüfenden Dokumententeile</li>
+</ul>
+</li>
+<li><strong>Kick-Off</strong> (beteiligt: alle Teilnehmer)
+<ul>
+<li>Verteilen der Dokumente</li>
+<li>Erläutern der Ziele, des Prozesses und der Dokumente für die Teilnehmer</li>
+</ul>
+</li>
+<li><strong>Individuelle Vorbereitung</strong> (beteiligt: Moderator, Gutachter)
+<ul>
+<li>Vorbereiten der Reviewsitzung durch Prüfung der Dokumente</li>
+<li>Notieren potenzieller Fehlerzustände, Fragen und Kommentare</li>
+</ul>
+</li>
+<li><strong>Reviewsitzung</strong> (beteiligt: Moderator, Autor, Gutachter, Protokollant)
+<ul>
+<li>Diskussion und Protokollierung</li>
+<li>Festhalten von Fehlerzuständen, Empfehlungen zum Umgang mit diesen oder Entscheidungen über Fehlerzustände</li>
+<li>Prüfen, Bewerten und Protokollieren von Problemen</li>
+</ul>
+</li>
+<li><strong>Überarbeiten</strong> (beteiligt: Autor)
+<ul>
+<li>Beheben der gefundenen Fehlerzustände durch den Autor</li>
+<li>Protokollieren des aktualisierten Fehlerstatus</li>
+</ul>
+</li>
+<li><strong>Nachbereiten</strong> (beteiligt: Moderator, Gutachter)
+<ul>
+<li>Prüfen, ob Fehlerzustände zugewiesen wurden</li>
+<li>Sammeln von Metriken</li>
+<li>Prüfen von Endekriterien</li>
+</ul>
+</li>
+</ol>
+<h4 id="rollen-und-verantwortlichkeiten">7.2.2 Rollen und Verantwortlichkeiten</h4>
+<ul>
+<li><strong>Manager</strong>: Die Person, die über die Durchführung eines Reviews entscheidet und dieses zeitlich einplant</li>
+<li><strong>Moderator</strong>: Die Person, die das Review eines Dokumentes leitet; übernimmt Reviewplanung, Leitung der Sitzung und die Nachbereitung der Sitzung</li>
+<li><strong>Autor</strong>: Der Verfasser oder die Person, die für das zu prüfende Dokument hauptverantwortlich ist</li>
+<li><strong>Gutachter</strong>: Personen mit einem spezifischen technischen oder fachlichen Hintergrund (auch <em>Prüfer</em> oder <em>Inspektoren</em>), die im Prüfobjekt Befunde identifizieren und beschreuben können</li>
+<li><strong>Protokollant</strong>: Die Person, die alle Ergebnisse, Probleme und offenen Punkte dokumentiert</li>
+</ul>
+<h4 id="reviewarten">7.2.3 Reviewarten</h4>
+<p>Ein Softwareprodukt oder ein Arbeitsergebnis kann Gegenstand von mehreren Reviews sein:</p>
+<p><strong>Informelles Review</strong>:</p>
+<ul>
+<li>kann in Form des Programmierens in Paaren (<em>pair programming</em>) durchgeführt werden oder ein technischer Experte unterzieht Entwurf und Quellcode einem Review</li>
+</ul>
+<p><strong>Walkthrough</strong>:</p>
+<ul>
+<li>systematisches Durchgehen des Quellcodes und Erläuterung durch den Autor</li>
+<li>kann in Form von Szenarien, Probeläufen oder im Kreis gleichgestellter Mitarbeiter stattfinden</li>
+</ul>
+<p><strong>Technisches Review</strong>:</p>
+<ul>
+<li>dokumentierter und definierter Fehlerfindungsprozess, der gleichgestellte Mitarbeiter und technische Experten sowie optional Personen aus dem Management einschließt</li>
+</ul>
+<h2 id="testmanagement">8 Testmanagement</h2>
+<h3 id="testmanagement-prozessrahmen">8.1 Testmanagement Prozessrahmen</h3>
+<p>Das Testmanagement umfasst folgende zwei Haupttätigkeiten:</p>
+<ol>
+<li>alle Aktivitäten der Planung, der Basis- und Detailkonzeption sowie der Steuerung eines Testprojektes</li>
+<li>die Aktivitäten der Steuerung und Organisation sowie Koordination des Testablaufs in den Umsetzungsphasen</li>
+</ol>
+<p><img src="https://i.imgur.com/oniOacN.jpg" alt="Testmanagement Prozessrahmen"><em>Abbildung 5: Testmanagement Prozessrahmen</em></p>
+<h3 id="testvorgehen-konzipieren-und-planen">8.2 Testvorgehen konzipieren und planen</h3>
+<h4 id="zu-testendes-system-definieren">8.2.1 Zu testendes System definieren</h4>
+<ul>
+<li>Testumfang des Projektes verstehen und definieren</li>
+<li>Testgegenstand wird konkretisiert (z.B. die Applikation, Schnittstellen, Datenflüsse und Funktionen)</li>
+</ul>
+<h4 id="testziele-und-testarten-festlegen">8.2.2 Testziele und Testarten festlegen</h4>
+<ul>
+<li>Definition der Qualitätsziele im Rahmen des Tests</li>
+<li>Festlegung der Qualitätsmerkmale zur Prüfung des Testgegenstandes</li>
+<li>jedes relevante Qualitätsmerkmal ist durch eine spezifische Testart nachzuweisen</li>
+</ul>
+<h4 id="teststufen-festlegen">8.2.3 Teststufen festlegen</h4>
+<ul>
+<li>identifizierte Testgegenstände enstehen in der Entwicklung schrittweise und werden nacheinander integriert</li>
+<li>jeder Testgegenstand soll die bestmögliche Integrationsstufe zur Testdurchführung erhalten</li>
+</ul>
+<p><img src="https://i.imgur.com/IhfcrLf.jpg" alt="Teststufen festlegen"><em>Abbildung 6: Teststufen festlegen</em></p>
+<h4 id="testobjekte-definieren">8.2.4 Testobjekte definieren</h4>
+<ul>
+<li>Testobjekte sind die konkreten Testgegenstände, wie sie in der Systemabgrenzung identifiziert und den Testintegrationsstufen zugeordnet wurden</li>
+<li>jede Teststufe besitzt ihre eigenen Testobjekte</li>
+</ul>
+<p><img src="https://i.imgur.com/lNLTEqn.jpg" alt="Testobjekte definieren"><em>Abbildung 7: Testobjekte definieren</em></p>
+<h4 id="testmethodik-festlegen">8.2.5 Testmethodik festlegen</h4>
+<ul>
+<li>Testgegenstände und Testziele sind in ihrer fachlichen Kritikalität unterschiedlich gewichtet</li>
+<li>abhängig von Gewichtung ermöglicht man die Skalierung der Testintensität durch die Definition unterschiedlicher Testmethoden</li>
+</ul>
+<p><img src="https://i.imgur.com/a5IqwjS.jpg" alt="Testmethodik festlegen"><em>Abbildung 8: Testmethodik festlegen</em></p>
+<h4 id="risikoanalyse-durchführen">8.2.6 Risikoanalyse durchführen</h4>
+<ul>
+<li>die identifizierten Testobjekte werden im Hinblick auf fachliche Kritikalität bewertet</li>
+<li>diese Information steuert die Priorisierung der Testaktivitäten, in der methodischen Konzeption deren Intensität</li>
+</ul>
+<p><img src="https://i.imgur.com/xqWxK4q.jpg" alt="Risikoanalyse durchführen"><em>Abbildung 9: Risikoanalyse durchführen</em></p>
+<h4 id="testplanung-durchführen">8.2.7 Testplanung durchführen</h4>
+<ul>
+<li>zeitliche Einplanung der erforderlichen Testaktivitäten und der dafür benötigten Ressourcen</li>
+<li>im weiteren Sinne auch inhaltliche Umsetzungsplanung der Scope- und Zielvorgaben</li>
+</ul>
+
