@@ -511,6 +511,8 @@ $$
 C_0 &#x3D; \frac{\text{Anzahl ausführbarer Anweisungen}}{\text{Anzahl aller Anweisungen}} \cdot 100\%
 $$
 
+![Anweisungstest](https://i.imgur.com/L8Q8806.jpg)_Abbildung 5: Anweisungstest_
+
 #### 6.3.2 Entscheidungstest und überdeckung
 * Ableitung von Testfällen zum Durchlauf bestimmter Entscheidungen
 * Trennung in verschiedene Abzweigungen an Entscheidungspunkten des Programmcodes (z.B. &#x60;if&#x60;-Anweisungen)
@@ -520,6 +522,8 @@ C_1 &#x3D; \frac{\text{Anzahl ausführbarer Zweige}}{\text{Anzahl aller Zweige}}
 $$
 * eine Form des kontrollflussbasierten Tests
 * Entscheidungsüberdeckung ist stärker als Anweisungsüberdeckung
+
+![Entscheidungstest](https://i.imgur.com/L8Q8806.jpg)_Abbildung 6: Entscheidungstest_
 
 #### 6.3.3 Bedingungstest und -überdeckung
 * bei Entscheidungsüberdeckung lediglich der ermittelte Ergebniswahrheitswert berücksichtigt
@@ -547,6 +551,8 @@ C_2 &#x3D; \frac{\text{Anzahl ausführbarer Pfade}}{\text{Anzahl aller Pfade}} \
 $$
 * Vorsicht: Bei Schleifen zählt jede mögliche Anzahl von Schleifenwiederholungen als ein möglicher Pfad.
 	* 100%-ige Überdeckung aller Pfade ist nicht erreichbar
+
+![Pfadtest](https://i.imgur.com/L8Q8806.jpg)_Abbildung 7: Pfadtest_
 
 ## 7 Statischer Test
 
@@ -642,7 +648,7 @@ Das Testmanagement umfasst folgende zwei Haupttätigkeiten:
 1. alle Aktivitäten der Planung, der Basis- und Detailkonzeption sowie der Steuerung eines Testprojektes
 2. die Aktivitäten der Steuerung und Organisation sowie Koordination des Testablaufs in den Umsetzungsphasen
 
-![Testmanagement Prozessrahmen](https://i.imgur.com/oniOacN.jpg)_Abbildung 5: Testmanagement Prozessrahmen_
+![Testmanagement Prozessrahmen](https://i.imgur.com/oniOacN.jpg)_Abbildung 8: Testmanagement Prozessrahmen_
 
 ### 8.2 Testvorgehen konzipieren und planen
 
@@ -659,25 +665,25 @@ Das Testmanagement umfasst folgende zwei Haupttätigkeiten:
 * identifizierte Testgegenstände enstehen in der Entwicklung schrittweise und werden nacheinander integriert
 * jeder Testgegenstand soll die bestmögliche Integrationsstufe zur Testdurchführung erhalten
 
-![Teststufen festlegen](https://i.imgur.com/IhfcrLf.jpg)_Abbildung 6: Teststufen festlegen_
+![Teststufen festlegen](https://i.imgur.com/IhfcrLf.jpg)_Abbildung 9: Teststufen festlegen_
 
 #### 8.2.4 Testobjekte definieren
 * Testobjekte sind die konkreten Testgegenstände, wie sie in der Systemabgrenzung identifiziert und den Testintegrationsstufen zugeordnet wurden
 * jede Teststufe besitzt ihre eigenen Testobjekte
 
-![Testobjekte definieren](https://i.imgur.com/lNLTEqn.jpg)_Abbildung 7: Testobjekte definieren_
+![Testobjekte definieren](https://i.imgur.com/lNLTEqn.jpg)_Abbildung 10: Testobjekte definieren_
 
 #### 8.2.5 Testmethodik festlegen
 * Testgegenstände und Testziele sind in ihrer fachlichen Kritikalität unterschiedlich gewichtet
 * abhängig von Gewichtung ermöglicht man die Skalierung der Testintensität durch die Definition unterschiedlicher Testmethoden
 
-![Testmethodik festlegen](https://i.imgur.com/a5IqwjS.jpg)_Abbildung 8: Testmethodik festlegen_
+![Testmethodik festlegen](https://i.imgur.com/a5IqwjS.jpg)_Abbildung 11: Testmethodik festlegen_
 
 #### 8.2.6 Risikoanalyse durchführen
 * die identifizierten Testobjekte werden im Hinblick auf fachliche Kritikalität bewertet
 * diese Information steuert die Priorisierung der Testaktivitäten, in der methodischen Konzeption deren Intensität
 
-![Risikoanalyse durchführen](https://i.imgur.com/xqWxK4q.jpg)_Abbildung 9: Risikoanalyse durchführen_
+![Risikoanalyse durchführen](https://i.imgur.com/xqWxK4q.jpg)_Abbildung 12: Risikoanalyse durchführen_
 
 #### 8.2.7 Testplanung durchführen
 * zeitliche Einplanung der erforderlichen Testaktivitäten und der dafür benötigten Ressourcen
