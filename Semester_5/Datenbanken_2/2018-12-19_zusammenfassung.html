@@ -8,6 +8,128 @@ layout: default
 <h1 id="zusammenfassung-datenbanken-2">Zusammenfassung Datenbanken 2</h1>
 <p><em>geschrieben am 19.12.2018 von Morten Terhart</em></p>
 <hr>
+<p><strong>Inhaltsverzeichnis</strong></p>
+<ul>
+<li><a href="#datenmanagement-und-modellierung">Datenmanagement und Modellierung</a>
+<ul>
+<li><a href="#historische-datenmodellierung">Historische Datenmodellierung</a></li>
+<li><a href="#datenmanagement">Datenmanagement</a></li>
+<li><a href="#prinzipien-des-datenmanagement">Prinzipien des Datenmanagement</a></li>
+<li><a href="#body-of-knowledge">Body of Knowledge</a>
+<ul>
+<li><a href="#data-governance">Data Governance</a></li>
+<li><a href="#wieviel-sind-daten-wert">Wieviel sind Daten wert?</a></li>
+<li><a href="#data-architecture">Data Architecture</a></li>
+<li><a href="#modelling-and-design">Modelling and Design</a></li>
+<li><a href="#data-storage-and-operations">Data Storage and Operations</a></li>
+<li><a href="#database-processing">Database Processing</a></li>
+<li><a href="#data-security">Data Security</a></li>
+<li><a href="#data-integration-and-interoperability">Data Integration and Interoperability</a></li>
+<li><a href="#document-and-content-management">Document and Content Management</a></li>
+<li><a href="#reference-and-master-data">Reference and Master Data</a></li>
+<li><a href="#data-warehouse-and-business-intelligence">Data Warehouse and Business Intelligence</a></li>
+<li><a href="#metadata">Metadata</a></li>
+<li><a href="#data-quality">Data Quality</a></li>
+</ul>
+</li>
+<li><a href="#data-modelling">Data Modelling</a>
+<ul>
+<li><a href="#%C3%BCberblick-%C3%BCber-die-3-ebenen-der-datenmodellierung">Überblick über die 3 Ebenen der Datenmodellierung</a></li>
+<li><a href="#verantwortlichkeiten-data-modelling">Verantwortlichkeiten Data Modelling</a></li>
+<li><a href="#wie-sieht-ein-gutes-datenmodell-aus">Wie sieht ein gutes Datenmodell aus?</a></li>
+<li><a href="#praktischer-datenmodellierungsansatz">Praktischer Datenmodellierungsansatz</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#relationale-modellierung">Relationale Modellierung</a>
+<ul>
+<li><a href="#12-regeln-von-edgar-f-codd">12 Regeln von Edgar F. Codd</a></li>
+<li><a href="#normalisierung">Normalisierung</a>
+<ul>
+<li><a href="#zero-normal-form">Zero Normal Form</a></li>
+<li><a href="#erste-normalform">Erste Normalform</a></li>
+<li><a href="#zweite-normalform">Zweite Normalform</a></li>
+<li><a href="#dritte-normalform">Dritte Normalform</a></li>
+</ul>
+</li>
+<li><a href="#design-elemente-eines-erm-diagramms">Design-Elemente eines ERM-Diagramms</a></li>
+<li><a href="#physikalisches-datenmodell">Physikalisches Datenmodell</a></li>
+</ul>
+</li>
+<li><a href="#dimensionierte-modellierung">Dimensionierte Modellierung</a>
+<ul>
+<li><a href="#definition">Definition</a></li>
+</ul>
+</li>
+<li><a href="#data-vault">Data Vault</a>
+<ul>
+<li><a href="#definition-1">Definition</a></li>
+<li><a href="#bestandteile">Bestandteile</a></li>
+<li><a href="#trennung-der-komponenten">Trennung der Komponenten</a></li>
+<li><a href="#wann-wird-welche-technik-eingesetzt">Wann wird welche Technik eingesetzt?</a></li>
+</ul>
+</li>
+<li><a href="#data-flow-and-preparation">Data Flow and Preparation</a>
+<ul>
+<li><a href="#etl-extract-transform-load">ETL (Extract, Transform, Load)</a></li>
+<li><a href="#data-wrangling">Data Wrangling</a></li>
+<li><a href="#data-prep">Data Prep</a></li>
+<li><a href="#lean-startup">Lean Startup</a></li>
+</ul>
+</li>
+<li><a href="#data-visualization">Data Visualization</a>
+<ul>
+<li><a href="#%C3%A4sthetik">Ästhetik</a></li>
+<li><a href="#arten-der-visualisierung">Arten der Visualisierung</a>
+<ul>
+<li><a href="#balkendiagramme">Balkendiagramme</a></li>
+<li><a href="#histogramme">Histogramme</a></li>
+<li><a href="#liniendiagramme">Liniendiagramme</a></li>
+<li><a href="#fl%C3%A4chendiagramme">Flächendiagramme</a></li>
+<li><a href="#streudiagramme">Streudiagramme</a></li>
+<li><a href="#kartendiagramme">Kartendiagramme</a></li>
+<li><a href="#andere-diagrammarten">Andere Diagrammarten</a></li>
+</ul>
+</li>
+<li><a href="#problem-des-overplotting">Problem des Overplotting</a></li>
+<li><a href="#4-prinzipien-f%C3%BCr-ein-gutes-dashboard">4 Prinzipien für ein gutes Dashboard</a></li>
+</ul>
+</li>
+<li><a href="#data-quality-1">Data Quality</a>
+<ul>
+<li><a href="#definition-2">Definition</a></li>
+<li><a href="#cluster-der-datenqualit%C3%A4t">Cluster der Datenqualität</a></li>
+<li><a href="#dimensionen-und-metriken">Dimensionen und Metriken</a></li>
+<li><a href="#vereinbarung-von-vor--und-nachteilen-trade-offs">Vereinbarung von Vor- und Nachteilen (Trade-Offs)</a></li>
+<li><a href="#data-quality-management">Data Quality Management</a></li>
+<li><a href="#klassischer-ansatz-zum-data-quality-management">Klassischer Ansatz zum Data Quality Management</a></li>
+<li><a href="#strategien-zur-verbesserung-der-datenqualit%C3%A4t">Strategien zur Verbesserung der Datenqualität</a></li>
+</ul>
+</li>
+<li><a href="#machine-learning">Machine Learning</a>
+<ul>
+<li><a href="#aktuelle-l%C3%B6sung-im-ml">Aktuelle Lösung im ML</a></li>
+<li><a href="#standardprozess-f%C3%BCr-data-mining">Standardprozess für Data Mining</a></li>
+<li><a href="#arten-der-k%C3%BCnstlichen-intelligenz">Arten der künstlichen Intelligenz</a></li>
+<li><a href="#beispiele-f%C3%BCr-machine-learning">Beispiele für Machine Learning</a></li>
+<li><a href="#konzept-des-machine-learning">Konzept des Machine Learning</a></li>
+<li><a href="#komponenten-des-machine-learning">Komponenten des Machine Learning</a></li>
+<li><a href="#learning-x3d-representation--evaluation--optimization">Learning = Representation + Evaluation + Optimization</a></li>
+<li><a href="#ml-learner-%C3%BCbersicht">ML Learner Übersicht</a></li>
+<li><a href="#overfitting">Overfitting</a></li>
+<li><a href="#underfitting">Underfitting</a></li>
+<li><a href="#bias-und-varianz">Bias und Varianz</a></li>
+<li><a href="#grundlegende-mathematik">Grundlegende Mathematik</a></li>
+<li><a href="#%C3%BCberwachte-ml-algorithmen">Überwachte ML-Algorithmen</a></li>
+<li><a href="#nicht-%C3%BCberwachte-ml-algorithmen">Nicht überwachte ML-Algorithmen</a></li>
+<li><a href="#informationsgewinnung">Informationsgewinnung</a></li>
+<li><a href="#feature-engineering">Feature Engineering</a></li>
+</ul>
+</li>
+<li><a href="#data-warehouse">Data Warehouse</a></li>
+<li><a href="#data-lake">Data Lake</a></li>
+</ul>
 <h2 id="datenmanagement-und-modellierung">Datenmanagement und Modellierung</h2>
 <ul>
 <li><strong>Daten</strong>: Informationen, die gut zu bewegen und verarbeiten sind</li>
@@ -113,7 +235,7 @@ layout: default
 <li>in der Praxis muss eine Modellierung immer zu einem Ergebnis führen</li>
 </ul>
 <h4 id="überblick-über-die-3-ebenen-der-datenmodellierung">Überblick über die 3 Ebenen der Datenmodellierung</h4>
-<div class="mermaid"><svg xmlns="http://www.w3.org/2000/svg" id="mermaid-svg-o7W8n58yBvKzaXR7" width="100%" style="max-width: 132.26666259765625px;" viewBox="0 0 132.26666259765625 256.1499786376953"><g transform="translate(-12, -12)"><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath" style="opacity: 1;"><path class="path" d="M78.13333129882812,66.71665954589844L78.13333129882812,91.71665954589844L78.13333129882812,116.71665954589844" marker-end="url(#arrowhead530)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead530" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M78.13333129882812,163.43331909179688L78.13333129882812,188.43331909179688L78.13333129882812,213.43331909179688" marker-end="url(#arrowhead531)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead531" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node" style="opacity: 1;" id="A" transform="translate(78.13333129882812,43.35832977294922)"><rect rx="5" ry="5" x="-58.133331298828125" y="-23.35832977294922" width="116.26666259765625" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-48.133331298828125,-13.358329772949219)"><foreignObject width="96.26666259765625" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Konzeptionell</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="B" transform="translate(78.13333129882812,140.07498931884766)"><rect rx="5" ry="5" x="-36.15833282470703" y="-23.35832977294922" width="72.31666564941406" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-26.15833282470703,-13.358329772949219)"><foreignObject width="52.31666564941406" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Logisch</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="C" transform="translate(78.13333129882812,236.7916488647461)"><rect rx="5" ry="5" x="-52.18333435058594" y="-23.35832977294922" width="104.36666870117188" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-42.18333435058594,-13.358329772949219)"><foreignObject width="84.36666870117188" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Physikalisch</div></foreignObject></g></g></g></g></g></g></svg></div>
+<div class="mermaid"><svg xmlns="http://www.w3.org/2000/svg" id="mermaid-svg-D2zlGzbSVilGWVgJ" width="100%" style="max-width: 132.26666259765625px;" viewBox="0 0 132.26666259765625 256.1499786376953"><g transform="translate(-12, -12)"><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath" style="opacity: 1;"><path class="path" d="M78.13333129882812,66.71665954589844L78.13333129882812,91.71665954589844L78.13333129882812,116.71665954589844" marker-end="url(#arrowhead25)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead25" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M78.13333129882812,163.43331909179688L78.13333129882812,188.43331909179688L78.13333129882812,213.43331909179688" marker-end="url(#arrowhead26)" style="stroke: #333; stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead26" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node" style="opacity: 1;" id="A" transform="translate(78.13333129882812,43.35832977294922)"><rect rx="5" ry="5" x="-58.133331298828125" y="-23.35832977294922" width="116.26666259765625" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-48.133331298828125,-13.358329772949219)"><foreignObject width="96.26666259765625" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Konzeptionell</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="B" transform="translate(78.13333129882812,140.07498931884766)"><rect rx="5" ry="5" x="-36.15833282470703" y="-23.35832977294922" width="72.31666564941406" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-26.15833282470703,-13.358329772949219)"><foreignObject width="52.31666564941406" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Logisch</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="C" transform="translate(78.13333129882812,236.7916488647461)"><rect rx="5" ry="5" x="-52.18333435058594" y="-23.35832977294922" width="104.36666870117188" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-42.18333435058594,-13.358329772949219)"><foreignObject width="84.36666870117188" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Physikalisch</div></foreignObject></g></g></g></g></g></g></svg></div>
 <ol>
 <li><strong>Konzeptionell</strong>: technologieunabhängige Spezifikation der Daten in der Datenbank</li>
 <li><strong>Logisch</strong>: Umwandlung des konzeptionellen Modells in Strukturen, die durch ein DBMS implementiert werden können</li>
