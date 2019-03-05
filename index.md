@@ -1,7 +1,7 @@
 ---
 title: Homepage
 layout: default
-
+filepath: index.md
 ---
 
 # Vorlesungen 4. Semester

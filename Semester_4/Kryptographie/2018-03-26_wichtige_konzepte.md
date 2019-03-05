@@ -2,7 +2,7 @@
 title: Kryptographische Begriffe und Konzepte
 layout: default
 permalink: Semester_4/Kryptographie/Wichtige_Konzepte_md
-
+filepath: Semester_4/Kryptographie/2018-03-26_wichtige_konzepte.md
 ---
 
 # Wichtige kryptographische Begriffe und Konzepte

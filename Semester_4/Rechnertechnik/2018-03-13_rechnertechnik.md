@@ -2,6 +2,7 @@
 title: Rechnertechnik 13.03.2018
 layout: default
 permalink: Semester_4/Rechnertechnik/2018-03-13_rechnertechnik_md
+filepath: Semester_4/Rechnertechnik/2018-03-13_rechnertechnik.md
 ---
 
 # Gleitpunktarithmetik und Maschinenbefehle

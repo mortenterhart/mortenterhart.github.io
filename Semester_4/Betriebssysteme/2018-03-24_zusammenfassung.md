@@ -2,6 +2,7 @@
 title: Zusammenfassung Betriebssysteme
 layout: default
 permalink: Semester_4/Betriebssysteme/Zusammenfassung_md
+filepath: Semester_4/Betriebssysteme/2018-03-24_zusammenfassung.md
 ---
 
 # Zusammenfassung Betriebssysteme

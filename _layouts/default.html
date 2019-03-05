@@ -46,7 +46,12 @@
       <div id="banner">
         <span id="logo"></span>
 
-        <a href="{{ site.github.repository_url }}" class="button fork"><strong>View On GitHub</strong></a>
+        {% if page.filepath %}
+          {% assign masterBlob = "/blob/master/" %}
+          <a href="{{ site.github.repository_url | append: masterBlob | append: page.filepath }}" class="button fork"><strong>View On GitHub</strong></a>
+        {% else %}
+          <a href="{{ site.github.repository_url }}" class="button fork"><strong>View On GitHub</strong></a>
+        {% endif %}
         <a href="{{ '/' | relative_url }}" class="button fork home"><strong>Home</strong></a>
         {% if site.show_downloads %}
           <div class="downloads">

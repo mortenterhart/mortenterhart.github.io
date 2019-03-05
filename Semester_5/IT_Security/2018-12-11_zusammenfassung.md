@@ -2,7 +2,7 @@
 title: Zusammenfassung IT-Security
 layout: default
 permalink: Semester_5/IT_Security/2018-12-11_zusammenfassung_md
-
+filepath: Semester_5/IT_Security/2018-12-11_zusammenfassung.md
 ---
 
 # Zusammenfassung IT-Security

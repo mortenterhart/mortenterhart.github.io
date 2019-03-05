@@ -2,7 +2,7 @@
 title: Zusammenfassung Datenbanken 2
 layout: default
 permalink: Semester_5/Datenbanken_2/2018-12-19_zusammenfassung_md
-
+filepath: Semester_5/Datenbanken_2/2018-12-19_zusammenfassung.md
 ---
 
 # Zusammenfassung Datenbanken 2

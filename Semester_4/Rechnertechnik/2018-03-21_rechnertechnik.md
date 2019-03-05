@@ -2,7 +2,7 @@
 title: Rechnertechnik 21.03.2018
 layout: default
 permalink: Semester_4/Rechnertechnik/2018-03-21_rechnertechnik_md
-
+filepath: Semester_4/Rechnertechnik/2018-03-21_rechnertechnik.md
 ---
 
 # Addierwerke in der arithmetisch logischen Einheit (ALU)

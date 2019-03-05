@@ -2,7 +2,7 @@
 title: Zusammenfassung Software Engineering II
 layout: default
 permalink: Semester_5/Software_Engineering_2/2018-12-18_zusammenfassung_md
-
+filepath: Semester_5/Software_Engineering_2/2018-12-18_zusammenfassung.md
 ---
 
 # Zusammenfassung Software Engineering II

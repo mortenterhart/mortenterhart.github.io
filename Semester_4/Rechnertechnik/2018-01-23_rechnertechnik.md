@@ -2,7 +2,7 @@
 title: Rechnertechnik 23.01.2018
 layout: default
 permalink: Semester_4/Rechnertechnik/2018-01-23_rechnertechnik_md
-
+filepath: Semester_4/Rechnertechnik/2018-01-23_rechnertechnik.md
 ---
 
 # Einführung Rechnerarchitektur

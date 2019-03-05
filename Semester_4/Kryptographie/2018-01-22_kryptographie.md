@@ -2,7 +2,7 @@
 title: Kryptographie 22.01.2018
 layout: default
 permalink: Semester_4/Kryptographie/2018-01-22_kryptographie_md
-
+filepath: Semester_4/Kryptographie/2018-01-22_kryptographie.md
 ---
 
 <h1 id="kryptographie-22-01-2018">Kryptographie 22.01.2018</h1>

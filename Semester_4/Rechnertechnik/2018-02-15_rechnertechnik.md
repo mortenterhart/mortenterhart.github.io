@@ -2,6 +2,7 @@
 title: Rechnertechnik 15.02.2018
 layout: default
 permalink: 2018-02-15_rechnertechnik_md
+filepath: Semester_4/Rechnertechnik/2018-02-15_rechnertechnik.md
 ---
 # Darstellungen von Daten und Rechenoperationen
 _aus der Vorlesung Rechnertechnik vom 15.02.2018_

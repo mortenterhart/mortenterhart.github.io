@@ -2,7 +2,7 @@
 title: Klausurhinweise Rechnertechnik
 layout: default
 permalink: Semester_4/Rechnertechnik/2018-03-22_klausurhinweise_md
-
+filepath: Semester_4/Rechnertechnik/2018-03-22_klausurhinweise.md
 ---
 
 # Klausurhinweise

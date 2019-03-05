@@ -2,6 +2,7 @@
 title: Kryptographie
 layout: default
 permalink: Semester_4/Kryptographie
+filepath: Semester_4/Kryptographie/Kryptographie.md
 ---
 
 ## Skript

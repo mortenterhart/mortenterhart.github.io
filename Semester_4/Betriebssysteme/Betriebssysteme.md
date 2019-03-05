@@ -2,7 +2,7 @@
 title: Betriebssysteme
 layout: default
 permalink: Semester_4/Betriebssysteme
-
+filepath: Semester_4/Betriebssysteme/Betriebssysteme.md
 ---
 
 ## Skripte

@@ -2,6 +2,7 @@
 title: Rechnertechnik 15.03.2018
 layout: default
 permalink: Semester_4/Rechnertechnik/2018-03-15_rechnertechnik_md
+filepath: Semester_4/Rechnertechnik/2018-03-15_rechnertechnik.md
 ---
 
 # Ausführungsphasen eines Maschinenbefehls
