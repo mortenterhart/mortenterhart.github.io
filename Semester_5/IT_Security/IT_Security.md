@@ -6,5 +6,5 @@ layout: default
 ---
 
 ## Zusammenfassung
-* [Zusammenfassung IT-Security](IT_Security/2018-12-11_zusammenfassung)
+* [Zusammenfassung IT-Security](2018-12-11_zusammenfassung.html)
 

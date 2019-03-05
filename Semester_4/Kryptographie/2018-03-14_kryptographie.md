@@ -186,7 +186,7 @@ $Y_B$ geht an Alice.
 
 $\rightarrow$ Da $K = K'$ (gleich), haben Bob und Alice einen gemeinsamen Sitzungsschlüssel.
 
-![Key-Exchange Method](images/Key_Exchange_Method.svg)
+![Key-Exchange Method](https://i.imgur.com/rqGbwK3.jpg)
 
 Es gilt:
 $K = Y_B^{X_A} \mod{q}$ (Alice)
@@ -279,10 +279,10 @@ $K_{\overset{A}{\text{priv}}} = [x] = [3]$
 Klartext, der von Alice signiert wird, ist $M = 10$.
 Zum Signieren muss Alice die Zahlen $a, b$ bestimmen:
 
-4. Alice wählt zufällige Zahl $k = 5$, ist ok: $\text{ggT}(5, 12) = 1$
-5. $a = g^k \mod{p}$
+1. Alice wählt zufällige Zahl $k = 5$, ist ok: $\text{ggT}(5, 12) = 1$
+2. $a = g^k \mod{p}$
 $\ \ \ = 7^5 \mod{13} \equiv 11 \mod{13}$
-6. Berechne $b$ aus
+3. Berechne $b$ aus
 $M = (xa + kb) \mod{(p - 1)}$
 $10 = (3 \cdot 11 + 5 \cdot b) \mod{12}$
 $\quad \ = (9 + 5 \cdot b) \mod{12}$

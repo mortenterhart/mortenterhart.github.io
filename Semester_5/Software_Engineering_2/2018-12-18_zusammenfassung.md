@@ -1,7 +1,7 @@
----
+﻿---
 title: Zusammenfassung Software Engineering II
-permalink: Semester_5/Software_Engineering_2/2018-12-18_zusammenfassung_md
 layout: default
+permalink: Semester_5/Software_Engineering_2/2018-12-18_zusammenfassung_md
 
 ---
 
@@ -109,7 +109,7 @@ _geschrieben am 18.12.2018 von Morten Terhart_
 * Vorbeugen von Fehlern
 
 **Hinweis**
-&gt; _Testen erhöht nicht die Qualität der Software, sondern kann die Qualität nur messen. Die Qualität kann nur durch die Beseitigung von Fehlern erhöht werden._
+> _Testen erhöht nicht die Qualität der Software, sondern kann die Qualität nur messen. Die Qualität kann nur durch die Beseitigung von Fehlern erhöht werden._
 
 ### 2.2 Auswirkung
 Fehlerhafte Software kann zu Schäden wie **Geld-, Zeit- oder Imageverlust** und **Personenschäden** wie Verletzung oder Tod führen.
@@ -117,7 +117,9 @@ Fehlerhafte Software kann zu Schäden wie **Geld-, Zeit- oder Imageverlust** und
 ### 2.4 Arten der Qualitätssicherung
 **Qualitätssicherung**: jede geplante und systematische Maßnahme zur Erfüllung der Qualitätsanforderungen
 
-![Qualitätssicherungsarten](https://i.imgur.com/vZ6Fz5S.jpg)_Abbildung 1: Arten der Qualitätssicherung_
+![Qualitätssicherungsarten](https://i.imgur.com/vZ6Fz5S.jpg)
+
+_Abbildung 1: Arten der Qualitätssicherung_
 
 konstruktive Qualitätssicherung:
 * sorgt dafür, dassSoftware im Vorfeld bestimmte Eigenschaften hat
@@ -310,7 +312,9 @@ Der Fehler zieht eine Abhängigkeitskette von Fehlhandlung, Fehlerzustand und Fe
 
 ### 4.4 Qualitätsmerkmale
 Die Norm ISO/IEC 9126 ist ein Modell, um Softwarequalität sicherzustellen. Sie bezieht sich mit ihren Kriterien ausschließlich auf die Qualität der Software als Produkt und unterscheidet 6 Merkmale:
-![Qualitätsmerkmale nach ISO/IEC 9126](https://i.imgur.com/iPln0GS.jpg)_Abbildung 2: Qualitätsmerkmale nach ISO/IEC 9126_
+![Qualitätsmerkmale nach ISO/IEC 9126](https://i.imgur.com/iPln0GS.jpg)
+
+_Abbildung 2: Qualitätsmerkmale nach ISO/IEC 9126_
 
 **Funktionalität**: Vorhandensein von geforderten Funktionen mit festgelegten Eigenschaften
 
@@ -326,13 +330,13 @@ Die Norm ISO/IEC 9126 ist ein Modell, um Softwarequalität sicherzustellen. Sie 
 
 ### 4.5 Fundamentaler Testprozess
 Der fundamentale Testprozess gliedert die Testaktivitäten in fünf Hauptaktivitäten:
-&#x60;&#x60;&#x60;mermaid
+```mermaid
 graph TD
-  s1(&quot;Testplanung und Steuerung&quot;) &#x3D;&#x3D;&gt; s2(&quot;Testanalyse und Testenwurf&quot;)
-  s2 &#x3D;&#x3D;&gt; s3(&quot;Testrealisierung und Testdurchführung&quot;)
-  s3 &#x3D;&#x3D;&gt; s4(&quot;Bewertung von Endekriterien und Bericht&quot;)
-  s4 &#x3D;&#x3D;&gt; s5(&quot;Abschluss der Testaktivitäten&quot;)
-&#x60;&#x60;&#x60;
+  s1("Testplanung und Steuerung") ==> s2("Testanalyse und Testenwurf")
+  s2 ==> s3("Testrealisierung und Testdurchführung")
+  s3 ==> s4("Bewertung von Endekriterien und Bericht")
+  s4 ==> s5("Abschluss der Testaktivitäten")
+```
 
 ### 4.5.1 Testplanung und Steuerung
 Zur Testplanung gehören folgende zwei Aktivitäten:
@@ -375,7 +379,9 @@ Zur Testplanung gehören folgende zwei Aktivitäten:
 ## 5 Testen im Softwarelebenszyklus
 
 ### 5.1 V-Modell
-![V-Modell](https://i.imgur.com/uzCyC1n.jpg)_Abbildung 3: Das V-Modell_
+![V-Modell](https://i.imgur.com/uzCyC1n.jpg)
+
+_Abbildung 3: Das V-Modell_
 
 * jede Entwurfsphase hat eine gegenüberliegende Testphase
 * soll zu einer höheren Testabdeckung führen
@@ -391,7 +397,9 @@ Zur Testplanung gehören folgende zwei Aktivitäten:
 	* kurze Feedbackzyklen
 	* Integrations- und Regressionstests haben einen hohen Stellenwert
 
-![Scrum](https://i.imgur.com/I3lTMVr.jpg)_Abbildung 4: Scrum_
+![Scrum](https://i.imgur.com/I3lTMVr.jpg)
+
+_Abbildung 4: Scrum_
 
 ### 5.3 Testen innerhalb von Entwicklungszyklen
 Jeder Entwicklungszyklus beinhaltet einige Charakteristika für gutes Testen:
@@ -533,8 +541,8 @@ Jeder Entwicklungszyklus beinhaltet einige Charakteristika für gutes Testen:
 | **Äquivalenzklasse** | **Ausprägung** | **Wirkung** |
 |:--------------------:|:--------------:|:-----------:|
 | Aktuelles Jahr - Geburtsjahr $\geq$ 18 und Aktuelles Jahr - Geburtsjahr $\leq$ 65 | Gültige Klasse | Konto wird eröffnet |
-| Aktuelles Jahr - Geburtsjahr $&lt;$ 18 | Ungültige Klasse | Konto wird nicht eröffnet, zu jung |
-| Aktuelles Jahr - Geburtsjahr $&gt;$ 65 | Ungültige Klasse | Konto wird nicht eröffnet, zu alt |
+| Aktuelles Jahr - Geburtsjahr $<$ 18 | Ungültige Klasse | Konto wird nicht eröffnet, zu jung |
+| Aktuelles Jahr - Geburtsjahr $>$ 65 | Ungültige Klasse | Konto wird nicht eröffnet, zu alt |
 | $\neq$ vierstellige Zahl | Ungültige Klasse | falsche Eingabe |
 
 * beim Testen sollte jede Äquivalenzklasse berücksichtigt werden
@@ -549,8 +557,8 @@ Jeder Entwicklungszyklus beinhaltet einige Charakteristika für gutes Testen:
 | **Äquivalenzklasse** | **Grenzwerte** |
 |:--------------------:|:--------------:|
 | Aktuelles Jahr - Geburtsjahr $\geq$ 18 und Aktuelles Jahr - Geburtsjahr $\leq$ 65 | 17, 18, 65, 66 |
-| Aktuelles Jahr - Geburtsjahr $&lt;$ 18 | 17, 18 |
-| Aktuelles Jahr - Geburtsjahr $&gt;$ 65 | 65, 66 |
+| Aktuelles Jahr - Geburtsjahr $<$ 18 | 17, 18 |
+| Aktuelles Jahr - Geburtsjahr $>$ 65 | 65, 66 |
 | $\neq$ vierstellige Zahl | A, B, C, D, E, ..., Z |
 
 Für unsere erste Äquivalenzklasse sind die Grenzwerte 17, 18, 65 und 66. Da alle Grenzwerte dort bereits Bestandteil anderer Klassen sind, können diese für die Klassen gestrichen werden.
@@ -558,8 +566,8 @@ Für unsere erste Äquivalenzklasse sind die Grenzwerte 17, 18, 65 und 66. Da al
 | **Äquivalenzklasse** | **Grenzwerte** |
 |:--------------------:|:--------------:|
 | Aktuelles Jahr - Geburtsjahr $\geq$ 18 und Aktuelles Jahr - Geburtsjahr $\leq$ 65 | ~~17~~, 18, 65, ~~66~~ |
-| Aktuelles Jahr - Geburtsjahr $&lt;$ 18 | 17, ~~18~~ |
-| Aktuelles Jahr - Geburtsjahr $&gt;$ 65 | ~~65~~, 66 |
+| Aktuelles Jahr - Geburtsjahr $<$ 18 | 17, ~~18~~ |
+| Aktuelles Jahr - Geburtsjahr $>$ 65 | ~~65~~, 66 |
 | $\neq$ vierstellige Zahl | A, B, C, D, E, ..., Z |
 
 * Grenzwertanalyse kann in allen Teststufen angewendet werden
@@ -596,22 +604,26 @@ Für unsere erste Äquivalenzklasse sind die Grenzwerte 17, 18, 65 und 66. Da al
 * Testfälle müssen Quote an ausgeführten Anweisungen erfüllen oder auch alle Anweisungen ausführen
 * **Anweisungsüberdeckung ($C_0$-Maß)**: Verhältnis der Anzahl ausführbarer Anweisungen, die durch Testfälle überdeckt sind, mit der Anzahl aller Anweisungen
 $$
-C_0 &#x3D; \frac{\text{Anzahl ausführbarer Anweisungen}}{\text{Anzahl aller Anweisungen}} \cdot 100\%
+C_0 = \frac{\text{Anzahl ausführbarer Anweisungen}}{\text{Anzahl aller Anweisungen}} \cdot 100\%
 $$
 
-![Anweisungstest](https://i.imgur.com/L8Q8806.jpg)_Abbildung 5: Anweisungstest_
+![Anweisungstest](https://i.imgur.com/L8Q8806.jpg)
+
+_Abbildung 5: Anweisungstest_
 
 #### 6.3.2 Entscheidungstest und überdeckung
 * Ableitung von Testfällen zum Durchlauf bestimmter Entscheidungen
-* Trennung in verschiedene Abzweigungen an Entscheidungspunkten des Programmcodes (z.B. &#x60;if&#x60;-Anweisungen)
+* Trennung in verschiedene Abzweigungen an Entscheidungspunkten des Programmcodes (z.B. `if`-Anweisungen)
 * **Entscheidungsüberdeckung ($C_1$-Maß)**: prozentualer Anteil eines Entscheidungsergebnisses, bestimmt durch die Anzahl aller Entscheidungsausgänge, die durch Testfälle überdeckt sind, dividiert durch die Anzahl aller Entscheidungsausgänge
 $$
-C_1 &#x3D; \frac{\text{Anzahl ausführbarer Zweige}}{\text{Anzahl aller Zweige}} \cdot 100\%
+C_1 = \frac{\text{Anzahl ausführbarer Zweige}}{\text{Anzahl aller Zweige}} \cdot 100\%
 $$
 * eine Form des kontrollflussbasierten Tests
 * Entscheidungsüberdeckung ist stärker als Anweisungsüberdeckung
 
-![Entscheidungstest](https://i.imgur.com/L8Q8806.jpg)_Abbildung 6: Entscheidungstest_
+![Entscheidungstest](https://i.imgur.com/L8Q8806.jpg)
+
+_Abbildung 6: Entscheidungstest_
 
 #### 6.3.3 Bedingungstest und -überdeckung
 * bei Entscheidungsüberdeckung lediglich der ermittelte Ergebniswahrheitswert berücksichtigt
@@ -619,12 +631,12 @@ $$
 * bei Bedingung aus mehreren Teilbedingungen muss die Komplexität der Bedingung berücksichtigt werden
 
 ##### Einfache Bedingungsüberdeckung
-* jede Teilbedingung kann im Test die Werte &quot;wahr&quot; und &quot;falsch annehmen
-* eine Bedingung kann aus mehreren Teilbedingungen bestehen, die mittels &#x60;AND&#x60; und &#x60;OR&#x60; verknüpft sind
+* jede Teilbedingung kann im Test die Werte "wahr" und "falsch annehmen
+* eine Bedingung kann aus mehreren Teilbedingungen bestehen, die mittels `AND` und `OR` verknüpft sind
 
 ##### Mehrfachbedingungsüberdeckung
 * möglichst alle Kombinationen der Wahrheitswerte aus Teilbedingungen sollen berücksichtigt werden
-* Problem: nicht alle Kombinationen können durch einen Test abgebildet werden (Beispiel: $3 \leq x \ \text{AND}\ x &lt; 5$)
+* Problem: nicht alle Kombinationen können durch einen Test abgebildet werden (Beispiel: $3 \leq x \ \text{AND}\ x < 5$)
 
 ##### Minimale Mehrfachbedingungsüberdeckung
 * nur jede mögliche Kombination von Wahrheitswerten muss berücksichtigt werden
@@ -635,12 +647,14 @@ $$
 * berücksichtigt auch Kontrollstrukturen wie Schleifen
 * **Pfadüberdeckung ($C_2$-Maß)**: Verhältnis der Anzahl aller Pfade, die durch Testfälle überdeckt sind, mit der Anzahl aller Pfade des Programmes
 $$
-C_2 &#x3D; \frac{\text{Anzahl ausführbarer Pfade}}{\text{Anzahl aller Pfade}} \cdot 100\%
+C_2 = \frac{\text{Anzahl ausführbarer Pfade}}{\text{Anzahl aller Pfade}} \cdot 100\%
 $$
 * Vorsicht: Bei Schleifen zählt jede mögliche Anzahl von Schleifenwiederholungen als ein möglicher Pfad.
 	* 100%-ige Überdeckung aller Pfade ist nicht erreichbar
 
-![Pfadtest](https://i.imgur.com/L8Q8806.jpg)_Abbildung 7: Pfadtest_
+![Pfadtest](https://i.imgur.com/L8Q8806.jpg)
+
+_Abbildung 7: Pfadtest_
 
 ## 7 Statischer Test
 
@@ -677,14 +691,14 @@ $$
 #### 7.2.1 Aktivitäten eines formalen Reviews
 Ein typisches formales Review besteht aus folgenden sechs Hauptaktivitäten:
 
-&#x60;&#x60;&#x60;mermaid
+```mermaid
 graph TD
-  s1(&quot;Planen&quot;) &#x3D;&#x3D;&gt; s2(&quot;Kick-Off&quot;)
-  s2 &#x3D;&#x3D;&gt; s3(&quot;Individuelle Vorbereitung&quot;)
-  s3 &#x3D;&#x3D;&gt; s4(&quot;Reviewsitzung&quot;)
-  s4 &#x3D;&#x3D;&gt; s5(&quot;Überarbeiten&quot;)
-  s5 &#x3D;&#x3D;&gt; s6(&quot;Nachbereiten&quot;)
-&#x60;&#x60;&#x60;
+  s1("Planen") ==> s2("Kick-Off")
+  s2 ==> s3("Individuelle Vorbereitung")
+  s3 ==> s4("Reviewsitzung")
+  s4 ==> s5("Überarbeiten")
+  s5 ==> s6("Nachbereiten")
+```
 
 1. **Planen** (beteiligt: Manager, Moderator)
 	* Festlegen von Review-/Prüfkriterien
@@ -736,7 +750,9 @@ Das Testmanagement umfasst folgende zwei Haupttätigkeiten:
 1. alle Aktivitäten der Planung, der Basis- und Detailkonzeption sowie der Steuerung eines Testprojektes
 2. die Aktivitäten der Steuerung und Organisation sowie Koordination des Testablaufs in den Umsetzungsphasen
 
-![Testmanagement Prozessrahmen](https://i.imgur.com/oniOacN.jpg)_Abbildung 8: Testmanagement Prozessrahmen_
+![Testmanagement Prozessrahmen](https://i.imgur.com/oniOacN.jpg)
+
+_Abbildung 8: Testmanagement Prozessrahmen_
 
 ### 8.2 Testvorgehen konzipieren und planen
 
@@ -753,27 +769,34 @@ Das Testmanagement umfasst folgende zwei Haupttätigkeiten:
 * identifizierte Testgegenstände enstehen in der Entwicklung schrittweise und werden nacheinander integriert
 * jeder Testgegenstand soll die bestmögliche Integrationsstufe zur Testdurchführung erhalten
 
-![Teststufen festlegen](https://i.imgur.com/IhfcrLf.jpg)_Abbildung 9: Teststufen festlegen_
+![Teststufen festlegen](https://i.imgur.com/IhfcrLf.jpg)
+
+_Abbildung 9: Teststufen festlegen_
 
 #### 8.2.4 Testobjekte definieren
 * Testobjekte sind die konkreten Testgegenstände, wie sie in der Systemabgrenzung identifiziert und den Testintegrationsstufen zugeordnet wurden
 * jede Teststufe besitzt ihre eigenen Testobjekte
 
-![Testobjekte definieren](https://i.imgur.com/lNLTEqn.jpg)_Abbildung 10: Testobjekte definieren_
+![Testobjekte definieren](https://i.imgur.com/lNLTEqn.jpg)
+
+_Abbildung 10: Testobjekte definieren_
 
 #### 8.2.5 Testmethodik festlegen
 * Testgegenstände und Testziele sind in ihrer fachlichen Kritikalität unterschiedlich gewichtet
 * abhängig von Gewichtung ermöglicht man die Skalierung der Testintensität durch die Definition unterschiedlicher Testmethoden
 
-![Testmethodik festlegen](https://i.imgur.com/a5IqwjS.jpg)_Abbildung 11: Testmethodik festlegen_
+![Testmethodik festlegen](https://i.imgur.com/a5IqwjS.jpg)
+
+_Abbildung 11: Testmethodik festlegen_
 
 #### 8.2.6 Risikoanalyse durchführen
 * die identifizierten Testobjekte werden im Hinblick auf fachliche Kritikalität bewertet
 * diese Information steuert die Priorisierung der Testaktivitäten, in der methodischen Konzeption deren Intensität
 
-![Risikoanalyse durchführen](https://i.imgur.com/xqWxK4q.jpg)_Abbildung 12: Risikoanalyse durchführen_
+![Risikoanalyse durchführen](https://i.imgur.com/xqWxK4q.jpg)
+
+_Abbildung 12: Risikoanalyse durchführen_
 
 #### 8.2.7 Testplanung durchführen
 * zeitliche Einplanung der erforderlichen Testaktivitäten und der dafür benötigten Ressourcen
 * im weiteren Sinne auch inhaltliche Umsetzungsplanung der Scope- und Zielvorgaben
-

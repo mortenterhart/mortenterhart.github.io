@@ -1,7 +1,7 @@
----
+﻿---
 title: Zusammenfassung Datenbanken 2
-permalink: Semester_5/Datenbanken_2/2018-12-19_zusammenfassung_md
 layout: default
+permalink: Semester_5/Datenbanken_2/2018-12-19_zusammenfassung_md
 
 ---
 
@@ -84,7 +84,7 @@ _geschrieben am 19.12.2018 von Morten Terhart_
   * [Beispiele für Machine Learning](#beispiele-f%C3%BCr-machine-learning)
   * [Konzept des Machine Learning](#konzept-des-machine-learning)
   * [Komponenten des Machine Learning](#komponenten-des-machine-learning)
-  * [Learning &amp;#x3D; Representation + Evaluation + Optimization](#learning-x3d-representation--evaluation--optimization)
+  * [Learning &#x3D; Representation + Evaluation + Optimization](#learning-x3d-representation--evaluation--optimization)
   * [ML Learner Übersicht](#ml-learner-%C3%BCbersicht)
   * [Overfitting](#overfitting)
   * [Underfitting](#underfitting)
@@ -107,10 +107,10 @@ _geschrieben am 19.12.2018 von Morten Terhart_
 
 ### Datenmanagement
 Definition nach DAMA-DMBOK: Data Management Body of Knowledge (Edition 2):
-&gt; **Datenmanagement** ist die Entwicklung, Ausführung und Überwachung von Plänen, Richtlinien, Programmen und Techniken, die den Wert der Daten und die Informationen innerhalb ihres Lebenszyklus liefern, kontrollieren, schützen und verbessern.
+> **Datenmanagement** ist die Entwicklung, Ausführung und Überwachung von Plänen, Richtlinien, Programmen und Techniken, die den Wert der Daten und die Informationen innerhalb ihres Lebenszyklus liefern, kontrollieren, schützen und verbessern.
 
 Kurze Definition:
-&gt; **Datenmanagement** liefert, kontrolliert, schützt und verbessert den Wert von Daten.
+> **Datenmanagement** liefert, kontrolliert, schützt und verbessert den Wert von Daten.
 
 ### Prinzipien des Datenmanagement
 * Daten haben einmalige Eigenschaften
@@ -176,11 +176,11 @@ Kurze Definition:
 * in der Praxis muss eine Modellierung immer zu einem Ergebnis führen
 
 #### Überblick über die 3 Ebenen der Datenmodellierung
-&#x60;&#x60;&#x60;mermaid
+```mermaid
 graph TD
-  A(&quot;Konzeptionell&quot;) &#x3D;&#x3D;&gt; B(&quot;Logisch&quot;)
-  B &#x3D;&#x3D;&gt; C(&quot;Physikalisch&quot;)
-&#x60;&#x60;&#x60;
+  A("Konzeptionell") ==> B("Logisch")
+  B ==> C("Physikalisch")
+```
 
 1. **Konzeptionell**: technologieunabhängige Spezifikation der Daten in der Datenbank
 2. **Logisch**: Umwandlung des konzeptionellen Modells in Strukturen, die durch ein DBMS implementiert werden können
@@ -217,7 +217,7 @@ Faktoren für ein gutes Datenmodell:
 ### 12 Regeln von Edgar F. Codd
 1. **Informationsregel**: Daten in einer Datenbank müssen Werte in einer Tabellenzelle sein
 2. **Regel des garantierten Zugriffs**: jedes Datenelement muss erreichbar sein
-3. **Behandlung von &#x60;NULL&#x60;-Werten**: &#x60;NULL&#x60; kann bedeuten: Daten fehlen, Daten sind nicht bekannt oder Daten sind nicht erreichbar
+3. **Behandlung von `NULL`-Werten**: `NULL` kann bedeuten: Daten fehlen, Daten sind nicht bekannt oder Daten sind nicht erreichbar
 4. **Aktiver Online-Katalog**: Die Strukturbeschreibung einer Datenbank muss in einem Online-Katalog, dem _Data Dictionary_, gespeichert sein
 5. **Daten-Subsprache**: Zugriff auf Daten über eine Sprache, die Datendefinition, Datenmanipulation und Transaktionsmanagement unterstützt
 6. **Aktualisierung von Ansichten**: Alle Ansichten der Datenbank müssen aktualisiert werden können
@@ -255,12 +255,12 @@ Faktoren für ein gutes Datenmodell:
 ## Dimensionierte Modellierung
 
 ### Definition
-&gt; **Dimensionerte Modellierung** ist eine logische Design-Technik, die die Daten in einem intuitiven standardmäßigen Bezugssystem präsentiert, welches einen sehr schnellen Zugriff erlaubt.
+> **Dimensionerte Modellierung** ist eine logische Design-Technik, die die Daten in einem intuitiven standardmäßigen Bezugssystem präsentiert, welches einen sehr schnellen Zugriff erlaubt.
 
 ## Data Vault
 
 ### Definition
-&gt; **Data Vault** ist ein detailliertes Nachverfolgen historischer Daten und besteht aus verknüpften normalisierten Tabellen, die eine oder mehrere funktionale Geschäftsbereiche unterstützen.
+> **Data Vault** ist ein detailliertes Nachverfolgen historischer Daten und besteht aus verknüpften normalisierten Tabellen, die eine oder mehrere funktionale Geschäftsbereiche unterstützen.
 
 * ein hybrider Ansatz, der die Vorzüge der dritten Normalform und des Sternschemas (_Star Schema_) vereint
 * flexibles Design
@@ -342,11 +342,11 @@ Arten der Informationen in einem Diagramm:
 4. Die richtigen Visualisierungen auswählen
 
 ## Data Quality
-&gt; Data is the new oil.
+> Data is the new oil.
 
 ### Definition
 nach ISO1:
-&gt; das Maß, nach dem Daten den Benutzeranforderungen entsprechen
+> das Maß, nach dem Daten den Benutzeranforderungen entsprechen
 
 ### Cluster der Datenqualität
 * Exaktheit: Korrektheit
@@ -413,7 +413,7 @@ nach ISO1:
 * Optimizer
 
 ![Komponenten des Machine Learning](https://i.imgur.com/lP8nPM3.png)
-### Learning &#x3D; Representation + Evaluation + Optimization
+### Learning = Representation + Evaluation + Optimization
 **Repräsentation**
 * wie die Eingangsdaten zu repräsentieren sind
 * erfordert eine formale Beschreibung der Daten (z.B. lineare Gleichung oder if-then-else-Regeln)
@@ -482,4 +482,3 @@ nach ISO1:
 
 ## Data Lake
 * ein System zur Katalogisierung und Speicherung von Daten, um schnelle iterative Analysen zu ermöglichen
-

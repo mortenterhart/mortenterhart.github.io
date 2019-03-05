@@ -2,8 +2,11 @@
 title: Rechnertechnik 23.01.2018
 layout: default
 permalink: Semester_4/Rechnertechnik/2018-01-23_rechnertechnik_md
+
 ---
+
 # Einführung Rechnerarchitektur
+
 ## Rechnerarchitektur, Begriffsbildung
 
 Die Rechnerarchitektur wird durch die Aufbaustruktur der Hardware und das Operationsprinzip bestimmt. Hierbei legt das funktionelle Verhalten bei der Darstellung, der Speicherung und bei der Transformation von Informationen fest. Dies umfasst die Festlegung der Bedeutung von Kontrollstrukturen zur Programmausführung in der Hardware. Ein und dasselbe Operationsprinzip kann in verschiedenen Hardware-Strukturen realisiert werden. Beim Entwurf einer Rechnerarchitektur sollen u. a. folgende Anforderungen möglichst gut erfüllt werden:

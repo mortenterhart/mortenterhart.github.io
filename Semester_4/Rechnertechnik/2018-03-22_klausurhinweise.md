@@ -25,4 +25,3 @@ permalink: Semester_4/Rechnertechnik/2018-03-22_klausurhinweise_md
 	* Vereinfachung von BOOL'schen Ausdrücken
 	* Takt $0$ bis Takt $n - 1$
 	* Bitstellen berechnen
-

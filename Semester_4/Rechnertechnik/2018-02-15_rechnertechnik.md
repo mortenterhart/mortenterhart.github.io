@@ -1,5 +1,6 @@
----
+﻿---
 title: Rechnertechnik 15.02.2018
+layout: default
 permalink: 2018-02-15_rechnertechnik_md
 ---
 # Darstellungen von Daten und Rechenoperationen
@@ -145,9 +146,3 @@ $\quad \  = 2560 + 64 + 5$
 $\quad \ = 2629$
 
 In allen Zahlensystemen lassen sich die Operationen Addition, Subtraktion, Multiplikation und Division mit dem vom Dezimalsystem bekannten Verfahren ausführen, d.h. stellenweises Rechnen mit Überträgen und Borger.
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0NDI0ODA1XX0=
--->
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2NzA4OTc4NV19
--->

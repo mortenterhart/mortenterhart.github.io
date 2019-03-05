@@ -1,4 +1,4 @@
----
+﻿---
 title: Kryptographische Begriffe und Konzepte
 layout: default
 permalink: Semester_4/Kryptographie/Wichtige_Konzepte_md
@@ -24,7 +24,7 @@ _vom 26.03.2018_
 - [Asymmetrische Verfahren](#asymmetrische-verfahren)
 - [Block- und Strom-Chiffren](#block--und-strom-chiffren)
 - [Grundsätzliche kryptographische Operationen](#grunds%C3%A4tzliche-kryptographische-operationen)
-- [Kerckhoff&amp;#x27;sches Prinzip](#kerckhoffx27sches-prinzip)
+- [Kerckhoff&#x27;sches Prinzip](#kerckhoffx27sches-prinzip)
 - [Monoalphabetische Chiffren](#monoalphabetische-chiffren)
   - [Shift-Chiffre](#shift-chiffre)
   - [Affine Chiffre](#affine-chiffre)
@@ -49,11 +49,11 @@ _vom 26.03.2018_
 ## Was ist Kryptologie?
 Kryptologie ist eine Wissenschaft, die sich mit Methoden der Verschlüsselung und damit verwandten Verfahren befasst. Kryptologen sind ausgebildete High-End-Mathematiker.
 
-&#x60;&#x60;&#x60;mermaid
+```mermaid
 graph TD;
-  A[&quot;Kryptologie&quot;] &#x3D;&#x3D;&gt; B[&quot;Kryptographie&quot;]
-  A &#x3D;&#x3D;&gt; C[&quot;Kryptoanalysis&quot;]
-&#x60;&#x60;&#x60;
+  A["Kryptologie"] ==> B["Kryptographie"]
+  A ==> C["Kryptoanalysis"]
+```
 
 Kryptographie bezeichnet den Zweig der Kryptologie, der sich mit der Erstellung und dem Design kryptographischer Algorithmen befasst. In der Kryptoanalyse geht es um das nicht-autorisierte Brechen der Verschlüsselungen.
 
@@ -90,22 +90,22 @@ Vorstellbare Klausuraufgaben:
 * Stellen Sie den Unterschied zwischen **Authentifizierung** und **Autorisierung** heraus.
 	* _Antwort_: Bei der Authentifizierung geht es um den Beweis der eigenen Identität, in der Regel ein Anmeldeprozess. Bei der Autorisierung hingegen berechtigt man eine dritte Person, die Nachricht zu lesen. Übertagen auf die Kryptographie bedeutet dies, dass die Authentifizierung sicherstellt, dass nur der legitime Empfänger einer Nachricht diese auch lesen kann. Bei der Autorisierung berechtigt man eine dritte Partei, die Nachricht auch zu lesen.
 * Was grenzt den **Datenschutz** von der **Datensicherheit** ab (siehe Begriffe im Folgenden definiert)?
-	* _Antwort_: Der Datenschutz regelt, in welchem Maße personenbezogene Daten überhaupt erhoben werden dürfen, wer diese sehen und abrufen kann und wer damit &quot;handeln&quot; darf. Er zeigt Richtlinien für den Umgang mit diesen Daten auf. Die Datensicherheit beschäftigt sich mit der Privatisierung bzw. dem allgemeinen Schutz von Daten, die bereits erhoben wurden.
+	* _Antwort_: Der Datenschutz regelt, in welchem Maße personenbezogene Daten überhaupt erhoben werden dürfen, wer diese sehen und abrufen kann und wer damit "handeln" darf. Er zeigt Richtlinien für den Umgang mit diesen Daten auf. Die Datensicherheit beschäftigt sich mit der Privatisierung bzw. dem allgemeinen Schutz von Daten, die bereits erhoben wurden.
 
 ### Datenschutz und Datensicherheit
 
 #### Datenschutz
 
-&gt; &quot;Je nach Betrachtungsweise wird Datenschutz verstanden als Schutz vor missbräuchlicher [Datenverarbeitung](https://de.wikipedia.org/wiki/Datenverarbeitung &quot;Datenverarbeitung&quot;), Schutz des Rechts auf [informationelle Selbstbestimmung](https://de.wikipedia.org/wiki/Informationelle_Selbstbestimmung &quot;Informationelle Selbstbestimmung&quot;), Schutz des Persönlichkeitsrechts bei der Datenverarbeitung und auch Schutz der [Privatsphäre](https://de.wikipedia.org/wiki/Privatsph%C3%A4re &quot;Privatsphäre&quot;).&quot;
-&gt; 
-&gt; _Definition Datenschutz von Wikipedia_ ([Quelle](https://de.wikipedia.org/wiki/Datenschutz))
+> "Je nach Betrachtungsweise wird Datenschutz verstanden als Schutz vor missbräuchlicher [Datenverarbeitung](https://de.wikipedia.org/wiki/Datenverarbeitung "Datenverarbeitung"), Schutz des Rechts auf [informationelle Selbstbestimmung](https://de.wikipedia.org/wiki/Informationelle_Selbstbestimmung "Informationelle Selbstbestimmung"), Schutz des Persönlichkeitsrechts bei der Datenverarbeitung und auch Schutz der [Privatsphäre](https://de.wikipedia.org/wiki/Privatsph%C3%A4re "Privatsphäre")."
+> 
+> _Definition Datenschutz von Wikipedia_ ([Quelle](https://de.wikipedia.org/wiki/Datenschutz))
 
 Der Datenschutz behandelt den Umgang mit personenbezogenen Daten. Hier geht es um die Frage, ob personenbezogene Daten überhaupt erhoben werden dürfen und / oder verarbeitet / anonymisiert werden.
 
 #### Datensicherheit
-&gt; &quot;Als **Informationssicherheit** bezeichnet man Eigenschaften von informationsverarbeitenden und -lagernden _(technischen oder nicht-technischen)_ Systemen, die die Schutzziele [Vertraulichkeit](https://de.wikipedia.org/wiki/Vertraulichkeit &quot;Vertraulichkeit&quot;), [Verfügbarkeit](https://de.wikipedia.org/wiki/Verf%C3%BCgbarkeit &quot;Verfügbarkeit&quot;) und [Integrität](https://de.wikipedia.org/wiki/Integrit%C3%A4t_(Informationssicherheit) &quot;Integrität (Informationssicherheit)&quot;) sicherstellen. Informationssicherheit dient dem Schutz vor [Gefahren](https://de.wikipedia.org/wiki/Gefahr &quot;Gefahr&quot;) bzw. [Bedrohungen](https://de.wikipedia.org/wiki/Bedrohung &quot;Bedrohung&quot;), der Vermeidung von wirtschaftlichen [Schäden](https://de.wikipedia.org/wiki/Schaden &quot;Schaden&quot;) und der Minimierung von [Risiken](https://de.wikipedia.org/wiki/Risiko &quot;Risiko&quot;).&quot;
-&gt; 
-&gt; _Definition Datensicherheit von Wikipedia_ ([Quelle](https://de.wikipedia.org/wiki/Informationssicherheit))
+> "Als **Informationssicherheit** bezeichnet man Eigenschaften von informationsverarbeitenden und -lagernden _(technischen oder nicht-technischen)_ Systemen, die die Schutzziele [Vertraulichkeit](https://de.wikipedia.org/wiki/Vertraulichkeit "Vertraulichkeit"), [Verfügbarkeit](https://de.wikipedia.org/wiki/Verf%C3%BCgbarkeit "Verfügbarkeit") und [Integrität](https://de.wikipedia.org/wiki/Integrit%C3%A4t_(Informationssicherheit) "Integrität (Informationssicherheit)") sicherstellen. Informationssicherheit dient dem Schutz vor [Gefahren](https://de.wikipedia.org/wiki/Gefahr "Gefahr") bzw. [Bedrohungen](https://de.wikipedia.org/wiki/Bedrohung "Bedrohung"), der Vermeidung von wirtschaftlichen [Schäden](https://de.wikipedia.org/wiki/Schaden "Schaden") und der Minimierung von [Risiken](https://de.wikipedia.org/wiki/Risiko "Risiko")."
+> 
+> _Definition Datensicherheit von Wikipedia_ ([Quelle](https://de.wikipedia.org/wiki/Informationssicherheit))
 
 Datensicherheit versucht, die schon vorhandenen Daten (ob personenbezogen oder nicht) in einem informationstechnischen System zu schützen / unzugänglich zu machen.
 
@@ -113,7 +113,7 @@ Datensicherheit versucht, die schon vorhandenen Daten (ob personenbezogen oder n
 **Definition**: Der **Klartext** (engl. _cleartext_ oder _plaintext_) ist die Nachricht, die durch ein geeignetes Verfahren in eine Form transformiert wird, dass eine Informationsentnahme durch eine dritte Partei nicht möglich ist.
 
 Es gibt zwei grundlegende Verfahren, eine Nachricht vor Informationsentnahme zu schützen:
-* Kryptographische Verfahren (&quot;unlesbar machen&quot;)
+* Kryptographische Verfahren ("unlesbar machen")
 * Steganographie (Existenz der Nachricht verschleiern)
 
 Das Verfahren, einen Klartext in eine Form zu transformieren, dass die Informationsentnahme nicht möglich ist, heißt **Verschlüsselung** oder **Chiffrierung**. Eine verschlüsselte Nachricht heißt **Chiffretext**.
@@ -126,14 +126,14 @@ Die Umkehrung heißt **Entschlüsselung** oder **Dechiffrierung**.
 
 ## Grundlegendes Szenario
 
-&#x60;&#x60;&#x60;mermaid
+```mermaid
 graph LR;
-    A[&quot;Klartext&quot;] &#x3D;&#x3D;&gt; B(&quot;Verschlüsselung&quot;)
-    B &#x3D;&#x3D; Chiffretext &#x3D;&#x3D;&gt; C(&quot;Entschlüsselung&quot;)
-    C &#x3D;&#x3D;&gt; D[&quot;Klartext&quot;]
-    K --&gt; B
-    K --&gt; C
-&#x60;&#x60;&#x60;
+    A["Klartext"] ==> B("Verschlüsselung")
+    B == Chiffretext ==> C("Entschlüsselung")
+    C ==> D["Klartext"]
+    K --> B
+    K --> C
+```
 Sender und Empfänger benötigen den gleichen Schlüssel $K$ zum Ver- / Entschlüsseln (daher **symmetrische Verschlüsselung**).
 
 ## Probleme bei symmetrischen Verfahren
@@ -146,11 +146,11 @@ Symmetrische Systeme haben (alle) drei grundsätzliche Probleme:
 	* Wird für jede Sitzung ein eigener Schlüssel verwendet oder für alle der Gleiche?
 3. Mit symmetrischen Verfahren ist es nicht möglich, eine **digitale Signatur** zu realisieren. Es gibt kein eindeutiges Identifikationsmerkmal für den Sender einer Nachricht.
 
-&#x60;&#x60;&#x60;mermaid
+```mermaid
 graph LR;
-    A[&quot;Alice&quot;] &#x3D;&#x3D;&gt; B[&quot;Bob&quot;]
-    C[&quot;3. Partei (&#x3D; Trust)&quot;]
-&#x60;&#x60;&#x60;
+    A["Alice"] ==> B["Bob"]
+    C["3. Partei (= Trust)"]
+```
 
 ## Asymmetrische Verfahren
 **Public-Key Kryptographie** oder **asymmetrische Verschlüsselung**
@@ -171,7 +171,7 @@ Das funktioniert so:
 	* $\rightarrow$ Klartext
 
 $$
-D_{K_{\overset{B}{\text{priv}}}} (E_{K_{\overset{B}{\text{pub}}}} (M)) &#x3D; M
+D_{K_{\overset{B}{\text{priv}}}} (E_{K_{\overset{B}{\text{pub}}}} (M)) = M
 $$
 
 Nur mit dem privaten Schlüssel $K_{\overset{B}{\text{priv}}}$ von Bob darf die Entschlüsselung möglich sein.
@@ -189,20 +189,20 @@ Die Public-Key-Verfahren werden dabei genutzt, um zwischen Sender und Empfänger
 1. Alice erzeugt ein Schlüsselpaar ($K_{\overset{A}{\text{priv}}}, K_{\overset{A}{\text{pub}}}$) (Sender).
 2. Alice verschlüsselt den Klartext mit ihrem $K_{\overset{A}{\text{priv}}}$ (den nur Alice hat)
 	* $\rightarrow$ Chiffrat
-	* **Idee**: $D_{K_{\overset{A}{\text{pub}}}} (E_{K_{\overset{A}{\text{priv}}}} (M)) &#x3D; M$
+	* **Idee**: $D_{K_{\overset{A}{\text{pub}}}} (E_{K_{\overset{A}{\text{priv}}}} (M)) = M$
 3. Chiffrat geht an Bob.
 4. Bob besorgt sich $K_{\overset{A}{\text{pub}}}$ und dechiffriert das erhaltene Chiffrat.
 5. Entsteht Klartext, dann ist auch für eine neutrale dritte Partei gezeigt, dass Alice die Nachricht verfasst hat.
 
 In der Praxis geht das etwas anders:
 
-&#x60;&#x60;&#x60;mermaid
+```mermaid
 graph LR;
-    A(&quot;Alice&quot;)
-    B[&quot;Klartext&quot;] --&gt; C[&quot;Hash-Algorithmus&quot;]
-    C --&gt; D[&quot;Hashwert (Message Digest)&quot;]
-    D --&gt; E[&quot;Klartext (signiert)&quot;]
-&#x60;&#x60;&#x60;
+    A("Alice")
+    B["Klartext"] --> C["Hash-Algorithmus"]
+    C --> D["Hashwert (Message Digest)"]
+    D --> E["Klartext (signiert)"]
+```
 
 Der Hash-Algorithmus erzeugt eine Prüfziffer ($180$ Bit), die klartext-abhängig ist und sich ändert, falls die Nachricht manipuliert wurde. Damit garantiert der Hashwert die **Integrität**, d.h. das ist das Instrument, um zu prüfen, ob der Klartext während der Übertragung manipuliert wurde.
 
@@ -225,37 +225,37 @@ Moderne Verfahren benutzen eine Vielzahl von Substitutions- bzw. Transpositionso
 
 --------
 
-## Kerckhoff&#x27;sches Prinzip
+## Kerckhoff'sches Prinzip
 In der Kryptographie wird in der Regel streng auf das KERCKHOFFs-Prinzip geachtet (1883).
 
-&gt; Die Sicherheit eines Kryptosystems darf **niemals** von der Geheimhaltung des Verschlüsselungsalgorithmus abhängen, sondern ausschließlich von der Geheimhaltung des Schlüssels.
+> Die Sicherheit eines Kryptosystems darf **niemals** von der Geheimhaltung des Verschlüsselungsalgorithmus abhängen, sondern ausschließlich von der Geheimhaltung des Schlüssels.
 
 ## Monoalphabetische Chiffren
 
 ### Shift-Chiffre
 * Buchstaben des Klartextes werden um ein $k \in \mathbb{Z}_{26}$ verschoben
-* Anmerkungen: $k &#x3D; 3$ heißt üblicherweise CÄSAR-Chiffre
+* Anmerkungen: $k = 3$ heißt üblicherweise CÄSAR-Chiffre
 
 Die Shift-Chiffre ist eine sogenannte **monoalphabetische Chiffre**, d.h. das Klartextalphabet wird genau auf ein Chiffretextalphabet abgebildet. Dies hat zur Folge, dass die statistische Struktur des Klartextes erhalten bleibt.
 
 ### Affine Chiffre
-**Definition**: Sei $\{M\} &#x3D; \{C\} &#x3D; \mathbb{Z}_{26}$ und $\{K\} &#x3D; \{(\alpha, \beta ) \in \mathbb{Z}_{26} \times \mathbb{Z}_{26} \ | \ \text{ggT}(\alpha, 26) &#x3D; 1\}$.
+**Definition**: Sei $\{M\} = \{C\} = \mathbb{Z}_{26}$ und $\{K\} = \{(\alpha, \beta ) \in \mathbb{Z}_{26} \times \mathbb{Z}_{26} \ | \ \text{ggT}(\alpha, 26) = 1\}$.
 
 **Verschlüsselung**:
 $A_{(\alpha, \beta)}: \mathbb{Z}_{26} \rightarrow \mathbb{Z}_{26}$
-$x \mapsto y &#x3D; A_{(\alpha, \beta)}(x)$
-$\qquad \quad &#x3D; (\alpha \cdot x + \beta) \mod{26}$
+$x \mapsto y = A_{(\alpha, \beta)}(x)$
+$\qquad \quad = (\alpha \cdot x + \beta) \mod{26}$
 
 Die **Entschlüsselung** ist:
 $A_{(\alpha, \beta)}^{-1}: \mathbb{Z}_{26} \times \mathbb{Z}_{26}$
-$y \mapsto x &#x3D; A_{(\alpha, \beta)}^{-1}(y) \quad \text{mit Klartextzeichen} \ x$
-$\qquad \quad &#x3D; (\alpha^{-1} (y - \beta)) \mod 26$
+$y \mapsto x = A_{(\alpha, \beta)}^{-1}(y) \quad \text{mit Klartextzeichen} \ x$
+$\qquad \quad = (\alpha^{-1} (y - \beta)) \mod 26$
 
 mit $\alpha^{-1} \cdot \alpha \equiv 1 \mod 26$.
 
 **Anmerkungen**:
 1. Die Shift-Chiffre ist in der affinen Chiffre enthalten.
-2. Schlüsselraum: Es gibt $12 \cdot 26 &#x3D; 312$ verschiedene Schlüssel, da $\phi(26) &#x3D; 12$.
+2. Schlüsselraum: Es gibt $12 \cdot 26 = 312$ verschiedene Schlüssel, da $\phi(26) = 12$.
 3. Monoalphabetisch $\rightarrow$ Statistische Struktur bleibt erhalten.
 
 ## Polyalphabetische Chiffren
@@ -267,10 +267,10 @@ Die Vigenére-Chiffre (1586 veröffentlicht) galt lange als nicht brechbar, bis 
 
 **Definition**: Sei $m$ eine positive ganze Zahl und
 $$
-M &#x3D; C &#x3D; K &#x3D; (\mathbb{Z}_{26})^m &#x3D; \mathbb{Z}_{26} \times \mathbb{Z}_{26} \times \ldots \times \mathbb{Z}_{26}
+M = C = K = (\mathbb{Z}_{26})^m = \mathbb{Z}_{26} \times \mathbb{Z}_{26} \times \ldots \times \mathbb{Z}_{26}
 $$
 
-Für einen festen Schlüsselwert $\vec{K} &#x3D; (K_1, \ldots, K_m)$ ist
+Für einen festen Schlüsselwert $\vec{K} = (K_1, \ldots, K_m)$ ist
 $$
 V_k: \mathbb{Z}_{26} \rightarrow \mathbb{Z}_{26}
 $$
@@ -282,19 +282,19 @@ $$
 **Dechiffrierung**:
 $V_k^{-1}: \mathbb{Z}_{26} \rightarrow \mathbb{Z}_{26}$
 $y \mapsto (\vec{x} - \vec{k}) \mod 26$
-$\quad \quad &#x3D; [(x_1 - k_1) \mod 26, \ldots, (x_m - k_m) \mod 26]$.
+$\quad \quad = [(x_1 - k_1) \mod 26, \ldots, (x_m - k_m) \mod 26]$.
 
 **Entschlüsselung**: Mit dem gleichen Schlüsselwort einfach abziehen
 $\rightarrow (x_i - k_i) \mod 26$
 
-**Schlüsselraum**: $|K| &#x3D; 26 \cdot 26 \cdot \ldots \cdot 26 &#x3D; 26^m$ mit $\vec{k} &#x3D; (k_1, k_2, \ldots, k_m)$.
+**Schlüsselraum**: $|K| = 26 \cdot 26 \cdot \ldots \cdot 26 = 26^m$ mit $\vec{k} = (k_1, k_2, \ldots, k_m)$.
 
-Die Vigenére-Chiffre ist eine **polyalphabetische Chiffre**, weil durch die Wahl des Schlüssels $\vec{k} &#x3D; (k_1, k_2, \ldots, k_m)$ (ohne Buchstabenwiederholung) ein Klartextzeichen auf $m$ mögliche Chiffrezeichen abgebildet wird.
+Die Vigenére-Chiffre ist eine **polyalphabetische Chiffre**, weil durch die Wahl des Schlüssels $\vec{k} = (k_1, k_2, \ldots, k_m)$ (ohne Buchstabenwiederholung) ein Klartextzeichen auf $m$ mögliche Chiffrezeichen abgebildet wird.
 
 ### Die HILL-Chiffre
 
 1. Auswahl eines Schlüssels
-	* Wähle eine Zahl, z.B. $k &#x3D; 3;$ der Schlüssel ist eine $n \times m$-Matrix $M$, deren Einträge Zahlen $\mod 26$ sind.
+	* Wähle eine Zahl, z.B. $k = 3;$ der Schlüssel ist eine $n \times m$-Matrix $M$, deren Einträge Zahlen $\mod 26$ sind.
 2. **Verschlüsselung**
 	* Der Klartext wird in Zeilenvektoren aufgeteilt mit Länge $n$, d.h. die HILL-Chiffre ist eine **Block-Chiffre**, bei der Blöcke fester Länge in einem Vorgang verschlüsselt werden.
 3. **Dechiffrierung**
@@ -303,10 +303,10 @@ $$
 M \cdot N \equiv \mathbb{1}_{3 \times 3} \mod 26
 $$
 
-**Notation**: $\mathbb{1}_{3 \times 3} &#x3D; \begin{pmatrix}
-1 &amp; 0 &amp; 0 \\
-0 &amp; 1 &amp; 0 \\
-0 &amp; 0 &amp; 1 \\
+**Notation**: $\mathbb{1}_{3 \times 3} = \begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 \\
 \end{pmatrix}$ (Einheitsmatrix)
 
 ## Eigenschaften von Block-Chiffren
@@ -319,7 +319,7 @@ Diese Eigenschaft müssen heutige Block-Chiffren (DES, AES) aufweisen; dadurch w
 ### Relativ prime Zahlen
 **Definition**: Zwei Zahlen $a, b \in \mathbb{Z}$ heißen **relativ prim**, **coprim** oder teilerfremd, falls sie keinen Primfaktor gemeinsam haben. Dies ist insbesondere dann der Fall, falls
 $$
-\text{ggT}(a, b) &#x3D; 1
+\text{ggT}(a, b) = 1
 $$
 
 gilt.
@@ -327,16 +327,16 @@ gilt.
 ### Totientenfunktion
 Ein wichtiges Konzept ist die EULER-Funktion oder **EULER-Totietennfunktion**.
 
-$\phi(n)$ gibt an, wieviele Zahlen $a \in \mathbb{N}, a \ge 1$ existieren mit $a &lt; n$ und $\text{ggT}(a, n) &#x3D; 1$
+$\phi(n)$ gibt an, wieviele Zahlen $a \in \mathbb{N}, a \ge 1$ existieren mit $a < n$ und $\text{ggT}(a, n) = 1$
 
-$\phi(n)$ gibt des Weiteren an, wieviele coprime Zahlen $&lt; n$ existieren.
+$\phi(n)$ gibt des Weiteren an, wieviele coprime Zahlen $< n$ existieren.
 
-Es gilt: $\phi(p) &#x3D; p - 1$, falls $p$ eine Primzahl ist.
+Es gilt: $\phi(p) = p - 1$, falls $p$ eine Primzahl ist.
 
-**Satz**: Falls $\text{ggT}(m, n) &#x3D; 1 \Rightarrow \phi(m, n) &#x3D; \phi(m \cdot n)$
+**Satz**: Falls $\text{ggT}(m, n) = 1 \Rightarrow \phi(m, n) = \phi(m \cdot n)$
 
-**Folgerung**: Wenn $p, q$ zwei Primzahlen sind und $n &#x3D; p \cdot q$
-$\Rightarrow \phi(n) &#x3D; \phi(p \cdot q) &#x3D; (p - 1) \cdot (q - 1)$.
+**Folgerung**: Wenn $p, q$ zwei Primzahlen sind und $n = p \cdot q$
+$\Rightarrow \phi(n) = \phi(p \cdot q) = (p - 1) \cdot (q - 1)$.
 
 ### Kleiner Satz von FERMAT
 Falls $p$ eine Primzahl ist und $a$ eine positive ganze Zahl, die nicht durch $p$ geteilt wird, dann gilt
@@ -363,41 +363,41 @@ Mit diesen Werkzeugen kann man den RSA-Algorithmus durchbrechen.
 Dieser lautet:
 1. Man wähle zwei zufällige Primzahlen $p, q$ ($512, 1024, 2048, 4096$ Bit) und berechne
 $$
-n &#x3D; p \cdot q
+n = p \cdot q
 $$
 
-2. Berechne $\phi(n) &#x3D; (p - 1)(q - 1)$.
-3. Wähle ein $e$ mit $1 &lt; e &lt; \phi(n), \ \text{ggT}(e, \phi(n)) &#x3D; 1$.
+2. Berechne $\phi(n) = (p - 1)(q - 1)$.
+3. Wähle ein $e$ mit $1 < e < \phi(n), \ \text{ggT}(e, \phi(n)) = 1$.
 4. Berechne $d$ mit $e \cdot d \equiv 1 \mod \phi(n)$.
-5. $K_{\text{pub}} &#x3D; (e, n), K_{\text{priv}} &#x3D; (d, n)$.
+5. $K_{\text{pub}} = (e, n), K_{\text{priv}} = (d, n)$.
 
-**Verschlüsselung**: $M$ geeignet als Zahl codiert $M &lt; n$
+**Verschlüsselung**: $M$ geeignet als Zahl codiert $M < n$
 $$
-C &#x3D; M^e \mod n
+C = M^e \mod n
 $$
 
 **Entschlüsselung**:
 $$
-M &#x3D; C^d \mod n
+M = C^d \mod n
 $$
 
 ## DIFFIE-HELLMAN Key-Exchange Verfahren
-Dieses Verfahren wurde in der Arbeit &quot;_New Directions in Cryptography_&quot; vorgestellt und zählt zu den Public-Key Verfahren, erlaubt aber
+Dieses Verfahren wurde in der Arbeit "_New Directions in Cryptography_" vorgestellt und zählt zu den Public-Key Verfahren, erlaubt aber
 * keine Verschlüsselung
 * keine digitale Signatur
 
 Generell nutzen Public-Key Verfahren immer sogenannte **Trapdoor-Funktionen**; das sind Funktionen, die in der einen Richtung einfach sind, die Umkehrung jedoch schwierig bis unmöglich.
 
-RSA: $p \cdot q \xrightleftharpoons[\text{schwierig}]{\text{einfach}} n &#x3D; p \cdot q$
+RSA: $p \cdot q \xrightleftharpoons[\text{schwierig}]{\text{einfach}} n = p \cdot q$
 
 Eine andere Trapdoor-Funktion ist z.B.
-$\rightarrow$ Berechne $\displaystyle \prod_{i &#x3D; 1}^{11} \; (x - i ) &#x3D; (x - 1) (x - 2) (x - 3) \ldots (x - 11)$
-$\quad \qquad \qquad \qquad \qquad \ \ \, &#x3D; x^{11} - 66x^{10} + 1925x^9 - 32670x^8$
+$\rightarrow$ Berechne $\displaystyle \prod_{i = 1}^{11} \; (x - i ) = (x - 1) (x - 2) (x - 3) \ldots (x - 11)$
+$\quad \qquad \qquad \qquad \qquad \ \ \, = x^{11} - 66x^{10} + 1925x^9 - 32670x^8$
 $\quad \qquad \qquad \qquad \qquad \ \ \, \quad + 35742x^7 - 39916800x^6$
 
 Das DH-Key-Exchange-Verfahren nutzt den **diskreten Logarithmus** als Trapdoor-Funktion; d.h. die Sicherheit des DH-Verfahrens hängt davon ab, dass es **sehr** schwierig (bis unmöglich) ist, diskrete Logarithmen zu berechnen.
 
-Betrachte wieder die Menge $\mathbb{Z}_p &#x3D; \{ 0, 1, \ldots, p - 1 \}$. Eine **primitive Wurzel** einer Primzahl $p$ ist eine Zahl in $\mathbb{Z}_p \backslash \{ 0 \}$, deren Potenzen alle Zahlen von $1$ bis $p - 1$ generiert. Ist $a$ eine primitive Wurzel, dann sind
+Betrachte wieder die Menge $\mathbb{Z}_p = \{ 0, 1, \ldots, p - 1 \}$. Eine **primitive Wurzel** einer Primzahl $p$ ist eine Zahl in $\mathbb{Z}_p \backslash \{ 0 \}$, deren Potenzen alle Zahlen von $1$ bis $p - 1$ generiert. Ist $a$ eine primitive Wurzel, dann sind
 
 $$
 a \mod{p}, a^2 \mod{p}, a^3 \mod{p}, \ldots, a^{p - 1} \mod{p}
@@ -409,42 +409,42 @@ alle unterschiedlich und bestehen aus den Zahlen $1$ bis $p - 1$ in irgendeiner 
 1. **Szenario**: Alice und Bob wollen einen gemeinsamen Schlüssel erzeugen, den nur sie kennen, ohne sich zuvor begegnet zu sein.
 2. Alice und Bob einigen sich (öffentlich) auf eine Primzahl $q$ und eine primitive Wurzel $a$ ($(q, a)$ ist eine Art Public Key).
 3. **Geheimer Schlüssel Alice**
-Alice wählt eine Zahl $X_A$ ($X_A &lt; q$) und wird Alice benannt. Alice berechnet
+Alice wählt eine Zahl $X_A$ ($X_A < q$) und wird Alice benannt. Alice berechnet
 $$
-Y_A &#x3D; a^{X_A} \mod{q}
+Y_A = a^{X_A} \mod{q}
 $$
 $Y_A$ geht an Bob.
 4. **Geheimer Schlüssel Bob**
-Bob wählt eine Zahl $X_B$ ($X_B &lt; q$) und wird Bob benannt. Bob berechnet
+Bob wählt eine Zahl $X_B$ ($X_B < q$) und wird Bob benannt. Bob berechnet
 $$
-Y_B &#x3D; a^{X_B} \mod{q}
+Y_B = a^{X_B} \mod{q}
 $$
 $Y_B$ geht an Alice.
-5. Alice berechnet $K &#x3D; (Y_B)^{X_A} \mod{q}$.
-6. Bob berechnet $K&#x27; &#x3D; (Y_A)^{X_B} \mod{q}$.
+5. Alice berechnet $K = (Y_B)^{X_A} \mod{q}$.
+6. Bob berechnet $K' = (Y_A)^{X_B} \mod{q}$.
 
-$\rightarrow$ Da $K &#x3D; K&#x27;$ (gleich), haben Bob und Alice einen gemeinsamen Sitzungsschlüssel.
+$\rightarrow$ Da $K = K'$ (gleich), haben Bob und Alice einen gemeinsamen Sitzungsschlüssel.
 
 ![Key-Exchange Method](https://i.imgur.com/rqGbwK3.jpg)
 
 ## ELGAMAL-Kryptosysteme (TAHER ELGAMAL, 1985)
 
 ### Digitale Signatur
-**Schlüssel**: Wähle eine Primzahl $p$ mit zwei Zufallszahlen $g, x$ mit $g, x &lt; p$.
-Berechne $y &#x3D; g^x \mod{p}$
+**Schlüssel**: Wähle eine Primzahl $p$ mit zwei Zufallszahlen $g, x$ mit $g, x < p$.
+Berechne $y = g^x \mod{p}$
 
-$K_{\text{pub}} &#x3D; [y, g, p]$
-$K_{\text{priv}} &#x3D; [x]$
+$K_{\text{pub}} = [y, g, p]$
+$K_{\text{priv}} = [x]$
 
 **Signatur**: $M$ soll signiert werden.
 Wähle eine zufällige Zahl $k$, so dass $k$ und $p - 1$ coprim sind, d.h.
 $$
-\text{ggT}(k, p - 1) &#x3D; 1.
+\text{ggT}(k, p - 1) = 1.
 $$
 
 Berechne
 $$
-a &#x3D; g^k \mod{p}.
+a = g^k \mod{p}.
 $$
 
 Berechne $b$ aus
@@ -457,31 +457,31 @@ Signatur: $(a, b)$, $k$ bleibt geheim.
 Bob verifiziert die Signatur wie folgt:
 Es muss gelten:
 $$
-y^a \cdot a^b \mod{p} \overset{!}{&#x3D;} g^M \mod{p}
+y^a \cdot a^b \mod{p} \overset{!}{=} g^M \mod{p}
 $$
 
-Klartext, der von Alice signiert wird, ist $M &#x3D; 10$.
+Klartext, der von Alice signiert wird, ist $M = 10$.
 Zum Signieren muss Alice die Zahlen $a, b$ bestimmen:
 
-1. Alice wählt zufällige Zahl $k &#x3D; 5$, ist ok: $\text{ggT}(5, 12) &#x3D; 1$
-2. $a &#x3D; g^k \mod{p}$
-$\ \ \ &#x3D; 7^5 \mod{13} \equiv 11 \mod{13}$
+1. Alice wählt zufällige Zahl $k = 5$, ist ok: $\text{ggT}(5, 12) = 1$
+2. $a = g^k \mod{p}$
+$\ \ \ = 7^5 \mod{13} \equiv 11 \mod{13}$
 3. Berechne $b$ aus
-$M &#x3D; (xa + kb) \mod{(p - 1)}$
-$10 &#x3D; (3 \cdot 11 + 5 \cdot b) \mod{12}$
-$\quad \ &#x3D; (9 + 5 \cdot b) \mod{12}$
+$M = (xa + kb) \mod{(p - 1)}$
+$10 = (3 \cdot 11 + 5 \cdot b) \mod{12}$
+$\quad \ = (9 + 5 \cdot b) \mod{12}$
 $\iff 1 \equiv 5 \cdot b \mod{12}$
-$\qquad \rightarrow \underline{b &#x3D; 5}$
+$\qquad \rightarrow \underline{b = 5}$
 
 An Bob wird gesendet:
 * Klartext $M$
-* Signaturwerte $[a, b] &#x3D; [11, 5]$
-* $K_{\text{pub}}$ von Alice: $K_{\overset{A}{\text{pub}}} &#x3D; [p &#x3D; 13, g &#x3D; 7, y &#x3D; 5]$
+* Signaturwerte $[a, b] = [11, 5]$
+* $K_{\text{pub}}$ von Alice: $K_{\overset{A}{\text{pub}}} = [p = 13, g = 7, y = 5]$
 
 **Verifikation**:
-$\qquad \qquad (y^a \cdot a^b) \mod{p} \overset{!}{&#x3D;} g^M \mod{p}$
-$\text{links:} \quad \ \ \, (5^{11} \cdot 11^5) \mod{13} &#x3D; 4 \mod{13}$
-$\text{rechts:} \quad \ 7^{10} \mod{13} &#x3D; 4 \mod{13}$
+$\qquad \qquad (y^a \cdot a^b) \mod{p} \overset{!}{=} g^M \mod{p}$
+$\text{links:} \quad \ \ \, (5^{11} \cdot 11^5) \mod{13} = 4 \mod{13}$
+$\text{rechts:} \quad \ 7^{10} \mod{13} = 4 \mod{13}$
 $\Rightarrow$ Beide Terme sind gleich.
 
 ## Die FEISTEL-Chiffre
@@ -489,7 +489,7 @@ _von HORST FEISTEL_, ~1970 IBM
 
 Die **FEISTEL-Chiffre** / oder **FEISTEL-Netzwerk** ist eine Vorlage / Muster für viele symmetrische Block-Chiffren, z.B.
 
-&lt;center&gt;DES, Blowfish, Twofish, CAST, RC5, MARS, ...&lt;/center&gt;
+<center>DES, Blowfish, Twofish, CAST, RC5, MARS, ...</center>
 
 Bei der FEISTEL-Chiffre ist die Ver- / Entschlüsselung (fast) identisch, der Unterschied liegt lediglich in der Reihenfolge der Anwendung der sogenannten **Rundenschlüssel**.
 
@@ -515,10 +515,9 @@ Jedes $n$-Bit Klartextblock wird unabhängig von anderen mit dem gleichen Schlü
 _Abbildung 2: Verschlüsselung mittels ECB_ ([Quelle](https://de.wikipedia.org/wiki/Electronic_Code_Book_Mode))
 
 ### Cipher Block Chaining Mode (CBC)
-Input des Verschlüsselungsalgorithmus ist die &#x60;XOR&#x60;-Verknüpfung des letzten Chiffreblocks mit dem Klartextblock. Die Verkettung der Klartextblöcke mit den Chiffretextblöcken führt dazu, dass statistische Eigenschaften des Klartextes nicht auf das Chiffrat übertragen werden.
+Input des Verschlüsselungsalgorithmus ist die `XOR`-Verknüpfung des letzten Chiffreblocks mit dem Klartextblock. Die Verkettung der Klartextblöcke mit den Chiffretextblöcken führt dazu, dass statistische Eigenschaften des Klartextes nicht auf das Chiffrat übertragen werden.
 
 ![CBC Block-Chiffre](images/cbc-encryption.svg)
 _Abbildung 3: Verschlüsselung mittels CBC_ ([Quelle](https://de.wikipedia.org/wiki/Cipher_Block_Chaining_Mode))
 
 CFB, OFB und CTR dienen dazu, eine Block-Chiffre als Strom-Chiffre zu betreiben.
-

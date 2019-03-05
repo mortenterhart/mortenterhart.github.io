@@ -2,8 +2,9 @@
 # Main CSS file
 ---
 
-/* Import Sass partials  */
+// Import Sass partials
 @import "{{ site.theme }}";
+@import "banner";
 @import "katexSpaces";
 @import "headerAnchorOffset";
 @import "mermaid";

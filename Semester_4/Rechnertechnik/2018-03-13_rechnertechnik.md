@@ -1,5 +1,6 @@
 ﻿---
 title: Rechnertechnik 13.03.2018
+layout: default
 permalink: Semester_4/Rechnertechnik/2018-03-13_rechnertechnik_md
 ---
 
@@ -9,15 +10,15 @@ _aus der Vorlesung Rechnertechnik vom 13.03.2018_
 ---
 
 _Beispiel_:
-| **Dual** | **Oktal** | **Dezimal** | **Hex** | ($126_d + 35_d \cdot 161_d$) |
+| **Dual** | **Oktal** | **Dezimal** | **Hex** | ($126_d + 35_d = 161_d$) |
 |--:|:--:|:---:|:---:|:---:|
 | $0111110$ | $176$ | $126$ | $7E$ | Summand 1 | 
-| $+ 100011$ | $+ 43$ | $+ 35$ | $23$ | Summand 2 |
+| $+ 100011$ | $+ 43$ | $+ 35$ | $+ 23$ | Summand 2 |
 | $11111100 \leftarrow$ | $110 \leftarrow$ | $010 \leftarrow$ | $0 \leftarrow$ | Übertrag (Carry) |
 | $10100001$ | $241$ | $161$ | $A1$ | Summe |
 
 _Beispiel 2_:
-| **Dual** | **Oktal** | **Dezimal** | **Hex** | ($126_d + 35_d \cdot 161_d$) |
+| **Dual** | **Oktal** | **Dezimal** | **Hex** | ($130_d - 42_d = 88_d$) |
 |--:|:--:|:---:|:---:|:---:|
 | $10000010$ | $202$ | $130$ | $82$ | Minuend | 
 | $- 101010$ | $- 52$ | $- 42$ | $- 2A$ | Subtrahend |
@@ -165,6 +166,7 @@ Neben der Art der Operation verschlüsselt der Operationsteil auch die Länge de
 Im Adressteil des Befehls wird angegeben, wo sich ein Operand befindet. Grundsätzlich gibt es hierfür zwei Möglichkeiten:
 * der Operand befindet sich im Arbeitsspeicher
 * der Operand befindet sich in einem Register der CPU
+* der Operand befindet sich in einem prozessornahen Cache. Dieser kann vom Benutzer nicht adressiert werden und dient dazu, den "Von-Neumann-Flaschenhals" zu öffnen.
 
 Moderne Prozessoren verfügen über verschiedene Adressierungsarten. Neben direkter Adressangabe gibt es indirekte Verfahren, bei denen die eigentlichen Operanden in dem adressierten Register oder Speicherwort steht. Durch indirekte Adressierung ist es möglich, die Adresse des Operanden zur Laufzeit des Programms zu berechnen. Die indirekte Adressierung ist sehr flexibel, hat jedoch den Nachteil, dass der doppelte Zugriff auf Register oder Arbeitsspeicher die Zeit für Ausführung des Befehls verlängert.
 
@@ -189,7 +191,7 @@ graph TD;
   B{Indexregister X}-->C
 ```
 
-## Ausführungsphasen eines Maschinebefehls
+## Ausführungsphasen eines Maschinenbefehls
 Nach dem bisherigen Überlegungen kann die Ausführung eines Maschinenbefehls in folgende Zeitphasen unterteilt werden.
 
 * `F`: (Fetch) Befehlswort aus dem Speicher in das Befehlsregister laden.

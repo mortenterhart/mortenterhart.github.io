@@ -86,7 +86,7 @@ Grundlage zur formalen Beschreibung von Schaltnetzen und Schaltwerken ist die _B
 Die drei Basisoperationen basieren auf der Aussagenlogik mit den Werten _wahr_ (`true`, Zuordnung $1$) und _falsch_ (`false`, Zuordnung $0$). Mit dieser Interpretation lassen sich die Operationen wie das logische `AND`, das logische `OR` und das logische `NOT` wie folgt definieren.
 * Das logische `AND` (**Konjunktion**) wird durch den Operator $\wedge$ ($*$) bezeichnet (und entspricht der Multiplikation im Raum der natürlichen Zahlen $\mathbb{N}$)
 $0 \wedge 0 = 0 \ (0 * 0 = 0), \quad 0 \wedge 1 = 0 \ (0 * 1 = 0);$
-$1 \wedge 0 = 0 \ (1 * 0 = 0), \quad 1 \wedge 1 = 1 \ (1 * 1 = 0);$
+$1 \wedge 0 = 0 \ (1 * 0 = 0), \quad 1 \wedge 1 = 1 \ (1 * 1 = 1);$
 als Tabelle:
 
 | $\wedge$ | $0$ | $1$ |
@@ -117,7 +117,7 @@ Führt man nun die Eingänge eines Schaltnetzes, die mit den Signalen $0$ oder $
 Beispiel: Betrachte das Schaltnetz
 ```mermaid
 graph TD;
-  A("x_3") --> D["Schaltnetz"]
+  A("x_1") --> D["Schaltnetz"]
   B("x_2") --> D
   C("x_3") --> D
   D --> E("f (x_1, x_2, x_3)")

@@ -1,4 +1,4 @@
----
+﻿---
 title: Zusammenfassung IT-Security
 layout: default
 permalink: Semester_5/IT_Security/2018-12-11_zusammenfassung_md
@@ -10,22 +10,20 @@ _geschrieben am 11.12.18 von Morten Terhart_
 
 ---
 
-**Inhaltsverzeichnis**
-
-* [Einführung in die Informationssicherheit](#einf%C3%BChrung-in-die-informationssicherheit)
-  * [Mögliche Angriffe](#m%C3%B6gliche-angriffe)
+* [Einführung in die Informationssicherheit](#einführung-in-die-informationssicherheit)
+  * [Mögliche Angriffe](#mögliche-angriffe)
   * [MOM (Motive, Opportunity, Method)](#mom-motive-opportunity-method)
-  * [Motive für einen Angriff](#motive-f%C3%BCr-einen-angriff)
+  * [Motive für einen Angriff](#motive-für-einen-angriff)
   * [Begriff der Informationssicherheit](#begriff-der-informationssicherheit)
-  * [Maßnahmen zur Informationssicherheit](#ma%C3%9Fnahmen-zur-informationssicherheit)
+  * [Maßnahmen zur Informationssicherheit](#maßnahmen-zur-informationssicherheit)
   * [Ziele der Informationssicherheit](#ziele-der-informationssicherheit)
   * [Bedeutung](#bedeutung)
   * [Ziele und Ursachen von Bedrohungen](#ziele-und-ursachen-von-bedrohungen)
   * [Angriff und Schutz](#angriff-und-schutz)
-  * [Bedrohungen und Maßnahmen](#bedrohungen-und-ma%C3%9Fnahmen)
+  * [Bedrohungen und Maßnahmen](#bedrohungen-und-maßnahmen)
   * [Klassifizierung von Informationen](#klassifizierung-von-informationen)
   * [Management der Informationssicherheit](#management-der-informationssicherheit)
-  * [Maßnahmen zur Gewährleistung der Informationssicherheit](#ma%C3%9Fnahmen-zur-gew%C3%A4hrleistung-der-informationssicherheit)
+  * [Maßnahmen zur Gewährleistung der Informationssicherheit](#maßnahmen-zur-gewährleistung-der-informationssicherheit)
   * [Funktionsweise eines ISMS-Systems](#funktionsweise-eines-isms-systems)
     * [Schritte zu einem ISMS-System](#schritte-zu-einem-isms-system)
   * [Schutz der Infrastruktur](#schutz-der-infrastruktur)
@@ -34,13 +32,13 @@ _geschrieben am 11.12.18 von Morten Terhart_
     * [Intrusion Detection Systeme (IDS)](#intrusion-detection-systeme-ids)
     * [Intrusion Prevention System (IPS)](#intrusion-prevention-system-ips)
     * [Trennung der Netzwerke](#trennung-der-netzwerke)
-    * [Zugriffsbeschränkungen](#zugriffsbeschr%C3%A4nkungen)
+    * [Zugriffsbeschränkungen](#zugriffsbeschränkungen)
     * [Redundanz der Systeme](#redundanz-der-systeme)
   * [Schutz der Daten](#schutz-der-daten)
     * [Verteilte Datenhaltung](#verteilte-datenhaltung)
   * [Penetrationstests](#penetrationstests)
     * [Ziele](#ziele)
-    * [Legalität](#legalit%C3%A4t)
+    * [Legalität](#legalität)
     * [Vorgehensweise](#vorgehensweise)
     * [Risiken](#risiken)
 * [Secure Development Life Cycle (SDLC)](#secure-development-life-cycle-sdlc)
@@ -55,12 +53,12 @@ _geschrieben am 11.12.18 von Morten Terhart_
     * [Produktionsphase](#produktionsphase)
 * [Erweiterte Security-Analyse](#erweiterte-security-analyse)
   * [Security-Analyse durch Reverse Code Engineering](#security-analyse-durch-reverse-code-engineering)
-  * [Gründe für den Einsatz von IT-Forensik](#gr%C3%BCnde-f%C3%BCr-den-einsatz-von-it-forensik)
+  * [Gründe für den Einsatz von IT-Forensik](#gründe-für-den-einsatz-von-it-forensik)
 * [Der Heartbleed-Bug](#der-heartbleed-bug)
   * [Wodurch ist der Bug entstanden?](#wodurch-ist-der-bug-entstanden)
   * [Bedrohungen durch den Bug](#bedrohungen-durch-den-bug)
   * [Probleme durch den Bug](#probleme-durch-den-bug)
-  * [Schutzmöglichkeiten](#schutzm%C3%B6glichkeiten)
+  * [Schutzmöglichkeiten](#schutzmöglichkeiten)
 * [Aktive IT-Security-Analysen](#aktive-it-security-analysen)
   * [Voraussetzungen](#voraussetzungen)
   * [Vorhandene Tools](#vorhandene-tools)
@@ -80,43 +78,43 @@ _geschrieben am 11.12.18 von Morten Terhart_
   * [Session Manipulation](#session-manipulation)
     * [Techniken](#techniken-1)
   * [Werkzeuge eines Penetrationstesters](#werkzeuge-eines-penetrationstesters)
-  * [Gegenmaßnahmen](#gegenma%C3%9Fnahmen)
+  * [Gegenmaßnahmen](#gegenmaßnahmen)
 * [Web Application Firewall (WAF)](#web-application-firewall-waf)
-  * [Gründe für eine WAF](#gr%C3%BCnde-f%C3%BCr-eine-waf)
+  * [Gründe für eine WAF](#gründe-für-eine-waf)
   * [Implementierung](#implementierung)
   * [Web Intrusion Detection / Prevention](#web-intrusion-detection--prevention)
-  * [Ansätze für Web Intrusion Prevention](#ans%C3%A4tze-f%C3%BCr-web-intrusion-prevention)
+  * [Ansätze für Web Intrusion Prevention](#ansätze-für-web-intrusion-prevention)
   * [Erkennungsformen](#erkennungsformen)
   * [Apache Webserver als WAF](#apache-webserver-als-waf)
 * [Kryptographie in der Praxis](#kryptographie-in-der-praxis)
   * [Begriffe aus der Kryptographie](#begriffe-aus-der-kryptographie)
-  * [Sehr unsichere Verschlüsselungsverfahren](#sehr-unsichere-verschl%C3%BCsselungsverfahren)
+  * [Sehr unsichere Verschlüsselungsverfahren](#sehr-unsichere-verschlüsselungsverfahren)
   * [Symmetrische und asymmetrische Verfahren](#symmetrische-und-asymmetrische-verfahren)
-  * [Hybride Verschlüsselung](#hybride-verschl%C3%BCsselung)
-  * [RSA-Verschlüsselung](#rsa-verschl%C3%BCsselung)
+  * [Hybride Verschlüsselung](#hybride-verschlüsselung)
+  * [RSA-Verschlüsselung](#rsa-verschlüsselung)
   * [Vorsicht beim RSA](#vorsicht-beim-rsa)
-  * [Sichere Kommunikation mit symmetrischer Verschlüsselung](#sichere-kommunikation-mit-symmetrischer-verschl%C3%BCsselung)
+  * [Sichere Kommunikation mit symmetrischer Verschlüsselung](#sichere-kommunikation-mit-symmetrischer-verschlüsselung)
   * [Sicherheit des Diffie-Hellman-Verfahrens](#sicherheit-des-diffie-hellman-verfahrens)
   * [Transport Layer Security (TLS)](#transport-layer-security-tls)
     * [Funktionsweise](#funktionsweise)
     * [Vorteile von TLS](#vorteile-von-tls)
     * [Nachteile von TLS](#nachteile-von-tls)
-  * [ECB-Modus für Blockchiffren](#ecb-modus-f%C3%BCr-blockchiffren)
-  * [CBC-Modus für Blockchiffren](#cbc-modus-f%C3%BCr-blockchiffren)
+  * [ECB-Modus für Blockchiffren](#ecb-modus-für-blockchiffren)
+  * [CBC-Modus für Blockchiffren](#cbc-modus-für-blockchiffren)
 * [Security-Analyse komplexer Systemumgebungen](#security-analyse-komplexer-systemumgebungen)
   * [Ziele](#ziele-2)
-  * [Eigenschaften von Security-Analysen in unterschiedlichem Ausmaß](#eigenschaften-von-security-analysen-in-unterschiedlichem-ausma%C3%9F)
+  * [Eigenschaften von Security-Analysen in unterschiedlichem Ausmaß](#eigenschaften-von-security-analysen-in-unterschiedlichem-ausmaß)
   * [Vorgehen bei der Security-Analyse](#vorgehen-bei-der-security-analyse)
     * [1. Schritt: Identifikation und Clusterung der Schutzziele](#1-schritt-identifikation-und-clusterung-der-schutzziele)
     * [2. Schritt: Identifikation der Kommunikationsbeziehungen](#2-schritt-identifikation-der-kommunikationsbeziehungen)
     * [3. Schritt: Schutzziele und Kommunikationsbeziehungen analysieren](#3-schritt-schutzziele-und-kommunikationsbeziehungen-analysieren)
-    * [4. Schritt: Identifikation möglicher Bedrohungen und Verwundbarkeiten](#4-schritt-identifikation-m%C3%B6glicher-bedrohungen-und-verwundbarkeiten)
-    * [5. Schritt: Ermitteln von Maßnahmen zur Reduzierung der möglichen Bedrohungen und Verwundbarkeiten](#5-schritt-ermitteln-von-ma%C3%9Fnahmen-zur-reduzierung-der-mo%CC%88glichen-bedrohungen-und-verwundbarkeiten)
-    * [6. Schritt: Durchführung von Risikoanalyse und Risikoakzeptanz](#6-schritt-durchf%C3%BChrung-von-risikoanalyse-und-risikoakzeptanz)
-* [Übungen zur Netzwerkanalyse](#%C3%BCbungen-zur-netzwerkanalyse)
+    * [4. Schritt: Identifikation möglicher Bedrohungen und Verwundbarkeiten](#4-schritt-identifikation-möglicher-bedrohungen-und-verwundbarkeiten)
+    * [5. Schritt: Ermitteln von Maßnahmen zur Reduzierung der möglichen Bedrohungen und Verwundbarkeiten](#5-schritt-ermitteln-von-maßnahmen-zur-reduzierung-der-möglichen-bedrohungen-und-verwundbarkeiten)
+    * [6. Schritt: Durchführung von Risikoanalyse und Risikoakzeptanz](#6-schritt-durchführung-von-risikoanalyse-und-risikoakzeptanz)
+* [Übungen zur Netzwerkanalyse](#Übungen-zur-netzwerkanalyse)
   * [nmap - Netzwerk- und Portscanner](#nmap---netzwerk--und-portscanner)
   * [Wireshark](#wireshark)
-* [Übungen zum Website-Pentesting](#%C3%BCbungen-zum-website-pentesting)
+* [Übungen zum Website-Pentesting](#Übungen-zum-website-pentesting)
   * [ARP-Spoofing](#arp-spoofing)
     * [Vorgehensweise](#vorgehensweise-1)
 * [Remote und Reverse Shell](#remote-und-reverse-shell)
@@ -126,17 +124,17 @@ _geschrieben am 11.12.18 von Morten Terhart_
 ## Einführung in die Informationssicherheit
 
 ### Mögliche Angriffe
-* Unauthorized Access
-* Mobile Device Attack
-* System Compromise
-* Cyber Espionage
-* Social Engeneering
-* Spam
-* Maleware
-* Indsiders
-* DoS
-* Data Leakage
-* Phishing
+* Unauthorized Access  
+* Mobile Device Attack  
+* System Compromise  
+* Cyber Espionage  
+* Social Engeneering  
+* Spam  
+* Maleware  
+* Indsiders  
+* DoS  
+* Data Leakage  
+* Phishing  
 * Identy Theft
 
 ### MOM (Motive, Opportunity, Method)
@@ -344,7 +342,7 @@ Mögliche Ziele eines Angriffs umfassen:
 * Überblick über implementierte Sicherheit
 
 ### Kryptofehler
-* DISCO: Don&#x27;t Invent Super Crypto on your Own!
+* DISCO: Don't Invent Super Crypto on your Own!
 * auf bewährte Verfahren zurückgreifen
 * Kryptoimplementierungen kritisch testen
 
@@ -417,7 +415,7 @@ Mögliche Ziele eines Angriffs umfassen:
 * Implementierung von Heartbeat-Verfahren für DTLS-Verbindungen
 * Funktion wurde von einem Studenten in seiner Dissertation zum SCTP-Protokoll entwickelt und als Entwurf bei OpenSSL eingereicht
 * 2011 wurde es offiziell bei OpenSSL eingeführt
-* Hauptproblem hierbei: eigene Funktionen für Allokation (&#x60;malloc&#x60;) und Deallokation (&#x60;free&#x60;) von Speicher implementiert, fehlende Überprüfung der tatsächlichen übergebenen Länge der Daten
+* Hauptproblem hierbei: eigene Funktionen für Allokation (`malloc`) und Deallokation (`free`) von Speicher implementiert, fehlende Überprüfung der tatsächlichen übergebenen Länge der Daten
 
 ### Bedrohungen durch den Bug
 * Auslesen des Speichers der Anwendung (z.B. Zugangsdaten (Benutername, Passwort), privater Server-Key)
@@ -470,7 +468,7 @@ Mögliche Ziele eines Angriffs umfassen:
 * Unverschlüsselte Datenübertragung
 	* **Maßnahme**: Umstellen von HTTP auf HTTPS-Verbindungen und Setzen der Secure-Cookie-Funktion im Webserver
 	* kein Einsatz von bereits geknackten SSL-Versionen (am besten TLS)
-* &#x60;robots.txt&#x60;-Datei: gibt sensible Daten über Datei-/Verzeichnispfade auf dem Webserver frei
+* `robots.txt`-Datei: gibt sensible Daten über Datei-/Verzeichnispfade auf dem Webserver frei
 	* **Maßnahme**: keine Verzeichnisse auflisten, die durch einen Webcrawler gefunden werden können
 
 ## Web-Security
@@ -515,18 +513,18 @@ Mögliche Ziele eines Angriffs umfassen:
 
 ### XML External Entity Processing (XXE)
 * Angriff auf den zugrundeliegenden XML-Parser
-&#x60;&#x60;&#x60;xml
-&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;ISO-8859-1&quot;?&gt;
-  &lt;!DOCTYPE foo [
-    &lt;!ELEMENT foo ANY &gt;
-    &lt;!ENTITY xxe SYSTEM &quot;file:///dev/random&quot; &gt;]&gt;&lt;foo&gt;&amp;xxe;&lt;/foo&gt;
-&#x60;&#x60;&#x60;
+```xml
+<?xml version="1.0" encoding="ISO-8859-1"?>
+  <!DOCTYPE foo [
+    <!ELEMENT foo ANY >
+    <!ENTITY xxe SYSTEM "file:///dev/random" >]><foo>&xxe;</foo>
+```
 
 * Zeile 1: Document Type Definition (DTD)
 * Zeile 2: Ausgabe
-* &#x60;xxe&#x60;: Variable wird deklariert
-* &#x60;&amp;xxe;&#x60;: Variable wird eingefügt
-* &#x60;file:&#x60;: Gibt das Protokoll an
+* `xxe`: Variable wird deklariert
+* `&xxe;`: Variable wird eingefügt
+* `file:`: Gibt das Protokoll an
 
 #### Angriffsarten
 * Auslesen von Dateien
@@ -535,7 +533,7 @@ Mögliche Ziele eines Angriffs umfassen:
 * Mails verschicken
 
 #### Besonderheiten
-* JRE und SMTP sind beide Plain-Text-Protokolle und erlauben somit die Versendung von Kontrollzeichen wie bspw. Line Feeds &#x60;&lt;LF&gt;&#x60; oder Carriage Returns &#x60;&lt;CR&gt;&#x60;
+* JRE und SMTP sind beide Plain-Text-Protokolle und erlauben somit die Versendung von Kontrollzeichen wie bspw. Line Feeds `<LF>` oder Carriage Returns `<CR>`
 
 #### Vermeidung von XXE
 * XML External Entity Processing beim XML-Parser deaktivieren
@@ -543,15 +541,15 @@ Mögliche Ziele eines Angriffs umfassen:
 
 ### Path Traversal
 * Zugriff auf andere Dateien im Dateisystem erlangen (außerhalb des Webserver-Verzeichnisses)
-* direkt über URL-Parameter möglich (&quot;Dot-Dot-Slash-Methode&quot;: &#x60;../../../file&#x60;)
+* direkt über URL-Parameter möglich ("Dot-Dot-Slash-Methode": `../../../file`)
 
 #### Beispiel
-* &#x60;http://some_site.lan/get-files?file&#x3D;../../../../some.dir/some.file&#x60;
+* `http://some_site.lan/get-files?file=../../../../some.dir/some.file`
 
 ### SQL Injection
 * Einschleusung von SQL-Anweisungen über Eingabefelder
 * Auslesen zusätzlicher Daten aus der Datenbank
-* Verändern von Daten (&#x60;DELETE&#x60;,  &#x60;INSERT&#x60;, &#x60;UPDATE&#x60;)
+* Verändern von Daten (`DELETE`,  `INSERT`, `UPDATE`)
 * Erraten der Datenbankstruktur
 * Ausführen administrativer Operationen (Shutdown, Drop-Table, Dateien einlesen)
 
@@ -579,7 +577,7 @@ Mögliche Ziele eines Angriffs umfassen:
 ## Web Application Firewall (WAF)
 
 ### Gründe für eine WAF
-* Prinzip &quot;Defense in Depth&quot;
+* Prinzip "Defense in Depth"
 * Firewall für HTTP-Verbindungen, daher gerade für Webanwendungen
 * Filterung auf Basis von
 	* Request/Response-Feldern
@@ -693,18 +691,18 @@ Mögliche Ziele eines Angriffs umfassen:
 * SSLv2 und SSLv3.0 sollten wegen bekannter Sicherheitslücken nicht mehr verwendet werden
 
 #### Funktionsweise
-&#x60;&#x60;&#x60;mermaid
+```mermaid
 sequenceDiagram
   participant C as Client
   participant S as Server
-  C --&gt;&gt; S: baut Verbindung auf
-  S --&gt;&gt; C: authentifiziert sich mit X.509 Zertifikat
-  C --&gt;&gt; S: überprüft Übereinstimmung Servername mit Zertifikat
-  C --&gt;&gt; S: schickt mit Public-Key des Servers verschlüsselte Zufallszahl
-  C --&gt;&gt; C: berechnet geheimen Schlüssel K1
-  S --&gt;&gt; S: berechnet geheimen Schlüssel K2
-  C --&gt; S: K1 &#x3D; K2
-&#x60;&#x60;&#x60;
+  C -->> S: baut Verbindung auf
+  S -->> C: authentifiziert sich mit X.509 Zertifikat
+  C -->> S: überprüft Übereinstimmung Servername mit Zertifikat
+  C -->> S: schickt mit Public-Key des Servers verschlüsselte Zufallszahl
+  C -->> C: berechnet geheimen Schlüssel K1
+  S -->> S: berechnet geheimen Schlüssel K2
+  C --> S: K1 = K2
+```
 Nach der Berechnung des geheimen Schlüssels kann eine symmetrische Verschlüsselung stattfinden, da $K_1$ und $K_2$ gleich sind.
 
 #### Vorteile von TLS
@@ -798,14 +796,14 @@ Nach der Berechnung des geheimen Schlüssels kann eine symmetrische Verschlüsse
 * Netzwerkanalyse- und Portscanning-Tool
 * OpenSource und frei verfügbar
 * sehr flexibel und über Lua-ScriptingEngine sehr erweiterbar
-* verschiedene Portscan-Möglichkeiten (TCP Connect &#x60;-sT&#x60;, TCP SYN &#x60;-sS&#x60;, TCP ACK &#x60;-sA&#x60;, UDP Scan &#x60;-sU&#x60;)
+* verschiedene Portscan-Möglichkeiten (TCP Connect `-sT`, TCP SYN `-sS`, TCP ACK `-sA`, UDP Scan `-sU`)
 * erweiterte Hosterkennung möglich
 
 ### Wireshark
-* Tool für die Analyse von Netzwerkdaten (wie Kommandozeilentool &#x60;tcpdump&#x60;)
+* Tool für die Analyse von Netzwerkdaten (wie Kommandozeilentool `tcpdump`)
 * Analyse aller Daten über Ethernet und WLAN
 * Netzwerkanalyse in Echtzeit oder Snapshot mit einer gespeicherten PCAP-Datei
-* Auslesen einer Nachricht über Optionenpunkt &quot;Follow TCP Stream&quot; (ermöglicht Anzeige des kompletten Datenverkehrs)
+* Auslesen einer Nachricht über Optionenpunkt "Follow TCP Stream" (ermöglicht Anzeige des kompletten Datenverkehrs)
 
 ## Übungen zum Website-Pentesting
 
@@ -817,15 +815,15 @@ Nach der Berechnung des geheimen Schlüssels kann eine symmetrische Verschlüsse
 
 #### Vorgehensweise
 * Dem Linux-Kernel mitteilen, dass IP-Pakete weiter geleitet werden sollen
-&#x60;&#x60;&#x60;bash
-echo 1 &gt; /proc/sys/net/ipv4/ip_forward            # IPv4
-echo 1 &gt; /proc/sys/net/ipv6/conf/all/forwarding   # IPv6
-&#x60;&#x60;&#x60;
+```bash
+echo 1 > /proc/sys/net/ipv4/ip_forward            # IPv4
+echo 1 > /proc/sys/net/ipv6/conf/all/forwarding   # IPv6
+```
 * ARP-Spoofing starten
-&#x60;&#x60;&#x60;bash
-arpspoof –t &quot;&lt;target IP&gt;&quot; –r &quot;&lt;gateway IP&gt;&quot;
-&#x60;&#x60;&#x60;
-* nun in Wireshark mithilfe der &quot;Follow TCP Stream&quot; Funktion alle Daten einer Verbindung auslesen
+```bash
+arpspoof –t "<target IP>" –r "<gateway IP>"
+```
+* nun in Wireshark mithilfe der "Follow TCP Stream" Funktion alle Daten einer Verbindung auslesen
 * mit HTTPS nicht ohne Weiteres möglich
 
 ## Remote und Reverse Shell
@@ -843,4 +841,3 @@ arpspoof –t &quot;&lt;target IP&gt;&quot; –r &quot;&lt;gateway IP&gt;&quot;
 * der Angreifer startet auf seinem System einen Listener
 * der Angreifer startet dann auf dem Zielsystem eine Reverse Shell, die sich zum Listener auf dem Angreifersystem verbindet
 ![Reverse Shell](https://i.imgur.com/x5OAGfk.png)
-

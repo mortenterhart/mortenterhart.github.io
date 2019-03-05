@@ -2,7 +2,9 @@
 title: Kryptographie 22.01.2018
 layout: default
 permalink: Semester_4/Kryptographie/2018-01-22_kryptographie_md
+
 ---
+
 <h1 id="kryptographie-22-01-2018">Kryptographie 22.01.2018</h1>
 <h2 id="inhalte">Inhalte</h2>
 <ul>
@@ -23,20 +25,20 @@ permalink: Semester_4/Kryptographie/2018-01-22_kryptographie_md
 <ul>
 <li>Exkurs über Galois Felder :)</li>
 </ul>
-</li>
-</ul>
-</li>
-<li>Public-Key-Verschlüsselungssysteme
-<ul>
-<li>RSA - Algorithmus</li>
-<li>Diffie - Hellman Key Exchange</li>
-<li>ElGamal dig. Signatur</li>
-<li>Elliptische Kurven Kryptographie</li>
-</ul>
-</li>
-</ul>
-<h2 id="literatur">Literatur</h2>
-<ul>
+    </li>
+    </ul>
+    </li>
+    <li>Public-Key-Verschlüsselungssysteme
+    <ul>
+    <li>RSA - Algorithmus</li>
+    <li>Diffie - Hellman Key Exchange</li>
+    <li>ElGamal dig. Signatur</li>
+    <li>Elliptische Kurven Kryptographie</li>
+    </ul>
+    </li>
+    </ul>
+    <h2 id="literatur">Literatur</h2>
+    <ul>
 <li>Simon Singh: Geheime Botschaften, Hanser-Verlag</li>
 <li>D. Kippenhahn: Verschlüsselte Botschaften, Rowohld</li>
 <li>David Kahn: The Codebreakers, Scribner NY 1997</li>

@@ -7,4 +7,4 @@ layout: default
 
 ## Software Engineering 2
 
-* [Zusammenfassung Software Engineering 2](Software_Engineering_2/2018-12-18_zusammenfassung)
+* [Zusammenfassung Software Engineering 2](2018-12-18_zusammenfassung.html)

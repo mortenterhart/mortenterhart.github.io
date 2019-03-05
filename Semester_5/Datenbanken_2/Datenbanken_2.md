@@ -7,5 +7,5 @@ layout: default
 
 ## Datenbanken 2
 
-* [Zusammenfassung Datenbanken 2](Datenbanken_2/2018-12-19_zusammenfassung)
+* [Zusammenfassung Datenbanken 2](2018-12-19_zusammenfassung.md)
 

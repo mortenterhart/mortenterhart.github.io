@@ -13,6 +13,7 @@
     <!-- Include KaTeX -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha384-TEMocfGvRuD1rIAacqrknm5BQZ7W7uWitoih+jMNFXQIbNl16bO8OZmylH/Vi/Ei" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js" integrity="sha384-jmxIlussZWB7qCuB+PgKG1uLjjxbVVIayPJwi6cG6Zb4YKq0JIw+OMnkkEC7kYCq" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
     <!-- Include Prism JS -->
     <script type="text/javascript" src="{{ '/assets/scripts/prism.js' | relative_url }}" ></script>
     <!--[if lt IE 9]>
@@ -36,7 +37,9 @@
   <body>
 
       <header>
-        <h1>{{ site.title | default: site.github.repository_name }}</h1>
+        <a href="{{ '/' | relative_url }}">
+            <h1>{{ site.title | default: site.github.repository_name }}</h1>
+        </a>
         <p>{{ site.description | default: site.github.project_tagline }}</p>
       </header>
 
@@ -44,6 +47,7 @@
         <span id="logo"></span>
 
         <a href="{{ site.github.repository_url }}" class="button fork"><strong>View On GitHub</strong></a>
+        <a href="{{ '/' | relative_url }}" class="button fork home"><strong>Home</strong></a>
         {% if site.show_downloads %}
           <div class="downloads">
             <span>Downloads:</span>
@@ -69,6 +73,7 @@
          a 'language-*' class. This must stand below the contents
          of the side because <pre> tags have to be loaded first -->
     <script type="text/javascript" src="{{ '/assets/scripts/insertLineNumbers.js' | relative_url }}"></script>
+    <script type="text/javascript" src="{{ '/assets/scripts/renderKatex.js' | relative_url }}"></script>
 
       <footer>
         {% if site.github.is_project_page %}

@@ -1,4 +1,4 @@
----
+﻿---
 title: Zusammenfassung Betriebssysteme
 layout: default
 permalink: Semester_4/Betriebssysteme/Zusammenfassung_md
@@ -8,75 +8,6 @@ permalink: Semester_4/Betriebssysteme/Zusammenfassung_md
 _geschrieben von Morten Terhart am 24.03.2018_
 
 ---
-
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Inhaltsverzeichnis**
-
-- [Einführung](#einf%C3%BChrung)
-  - [Was ist ein Betriebssystem?](#was-ist-ein-betriebssystem)
-  - [Anforderungen an ein Betriebssystem](#anforderungen-an-ein-betriebssystem)
-  - [Betriebsarten von Betriebssystem](#betriebsarten-von-betriebssystem)
-  - [Aufgaben eines Betriebssystems](#aufgaben-eines-betriebssystems)
-  - [Dienste eines Betriebssystems](#dienste-eines-betriebssystems)
-  - [Einblick in UNIX](#einblick-in-unix)
-  - [Unterbrechungen (_Interrupts_)](#unterbrechungen-interrupts)
-- [Prozesse](#prozesse)
-  - [Definition](#definition)
-  - [Umgebung eines Prozessors](#umgebung-eines-prozessors)
-  - [Verhalten eines Prozesses](#verhalten-eines-prozesses)
-  - [Zustände eines Prozesses](#zust%C3%A4nde-eines-prozesses)
-- [Prozessverwaltung](#prozessverwaltung)
-  - [Steuerung von Prozessen](#steuerung-von-prozessen)
-  - [Scheduling-Strategien](#scheduling-strategien)
-  - [Non-preemptive Scheduling-Strategien](#non-preemptive-scheduling-strategien)
-  - [Preemptive Scheduling-Strategien](#preemptive-scheduling-strategien)
-  - [Prozess-Scheduling in UNIX](#prozess-scheduling-in-unix)
-  - [Prozesshierarchie](#prozesshierarchie)
-- [Threads und Prozesse](#threads-und-prozesse)
-- [Kommunikation zwischen Prozessen](#kommunikation-zwischen-prozessen)
-  - [Möglichkeiten der Prozesskommunikation](#m%C3%B6glichkeiten-der-prozesskommunikation)
-  - [Bedingungen für den gegenseitigen Ausschluss (_mutual exclusion_)](#bedingungen-f%C3%BCr-den-gegenseitigen-ausschluss-mutual-exclusion)
-  - [Unterbrechungssperre](#unterbrechungssperre)
-  - [Verwendung eines Semaphors](#verwendung-eines-semaphors)
-  - [Erzeuger- / Verbraucher-Problem](#erzeuger---verbraucher-problem)
-  - [Bewertung des Semaphor-Konzepts](#bewertung-des-semaphor-konzepts)
-  - [Kommunikation mittels Nachrichten](#kommunikation-mittels-nachrichten)
-  - [Verklemmungen (_Deadlocks_)](#verklemmungen-deadlocks)
-- [Speicherverwaltung](#speicherverwaltung)
-  - [Zu bewältigende Aufgaben](#zu-bew%C3%A4ltigende-aufgaben)
-  - [Speicherpartitionierung und Fragmentierung](#speicherpartitionierung-und-fragmentierung)
-  - [Prozesseinordnungsalgorithmen](#prozesseinordnungsalgorithmen)
-  - [Swapping](#swapping)
-  - [Der Adressraum](#der-adressraum)
-  - [Virtueller Speicher](#virtueller-speicher)
-  - [Adressabbildung](#adressabbildung)
-  - [Die Seitentabelle](#die-seitentabelle)
-  - [Seitenwechselstrategien](#seitenwechselstrategien)
-  - [Bewertung des virtuellen Speichers](#bewertung-des-virtuellen-speichers)
-- [Dateien und Dateisysteme](#dateien-und-dateisysteme)
-  - [Massenspeicher / Hintergrundspeicher](#massenspeicher--hintergrundspeicher)
-  - [Datei-Konzept](#datei-konzept)
-  - [Verzeichniskonzept](#verzeichniskonzept)
-  - [Verschiedene Varianten von Verzeichnissen](#verschiedene-varianten-von-verzeichnissen)
-  - [Operationen auf Dateisystemen](#operationen-auf-dateisystemen)
-  - [Implementierung auf Festplatten](#implementierung-auf-festplatten)
-  - [Implementierung von Dateisystemen](#implementierung-von-dateisystemen)
-  - [Allokationsstrategien vom Dateisystem](#allokationsstrategien-vom-dateisystem)
-    - [Zusammenhängende Belegung](#zusammenh%C3%A4ngende-belegung)
-    - [Verkettete Belegung](#verkettete-belegung)
-    - [Indizierte Belegung](#indizierte-belegung)
-    - [Multi-Level-Indexblock](#multi-level-indexblock)
-    - [UNIX Inodes](#unix-inodes)
-- [Ein- und Ausgabekonzepte und Bussysteme](#ein--und-ausgabekonzepte-und-bussysteme)
-  - [Strategien der Ein- / Ausgabe](#strategien-der-ein---ausgabe)
-  - [Kopplung der E/A-Bausteine](#kopplung-der-ea-bausteine)
-  - [Kommunikation zwischen CPU und E/A-Geräten](#kommunikation-zwischen-cpu-und-ea-ger%C3%A4ten)
-  - [Direct Memory Access (DMA)](#direct-memory-access-dma)
-  - [Ablauf eines DMA-Transfers](#ablauf-eines-dma-transfers)
-  - [E/A-Scheduling-Strategien](#ea-scheduling-strategien)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Einführung
 ### Was ist ein Betriebssystem?
@@ -204,7 +135,7 @@ Moderne Betriebssysteme verwenden ausschließlich preemptive Strategien.
 ![Non-preemptive Strategie First Come, First Serve](images/first-come-first-serve.png)
 _Abbildung 6: Scheduling-Strategie "First Come, First Serve"_
 * _Last Come, First Serve_ (LCFS)
-    * Prozesse werden in der Reihenfolge ihrer Ankunft in die Warteschlange eingereiht, diese wird nach dem LIFO-Prinzip (_Last In, First Out_) bearbeitet, d.h. der zuletzt eingetroffene Prozess wird als erstes von der CPU behandelt
+	* Prozesse werden in der Reihenfolge ihrer Ankunft in die Warteschlange eingereiht, diese wird nach dem LIFO-Prinzip (_Last In, First Out_) bearbeitet, d.h. der zuletzt eingetroffene Prozess wird als erstes von der CPU behandelt.
 * _Shortest Job First_ (SJF)
 	* Prozesse mit geringsten Bedienzeiten werden zuerst behandelt.
 	* Ziel: Durchschnittliche Antwortzeit reduzieren
@@ -714,7 +645,7 @@ sequenceDiagram
     participant RAM as Hauptspeicher
     CPU ->> EA: initialisiert
     CPU ->> DMA: initialisiert
-    EA ->> CPU: setzt TransferRQ
+    EA  ->> CPU: setzt TransferRQ
     DMA ->> CPU: fordert Bus an (BRQ)
     CPU ->> CPU: deaktiviert Bustreiber und setzt BGT
     DMA ->> EA: signalisiert Beginn des Datentransfers

@@ -1,4 +1,4 @@
----
+﻿---
 title: Rechnertechnik 13.02.2018
 permalink: Semester_4/Rechnertechnik/2018-02-13_rechnertechnik_md
 ---
