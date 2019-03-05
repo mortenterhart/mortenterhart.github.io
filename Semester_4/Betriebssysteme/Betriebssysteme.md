@@ -20,4 +20,3 @@ filepath: Semester_4/Betriebssysteme/Betriebssysteme.md
 
 ## Übungsklausur
 * [Übungsklausur](exam/Übungsklausur.pdf) ([Lösungen](exam/Lösung_Übungsklausur.pdf))
-
