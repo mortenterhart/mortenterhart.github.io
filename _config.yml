@@ -14,22 +14,23 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Skripte DHBW
-email: example@url.com
 description: >- # this means to ignore newlines until "baseurl:"
     Vorlesungsskripte aus dem DHBW-Studium
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-#twitter_username: jekyllrb
+
 github_username:  mortenterhart
-show_downloads: "false"
+show_downloads: true
+
+github:
+    zip_url: "http://github.com/mortenterhart/mortenterhart.github.io/zipball/master"
+    tar_url: "http://github.com/mortenterhart/mortenterhart.github.io/tarball/master"
+
 highlighter: rouge
 repository: mortenterhart/mortenterhart.github.io
-
-exclude: ['path']
 
 # Build settings
 markdown: kramdown
 theme: jekyll-theme-leap-day
+
 plugins:
   - jekyll-feed
 
@@ -40,12 +41,6 @@ google_analytics: UA-116473915-1
 sass:
     sass_dir: _sass
     style: compressed
-
-# Breadcrumbs plugin
-breadcrumbs:
-  root:
-    hide: false  # show breadcrumbs on root/home page
-    image: false # Show image or title text
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
