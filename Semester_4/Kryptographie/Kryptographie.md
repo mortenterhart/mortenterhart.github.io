@@ -13,7 +13,7 @@ filepath: Semester_4/Kryptographie/Kryptographie.md
 * [Vorlesung 14.03.2018](2018-03-14_kryptographie.html)
 
 ## Zusammenfassung
-* [Wichtige Begriffe und Konzepte](2018-03-26_wichtige_konzepte.md)
+* [Wichtige Begriffe und Konzepte](2018-03-26_wichtige_konzepte.html)
 
 ## Scans
 * [A Kurs 05.02.2018](scans/2018-02-05_A_kurs_kryptographie_scan.pdf)
